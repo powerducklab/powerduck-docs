@@ -1,0 +1,29 @@
+{
+  "id": "openapi-codegen/installation",
+  "title": "Installation",
+  "description": "Install @powerduck/openapi-codegen with npm, yarn, or pnpm, and use it in Node.js or the browser. Requires Node.js >= 18.",
+  "source": "@site/docs/openapi-codegen/installation.md",
+  "sourceDirName": "openapi-codegen",
+  "slug": "/openapi-codegen/installation",
+  "permalink": "/docs/openapi-codegen/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-codegen/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install @powerduck/openapi-codegen with npm, yarn, or pnpm, and use it in Node.js or the browser. Requires Node.js >= 18."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-codegen/introduction"
+  },
+  "next": {
+    "title": "Quick Start",
+    "permalink": "/docs/openapi-codegen/quickstart"
+  }
+}

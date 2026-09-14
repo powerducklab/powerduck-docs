@@ -1,0 +1,914 @@
+/**
+ * Powerduck Docs - Clean, Readable Design
+ * Solid-color surfaces, blue accent, comfortable spacing. No glassmorphism.
+ * Matches the powerduck.com website design tokens.
+ */
+
+/* ============================================
+   Design Tokens - Light
+   ============================================ */
+
+:root {
+  /* Primary accent - blue */
+  --ifm-color-primary: #1c5cff;
+  --ifm-color-primary-dark: #1a52e6;
+  --ifm-color-primary-darker: #184dd9;
+  --ifm-color-primary-darkest: #1440b3;
+  --ifm-color-primary-light: #4d7fff;
+  --ifm-color-primary-lighter: #6a93ff;
+  --ifm-color-primary-lightest: #a8bdff;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-soft: #f6f7f9;
+  --bg-subtle: #fafbfc;
+  --surface: #ffffff;
+
+  /* Text */
+  --ink: #0e1116;
+  --ink-soft: #252c36;
+  --muted: #657080;
+  --muted-light: #9aa3b0;
+
+  /* Borders */
+  --line: #e4e7eb;
+  --line-strong: #d6dbe2;
+
+  /* Accent helpers */
+  --accent: #1c5cff;
+  --accent-soft: #e9efff;
+  --accent-border: #c3d2ff;
+
+  /* Status colors (solid soft backgrounds) */
+  --ok: #047857;
+  --ok-soft: #ecfdf5;
+  --warn: #b45309;
+  --warn-soft: #fef6e7;
+  --danger: #b32020;
+  --danger-soft: #feecec;
+
+  /* Docusaurus theme mapping */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #252c36;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f6f7f9;
+  --ifm-toc-border-color: #e4e7eb;
+  --ifm-color-emphasis-100: #f6f7f9;
+  --ifm-color-emphasis-200: #e4e7eb;
+  --ifm-color-emphasis-300: #d6dbe2;
+  --ifm-color-emphasis-400: #9aa3b0;
+  --ifm-color-emphasis-600: #657080;
+  --ifm-color-emphasis-700: #4b5563;
+
+  /* Typography - comfortable reading size */
+  --ifm-font-family-base: Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+    Consolas, monospace;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+
+  /* Code */
+  --ifm-code-font-size: 90%;
+  --ifm-code-border-radius: 6px;
+  --docusaurus-highlighted-code-line-bg: rgba(28, 92, 255, 0.12);
+
+  /* Radius */
+  --radius-sm: 7px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows - very subtle */
+  --shadow-sm: 0 1px 2px rgba(14, 17, 22, 0.06);
+  --shadow-md: 0 12px 32px -22px rgba(14, 17, 22, 0.22);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+}
+
+/* ============================================
+   Design Tokens - Dark
+   ============================================ */
+
+[data-theme='dark'] {
+  --ifm-color-primary: #6d96ff;
+  --ifm-color-primary-dark: #5a87ff;
+  --ifm-color-primary-darker: #4f7eff;
+  --ifm-color-primary-darkest: #3a69ee;
+  --ifm-color-primary-light: #8faaff;
+  --ifm-color-primary-lighter: #a3b9ff;
+  --ifm-color-primary-lightest: #cbd9ff;
+
+  --bg: #0b0f14;
+  --bg-soft: #111720;
+  --bg-subtle: #0e141b;
+  --surface: #121821;
+
+  --ink: #edf2f7;
+  --ink-soft: #d9e1eb;
+  --muted: #98a4b4;
+  --muted-light: #6f7b8b;
+
+  --line: #252e39;
+  --line-strong: #34404e;
+
+  --accent: #6d96ff;
+  --accent-soft: rgba(74, 119, 255, 0.14);
+  --accent-border: rgba(109, 150, 255, 0.35);
+
+  --ok: #5dd6a0;
+  --ok-soft: rgba(34, 197, 94, 0.1);
+  --warn: #e7a84b;
+  --warn-soft: rgba(217, 144, 31, 0.11);
+  --danger: #f08080;
+  --danger-soft: rgba(240, 128, 128, 0.12);
+
+  --ifm-background-color: #0b0f14;
+  --ifm-background-surface-color: #121821;
+  --ifm-font-color-base: #d9e1eb;
+  --ifm-navbar-background-color: #0b0f14;
+  --ifm-footer-background-color: #0e141b;
+  --ifm-toc-border-color: #252e39;
+  --ifm-color-emphasis-100: #111720;
+  --ifm-color-emphasis-200: #252e39;
+  --ifm-color-emphasis-300: #34404e;
+  --ifm-color-emphasis-400: #6f7b8b;
+  --ifm-color-emphasis-600: #98a4b4;
+  --ifm-color-emphasis-700: #b6c1cf;
+
+  --docusaurus-highlighted-code-line-bg: rgba(109, 150, 255, 0.15);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Navbar Right Items - Alignment
+   ============================================ */
+
+.navbar__items--right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+/* Style Website link and GitHub button only - DO NOT touch ColorModeToggle */
+.navbar__items--right > .navbar__item:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module),
+.navbar__items--right > .clean-btn:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  min-width: 36px !important;
+  padding: 0 0.65rem !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: var(--radius-sm) !important;
+  background: transparent !important;
+  color: var(--ink-soft) !important;
+  opacity: 1 !important;
+  line-height: 1 !important;
+  vertical-align: middle !important;
+  transition: background var(--transition-fast), color var(--transition-fast) !important;
+  box-sizing: border-box !important;
+}
+
+/* GitHub icon button: square */
+.navbar__items--right > .navbar__item.header-github-link {
+  width: 36px !important;
+  padding: 0 !important;
+}
+
+/* Hover state for styled items (not ColorModeToggle - it has its own) */
+.navbar__items--right > .navbar__item:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module):hover,
+.navbar__items--right > .clean-btn:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module):hover {
+  background: var(--bg-soft) !important;
+  color: var(--ink) !important;
+}
+
+/* Ensure ColorModeToggle is vertically centered without changing its internal layout */
+.navbar__items--right .toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module {
+  margin: 0 !important;
+  align-self: center !important;
+}
+
+/* GitHub icon - reliable centering via flex parent */
+.header-github-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-github-link::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23252c36' d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z'/%3E%3C/svg%3E") no-repeat center center;
+  background-size: 20px 20px;
+}
+
+[data-theme='dark'] .header-github-link::before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d9e1eb' d='M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z'/%3E%3C/svg%3E") no-repeat center center;
+  background-size: 20px 20px;
+}
+
+/* Dark theme colors for styled right nav items (ColorModeToggle handles its own colors) */
+[data-theme='dark'] .navbar__items--right > .navbar__item:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module),
+[data-theme='dark'] .navbar__items--right > .clean-btn:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module) {
+  color: var(--ink-soft) !important;
+}
+
+[data-theme='dark'] .navbar__items--right > .navbar__item:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module):hover,
+[data-theme='dark'] .navbar__items--right > .clean-btn:not(.toggleButton_node_modules-\@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module):hover {
+  background: var(--bg-soft) !important;
+  color: var(--ink) !important;
+}
+
+/* ============================================
+   Landing Hero - Solid accent, no gradient
+   ============================================ */
+
+.hero--primary {
+  background: var(--accent);
+}
+
+.hero__title {
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ============================================
+   Navbar - Solid, compact, no blur
+   ============================================ */
+
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+  height: 56px;
+  box-shadow: none;
+  transition: box-shadow var(--transition-normal);
+}
+
+[data-theme='dark'] .navbar {
+  background: #0b0f14;
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar--fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar.scrolled {
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .navbar.scrolled {
+  background: #0b0f14;
+}
+
+.navbar__inner {
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__items {
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__items--right {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar__logo {
+  margin-right: 0.55rem;
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+  height: 28px;
+  width: 28px;
+}
+
+.navbar__link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+}
+
+.navbar__link:hover {
+  color: var(--ink);
+  background: var(--bg-soft);
+}
+
+.navbar__link--active {
+  color: var(--accent) !important;
+  background: transparent !important;
+}
+
+/* Dropdown trigger button */
+.navbar__item.dropdown > .navbar__link {
+  gap: 0.3rem;
+}
+
+.navbar__item.dropdown > .navbar__link::after {
+  border-width: 0.35rem 0.35rem 0;
+  border-color: currentColor transparent transparent;
+  margin-top: 0.1rem;
+}
+
+/* Dropdown panel */
+.navbar__dropdownContainer .dropdown__menu {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.dropdown__link:hover {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* ============================================
+   Sidebar - Comfortable spacing, bottom padding
+   ============================================ */
+
+.menu {
+  padding: 1rem 0.75rem 3rem;
+  font-size: 0.9rem;
+  padding-bottom: 4rem!important;
+}
+
+.menu__list-item {
+  margin: 0.1rem 0;
+}
+
+.menu__link {
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-weight: 400;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  line-height: 1.5;
+}
+
+.menu__link:hover {
+  background: var(--bg-soft);
+  color: var(--ink);
+}
+
+.menu__link--active {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.menu__caret {
+  color: var(--muted-light);
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.menu__caret:hover {
+  background: var(--bg-soft);
+}
+
+.menu__list-item-collapsible > .menu__link {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================
+   Main Content - Comfortable reading
+   ============================================ */
+
+.main-wrapper {
+  background: var(--bg);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--line) !important;
+}
+
+.markdown {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* Headings */
+.markdown h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.markdown h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  margin-top: 2rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.markdown h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+}
+
+.markdown h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+}
+
+.markdown p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.markdown a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.markdown a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.markdown li {
+  margin-bottom: 0.4rem;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  margin: 1.2rem 0;
+  padding: 0.8rem 1.1rem;
+  border-left: 3px solid var(--line-strong);
+  background: var(--bg-soft);
+  color: var(--muted);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ============================================
+   Code Blocks - Clean, theme-aware, no extra borders
+   ============================================ */
+
+.theme-code-block {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 1.2rem 0;
+  border: 1px solid var(--line);
+}
+
+.theme-code-block pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  font-family: var(--ifm-font-family-monospace);
+  background: var(--bg-soft) !important;
+}
+
+[data-theme='dark'] .theme-code-block pre {
+  background: var(--bg-subtle) !important;
+}
+
+.theme-code-block code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Inline code */
+.markdown code {
+  background: var(--bg-soft);
+  color: var(--ink);
+  padding: 0.15rem 0.45rem;
+  border-radius: 5px;
+  font-size: 0.88em;
+  font-family: var(--ifm-font-family-monospace);
+  border: 1px solid var(--line);
+}
+
+[data-theme='dark'] .markdown code {
+  background: var(--bg-subtle);
+  border-color: var(--line-strong);
+}
+
+/* Code copy button */
+.clean-btn {
+  border-radius: 6px;
+  padding: 0.35rem;
+  margin: 0.4rem;
+  opacity: 0;
+  transition: opacity var(--transition-fast), background var(--transition-fast);
+  color: var(--muted) !important;
+}
+
+.theme-code-block:hover .clean-btn {
+  opacity: 1;
+}
+
+.clean-btn:hover {
+  background: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+/* ============================================
+   Tables - Clean, minimal borders
+   ============================================ */
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 0.92rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown th {
+  background: var(--bg-soft);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+.markdown td {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+
+.markdown tr:nth-child(even) td {
+  background: var(--bg-subtle);
+}
+
+.markdown tr:hover td {
+  background: var(--accent-soft);
+}
+
+/* ============================================
+   Admonitions - Solid soft colors, no gradient
+   ============================================ */
+
+.alert {
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0;
+  border: 1px solid transparent;
+  box-shadow: none;
+  font-size: 0.95rem;
+}
+
+.alert--info {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+  border-left: 3px solid var(--accent);
+}
+
+.alert--success {
+  background: var(--ok-soft);
+  border-left: 3px solid var(--ok);
+}
+
+.alert--warning {
+  background: var(--warn-soft);
+  border-left: 3px solid var(--warn);
+}
+
+.alert--danger {
+  background: var(--danger-soft);
+  border-left: 3px solid var(--danger);
+}
+
+.alert__heading {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+/* ============================================
+   Tabs - Compact segmented
+   ============================================ */
+
+.tabs-container {
+  margin: 1.2rem 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.25rem;
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.9rem;
+  width: fit-content;
+}
+
+.tabs__item {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  border: none;
+  background: transparent;
+}
+
+.tabs__item:hover {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.tabs__item--active {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   Pagination - Clean, no lift
+   ============================================ */
+
+.pagination-nav {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.pagination-nav__link {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--accent);
+  box-shadow: none;
+  transform: none;
+}
+
+.pagination-nav__sublabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted-light);
+  margin-bottom: 0.25rem;
+}
+
+.pagination-nav__label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ============================================
+   Footer - Comfortable
+   ============================================ */
+
+.footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  padding: 2.5rem 0 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted-light);
+  margin-bottom: 0.9rem;
+}
+
+.footer__link-item {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 0.25rem 0;
+  transition: color var(--transition-fast);
+}
+
+.footer__link-item:hover {
+  color: var(--accent);
+}
+
+.footer__copyright {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--muted-light);
+}
+
+/* ============================================
+   Badge
+   ============================================ */
+
+.badge {
+  border-radius: 12px;
+  font-size: 0.82rem;
+  padding: 0.2rem 0.7rem;
+}
+
+/* ============================================
+   Doc Page Layout - Comfortable content padding
+   ============================================ */
+
+.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+  padding: 2rem 2rem !important;
+}
+
+@media (min-width: 997px) {
+  .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: calc(100% - var(--ifm-col-width) - 2rem) !important;
+    padding: 2rem 2rem !important;
+  }
+}
+
+/* Table of contents rail */
+.table-of-contents {
+  font-size: 0.88rem;
+}
+
+.table-of-contents__link--active {
+  color: var(--accent);
+  border-left-color: var(--accent);
+}
+
+/* ============================================
+   Scrollbar - Thin clean
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-light);
+}
+
+/* ============================================
+   Selection - Accent
+   ============================================ */
+
+::selection {
+  background: rgba(28, 92, 255, 0.18);
+  color: inherit;
+}
+
+/* ============================================
+   Utility Cards - Flat, no lift
+   ============================================ */
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.feature-card:hover {
+  border-color: var(--accent-border);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.api-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.api-table th,
+.api-table td {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.api-table th {
+  background: var(--bg-soft);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+/* ============================================
+   Responsive adjustments
+   ============================================ */
+
+@media (max-width: 996px) {
+  .markdown h1 {
+    font-size: 1.8rem;
+  }
+
+  .markdown h2 {
+    font-size: 1.4rem;
+  }
+
+  .markdown h3 {
+    font-size: 1.2rem;
+  }
+
+  .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    padding: 1.5rem 1.25rem !important;
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "openapi-mcp-server/configuration",
+  "title": "Configuration",
+  "description": "Complete configuration for @powerduck/openapi-mcp-server: ServerConfig, SecurityContext, ExecutionContext, TransportMode, and the literal unions for sources, statuses, protocols, log levels and body encodings.",
+  "source": "@site/docs/openapi-mcp-server/configuration.md",
+  "sourceDirName": "openapi-mcp-server",
+  "slug": "/openapi-mcp-server/configuration",
+  "permalink": "/docs/openapi-mcp-server/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-mcp-server/configuration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Configuration",
+    "description": "Complete configuration for @powerduck/openapi-mcp-server: ServerConfig, SecurityContext, ExecutionContext, TransportMode, and the literal unions for sources, statuses, protocols, log levels and body encodings.",
+    "keywords": [
+      "configuration",
+      "ServerConfig",
+      "SecurityContext",
+      "ExecutionContext",
+      "TransportMode",
+      "openapi-mcp-server"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/docs/openapi-mcp-server/quickstart"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/docs/openapi-mcp-server/api-reference"
+  }
+}

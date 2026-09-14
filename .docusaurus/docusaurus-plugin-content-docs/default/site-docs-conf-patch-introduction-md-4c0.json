@@ -1,0 +1,38 @@
+{
+  "id": "conf-patch/introduction",
+  "title": "Introduction",
+  "description": "Overview of @powerduck/conf-patch v0.3.4 — a two-layer RFC 6902 JSON Patch configuration editor for JSON, JSONC, and YAML with comment preservation, atomic writes, file locking, and OpenAPI validation.",
+  "source": "@site/docs/conf-patch/introduction.md",
+  "sourceDirName": "conf-patch",
+  "slug": "/conf-patch/introduction",
+  "permalink": "/docs/conf-patch/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/conf-patch/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Overview of @powerduck/conf-patch v0.3.4 — a two-layer RFC 6902 JSON Patch configuration editor for JSON, JSONC, and YAML with comment preservation, atomic writes, file locking, and OpenAPI validation.",
+    "keywords": [
+      "conf-patch",
+      "configuration editor",
+      "RFC 6902",
+      "JSON Patch",
+      "JSONC",
+      "YAML",
+      "OpenAPI validation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/md-editor/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/conf-patch/introduction"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "openapi-cli/introduction",
+  "title": "Introduction",
+  "description": "Introduction to @powerduck/openapi-cli, a CI-ready CLI for batch-testing OpenAPI 3.2 documents across six protocols.",
+  "source": "@site/docs/openapi-cli/introduction.md",
+  "sourceDirName": "openapi-cli",
+  "slug": "/openapi-cli/introduction",
+  "permalink": "/docs/openapi-cli/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-cli/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Introduction to @powerduck/openapi-cli, a CI-ready CLI for batch-testing OpenAPI 3.2 documents across six protocols."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/conf-patch/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-cli/introduction"
+  }
+}

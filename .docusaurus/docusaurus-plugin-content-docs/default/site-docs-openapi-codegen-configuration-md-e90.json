@@ -1,0 +1,29 @@
+{
+  "id": "openapi-codegen/configuration",
+  "title": "Configuration",
+  "description": "Generation options for @powerduck/openapi-codegen: GenerateOptions, RequestIR, the Generator interface, and the Plugin interface.",
+  "source": "@site/docs/openapi-codegen/configuration.md",
+  "sourceDirName": "openapi-codegen",
+  "slug": "/openapi-codegen/configuration",
+  "permalink": "/docs/openapi-codegen/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-codegen/configuration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Configuration",
+    "description": "Generation options for @powerduck/openapi-codegen: GenerateOptions, RequestIR, the Generator interface, and the Plugin interface."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start",
+    "permalink": "/docs/openapi-codegen/quickstart"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/docs/openapi-codegen/api-reference"
+  }
+}

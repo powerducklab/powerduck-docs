@@ -1,0 +1,38 @@
+{
+  "id": "x-to-openapi/introduction",
+  "title": "Introduction",
+  "description": "Overview of @powerduck/x-to-openapi v0.2.2 — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture.",
+  "source": "@site/docs/x-to-openapi/introduction.md",
+  "sourceDirName": "x-to-openapi",
+  "slug": "/x-to-openapi/introduction",
+  "permalink": "/docs/x-to-openapi/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/x-to-openapi/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Overview of @powerduck/x-to-openapi v0.2.2 — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture.",
+    "keywords": [
+      "x-to-openapi",
+      "curl",
+      "postman",
+      "OpenAPI 3.2",
+      "converter",
+      "adapter",
+      "Reverse engineering"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/openapi-request/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/x-to-openapi/introduction"
+  }
+}

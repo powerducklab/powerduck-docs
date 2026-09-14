@@ -1,0 +1,29 @@
+{
+  "id": "openapi-cli/commands",
+  "title": "CLI Commands",
+  "description": "Complete CLI reference for the openapi-cli binary: every flag, exit code, and environment variable.",
+  "source": "@site/docs/openapi-cli/commands.md",
+  "sourceDirName": "openapi-cli",
+  "slug": "/openapi-cli/commands",
+  "permalink": "/docs/openapi-cli/commands",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-cli/commands.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "CLI Commands",
+    "description": "Complete CLI reference for the openapi-cli binary: every flag, exit code, and environment variable."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/openapi-cli/configuration"
+  },
+  "next": {
+    "title": "Examples",
+    "permalink": "/docs/openapi-cli/examples"
+  }
+}

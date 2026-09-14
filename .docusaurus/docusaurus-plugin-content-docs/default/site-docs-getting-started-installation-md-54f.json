@@ -1,0 +1,38 @@
+{
+  "id": "getting-started/installation",
+  "title": "Installation",
+  "description": "Install Powerduck libraries via npm, yarn, or pnpm. Learn about peer dependencies, subpath exports, CLI binaries, and environment requirements.",
+  "source": "@site/docs/getting-started/installation.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/installation",
+  "permalink": "/docs/getting-started/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/getting-started/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install Powerduck libraries via npm, yarn, or pnpm. Learn about peer dependencies, subpath exports, CLI binaries, and environment requirements.",
+    "keywords": [
+      "installation",
+      "npm",
+      "yarn",
+      "pnpm",
+      "Powerduck",
+      "setup",
+      "peer dependencies"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/getting-started/introduction"
+  },
+  "next": {
+    "title": "Quick Start",
+    "permalink": "/docs/getting-started/quickstart"
+  }
+}

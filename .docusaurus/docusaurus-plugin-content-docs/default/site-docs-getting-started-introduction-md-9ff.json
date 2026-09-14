@@ -1,0 +1,25 @@
+{
+  "id": "getting-started/introduction",
+  "title": "Introduction",
+  "description": "Powerduck is a suite of high-performance OpenAPI tooling and embeddable components for developers.",
+  "source": "@site/docs/getting-started/introduction.md",
+  "sourceDirName": "getting-started",
+  "slug": "/getting-started/introduction",
+  "permalink": "/docs/getting-started/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/getting-started/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Powerduck is a suite of high-performance OpenAPI tooling and embeddable components for developers."
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/getting-started/introduction"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "openapi-cli/installation",
+  "title": "Installation",
+  "description": "Install @powerduck/openapi-cli globally, as a dev dependency, or with npx. Requires Node.js >= 18.17.",
+  "source": "@site/docs/openapi-cli/installation.md",
+  "sourceDirName": "openapi-cli",
+  "slug": "/openapi-cli/installation",
+  "permalink": "/docs/openapi-cli/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-cli/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install @powerduck/openapi-cli globally, as a dev dependency, or with npx. Requires Node.js >= 18.17."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-cli/introduction"
+  },
+  "next": {
+    "title": "Quick Start",
+    "permalink": "/docs/openapi-cli/quickstart"
+  }
+}

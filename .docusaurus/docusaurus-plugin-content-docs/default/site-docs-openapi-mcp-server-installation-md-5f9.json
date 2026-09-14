@@ -1,0 +1,37 @@
+{
+  "id": "openapi-mcp-server/installation",
+  "title": "Installation",
+  "description": "Installing @powerduck/openapi-mcp-server v1.3.0 via npm/yarn/pnpm or globally, the openapi-mcp CLI, the ./server subpath, Node >=20.11, and its runtime dependencies.",
+  "source": "@site/docs/openapi-mcp-server/installation.md",
+  "sourceDirName": "openapi-mcp-server",
+  "slug": "/openapi-mcp-server/installation",
+  "permalink": "/docs/openapi-mcp-server/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-mcp-server/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Installing @powerduck/openapi-mcp-server v1.3.0 via npm/yarn/pnpm or globally, the openapi-mcp CLI, the ./server subpath, Node >=20.11, and its runtime dependencies.",
+    "keywords": [
+      "installation",
+      "openapi-mcp",
+      "cli",
+      "global install",
+      "subpath",
+      "modelcontextprotocol"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-mcp-server/introduction"
+  },
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/openapi-mcp-server/quickstart"
+  }
+}

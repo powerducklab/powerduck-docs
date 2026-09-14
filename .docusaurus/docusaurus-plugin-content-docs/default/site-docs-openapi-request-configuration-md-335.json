@@ -1,0 +1,38 @@
+{
+  "id": "openapi-request/configuration",
+  "title": "Configuration",
+  "description": "Configuration for @powerduck/openapi-request: CreateClientOptions, DebuggerOptions, SendOptions, RequestValues, AuthConfig, and per-protocol options for HTTP, WebSocket, gRPC, MCP and GraphQL.",
+  "source": "@site/docs/openapi-request/configuration.md",
+  "sourceDirName": "openapi-request",
+  "slug": "/openapi-request/configuration",
+  "permalink": "/docs/openapi-request/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-request/configuration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Configuration",
+    "description": "Configuration for @powerduck/openapi-request: CreateClientOptions, DebuggerOptions, SendOptions, RequestValues, AuthConfig, and per-protocol options for HTTP, WebSocket, gRPC, MCP and GraphQL.",
+    "keywords": [
+      "configuration",
+      "CreateClientOptions",
+      "DebuggerOptions",
+      "SendOptions",
+      "RequestValues",
+      "AuthConfig",
+      "openapi-request"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quickstart",
+    "permalink": "/docs/openapi-request/quickstart"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/docs/openapi-request/api-reference"
+  }
+}

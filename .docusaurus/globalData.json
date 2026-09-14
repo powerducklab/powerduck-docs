@@ -1,0 +1,252 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs/",
+          "mainDocId": "getting-started/introduction",
+          "docs": [
+            {
+              "id": "conf-patch/api-reference",
+              "path": "/docs/conf-patch/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "conf-patch/examples",
+              "path": "/docs/conf-patch/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "conf-patch/installation",
+              "path": "/docs/conf-patch/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "conf-patch/introduction",
+              "path": "/docs/conf-patch/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "conf-patch/quickstart",
+              "path": "/docs/conf-patch/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/installation",
+              "path": "/docs/getting-started/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/introduction",
+              "path": "/docs/getting-started/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "getting-started/quickstart",
+              "path": "/docs/getting-started/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/api-reference",
+              "path": "/docs/md-editor/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/configuration",
+              "path": "/docs/md-editor/configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/examples",
+              "path": "/docs/md-editor/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/features",
+              "path": "/docs/md-editor/features",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/installation",
+              "path": "/docs/md-editor/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/introduction",
+              "path": "/docs/md-editor/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "md-editor/quickstart",
+              "path": "/docs/md-editor/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/api-reference",
+              "path": "/docs/openapi-cli/api-reference"
+            },
+            {
+              "id": "openapi-cli/commands",
+              "path": "/docs/openapi-cli/commands",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/configuration",
+              "path": "/docs/openapi-cli/configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/examples",
+              "path": "/docs/openapi-cli/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/installation",
+              "path": "/docs/openapi-cli/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/introduction",
+              "path": "/docs/openapi-cli/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-cli/quickstart",
+              "path": "/docs/openapi-cli/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/api-reference",
+              "path": "/docs/openapi-codegen/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/configuration",
+              "path": "/docs/openapi-codegen/configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/examples",
+              "path": "/docs/openapi-codegen/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/installation",
+              "path": "/docs/openapi-codegen/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/introduction",
+              "path": "/docs/openapi-codegen/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-codegen/quickstart",
+              "path": "/docs/openapi-codegen/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/api-reference",
+              "path": "/docs/openapi-mcp-server/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/configuration",
+              "path": "/docs/openapi-mcp-server/configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/examples",
+              "path": "/docs/openapi-mcp-server/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/installation",
+              "path": "/docs/openapi-mcp-server/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/introduction",
+              "path": "/docs/openapi-mcp-server/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-mcp-server/quickstart",
+              "path": "/docs/openapi-mcp-server/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/api-reference",
+              "path": "/docs/openapi-request/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/configuration",
+              "path": "/docs/openapi-request/configuration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/examples",
+              "path": "/docs/openapi-request/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/installation",
+              "path": "/docs/openapi-request/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/introduction",
+              "path": "/docs/openapi-request/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-request/quickstart",
+              "path": "/docs/openapi-request/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "x-to-openapi/api-reference",
+              "path": "/docs/x-to-openapi/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "x-to-openapi/examples",
+              "path": "/docs/x-to-openapi/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "x-to-openapi/installation",
+              "path": "/docs/x-to-openapi/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "x-to-openapi/introduction",
+              "path": "/docs/x-to-openapi/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "x-to-openapi/quickstart",
+              "path": "/docs/x-to-openapi/quickstart",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/getting-started/introduction",
+                "label": "Getting Started"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

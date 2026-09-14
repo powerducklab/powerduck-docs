@@ -1,0 +1,39 @@
+{
+  "id": "openapi-request/examples",
+  "title": "Examples",
+  "description": "Runnable examples for @powerduck/openapi-request: HTTP with SendOptions, SSE streaming, WebSocket sessions, GraphQL operations, MCP tool calls, gRPC unary calls, and response write-back.",
+  "source": "@site/docs/openapi-request/examples.md",
+  "sourceDirName": "openapi-request",
+  "slug": "/openapi-request/examples",
+  "permalink": "/docs/openapi-request/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-request/examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Examples",
+    "description": "Runnable examples for @powerduck/openapi-request: HTTP with SendOptions, SSE streaming, WebSocket sessions, GraphQL operations, MCP tool calls, gRPC unary calls, and response write-back.",
+    "keywords": [
+      "examples",
+      "sse",
+      "websocket",
+      "graphql",
+      "mcp",
+      "grpc",
+      "writeback",
+      "openapi-request"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Reference",
+    "permalink": "/docs/openapi-request/api-reference"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/x-to-openapi/introduction"
+  }
+}

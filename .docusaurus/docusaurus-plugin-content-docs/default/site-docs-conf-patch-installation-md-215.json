@@ -1,0 +1,38 @@
+{
+  "id": "conf-patch/installation",
+  "title": "Installation",
+  "description": "Install @powerduck/conf-patch with npm, yarn, or pnpm, and learn the two entry points: the main package (file layer) and the browser-safe ./core subpath.",
+  "source": "@site/docs/conf-patch/installation.md",
+  "sourceDirName": "conf-patch",
+  "slug": "/conf-patch/installation",
+  "permalink": "/docs/conf-patch/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/conf-patch/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install @powerduck/conf-patch with npm, yarn, or pnpm, and learn the two entry points: the main package (file layer) and the browser-safe ./core subpath.",
+    "keywords": [
+      "install conf-patch",
+      "npm",
+      "yarn",
+      "pnpm",
+      "core subpath",
+      "CommonJS",
+      "ESM"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/conf-patch/introduction"
+  },
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/conf-patch/quickstart"
+  }
+}

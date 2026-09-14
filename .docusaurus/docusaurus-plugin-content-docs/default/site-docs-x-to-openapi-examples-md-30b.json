@@ -1,0 +1,32 @@
+{
+  "id": "x-to-openapi/examples",
+  "title": "Examples",
+  "description": "Runnable examples for @powerduck/x-to-openapi: a basic curl command, a batch of curl commands, a Postman Collection, a custom adapter, and path parameter inference.",
+  "source": "@site/docs/x-to-openapi/examples.md",
+  "sourceDirName": "x-to-openapi",
+  "slug": "/x-to-openapi/examples",
+  "permalink": "/docs/x-to-openapi/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/x-to-openapi/examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Examples",
+    "description": "Runnable examples for @powerduck/x-to-openapi: a basic curl command, a batch of curl commands, a Postman Collection, a custom adapter, and path parameter inference.",
+    "keywords": [
+      "x-to-openapi examples",
+      "curlToOpenApi",
+      "postmanToOpenApi",
+      "custom adapter",
+      "path parameter inference"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Reference",
+    "permalink": "/docs/x-to-openapi/api-reference"
+  }
+}

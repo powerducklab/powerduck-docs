@@ -1,0 +1,29 @@
+{
+  "id": "openapi-cli/examples",
+  "title": "Examples",
+  "description": "Ready-to-run examples for @powerduck/openapi-cli: CLI usage, programmatic runs, auth, filtering, reports, and assertions.",
+  "source": "@site/docs/openapi-cli/examples.md",
+  "sourceDirName": "openapi-cli",
+  "slug": "/openapi-cli/examples",
+  "permalink": "/docs/openapi-cli/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-cli/examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Examples",
+    "description": "Ready-to-run examples for @powerduck/openapi-cli: CLI usage, programmatic runs, auth, filtering, reports, and assertions."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CLI Commands",
+    "permalink": "/docs/openapi-cli/commands"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-codegen/introduction"
+  }
+}

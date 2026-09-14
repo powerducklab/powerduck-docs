@@ -1,0 +1,38 @@
+{
+  "id": "openapi-request/api-reference",
+  "title": "API Reference",
+  "description": "Complete API reference for @powerduck/openapi-request v0.2.4: createClient, createDebugger, createManualSession, OpenAPI helpers, and HTTP, WebSocket, GraphQL, MCP and gRPC adapters with all type exports.",
+  "source": "@site/docs/openapi-request/api-reference.md",
+  "sourceDirName": "openapi-request",
+  "slug": "/openapi-request/api-reference",
+  "permalink": "/docs/openapi-request/api-reference",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-request/api-reference.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "API Reference",
+    "description": "Complete API reference for @powerduck/openapi-request v0.2.4: createClient, createDebugger, createManualSession, OpenAPI helpers, and HTTP, WebSocket, GraphQL, MCP and gRPC adapters with all type exports.",
+    "keywords": [
+      "api reference",
+      "createClient",
+      "createDebugger",
+      "createManualSession",
+      "SendOptions",
+      "adapter",
+      "openapi-request"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Configuration",
+    "permalink": "/docs/openapi-request/configuration"
+  },
+  "next": {
+    "title": "Examples",
+    "permalink": "/docs/openapi-request/examples"
+  }
+}

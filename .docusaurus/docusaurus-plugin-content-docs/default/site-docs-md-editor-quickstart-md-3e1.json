@@ -1,0 +1,36 @@
+{
+  "id": "md-editor/quickstart",
+  "title": "Quick start",
+  "description": "Mount your first MarkdownEditor in vanilla JS, use the React component, or render markdown standalone with renderMarkdown.",
+  "source": "@site/docs/md-editor/quickstart.md",
+  "sourceDirName": "md-editor",
+  "slug": "/md-editor/quickstart",
+  "permalink": "/docs/md-editor/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/md-editor/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Quick start",
+    "description": "Mount your first MarkdownEditor in vanilla JS, use the React component, or render markdown standalone with renderMarkdown.",
+    "keywords": [
+      "quickstart",
+      "vanilla",
+      "react",
+      "renderMarkdown",
+      "first editor"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/md-editor/installation"
+  },
+  "next": {
+    "title": "Configuration",
+    "permalink": "/docs/md-editor/configuration"
+  }
+}
