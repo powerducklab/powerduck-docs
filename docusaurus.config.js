@@ -228,7 +228,7 @@ const config = {
             position: "right",
           },
           {
-            href: "https://github.com/PowerDuckie",
+            href: "https://github.com/powerducklab",
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
@@ -287,7 +287,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/PowerDuckie",
+                href: "https://github.com/powerducklab",
               },
               {
                 label: "Website",

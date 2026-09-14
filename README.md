@@ -89,5 +89,5 @@ MIT License. See [LICENSE](LICENSE) for details.
 ## Community
 
 - [Website](https://www.powerduck.com)
-- [GitHub](https://github.com/PowerDuckie)
+- [GitHub](https://github.com/powerducklab)
 - [Contact](mailto:contact@neatico.com)

@@ -59,7 +59,7 @@ console.log(code);
 
 ## Community
 
-- **GitHub**: [https://github.com/PowerDuckie](https://github.com/PowerDuckie)
+- **GitHub**: [https://github.com/powerducklab](https://github.com/powerducklab)
 - **Website**: [https://www.powerduck.com](https://www.powerduck.com)
 - **Contact**: [contact@neatico.com](mailto:contact@neatico.com)
 
