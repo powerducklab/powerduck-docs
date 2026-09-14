@@ -15,7 +15,7 @@ It is also the **canonical source of truth for OpenAPI types and validation** us
 - **License:** MIT
 - **Node.js requirement:** `>= 18.0.0`
 - **Output:** OpenAPI **3.2.0** only
-- **Source:** [github.com/PowerDuckie/x-to-openapi](https://github.com/powerducklab/x-to-openapi)
+- **Source:** [github.com/powerducklab/x-to-openapi](https://github.com/powerducklab/x-to-openapi)
 
 ---
 

@@ -12,7 +12,7 @@ keywords: ["conf-patch", "configuration editor", "RFC 6902", "JSON Patch", "JSON
 - **Version:** `0.3.2`
 - **License:** MIT
 - **Node.js requirement:** `>= 18.0.0`
-- **Source:** [github.com/PowerDuckie/conf-patch](https://github.com/powerducklab/conf-patch)
+- **Source:** [github.com/powerducklab/conf-patch](https://github.com/powerducklab/conf-patch)
 
 ---
 
