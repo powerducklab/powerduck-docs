@@ -1,238 +1,195 @@
 {
-  "/docs/__docusaurus/debug-e58": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
-  "/docs/__docusaurus/debug/config-2ce": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
-  "/docs/__docusaurus/debug/content-11b": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    },
-    "__props": "__props---docs-docusaurus-debug-content-344-8d5"
-  },
-  "/docs/__docusaurus/debug/globalData-f13": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
-  "/docs/__docusaurus/debug/metadata-bff": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
-  "/docs/__docusaurus/debug/registry-830": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
-  "/docs/__docusaurus/debug/routes-13e": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---docs-docusaurus-debugb-38-c84"
-    }
-  },
   "/docs/-595": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---docs-aba-4f5"
+      "plugin": "aba21aa0"
     }
   },
   "/docs/-7c4": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-11-b-f70"
+    "__comp": "a7bd4aaa",
+    "__props": "11b43341"
   },
   "/docs/-963": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/docs/conf-patch/api-reference-494": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-conf-patch-api-reference-410-807"
+    "__comp": "17896441",
+    "content": "410096ee"
   },
   "/docs/conf-patch/examples-509": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-conf-patch-examples-73-d-871"
+    "__comp": "17896441",
+    "content": "73d0f4d7"
   },
   "/docs/conf-patch/installation-5d1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-conf-patch-installation-215-bfb"
+    "__comp": "17896441",
+    "content": "21531910"
   },
   "/docs/conf-patch/introduction-0ca": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-conf-patch-introduction-4-c-0-422"
+    "__comp": "17896441",
+    "content": "4c074976"
   },
   "/docs/conf-patch/quickstart-1e1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-conf-patch-quickstart-0-a-4-950"
+    "__comp": "17896441",
+    "content": "0a49e33c"
   },
   "/docs/getting-started/installation-267": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-installation-54-f-18d"
+    "__comp": "17896441",
+    "content": "54f44165"
   },
   "/docs/getting-started/introduction-314": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-introduction-9-ff-6b9"
+    "__comp": "17896441",
+    "content": "9ff4038f"
   },
   "/docs/getting-started/quickstart-1cd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-quickstartfbd-5fc"
+    "__comp": "17896441",
+    "content": "fbd7a87c"
   },
   "/docs/md-editor/api-reference-f37": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-api-reference-2-ef-e09"
+    "__comp": "17896441",
+    "content": "2efb799b"
   },
   "/docs/md-editor/configuration-89f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-configuration-6-d-4-3d3"
+    "__comp": "17896441",
+    "content": "6d40cae7"
   },
   "/docs/md-editor/examples-263": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-examples-8-bb-03a"
+    "__comp": "17896441",
+    "content": "8bba16b1"
   },
   "/docs/md-editor/features-bbf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-featuresfa-2-deb"
+    "__comp": "17896441",
+    "content": "fa2eb5f0"
   },
   "/docs/md-editor/installation-f10": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-installation-567-782"
+    "__comp": "17896441",
+    "content": "567a4b7b"
   },
   "/docs/md-editor/introduction-732": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-introductionc-09-c2c"
+    "__comp": "17896441",
+    "content": "c09ab799"
   },
   "/docs/md-editor/quickstart-c04": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-md-editor-quickstart-3-e-1-a83"
+    "__comp": "17896441",
+    "content": "3e1b30b1"
   },
   "/docs/openapi-cli/api-reference-6d9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-api-reference-424-1ec"
+    "__comp": "17896441",
+    "content": "4249c15e"
   },
   "/docs/openapi-cli/commands-898": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-commands-058-15d"
+    "__comp": "17896441",
+    "content": "05856cfb"
   },
   "/docs/openapi-cli/configuration-d28": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-configurationa-69-449"
+    "__comp": "17896441",
+    "content": "a698be95"
   },
   "/docs/openapi-cli/examples-2a6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-examples-9-a-1-346"
+    "__comp": "17896441",
+    "content": "9a1d29a4"
   },
   "/docs/openapi-cli/installation-4a6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-installation-701-bda"
+    "__comp": "17896441",
+    "content": "7016eaa5"
   },
   "/docs/openapi-cli/introduction-4f7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-introductiond-1-b-2f0"
+    "__comp": "17896441",
+    "content": "d1bf2f33"
   },
   "/docs/openapi-cli/quickstart-faf": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-cli-quickstart-80-a-710"
+    "__comp": "17896441",
+    "content": "80a7006d"
   },
   "/docs/openapi-codegen/api-reference-bbe": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-api-referenceda-3-77a"
+    "__comp": "17896441",
+    "content": "da399508"
   },
   "/docs/openapi-codegen/configuration-51e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-configuratione-90-8d2"
+    "__comp": "17896441",
+    "content": "e90b8a0e"
   },
   "/docs/openapi-codegen/examples-65a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-examples-3-d-1-375"
+    "__comp": "17896441",
+    "content": "3d12ff9c"
   },
   "/docs/openapi-codegen/installation-73c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-installation-71-a-600"
+    "__comp": "17896441",
+    "content": "71a156ad"
   },
   "/docs/openapi-codegen/introduction-301": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-introduction-225-fc7"
+    "__comp": "17896441",
+    "content": "225c813d"
   },
   "/docs/openapi-codegen/quickstart-69a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-codegen-quickstarte-6-b-418"
+    "__comp": "17896441",
+    "content": "e6b0c4aa"
   },
   "/docs/openapi-mcp-server/api-reference-d87": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-api-reference-6-d-5-ebc"
+    "__comp": "17896441",
+    "content": "6d5a6994"
   },
   "/docs/openapi-mcp-server/configuration-c83": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-configuration-416-041"
+    "__comp": "17896441",
+    "content": "416e7a42"
   },
   "/docs/openapi-mcp-server/examples-307": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-examples-426-8f7"
+    "__comp": "17896441",
+    "content": "4260c09d"
   },
   "/docs/openapi-mcp-server/installation-6d3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-installation-5-f-9-d17"
+    "__comp": "17896441",
+    "content": "5f9c0f0c"
   },
   "/docs/openapi-mcp-server/introduction-fb9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-introduction-194-f21"
+    "__comp": "17896441",
+    "content": "1940b87d"
   },
   "/docs/openapi-mcp-server/quickstart-2d4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-mcp-server-quickstart-3-f-4-f18"
+    "__comp": "17896441",
+    "content": "3f4645e7"
   },
   "/docs/openapi-request/api-reference-03f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-api-reference-028-54f"
+    "__comp": "17896441",
+    "content": "0282008d"
   },
   "/docs/openapi-request/configuration-538": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-configuration-335-e96"
+    "__comp": "17896441",
+    "content": "3350662c"
   },
   "/docs/openapi-request/examples-385": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-examples-7-d-5-9aa"
+    "__comp": "17896441",
+    "content": "7d5e64dc"
   },
   "/docs/openapi-request/installation-ed2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-installation-42-e-b0d"
+    "__comp": "17896441",
+    "content": "42ec74d7"
   },
   "/docs/openapi-request/introduction-e95": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-introduction-9-b-1-d3c"
+    "__comp": "17896441",
+    "content": "9b18c217"
   },
   "/docs/openapi-request/quickstart-32b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-openapi-request-quickstart-679-f89"
+    "__comp": "17896441",
+    "content": "67947ace"
   },
   "/docs/x-to-openapi/api-reference-52d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-x-to-openapi-api-reference-5-c-7-3d4"
+    "__comp": "17896441",
+    "content": "5c79a8d6"
   },
   "/docs/x-to-openapi/examples-6c0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-x-to-openapi-examples-30-b-e93"
+    "__comp": "17896441",
+    "content": "30b66ba0"
   },
   "/docs/x-to-openapi/installation-0eb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-x-to-openapi-installation-312-8e5"
+    "__comp": "17896441",
+    "content": "312f43ef"
   },
   "/docs/x-to-openapi/introduction-c90": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-x-to-openapi-introduction-6-d-0-9a5"
+    "__comp": "17896441",
+    "content": "6d07c87e"
   },
   "/docs/x-to-openapi/quickstart-6f0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-x-to-openapi-quickstartc-6-e-ccd"
+    "__comp": "17896441",
+    "content": "c6e0051a"
   }
 }
