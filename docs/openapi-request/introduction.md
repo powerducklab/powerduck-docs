@@ -10,7 +10,7 @@ keywords: ["openapi-request", "powerduck", "collection debugger", "SSE", "websoc
 `@powerduck/openapi-request` is an OpenAPI 3.2 collection debugger and request runtime. It turns an OpenAPI document into something you can actually drive: it plans a request from the document, sends it, classifies streaming responses, feeds observed data back into the document, and speaks six wire protocols behind one small surface.
 
 - **Package name:** `@powerduck/openapi-request`
-- **Version:** `0.2.2`
+- **Version:** <img src="https://img.shields.io/npm/v/@powerduck/openapi-request"/>
 - **License:** MIT
 - **Module format:** dual ESM and CommonJS builds with bundled type declarations.
 

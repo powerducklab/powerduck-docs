@@ -6,7 +6,7 @@ description: "Introduction to @powerduck/openapi-cli, a CI-ready CLI for batch-t
 
 # Introduction
 
-`@powerduck/openapi-cli` v0.2.3 is a command-line tool that batch-tests an
+`@powerduck/openapi-cli` is a command-line tool that batch-tests an
 OpenAPI 3.2 document against a live server. Point it at a spec file or URL,
 and it exercises every operation in the document, runs assertions against each
 response, and produces three report formats.

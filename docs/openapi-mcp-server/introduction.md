@@ -10,7 +10,7 @@ keywords: ["openapi-mcp-server", "mcp", "model context protocol", "openapi", "to
 `@powerduck/openapi-mcp-server` converts an OpenAPI document into a running MCP (Model Context Protocol) service. It generates **Tools** from operations, **Prompts** from the API's metadata and operations, and **Resources** from the API catalog, then serves them over the MCP protocol with a built-in admin Web UI.
 
 - **Package name:** `@powerduck/openapi-mcp-server`
-- **Version:** `1.1.0`
+- **Version:** <img src="https://img.shields.io/npm/v/@powerduck/openapi-mcp-server"/>
 - **License:** MIT
 - **Node engine:** `>=20.11`
 - **CLI binary:** `openapi-mcp`

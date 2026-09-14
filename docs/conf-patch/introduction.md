@@ -9,7 +9,7 @@ keywords: ["conf-patch", "configuration editor", "RFC 6902", "JSON Patch", "JSON
 
 **@powerduck/conf-patch** is a production-grade configuration editor built around a clean **two-layer architecture**. It patches JSON, JSONC, and YAML strings using [RFC 6902 JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) semantics while preserving comments and formatting, and adds filesystem safety (atomic writes + cross-process locking) for Node.js and Electron.
 
-- **Version:** `0.3.2`
+- **Version:** <img src="https://img.shields.io/npm/v/@powerduck/conf-patch"/>
 - **License:** MIT
 - **Node.js requirement:** `>= 18.0.0`
 - **Source:** [github.com/powerducklab/conf-patch](https://github.com/powerducklab/conf-patch)

@@ -6,7 +6,7 @@ description: "Generate runnable HTTP request examples from OpenAPI documents wit
 
 # Introduction
 
-`@powerduck/openapi-codegen` v0.5.3 is a TypeScript library that turns an
+`@powerduck/openapi-codegen` is a TypeScript library that turns an
 OpenAPI operation into **runnable HTTP request example code** in your choice of
 language and HTTP client. It is designed for API documentation sites, developer
 portals, API explorers, CLI tools, and build-time code generation.

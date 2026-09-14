@@ -11,7 +11,7 @@ keywords: ["x-to-openapi", "curl", "postman", "OpenAPI 3.2", "converter", "adapt
 
 It is also the **canonical source of truth for OpenAPI types and validation** used by every other `@powerduck/*` library (`@powerduck/openapi-request`, `@powerduck/cli`, and friends).
 
-- **Version:** `0.2.0`
+- **Version:** <img src="https://img.shields.io/npm/v/@powerduck/x-to-openapi"/>
 - **License:** MIT
 - **Node.js requirement:** `>= 18.0.0`
 - **Output:** OpenAPI **3.2.0** only

@@ -16,13 +16,13 @@ Powerduck is a collection of open-source libraries designed to make API developm
 
 | Library | Description | Latest Version |
 |---------|-------------|----------------|
-| [@powerduck/md-editor](/md-editor/introduction) | Embeddable Markdown editor with math, mindmaps, and code highlighting | 0.11.2 |
-| [@powerduck/conf-patch](/conf-patch/introduction) | Two-layer configuration editor with OpenAPI validation and atomic writes | 0.3.4 |
-| [@powerduck/openapi-cli](/openapi-cli/introduction) | CI-ready CLI for batch-testing OpenAPI across 6 protocols | 0.2.3 |
-| [@powerduck/openapi-codegen](/openapi-codegen/introduction) | Generate runnable HTTP code from OpenAPI (21 languages) | 0.5.3 |
-| [@powerduck/openapi-mcp-server](/openapi-mcp-server/introduction) | Turn OpenAPI specs into production MCP servers with Web UI | 1.3.0 |
-| [@powerduck/openapi-request](/openapi-request/introduction) | OpenAPI 3.2 collection debugger with HTTP/SSE/WebSocket | 0.2.4 |
-| [@powerduck/x-to-openapi](/x-to-openapi/introduction) | Convert cURL commands and Postman collections to OpenAPI 3.2 | 0.2.2 |
+| [@powerduck/md-editor](/md-editor/introduction) | Embeddable Markdown editor with math, mindmaps, and code highlighting | <img src="https://img.shields.io/npm/v/@powerduck/md-editor"/> |
+| [@powerduck/conf-patch](/conf-patch/introduction) | Two-layer configuration editor with OpenAPI validation and atomic writes | <img src="https://img.shields.io/npm/v/@powerduck/conf-patch"/> |
+| [@powerduck/openapi-cli](/openapi-cli/introduction) | CI-ready CLI for batch-testing OpenAPI across 6 protocols | <img src="https://img.shields.io/npm/v/@powerduck/openapi-cli"/> |
+| [@powerduck/openapi-codegen](/openapi-codegen/introduction) | Generate runnable HTTP code from OpenAPI (21 languages) | <img src="https://img.shields.io/npm/v/@powerduck/openapi-codegen"/> |
+| [@powerduck/openapi-mcp-server](/openapi-mcp-server/introduction) | Turn OpenAPI specs into production MCP servers with Web UI | <img src="https://img.shields.io/npm/v/@powerduck/openapi-mcp-server"/> |
+| [@powerduck/openapi-request](/openapi-request/introduction) | OpenAPI 3.2 collection debugger with HTTP/SSE/WebSocket | <img src="https://img.shields.io/npm/v/@powerduck/openapi-request"/> |
+| [@powerduck/x-to-openapi](/x-to-openapi/introduction) | Convert cURL commands and Postman collections to OpenAPI 3.2 | <img src="https://img.shields.io/npm/v/@powerduck/x-to-openapi"/> |
 
 ## Key Features
 

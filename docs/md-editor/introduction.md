@@ -9,8 +9,7 @@ keywords: ["markdown editor", "introduction", "powerduck", "overview", "features
 
 `@powerduck/md-editor` is a high-performance, embeddable Markdown editor for the browser. It pairs a [CodeMirror 6](https://codemirror.net) editing surface with a live Markdown preview rendered through [markdown-it](https://github.com/markdown-it/markdown-it), and adds rich authoring features on top: KaTeX math, Markmap mindmaps, highlighted code blocks, admonition callouts, a configurable toolbar, keyboard shortcuts, image upload hooks, @mentions, and document-link inserters.
 
-- **Package name:** `@powerduck/md-editor`
-- **Version:** `0.10.10`
+- **Package name:** `@powerduck/md-editor` <img src="https://img.shields.io/npm/v/@powerduck/md-editor"/>
 - **License:** MIT
 - **Module format:** ECMAScript module (`type: "module"`), with dual ESM (`dist/index.mjs`) and CJS (`dist/index.cjs`) builds and bundled type declarations (`dist/index.d.ts`).
 
