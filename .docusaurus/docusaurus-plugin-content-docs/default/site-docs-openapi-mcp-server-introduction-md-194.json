@@ -1,7 +1,7 @@
 {
   "id": "openapi-mcp-server/introduction",
   "title": "Introduction",
-  "description": "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.0: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI.",
+  "description": "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.3: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI.",
   "source": "@site/docs/openapi-mcp-server/introduction.md",
   "sourceDirName": "openapi-mcp-server",
   "slug": "/openapi-mcp-server/introduction",
@@ -15,7 +15,7 @@
   "frontMatter": {
     "sidebar_position": 1,
     "title": "Introduction",
-    "description": "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.0: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI.",
+    "description": "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.3: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI.",
     "keywords": [
       "openapi-mcp-server",
       "mcp",

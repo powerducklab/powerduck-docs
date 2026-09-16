@@ -1,0 +1,29 @@
+{
+  "id": "tree/examples",
+  "title": "Examples",
+  "description": "Drag-and-drop, context menus, imperative locate, and JSON Patch integration.",
+  "source": "@site/docs/tree/examples.md",
+  "sourceDirName": "tree",
+  "slug": "/tree/examples",
+  "permalink": "/docs/tree/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/tree/examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Examples",
+    "description": "Drag-and-drop, context menus, imperative locate, and JSON Patch integration."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Reference",
+    "permalink": "/docs/tree/api-reference"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/schema-editor/introduction"
+  }
+}

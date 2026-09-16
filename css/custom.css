@@ -198,6 +198,10 @@ body {
   align-self: center !important;
 }
 
+.md-editor-codeblock-lights{
+  padding: 0 8px!important;
+}
+
 /* GitHub icon - reliable centering via flex parent */
 .header-github-link {
   position: relative;

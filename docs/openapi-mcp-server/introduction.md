@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.0: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI."
+description: "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.3: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI."
 keywords: ["openapi-mcp-server", "mcp", "model context protocol", "openapi", "tools", "prompts", "resources", "admin ui", "introduction"]
 ---
 

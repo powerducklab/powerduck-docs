@@ -115,6 +115,66 @@ const sidebars = {
         'x-to-openapi/examples',
       ],
     },
+    {
+      type: 'category',
+      label: 'openapi-parser',
+      link: { type: 'doc', id: 'openapi-parser/introduction' },
+      items: [
+        'openapi-parser/introduction',
+        'openapi-parser/installation',
+        'openapi-parser/quickstart',
+        'openapi-parser/api-reference',
+        'openapi-parser/examples',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'workspace-yaml',
+      link: { type: 'doc', id: 'workspace-yaml/introduction' },
+      items: [
+        'workspace-yaml/introduction',
+        'workspace-yaml/installation',
+        'workspace-yaml/quickstart',
+        'workspace-yaml/api-reference',
+        'workspace-yaml/examples',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'tree',
+      link: { type: 'doc', id: 'tree/introduction' },
+      items: [
+        'tree/introduction',
+        'tree/installation',
+        'tree/quickstart',
+        'tree/api-reference',
+        'tree/examples',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'schema-editor',
+      link: { type: 'doc', id: 'schema-editor/introduction' },
+      items: [
+        'schema-editor/introduction',
+        'schema-editor/installation',
+        'schema-editor/quickstart',
+        'schema-editor/api-reference',
+        'schema-editor/examples',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'oas-document',
+      link: { type: 'doc', id: 'oas-document/introduction' },
+      items: [
+        'oas-document/introduction',
+        'oas-document/installation',
+        'oas-document/quickstart',
+        'oas-document/api-reference',
+        'oas-document/examples',
+      ],
+    },
   ],
 };
 

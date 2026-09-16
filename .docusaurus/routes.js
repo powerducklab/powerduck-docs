@@ -4,15 +4,15 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/docs/',
-    component: ComponentCreator('/docs/', '595'),
+    component: ComponentCreator('/docs/', 'dc5'),
     routes: [
       {
         path: '/docs/',
-        component: ComponentCreator('/docs/', '7c4'),
+        component: ComponentCreator('/docs/', '90e'),
         routes: [
           {
             path: '/docs/',
-            component: ComponentCreator('/docs/', '963'),
+            component: ComponentCreator('/docs/', '3a3'),
             routes: [
               {
                 path: '/docs/conf-patch/api-reference',
@@ -101,6 +101,36 @@ export default [
               {
                 path: '/docs/md-editor/quickstart',
                 component: ComponentCreator('/docs/md-editor/quickstart', 'c04'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/oas-document/api-reference',
+                component: ComponentCreator('/docs/oas-document/api-reference', '87e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/oas-document/examples',
+                component: ComponentCreator('/docs/oas-document/examples', '272'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/oas-document/installation',
+                component: ComponentCreator('/docs/oas-document/installation', 'ca9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/oas-document/introduction',
+                component: ComponentCreator('/docs/oas-document/introduction', '904'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/oas-document/quickstart',
+                component: ComponentCreator('/docs/oas-document/quickstart', '2d9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -218,6 +248,36 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/docs/openapi-parser/api-reference',
+                component: ComponentCreator('/docs/openapi-parser/api-reference', '76a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/openapi-parser/examples',
+                component: ComponentCreator('/docs/openapi-parser/examples', 'edb'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/openapi-parser/installation',
+                component: ComponentCreator('/docs/openapi-parser/installation', '608'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/openapi-parser/introduction',
+                component: ComponentCreator('/docs/openapi-parser/introduction', 'f35'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/openapi-parser/quickstart',
+                component: ComponentCreator('/docs/openapi-parser/quickstart', 'a67'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/docs/openapi-request/api-reference',
                 component: ComponentCreator('/docs/openapi-request/api-reference', '03f'),
                 exact: true,
@@ -250,6 +310,96 @@ export default [
               {
                 path: '/docs/openapi-request/quickstart',
                 component: ComponentCreator('/docs/openapi-request/quickstart', '32b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/schema-editor/api-reference',
+                component: ComponentCreator('/docs/schema-editor/api-reference', 'f08'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/schema-editor/examples',
+                component: ComponentCreator('/docs/schema-editor/examples', '17f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/schema-editor/installation',
+                component: ComponentCreator('/docs/schema-editor/installation', 'b0d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/schema-editor/introduction',
+                component: ComponentCreator('/docs/schema-editor/introduction', '511'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/schema-editor/quickstart',
+                component: ComponentCreator('/docs/schema-editor/quickstart', 'a3f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tree/api-reference',
+                component: ComponentCreator('/docs/tree/api-reference', 'e41'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tree/examples',
+                component: ComponentCreator('/docs/tree/examples', '6f8'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tree/installation',
+                component: ComponentCreator('/docs/tree/installation', '4f3'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tree/introduction',
+                component: ComponentCreator('/docs/tree/introduction', '629'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/tree/quickstart',
+                component: ComponentCreator('/docs/tree/quickstart', '954'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workspace-yaml/api-reference',
+                component: ComponentCreator('/docs/workspace-yaml/api-reference', 'df7'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workspace-yaml/examples',
+                component: ComponentCreator('/docs/workspace-yaml/examples', '921'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workspace-yaml/installation',
+                component: ComponentCreator('/docs/workspace-yaml/installation', 'bb6'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workspace-yaml/introduction',
+                component: ComponentCreator('/docs/workspace-yaml/introduction', '0fa'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/workspace-yaml/quickstart',
+                component: ComponentCreator('/docs/workspace-yaml/quickstart', '01f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

@@ -1,0 +1,29 @@
+{
+  "id": "oas-document/installation",
+  "title": "Installation",
+  "description": "Install @powerduck/oas-document and its peer dependencies.",
+  "source": "@site/docs/oas-document/installation.md",
+  "sourceDirName": "oas-document",
+  "slug": "/oas-document/installation",
+  "permalink": "/docs/oas-document/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/oas-document/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install @powerduck/oas-document and its peer dependencies."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/oas-document/introduction"
+  },
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/oas-document/quickstart"
+  }
+}

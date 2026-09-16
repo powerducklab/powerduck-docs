@@ -1,0 +1,38 @@
+{
+  "id": "tree/introduction",
+  "title": "Introduction",
+  "description": "Extensible tree component for API navigation, schema exploration, and documentation. Generic core with OpenAPI, JSON Schema, and doc adapters. React component with search, drag-and-drop, keyboard navigation, and context menus.",
+  "source": "@site/docs/tree/introduction.md",
+  "sourceDirName": "tree",
+  "slug": "/tree/introduction",
+  "permalink": "/docs/tree/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/tree/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Extensible tree component for API navigation, schema exploration, and documentation. Generic core with OpenAPI, JSON Schema, and doc adapters. React component with search, drag-and-drop, keyboard navigation, and context menus.",
+    "keywords": [
+      "tree",
+      "powerduck",
+      "React",
+      "navigation",
+      "OpenAPI",
+      "JSON Schema",
+      "introduction"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/workspace-yaml/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/tree/introduction"
+  }
+}

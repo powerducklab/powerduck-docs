@@ -1,0 +1,29 @@
+{
+  "id": "workspace-yaml/quickstart",
+  "title": "Quickstart",
+  "description": "Initialize a workspace and OpenAPI YAML file in one call.",
+  "source": "@site/docs/workspace-yaml/quickstart.md",
+  "sourceDirName": "workspace-yaml",
+  "slug": "/workspace-yaml/quickstart",
+  "permalink": "/docs/workspace-yaml/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/workspace-yaml/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Quickstart",
+    "description": "Initialize a workspace and OpenAPI YAML file in one call."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/workspace-yaml/installation"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/docs/workspace-yaml/api-reference"
+  }
+}

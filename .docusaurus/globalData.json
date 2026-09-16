@@ -86,6 +86,31 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "oas-document/api-reference",
+              "path": "/docs/oas-document/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "oas-document/examples",
+              "path": "/docs/oas-document/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "oas-document/installation",
+              "path": "/docs/oas-document/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "oas-document/introduction",
+              "path": "/docs/oas-document/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "oas-document/quickstart",
+              "path": "/docs/oas-document/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "openapi-cli/api-reference",
               "path": "/docs/openapi-cli/api-reference"
             },
@@ -180,6 +205,31 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "openapi-parser/api-reference",
+              "path": "/docs/openapi-parser/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-parser/examples",
+              "path": "/docs/openapi-parser/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-parser/installation",
+              "path": "/docs/openapi-parser/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-parser/introduction",
+              "path": "/docs/openapi-parser/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "openapi-parser/quickstart",
+              "path": "/docs/openapi-parser/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "openapi-request/api-reference",
               "path": "/docs/openapi-request/api-reference",
               "sidebar": "tutorialSidebar"
@@ -207,6 +257,81 @@
             {
               "id": "openapi-request/quickstart",
               "path": "/docs/openapi-request/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schema-editor/api-reference",
+              "path": "/docs/schema-editor/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schema-editor/examples",
+              "path": "/docs/schema-editor/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schema-editor/installation",
+              "path": "/docs/schema-editor/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schema-editor/introduction",
+              "path": "/docs/schema-editor/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "schema-editor/quickstart",
+              "path": "/docs/schema-editor/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tree/api-reference",
+              "path": "/docs/tree/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tree/examples",
+              "path": "/docs/tree/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tree/installation",
+              "path": "/docs/tree/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tree/introduction",
+              "path": "/docs/tree/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tree/quickstart",
+              "path": "/docs/tree/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workspace-yaml/api-reference",
+              "path": "/docs/workspace-yaml/api-reference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workspace-yaml/examples",
+              "path": "/docs/workspace-yaml/examples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workspace-yaml/installation",
+              "path": "/docs/workspace-yaml/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workspace-yaml/introduction",
+              "path": "/docs/workspace-yaml/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "workspace-yaml/quickstart",
+              "path": "/docs/workspace-yaml/quickstart",
               "sidebar": "tutorialSidebar"
             },
             {

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "Overview of @powerduck/x-to-openapi v0.2.2 — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture."
+description: "Overview of @powerduck/x-to-openapi v0.2.5 — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture."
 keywords: ["x-to-openapi", "curl", "postman", "OpenAPI 3.2", "converter", "adapter", "Reverse engineering"]
 ---
 
@@ -9,7 +9,7 @@ keywords: ["x-to-openapi", "curl", "postman", "OpenAPI 3.2", "converter", "adapt
 
 **@powerduck/x-to-openapi** is a production-grade, extensible TypeScript framework that converts source formats — **curl commands** and **Postman Collections (v2.0 / v2.1.0)** — into valid **OpenAPI 3.2** documents. It is built for CI pipelines, API documentation generation, and reverse-engineering HTTP traffic.
 
-It is also the **canonical source of truth for OpenAPI types and validation** used by every other `@powerduck/*` library (`@powerduck/openapi-request`, `@powerduck/cli`, and friends).
+It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerduck/openapi-parser) for document validation and upgrade to OpenAPI 3.2.
 
 - **Version:** <img src="https://img.shields.io/npm/v/@powerduck/x-to-openapi"/>
 - **License:** MIT

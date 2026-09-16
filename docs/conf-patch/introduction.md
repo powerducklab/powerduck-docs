@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "Overview of @powerduck/conf-patch v0.3.4 — a two-layer RFC 6902 JSON Patch configuration editor for JSON, JSONC, and YAML with comment preservation, atomic writes, file locking, and OpenAPI validation."
+description: "Overview of @powerduck/conf-patch v0.3.6 — a two-layer RFC 6902 JSON Patch configuration editor for JSON, JSONC, and YAML with comment preservation, atomic writes, file locking, and OpenAPI validation."
 keywords: ["conf-patch", "configuration editor", "RFC 6902", "JSON Patch", "JSONC", "YAML", "OpenAPI validation"]
 ---
 

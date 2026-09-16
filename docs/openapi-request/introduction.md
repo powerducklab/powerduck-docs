@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "OpenAPI 3.2 collection debugger and protocol client from @powerduck/openapi-request v0.2.4: HTTP/SSE/WebSocket, gRPC, MCP and GraphQL adapters, UI-first client, scripted debugger, manual sessions, and response write-back."
+description: "OpenAPI 3.2 collection debugger and protocol client from @powerduck/openapi-request v0.2.8: HTTP/SSE/WebSocket, gRPC, MCP and GraphQL adapters, UI-first client, scripted debugger, manual sessions, and response write-back."
 keywords: ["openapi-request", "powerduck", "collection debugger", "SSE", "websocket", "grpc", "mcp", "graphql", "introduction"]
 ---
 

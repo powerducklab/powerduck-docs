@@ -1,0 +1,29 @@
+{
+  "id": "tree/installation",
+  "title": "Installation",
+  "description": "Install @powerduck/tree and its peer dependencies.",
+  "source": "@site/docs/tree/installation.md",
+  "sourceDirName": "tree",
+  "slug": "/tree/installation",
+  "permalink": "/docs/tree/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/tree/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install @powerduck/tree and its peer dependencies."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/tree/introduction"
+  },
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/tree/quickstart"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "schema-editor/introduction",
+  "title": "Introduction",
+  "description": "Schema-aware Monaco editor for JSON, YAML, and JavaScript. Driven by any JSON Schema with ghost text, popup completion, enum dropdowns, example auto-fill, and schema diagnostics.",
+  "source": "@site/docs/schema-editor/introduction.md",
+  "sourceDirName": "schema-editor",
+  "slug": "/schema-editor/introduction",
+  "permalink": "/docs/schema-editor/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/schema-editor/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Introduction",
+    "description": "Schema-aware Monaco editor for JSON, YAML, and JavaScript. Driven by any JSON Schema with ghost text, popup completion, enum dropdowns, example auto-fill, and schema diagnostics.",
+    "keywords": [
+      "schema-editor",
+      "powerduck",
+      "Monaco",
+      "JSON Schema",
+      "editor",
+      "introduction"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Examples",
+    "permalink": "/docs/tree/examples"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/schema-editor/introduction"
+  }
+}

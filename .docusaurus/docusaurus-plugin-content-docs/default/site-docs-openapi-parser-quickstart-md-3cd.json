@@ -1,0 +1,29 @@
+{
+  "id": "openapi-parser/quickstart",
+  "title": "Quickstart",
+  "description": "Upgrade a Swagger 2.0 or OpenAPI 3.x document to OpenAPI 3.2 in one call.",
+  "source": "@site/docs/openapi-parser/quickstart.md",
+  "sourceDirName": "openapi-parser",
+  "slug": "/openapi-parser/quickstart",
+  "permalink": "/docs/openapi-parser/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/openapi-parser/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Quickstart",
+    "description": "Upgrade a Swagger 2.0 or OpenAPI 3.x document to OpenAPI 3.2 in one call."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/openapi-parser/installation"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/docs/openapi-parser/api-reference"
+  }
+}

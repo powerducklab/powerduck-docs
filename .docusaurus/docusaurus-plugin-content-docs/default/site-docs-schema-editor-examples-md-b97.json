@@ -1,0 +1,29 @@
+{
+  "id": "schema-editor/examples",
+  "title": "Examples",
+  "description": "Multiple editors side by side, read-only mode, and custom schemas.",
+  "source": "@site/docs/schema-editor/examples.md",
+  "sourceDirName": "schema-editor",
+  "slug": "/schema-editor/examples",
+  "permalink": "/docs/schema-editor/examples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/schema-editor/examples.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Examples",
+    "description": "Multiple editors side by side, read-only mode, and custom schemas."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Reference",
+    "permalink": "/docs/schema-editor/api-reference"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/oas-document/introduction"
+  }
+}

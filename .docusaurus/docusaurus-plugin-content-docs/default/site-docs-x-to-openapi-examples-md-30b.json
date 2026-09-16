@@ -28,5 +28,9 @@
   "previous": {
     "title": "API Reference",
     "permalink": "/docs/x-to-openapi/api-reference"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/openapi-parser/introduction"
   }
 }
