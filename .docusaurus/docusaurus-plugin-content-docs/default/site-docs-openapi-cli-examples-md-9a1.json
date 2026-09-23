@@ -19,8 +19,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "CLI Commands",
-    "permalink": "/docs/openapi-cli/commands"
+    "title": "API Reference",
+    "permalink": "/docs/openapi-cli/api-reference"
   },
   "next": {
     "title": "Introduction",

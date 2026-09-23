@@ -4,16 +4,112 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/docs/',
-    component: ComponentCreator('/docs/', 'dc5'),
+    component: ComponentCreator('/docs/', 'bc3'),
     routes: [
       {
         path: '/docs/',
-        component: ComponentCreator('/docs/', '90e'),
+        component: ComponentCreator('/docs/', '526'),
         routes: [
           {
             path: '/docs/',
-            component: ComponentCreator('/docs/', '3a3'),
+            component: ComponentCreator('/docs/', 'f15'),
             routes: [
+              {
+                path: '/docs/client/ai-models',
+                component: ComponentCreator('/docs/client/ai-models', '0d8'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/data-model',
+                component: ComponentCreator('/docs/client/data-model', '396'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/debug',
+                component: ComponentCreator('/docs/client/debug', '15e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/design',
+                component: ComponentCreator('/docs/client/design', '45d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/introduction',
+                component: ComponentCreator('/docs/client/introduction', 'e22'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/mock-server',
+                component: ComponentCreator('/docs/client/mock-server', '172'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/protocols',
+                component: ComponentCreator('/docs/client/protocols', 'f19'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/scenario-testing',
+                component: ComponentCreator('/docs/client/scenario-testing', 'b3a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/client/settings',
+                component: ComponentCreator('/docs/client/settings', '4d8'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/access-control',
+                component: ComponentCreator('/docs/cloud/access-control', '1f1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/billing',
+                component: ComponentCreator('/docs/cloud/billing', '1e3'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/custom-domains',
+                component: ComponentCreator('/docs/cloud/custom-domains', '5eb'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/documents-versions',
+                component: ComponentCreator('/docs/cloud/documents-versions', 'd2f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/exposure',
+                component: ComponentCreator('/docs/cloud/exposure', 'c3c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/introduction',
+                component: ComponentCreator('/docs/cloud/introduction', '9e5'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/cloud/quickstart',
+                component: ComponentCreator('/docs/cloud/quickstart', '41f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/docs/conf-patch/api-reference',
                 component: ComponentCreator('/docs/conf-patch/api-reference', '494'),
@@ -41,24 +137,6 @@ export default [
               {
                 path: '/docs/conf-patch/quickstart',
                 component: ComponentCreator('/docs/conf-patch/quickstart', '1e1'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/getting-started/installation',
-                component: ComponentCreator('/docs/getting-started/installation', '267'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/getting-started/introduction',
-                component: ComponentCreator('/docs/getting-started/introduction', '314'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/getting-started/quickstart',
-                component: ComponentCreator('/docs/getting-started/quickstart', '1cd'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -136,8 +214,9 @@ export default [
               },
               {
                 path: '/docs/openapi-cli/api-reference',
-                component: ComponentCreator('/docs/openapi-cli/api-reference', '6d9'),
-                exact: true
+                component: ComponentCreator('/docs/openapi-cli/api-reference', '7b5'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/docs/openapi-cli/commands',
@@ -310,6 +389,30 @@ export default [
               {
                 path: '/docs/openapi-request/quickstart',
                 component: ComponentCreator('/docs/openapi-request/quickstart', '32b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/opensource/',
+                component: ComponentCreator('/docs/opensource/', 'eb1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/overview/installation',
+                component: ComponentCreator('/docs/overview/installation', 'edf'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/overview/introduction',
+                component: ComponentCreator('/docs/overview/introduction', '45f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/overview/quickstart',
+                component: ComponentCreator('/docs/overview/quickstart', '44f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

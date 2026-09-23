@@ -179,7 +179,7 @@ export default {
       "logo": {
         "alt": "Powerduck Logo",
         "src": "img/logo.svg",
-        "href": "/getting-started/introduction"
+        "href": "/overview/introduction"
       },
       "items": [
         {
@@ -244,8 +244,8 @@ export default {
           "title": "Docs",
           "items": [
             {
-              "label": "Getting Started",
-              "to": "/getting-started/introduction"
+              "label": "Overview",
+              "to": "/overview/introduction"
             },
             {
               "label": "MD Editor",

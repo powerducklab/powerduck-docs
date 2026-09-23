@@ -1,0 +1,29 @@
+{
+  "id": "client/protocols",
+  "title": "Protocols",
+  "description": "Model HTTP, SSE, WebSocket, GraphQL, gRPC, and MCP in one OpenAPI document using the x-protocol extension and its exact configuration shapes.",
+  "source": "@site/docs/client/protocols.md",
+  "sourceDirName": "client",
+  "slug": "/client/protocols",
+  "permalink": "/docs/client/protocols",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/protocols.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "title": "Protocols",
+    "description": "Model HTTP, SSE, WebSocket, GraphQL, gRPC, and MCP in one OpenAPI document using the x-protocol extension and its exact configuration shapes."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Scenario Testing & Reports",
+    "permalink": "/docs/client/scenario-testing"
+  },
+  "next": {
+    "title": "Data Model & ER Diagram",
+    "permalink": "/docs/client/data-model"
+  }
+}

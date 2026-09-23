@@ -1,0 +1,29 @@
+{
+  "id": "cloud/documents-versions",
+  "title": "Documents & Versions",
+  "description": "Documents live under projects and move through a clear status lifecycle. Every change creates a new immutable version, and sources include upload and Git sync.",
+  "source": "@site/docs/cloud/documents-versions.md",
+  "sourceDirName": "cloud",
+  "slug": "/cloud/documents-versions",
+  "permalink": "/docs/cloud/documents-versions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/cloud/documents-versions.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Documents & Versions",
+    "description": "Documents live under projects and move through a clear status lifecycle. Every change creates a new immutable version, and sources include upload and Git sync."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cloud Quickstart",
+    "permalink": "/docs/cloud/quickstart"
+  },
+  "next": {
+    "title": "Exposed Operations",
+    "permalink": "/docs/cloud/exposure"
+  }
+}

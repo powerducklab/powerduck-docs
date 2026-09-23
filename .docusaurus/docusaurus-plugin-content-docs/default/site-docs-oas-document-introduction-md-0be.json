@@ -28,7 +28,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Examples",
-    "permalink": "/docs/schema-editor/examples"
+    "permalink": "/docs/openapi-request/examples"
   },
   "next": {
     "title": "Introduction",

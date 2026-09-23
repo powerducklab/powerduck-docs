@@ -1,0 +1,29 @@
+{
+  "id": "cloud/introduction",
+  "title": "Powerduck Cloud",
+  "description": "Host OpenAPI specs, publish online documentation, and serve managed MCP endpoints. Add a spec from upload, Git, or URL, choose what to expose, and share stable links.",
+  "source": "@site/docs/cloud/introduction.md",
+  "sourceDirName": "cloud",
+  "slug": "/cloud/introduction",
+  "permalink": "/docs/cloud/introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/cloud/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "title": "Powerduck Cloud",
+    "description": "Host OpenAPI specs, publish online documentation, and serve managed MCP endpoints. Add a spec from upload, Git, or URL, choose what to expose, and share stable links."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Settings",
+    "permalink": "/docs/client/settings"
+  },
+  "next": {
+    "title": "Powerduck Cloud",
+    "permalink": "/docs/cloud/introduction"
+  }
+}

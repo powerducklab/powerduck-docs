@@ -20,7 +20,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Examples",
-    "permalink": "/docs/conf-patch/examples"
+    "permalink": "/docs/x-to-openapi/examples"
   },
   "next": {
     "title": "Introduction",

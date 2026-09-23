@@ -1,0 +1,29 @@
+{
+  "id": "client/scenario-testing",
+  "title": "Scenario Testing & Reports",
+  "description": "Chain ordered API calls with data passing and assertions, run them through the local CLI, and export self-contained HTML reports in ten languages.",
+  "source": "@site/docs/client/scenario-testing.md",
+  "sourceDirName": "client",
+  "slug": "/client/scenario-testing",
+  "permalink": "/docs/client/scenario-testing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/scenario-testing.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Scenario Testing & Reports",
+    "description": "Chain ordered API calls with data passing and assertions, run them through the local CLI, and export self-contained HTML reports in ten languages."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Request Workspace & Environments",
+    "permalink": "/docs/client/debug"
+  },
+  "next": {
+    "title": "Protocols",
+    "permalink": "/docs/client/protocols"
+  }
+}

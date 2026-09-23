@@ -1,0 +1,29 @@
+{
+  "id": "client/settings",
+  "title": "Settings",
+  "description": "Configure appearance and language, request behavior, proxy, TLS and client certificates, the integrated terminal, and file/shell actions.",
+  "source": "@site/docs/client/settings.md",
+  "sourceDirName": "client",
+  "slug": "/client/settings",
+  "permalink": "/docs/client/settings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/settings.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "sidebar_position": 9,
+    "title": "Settings",
+    "description": "Configure appearance and language, request behavior, proxy, TLS and client certificates, the integrated terminal, and file/shell actions."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AI & Models",
+    "permalink": "/docs/client/ai-models"
+  },
+  "next": {
+    "title": "Powerduck Cloud",
+    "permalink": "/docs/cloud/introduction"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "overview/installation",
+  "title": "Installation",
+  "description": "Install the Powerduck desktop client on macOS, Windows, or Linux. The app is local-first and needs no account to start.",
+  "source": "@site/docs/overview/installation.md",
+  "sourceDirName": "overview",
+  "slug": "/overview/installation",
+  "permalink": "/docs/overview/installation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/overview/installation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Installation",
+    "description": "Install the Powerduck desktop client on macOS, Windows, or Linux. The app is local-first and needs no account to start."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/overview/introduction"
+  },
+  "next": {
+    "title": "Quickstart",
+    "permalink": "/docs/overview/quickstart"
+  }
+}

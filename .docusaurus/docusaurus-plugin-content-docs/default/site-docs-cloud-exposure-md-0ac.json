@@ -1,0 +1,29 @@
+{
+  "id": "cloud/exposure",
+  "title": "Exposed Operations",
+  "description": "Choose which operations are publicly available without modifying the source document. Group by tags, search, and toggle operations individually or in batches.",
+  "source": "@site/docs/cloud/exposure.md",
+  "sourceDirName": "cloud",
+  "slug": "/cloud/exposure",
+  "permalink": "/docs/cloud/exposure",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/cloud/exposure.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "title": "Exposed Operations",
+    "description": "Choose which operations are publicly available without modifying the source document. Group by tags, search, and toggle operations individually or in batches."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Documents & Versions",
+    "permalink": "/docs/cloud/documents-versions"
+  },
+  "next": {
+    "title": "Access Control",
+    "permalink": "/docs/cloud/access-control"
+  }
+}

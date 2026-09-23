@@ -1,0 +1,29 @@
+{
+  "id": "client/design",
+  "title": "Designing with the Assistant",
+  "description": "Design OpenAPI through a conversational assistant. Changes arrive as reviewable patch cards with granular JSON Patch operations, and focused edits preserve the rest of the operation.",
+  "source": "@site/docs/client/design.md",
+  "sourceDirName": "client",
+  "slug": "/client/design",
+  "permalink": "/docs/client/design",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/design.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "title": "Designing with the Assistant",
+    "description": "Design OpenAPI through a conversational assistant. Changes arrive as reviewable patch cards with granular JSON Patch operations, and focused edits preserve the rest of the operation."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Desktop Client",
+    "permalink": "/docs/client/introduction"
+  },
+  "next": {
+    "title": "Request Workspace & Environments",
+    "permalink": "/docs/client/debug"
+  }
+}

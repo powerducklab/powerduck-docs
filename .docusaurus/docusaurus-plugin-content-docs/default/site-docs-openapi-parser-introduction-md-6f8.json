@@ -28,8 +28,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Examples",
-    "permalink": "/docs/x-to-openapi/examples"
+    "title": "Open Source Libraries",
+    "permalink": "/docs/opensource/"
   },
   "next": {
     "title": "Introduction",

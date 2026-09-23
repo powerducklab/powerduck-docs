@@ -1,0 +1,29 @@
+{
+  "id": "overview/quickstart",
+  "title": "Quickstart",
+  "description": "Go from an OpenAPI file to a designed endpoint, a live request, and rendered documentation in a few minutes.",
+  "source": "@site/docs/overview/quickstart.md",
+  "sourceDirName": "overview",
+  "slug": "/overview/quickstart",
+  "permalink": "/docs/overview/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/overview/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Quickstart",
+    "description": "Go from an OpenAPI file to a designed endpoint, a live request, and rendered documentation in a few minutes."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/overview/installation"
+  },
+  "next": {
+    "title": "Desktop Client",
+    "permalink": "/docs/client/introduction"
+  }
+}

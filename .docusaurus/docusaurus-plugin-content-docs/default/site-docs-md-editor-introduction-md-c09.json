@@ -26,8 +26,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Quick Start",
-    "permalink": "/docs/getting-started/quickstart"
+    "title": "Examples",
+    "permalink": "/docs/oas-document/examples"
   },
   "next": {
     "title": "Introduction",

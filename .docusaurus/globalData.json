@@ -8,8 +8,88 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs/",
-          "mainDocId": "getting-started/introduction",
+          "mainDocId": "overview/introduction",
           "docs": [
+            {
+              "id": "client/ai-models",
+              "path": "/docs/client/ai-models",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/data-model",
+              "path": "/docs/client/data-model",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/debug",
+              "path": "/docs/client/debug",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/design",
+              "path": "/docs/client/design",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/introduction",
+              "path": "/docs/client/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/mock-server",
+              "path": "/docs/client/mock-server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/protocols",
+              "path": "/docs/client/protocols",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/scenario-testing",
+              "path": "/docs/client/scenario-testing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "client/settings",
+              "path": "/docs/client/settings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/access-control",
+              "path": "/docs/cloud/access-control",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/billing",
+              "path": "/docs/cloud/billing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/custom-domains",
+              "path": "/docs/cloud/custom-domains",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/documents-versions",
+              "path": "/docs/cloud/documents-versions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/exposure",
+              "path": "/docs/cloud/exposure",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/introduction",
+              "path": "/docs/cloud/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cloud/quickstart",
+              "path": "/docs/cloud/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
             {
               "id": "conf-patch/api-reference",
               "path": "/docs/conf-patch/api-reference",
@@ -33,21 +113,6 @@
             {
               "id": "conf-patch/quickstart",
               "path": "/docs/conf-patch/quickstart",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "getting-started/installation",
-              "path": "/docs/getting-started/installation",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "getting-started/introduction",
-              "path": "/docs/getting-started/introduction",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "getting-started/quickstart",
-              "path": "/docs/getting-started/quickstart",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -112,7 +177,8 @@
             },
             {
               "id": "openapi-cli/api-reference",
-              "path": "/docs/openapi-cli/api-reference"
+              "path": "/docs/openapi-cli/api-reference",
+              "sidebar": "tutorialSidebar"
             },
             {
               "id": "openapi-cli/commands",
@@ -260,6 +326,26 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "opensource/index",
+              "path": "/docs/opensource/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "overview/installation",
+              "path": "/docs/overview/installation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "overview/introduction",
+              "path": "/docs/overview/introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "overview/quickstart",
+              "path": "/docs/overview/quickstart",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "schema-editor/api-reference",
               "path": "/docs/schema-editor/api-reference",
               "sidebar": "tutorialSidebar"
@@ -364,8 +450,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/getting-started/introduction",
-                "label": "Getting Started"
+                "path": "/docs/overview/introduction",
+                "label": "Overview"
               }
             }
           }

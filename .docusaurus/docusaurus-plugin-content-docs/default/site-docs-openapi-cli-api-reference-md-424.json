@@ -16,5 +16,14 @@
     "sidebar_position": 4,
     "title": "API Reference",
     "description": "Every export of @powerduck/openapi-cli: functions, types, and the assertion engine."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CLI Commands",
+    "permalink": "/docs/openapi-cli/commands"
+  },
+  "next": {
+    "title": "Examples",
+    "permalink": "/docs/openapi-cli/examples"
   }
 }

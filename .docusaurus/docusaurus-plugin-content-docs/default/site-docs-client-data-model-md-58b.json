@@ -1,0 +1,29 @@
+{
+  "id": "client/data-model",
+  "title": "Data Model & ER Diagram",
+  "description": "Derive tables, foreign keys, many-to-many link tables, and SQL from your APIs; reconcile them against a live database; and track impact in a visual ER diagram.",
+  "source": "@site/docs/client/data-model.md",
+  "sourceDirName": "client",
+  "slug": "/client/data-model",
+  "permalink": "/docs/client/data-model",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/data-model.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "title": "Data Model & ER Diagram",
+    "description": "Derive tables, foreign keys, many-to-many link tables, and SQL from your APIs; reconcile them against a live database; and track impact in a visual ER diagram."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Protocols",
+    "permalink": "/docs/client/protocols"
+  },
+  "next": {
+    "title": "Local Mock Server",
+    "permalink": "/docs/client/mock-server"
+  }
+}

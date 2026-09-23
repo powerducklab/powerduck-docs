@@ -178,7 +178,7 @@ const config = {
         logo: {
           alt: "Powerduck Logo",
           src: "img/logo.svg",
-          href: "/getting-started/introduction",
+          href: "/overview/introduction",
         },
         items: [
           {
@@ -244,8 +244,8 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Getting Started",
-                to: "/getting-started/introduction",
+                label: "Overview",
+                to: "/overview/introduction",
               },
               {
                 label: "MD Editor",

@@ -1,0 +1,29 @@
+{
+  "id": "client/debug",
+  "title": "Request Workspace & Environments",
+  "description": "Send real requests in tabs, manage variables across scopes, and understand the relationship between custom environments and the servers declared in the OpenAPI document.",
+  "source": "@site/docs/client/debug.md",
+  "sourceDirName": "client",
+  "slug": "/client/debug",
+  "permalink": "/docs/client/debug",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/powerducklab/powerduck-docs/tree/main/docs/client/debug.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "title": "Request Workspace & Environments",
+    "description": "Send real requests in tabs, manage variables across scopes, and understand the relationship between custom environments and the servers declared in the OpenAPI document."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Designing with the Assistant",
+    "permalink": "/docs/client/design"
+  },
+  "next": {
+    "title": "Scenario Testing & Reports",
+    "permalink": "/docs/client/scenario-testing"
+  }
+}
