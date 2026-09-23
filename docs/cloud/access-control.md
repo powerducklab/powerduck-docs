@@ -17,6 +17,8 @@ Several conditions decide whether a public surface opens. Knowing the full list 
 3. **Access credential** — a view password for documentation, or an access key for MCP, when configured;
 4. **Expiry** — a documentation view can be set to expire at a given time.
 
+The published artifact behind a surface builds automatically after you add a version or change exposure, so publishing is not normally a manual step.
+
 Each surface is independent: disabling MCP does not affect documentation, and a documentation password does not gate MCP.
 
 ## Documentation view password
