@@ -41,16 +41,11 @@ const config = {
     author: "POWERDUCK LIMITED",
   },
 
-  // Head tags for SEO and fonts
+  // Head tags for SEO and fonts.
+  // Docusaurus generates per-page canonical, description, Open Graph and
+  // Twitter tags, so global versions of those are intentionally omitted to
+  // avoid duplicate and stale metadata (such as a fixed og:url on subpages).
   headTags: [
-    {
-      tagName: "meta",
-      attributes: {
-        name: "description",
-        content:
-          "Powerduck provides high-performance OpenAPI tooling, embeddable Markdown editors, and developer libraries. Explore our open-source documentation.",
-      },
-    },
     {
       tagName: "meta",
       attributes: {
@@ -64,56 +59,6 @@ const config = {
       attributes: {
         name: "author",
         content: "POWERDUCK LIMITED",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:title",
-        content: "Powerduck Docs - High-performance OpenAPI tooling",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:description",
-        content:
-          "Explore Powerduck open-source libraries: Markdown editor, OpenAPI CLI, code generation, MCP server, and more.",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:type",
-        content: "website",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        property: "og:url",
-        content: "https://www.powerduck.com/docs/",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:title",
-        content: "Powerduck Docs",
-      },
-    },
-    {
-      tagName: "meta",
-      attributes: {
-        name: "twitter:description",
-        content: "High-performance OpenAPI tooling and embeddable components.",
       },
     },
     {
@@ -182,56 +127,87 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Docs",
-          },
-          {
             type: "dropdown",
-            label: "Open Source",
+            label: "Client",
             position: "left",
             items: [
               {
-                label: "MD Editor",
-                href: "https://www.powerduck.com/opensource/md-editor.html",
+                label: "Spec Editor",
+                href: "https://www.powerduck.com/#spec-editor",
               },
               {
-                label: "OpenAPI CLI",
-                href: "https://www.powerduck.com/opensource/openapi-cli.html",
+                label: "API Debug",
+                href: "https://www.powerduck.com/#api-debug",
               },
               {
-                label: "OpenAPI Codegen",
-                href: "https://www.powerduck.com/opensource/openapi-codegen.html",
+                label: "MCP Server",
+                href: "https://www.powerduck.com/#mcp-server",
               },
               {
-                label: "OpenAPI Request",
-                href: "https://www.powerduck.com/opensource/openapi-request.html",
-              },
-              {
-                label: "OpenAPI MCP Server",
-                href: "https://www.powerduck.com/opensource/openapi-mcp-server.html",
-              },
-              {
-                label: "x-to-openapi",
-                href: "https://www.powerduck.com/opensource/x-to-openapi.html",
-              },
-              {
-                label: "conf-patch",
-                href: "https://www.powerduck.com/opensource/conf-patch.html",
+                label: "API Docs",
+                href: "https://www.powerduck.com/#api-docs",
               },
             ],
           },
           {
-            href: "https://www.powerduck.com",
-            label: "Website",
-            position: "right",
+            type: "dropdown",
+            label: "Cloud",
+            position: "left",
+            items: [
+              {
+                label: "Hub",
+                href: "https://www.powerduck.com/hub",
+              },
+              {
+                label: "Cloud Docs",
+                to: "/cloud/introduction",
+              },
+              {
+                label: "Sign in",
+                href: "https://www.powerduck.com/signin",
+              },
+            ],
+          },
+          {
+            label: "Pricing",
+            href: "https://www.powerduck.com/#licensing",
+            position: "left",
+          },
+          {
+            type: "dropdown",
+            label: "Resources",
+            position: "left",
+            items: [
+              {
+                label: "Documentation",
+                to: "/overview/introduction",
+              },
+              {
+                label: "Live Demo",
+                href: "https://www.powerduck.com/demo/",
+              },
+              {
+                label: "Open Source",
+                href: "https://github.com/powerducklab",
+              },
+            ],
           },
           {
             href: "https://github.com/powerducklab",
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
+          },
+          {
+            label: "Sign in",
+            href: "https://www.powerduck.com/signin",
+            position: "right",
+          },
+          {
+            label: "Download",
+            href: "https://github.com/powerducklab",
+            position: "right",
+            className: "header-download-link",
           },
         ],
       },

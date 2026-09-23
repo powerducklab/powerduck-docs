@@ -217,6 +217,36 @@ body {
   background-size: 20px 20px;
 }
 
+/* Download CTA: solid button that inverts with the color theme */
+.navbar__items--right > .navbar__item.header-download-link {
+  background: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #111111 !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0 1rem !important;
+  font-weight: 600 !important;
+  height: 34px !important;
+  min-width: auto !important;
+}
+
+.navbar__items--right > .navbar__item.header-download-link:hover {
+  background: #2b2b2b !important;
+  border-color: #2b2b2b !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .navbar__items--right > .navbar__item.header-download-link {
+  background: #ffffff !important;
+  color: #0b0f14 !important;
+  border-color: #ffffff !important;
+}
+
+[data-theme='dark'] .navbar__items--right > .navbar__item.header-download-link:hover {
+  background: #e7e7e7 !important;
+  border-color: #e7e7e7 !important;
+  color: #0b0f14 !important;
+}
+
 /* ============================================
    Color Mode Toggle - DO NOT touch inner SVGs!
    Docusaurus handles icon visibility via its own CSS.
