@@ -200,8 +200,9 @@ const config = {
           },
           {
             label: "Sign in",
-            href: "https://www.powerduck.com/signin",
+            href: "/signin",
             position: "right",
+            className: "header-signin-link",
           },
           {
             label: "Download",
@@ -326,6 +327,9 @@ const config = {
         maxHeadingLevel: 4,
       },
     }),
+
+  // Client scripts
+  scripts: [{ src: "/docs/session.js", async: true }],
 
   // Plugins
   plugins: [],
