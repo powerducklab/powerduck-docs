@@ -13,6 +13,9 @@
 
 /dist
 
+# docusaurus generated cache
+/.docusaurus
+
 # misc
 .DS_Store
 .env.local
