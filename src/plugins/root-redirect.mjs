@@ -10,21 +10,24 @@
 // index.html".
 //
 // This plugin writes the redirect `index.html` only during the production
-// build (`postBuild` never runs in `docusaurus start`), so the dev server stays
-// clean while every locale root still redirects to its documentation entry.
+// build (`postBuild` never runs in `docusaurus start`). A multilingual build
+// invokes `postBuild` once per locale with `outDir` set to that locale's output
+// directory, so the language and canonical are derived from the live plugin
+// context (`i18n.currentLocale` and the locale-prefixed `baseUrl`).
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
 const ENTRY = "overview/introduction";
 
-function redirectHtml() {
+function redirectHtml(lang, canonicalHref) {
   return `<!doctype html>
-<html lang="en">
+<html lang="${lang}">
   <head>
     <meta charset="utf-8" />
     <title>Powerduck Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="${canonicalHref}" />
     <meta http-equiv="refresh" content="0; url=${ENTRY}" />
   </head>
   <body>
@@ -43,34 +46,6 @@ function redirectHtml() {
 `;
 }
 
-// A locale root is a directory that holds the generated `overview/` folder.
-// That matches the build output root (default locale) and every `<locale>`
-// subdirectory produced by a multilingual build.
-async function findLocaleRoots(outDir) {
-  const roots = [];
-
-  if (await isDirectory(path.join(outDir, "overview"))) {
-    roots.push(outDir);
-  }
-
-  let entries = [];
-  try {
-    entries = await fs.readdir(outDir, { withFileTypes: true });
-  } catch {
-    return roots;
-  }
-
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-    const candidate = path.join(outDir, entry.name);
-    if (await isDirectory(path.join(candidate, "overview"))) {
-      roots.push(candidate);
-    }
-  }
-
-  return roots;
-}
-
 async function isDirectory(target) {
   try {
     const stat = await fs.stat(target);
@@ -80,17 +55,31 @@ async function isDirectory(target) {
   }
 }
 
+function trimSlash(value) {
+  return value.replace(/^\/+|\/+$/g, "");
+}
+
 /** @type {import('@docusaurus/types').PluginModule} */
-export default function rootRedirect() {
+export default function rootRedirect({ baseUrl, siteConfig, i18n }) {
+  const siteUrl = siteConfig.url.replace(/\/+$/, "");
+  const docsBase = trimSlash(baseUrl);
+  const lang =
+    i18n.currentLocale === i18n.defaultLocale ? "en" : i18n.currentLocale;
+
   return {
     name: "powerduck-root-redirect",
 
     async postBuild({ outDir }) {
-      const roots = await findLocaleRoots(outDir);
-      await Promise.all(
-        roots.map((root) =>
-          fs.writeFile(path.join(root, "index.html"), redirectHtml(), "utf8"),
-        ),
+      // This output directory holds a generated docs tree only when it contains
+      // the `overview/` folder; otherwise there is nothing to redirect.
+      if (!(await isDirectory(path.join(outDir, "overview")))) {
+        return;
+      }
+      const canonicalHref = `${siteUrl}/${docsBase}/${ENTRY}`;
+      await fs.writeFile(
+        path.join(outDir, "index.html"),
+        redirectHtml(lang, canonicalHref),
+        "utf8",
       );
     },
   };
