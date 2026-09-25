@@ -1,0 +1,78 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Libraries": {
+    "message": "Libraries",
+    "description": "The title of the footer links column with title=Libraries in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.Legal": {
+    "message": "Legal",
+    "description": "The title of the footer links column with title=Legal in the footer"
+  },
+  "link.item.label.Overview": {
+    "message": "Overview",
+    "description": "The label of footer link with label=Overview linking to /overview/introduction"
+  },
+  "link.item.label.MD Editor": {
+    "message": "MD Editor",
+    "description": "The label of footer link with label=MD Editor linking to /md-editor/introduction"
+  },
+  "link.item.label.OpenAPI CLI": {
+    "message": "OpenAPI CLI",
+    "description": "The label of footer link with label=OpenAPI CLI linking to /openapi-cli/introduction"
+  },
+  "link.item.label.conf-patch": {
+    "message": "conf-patch",
+    "description": "The label of footer link with label=conf-patch linking to /conf-patch/introduction"
+  },
+  "link.item.label.openapi-codegen": {
+    "message": "openapi-codegen",
+    "description": "The label of footer link with label=openapi-codegen linking to /openapi-codegen/introduction"
+  },
+  "link.item.label.openapi-mcp-server": {
+    "message": "openapi-mcp-server",
+    "description": "The label of footer link with label=openapi-mcp-server linking to /openapi-mcp-server/introduction"
+  },
+  "link.item.label.openapi-request": {
+    "message": "openapi-request",
+    "description": "The label of footer link with label=openapi-request linking to /openapi-request/introduction"
+  },
+  "link.item.label.x-to-openapi": {
+    "message": "x-to-openapi",
+    "description": "The label of footer link with label=x-to-openapi linking to /x-to-openapi/introduction"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/powerducklab"
+  },
+  "link.item.label.Website": {
+    "message": "Website",
+    "description": "The label of footer link with label=Website linking to https://www.powerduck.com"
+  },
+  "link.item.label.Contact": {
+    "message": "Contact",
+    "description": "The label of footer link with label=Contact linking to mailto:contact@neatico.com"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Privacy Policy",
+    "description": "The label of footer link with label=Privacy Policy linking to https://www.powerduck.com/privacy.html"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Terms of Service",
+    "description": "The label of footer link with label=Terms of Service linking to https://www.powerduck.com/terms.html"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Refund Policy",
+    "description": "The label of footer link with label=Refund Policy linking to https://www.powerduck.com/refunds.html"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 POWERDUCK LIMITED. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

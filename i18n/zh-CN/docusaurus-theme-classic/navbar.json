@@ -1,0 +1,70 @@
+{
+  "title": {
+    "message": "Powerduck",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Powerduck Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Client": {
+    "message": "Client",
+    "description": "Navbar item with label Client"
+  },
+  "item.label.Cloud": {
+    "message": "Cloud",
+    "description": "Navbar item with label Cloud"
+  },
+  "item.label.Pricing": {
+    "message": "Pricing",
+    "description": "Navbar item with label Pricing"
+  },
+  "item.label.Resources": {
+    "message": "Resources",
+    "description": "Navbar item with label Resources"
+  },
+  "item.label.Sign in": {
+    "message": "Sign in",
+    "description": "Navbar item with label Sign in"
+  },
+  "item.label.Download": {
+    "message": "Download",
+    "description": "Navbar item with label Download"
+  },
+  "item.label.Spec Editor": {
+    "message": "Spec Editor",
+    "description": "Navbar item with label Spec Editor"
+  },
+  "item.label.API Debug": {
+    "message": "API Debug",
+    "description": "Navbar item with label API Debug"
+  },
+  "item.label.MCP Server": {
+    "message": "MCP Server",
+    "description": "Navbar item with label MCP Server"
+  },
+  "item.label.API Docs": {
+    "message": "API Docs",
+    "description": "Navbar item with label API Docs"
+  },
+  "item.label.Hub": {
+    "message": "Hub",
+    "description": "Navbar item with label Hub"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Cloud Docs",
+    "description": "Navbar item with label Cloud Docs"
+  },
+  "item.label.Documentation": {
+    "message": "Documentation",
+    "description": "Navbar item with label Documentation"
+  },
+  "item.label.Live Demo": {
+    "message": "Live Demo",
+    "description": "Navbar item with label Live Demo"
+  },
+  "item.label.Open Source": {
+    "message": "Open Source",
+    "description": "Navbar item with label Open Source"
+  }
+}

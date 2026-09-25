@@ -29,7 +29,30 @@ const config = {
   // Internationalization
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: [
+      "en",
+      "zh-CN",
+      "zh-TW",
+      "ja-JP",
+      "ko-KR",
+      "fr-FR",
+      "de-DE",
+      "es-ES",
+      "pt-BR",
+      "ar-SA",
+    ],
+    localeConfigs: {
+      en: { label: "English", direction: "ltr" },
+      "zh-CN": { label: "简体中文", direction: "ltr" },
+      "zh-TW": { label: "繁體中文", direction: "ltr" },
+      "ja-JP": { label: "日本語", direction: "ltr" },
+      "ko-KR": { label: "한국어", direction: "ltr" },
+      "fr-FR": { label: "Français", direction: "ltr" },
+      "de-DE": { label: "Deutsch", direction: "ltr" },
+      "es-ES": { label: "Español", direction: "ltr" },
+      "pt-BR": { label: "Português (Brasil)", direction: "ltr" },
+      "ar-SA": { label: "العربية", direction: "rtl" },
+    },
   },
 
   // Custom fields for SEO and branding
@@ -191,6 +214,10 @@ const config = {
                 href: "https://github.com/powerducklab",
               },
             ],
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
           },
           {
             href: "https://github.com/powerducklab",

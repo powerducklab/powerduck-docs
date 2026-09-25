@@ -1,0 +1,70 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Overview": {
+    "message": "Overview",
+    "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Client": {
+    "message": "Desktop Client",
+    "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Powerduck Cloud": {
+    "message": "Powerduck Cloud",
+    "description": "The label for category 'Powerduck Cloud' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Source": {
+    "message": "Open Source",
+    "description": "The label for category 'Open Source' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.openapi-parser": {
+    "message": "openapi-parser",
+    "description": "The label for category 'openapi-parser' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.conf-patch": {
+    "message": "conf-patch",
+    "description": "The label for category 'conf-patch' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.x-to-openapi": {
+    "message": "x-to-openapi",
+    "description": "The label for category 'x-to-openapi' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.openapi-cli": {
+    "message": "openapi-cli",
+    "description": "The label for category 'openapi-cli' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.openapi-codegen": {
+    "message": "openapi-codegen",
+    "description": "The label for category 'openapi-codegen' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.openapi-mcp-server": {
+    "message": "openapi-mcp-server",
+    "description": "The label for category 'openapi-mcp-server' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.openapi-request": {
+    "message": "openapi-request",
+    "description": "The label for category 'openapi-request' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.oas-document": {
+    "message": "oas-document",
+    "description": "The label for category 'oas-document' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.md-editor": {
+    "message": "md-editor",
+    "description": "The label for category 'md-editor' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.schema-editor": {
+    "message": "schema-editor",
+    "description": "The label for category 'schema-editor' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.tree": {
+    "message": "tree",
+    "description": "The label for category 'tree' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.workspace-yaml": {
+    "message": "workspace-yaml",
+    "description": "The label for category 'workspace-yaml' in sidebar 'tutorialSidebar'"
+  }
+}
