@@ -44,4 +44,4 @@ Cuando los ejemplos por defecto o respuestas derivadas del esquema no bastan, la
 
 La simulación lee la misma spec que los demás modos, por lo que se mantiene alineada con el contrato al cambiar el diseño.
 
-Vea también: [Pruebas de escenario](/docs/client/scenario-testing)、[Diseñar con el asistente](/docs/client/design).
+Vea también: [Pruebas de escenario](./scenario-testing)、[Diseñar con el asistente](./design).

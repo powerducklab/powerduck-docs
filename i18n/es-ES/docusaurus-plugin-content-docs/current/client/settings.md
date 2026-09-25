@@ -76,4 +76,4 @@ Para cada operación, el asistente puede generar código cliente ejecutable (`cl
 
 Las peticiones a toda la app — cambiar tema o idioma, configurar un proxy, ignorar errores de certificado, cambiar la versión HTTP — se tratan con herramientas de ajustes, no como un problema de diseño de API. Los cambios de ajustes piden confirmación antes de aplicarse.
 
-Vea también: [IA y modelos](/docs/client/ai-models)、[Espacio de petición](/docs/client/debug).
+Vea también: [IA y modelos](./ai-models)、[Espacio de petición](./debug).

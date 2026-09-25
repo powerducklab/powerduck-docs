@@ -65,4 +65,4 @@ Bearer 토큰, Basic 비밀번호, API 키 값 등 기밀은 쓸 수 있지만 �
 - **자신의 에이전트용 MCP:** MCP 활성화와 접근 키 생성으로 자신의 클라이언트만 호출 가능.
 - **상류 인증:** MCP 서버 인증을 실제 API 요구에 맞추고 누가 MCP 엔드포인트를 호출할 수 있는지와 독립적으로 유지.
 
-관련: [노출 작업](/docs/cloud/exposure)、[문서와 버전](/docs/cloud/documents-versions)、[사용자 지정 도메인](/docs/cloud/custom-domains).
+관련: [노출 작업](./exposure)、[문서와 버전](./documents-versions)、[사용자 지정 도메인](./custom-domains).

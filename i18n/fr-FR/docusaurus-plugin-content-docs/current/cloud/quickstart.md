@@ -59,7 +59,7 @@ Quand l'API change, téléversez le nouveau contenu comme nouvelle version au li
 
 ## Étapes suivantes
 
-- [Documents et versions](/docs/cloud/documents-versions)
-- [Opérations exposées](/docs/cloud/exposure)
-- [Contrôle d'accès](/docs/cloud/access-control)
-- [Domaines personnalisés](/docs/cloud/custom-domains)
+- [Documents et versions](./documents-versions)
+- [Opérations exposées](./exposure)
+- [Contrôle d'accès](./access-control)
+- [Domaines personnalisés](./custom-domains)

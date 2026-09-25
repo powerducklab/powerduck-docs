@@ -47,7 +47,7 @@ description: "在不修改來源文件的情況下選擇哪些操作公開可用
 - 文件和 MCP 各有啟用標記；
 - 存取可由檢視密碼（文件）或存取密鑰（MCP）把關。
 
-完整把關項參見[存取控制](/docs/cloud/access-control)。
+完整把關項參見[存取控制](./access-control)。
 
 ## 計畫額度
 
@@ -57,4 +57,4 @@ description: "在不修改來源文件的情況下選擇哪些操作公開可用
 - **Pro**——最多 1,000 個；
 - **Team**——最多 10,000 個。
 
-相關：[存取控制](/docs/cloud/access-control)、[文件與版本](/docs/cloud/documents-versions)。
+相關：[存取控制](./access-control)、[文件與版本](./documents-versions)。

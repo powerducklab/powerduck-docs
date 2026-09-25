@@ -44,4 +44,4 @@ Quando os exemplos por defeito ou respostas derivadas do esquema não bastam, as
 
 A simulação lê a mesma spec que os demais modos, por isso mantém-se alinhada com o contrato ao mudar o desenho.
 
-Veja também: [Testes de cenário](/docs/client/scenario-testing)、[Desenhar com o assistente](/docs/client/design).
+Veja também: [Testes de cenário](./scenario-testing)、[Desenhar com o assistente](./design).

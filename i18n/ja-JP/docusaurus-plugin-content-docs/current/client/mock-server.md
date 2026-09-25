@@ -44,4 +44,4 @@ description: "ポート、ベースパス、レイテンシ、レスポンスオ
 
 モックは他のすべてのモードと同じ仕様を読むため、設計が変わると常に契約と整合します。
 
-関連: [シナリオテスト](/docs/client/scenario-testing)、[アシスタントで設計する](/docs/client/design)。
+関連: [シナリオテスト](./scenario-testing)、[アシスタントで設計する](./design)。

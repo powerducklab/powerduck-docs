@@ -84,4 +84,4 @@ Les fichiers réels vivent dans le stockage objet selon une organisation organis
 
 La combinaison de versions immuables et d'un cycle de vie à suppression douce permet d'itérer vite sans perdre l'historique et de ne pas exposer par erreur un document que vous vouliez arrêter. Pause pour interruption temporaire, archive pour conservation longue, liens fixés quand l'immuabilité compte.
 
-Voir aussi : [Opérations exposées](/docs/cloud/exposure)、[Contrôle d'accès](/docs/cloud/access-control)、[Domaines personnalisés](/docs/cloud/custom-domains).
+Voir aussi : [Opérations exposées](./exposure)、[Contrôle d'accès](./access-control)、[Domaines personnalisés](./custom-domains).

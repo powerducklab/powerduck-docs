@@ -76,4 +76,4 @@ Für jede Operation kann der Assistent ausführbaren Client-Code erzeugen (`clie
 
 App-weite Anfragen — Theme/Sprache wechseln, Proxy einrichten, Zertifikatsfehler ignorieren, HTTP-Version ändern — werden über Einstellungswerkzeuge behandelt, nicht als API-Entwurfsproblem. Einstellungsänderungen verlangen vor Anwendung eine Bestätigung.
 
-Siehe auch: [KI und Modelle](/docs/client/ai-models)、[Request-Arbeitsbereich](/docs/client/debug).
+Siehe auch: [KI und Modelle](./ai-models)、[Request-Arbeitsbereich](./debug).

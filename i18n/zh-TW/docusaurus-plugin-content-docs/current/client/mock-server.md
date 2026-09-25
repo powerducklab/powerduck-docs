@@ -44,4 +44,4 @@ Mock 會記錄它收到的請求。你可以查詢它們（`mock:requests`，可
 
 Mock 與其他每個形態讀取同一份規範，因此當設計變化時它始終與合約對齊。
 
-相關：[場景測試](/docs/client/scenario-testing)、[用助手進行設計](/docs/client/design)。
+相關：[場景測試](./scenario-testing)、[用助手進行設計](./design)。

@@ -47,7 +47,7 @@ Exposure decides **which operations** appear; other controls decide **whether th
 - Documentation and MCP each have an enabled flag;
 - Access can be gated by a view password (documentation) or an access key (MCP).
 
-See [Access control](/docs/cloud/access-control) for the full set of gates.
+See [Access control](./access-control) for the full set of gates.
 
 ## Plan limits
 
@@ -57,4 +57,4 @@ Plans cap the number of exposed operations:
 - **Pro** — up to 1,000;
 - **Team** — up to 10,000.
 
-Related: [Access control](/docs/cloud/access-control), [Documents and versions](/docs/cloud/documents-versions).
+Related: [Access control](./access-control), [Documents and versions](./documents-versions).

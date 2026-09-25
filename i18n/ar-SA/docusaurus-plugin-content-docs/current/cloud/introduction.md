@@ -68,13 +68,13 @@ description: "ضع مواصفة OpenAPI على الإنترنت في دقائق.
 | النتيجة | مفتاح ترخيص (يظهر مرة) | عضوية بلا مفتاح |
 | متى | محلي، دون اتصال، نطاق كامل | المشاركة والنشر عبر الإنترنت |
 
-يكمل أحدهما الآخر ويُباعان منفصلين. انظر [الفوترة](/docs/cloud/billing).
+يكمل أحدهما الآخر ويُباعان منفصلين. انظر [الفوترة](./billing).
 
 ## ابدأ هنا
 
-- [البدء السريع للسحابة](/docs/cloud/quickstart)
-- [المستندات والنسخ](/docs/cloud/documents-versions)
-- [العمليات المعروضة](/docs/cloud/exposure)
-- [التحكم بالوصول](/docs/cloud/access-control)
-- [النطاقات المخصصة](/docs/cloud/custom-domains)
-- [الفوترة](/docs/cloud/billing)
+- [البدء السريع للسحابة](./quickstart)
+- [المستندات والنسخ](./documents-versions)
+- [العمليات المعروضة](./exposure)
+- [التحكم بالوصول](./access-control)
+- [النطاقات المخصصة](./custom-domains)
+- [الفوترة](./billing)

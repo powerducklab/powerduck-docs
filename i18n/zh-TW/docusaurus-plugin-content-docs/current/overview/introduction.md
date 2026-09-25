@@ -47,23 +47,23 @@ Powerduck 在你的機器上執行，打開並儲存真實檔案，可離線工�
 
 | 形態 | 它是什麼 | 最適合 |
 |---|---|---|
-| [**桌面用戶端**](/docs/client/introduction) | 一個本機優先的 Electron 應用程式，內建 AI 助手和完整的 API 工作區 | 希望一切都在自己機器上、離線工作、密鑰和提示詞保留在本機的工程師 |
-| [**Powerduck Cloud**](/docs/cloud/introduction) | 用於 OAS 託管、線上文件和託管 MCP 的雲端服務 | 與他人共享 API、發布穩定連結，以及無需執行任何程式即可提供 MCP |
-| [**開源函式庫**](/docs/opensource/) | 可組合的 `@powerduck/*` npm 套件 | 建構你自己的工具、CI 管線或嵌入式元件 |
+| [**桌面用戶端**](../client/introduction) | 一個本機優先的 Electron 應用程式，內建 AI 助手和完整的 API 工作區 | 希望一切都在自己機器上、離線工作、密鑰和提示詞保留在本機的工程師 |
+| [**Powerduck Cloud**](../cloud/introduction) | 用於 OAS 託管、線上文件和託管 MCP 的雲端服務 | 與他人共享 API、發布穩定連結，以及無需執行任何程式即可提供 MCP |
+| [**開源函式庫**](../opensource/) | 可組合的 `@powerduck/*` npm 套件 | 建構你自己的工具、CI 管線或嵌入式元件 |
 
 三種形態共享相同的引擎：桌面用戶端和雲端都由開源函式庫組裝而成，因此無論你在本機執行、透過網路呼叫還是直接引入套件，同一個能力的表現都一致。
 
 ### 桌面用戶端
 
-[桌面用戶端](/docs/client/introduction)完全在你的機器上執行。它打開並編輯磁碟上的真實檔案，透過本機程序發送請求，執行本機 Mock，並讓你的 AI 提示詞和 API 密鑰遠離瀏覽器主控台。模型完全由你配置，每個提議的變更在套用前都以可審閱的卡片呈現。
+[桌面用戶端](../client/introduction)完全在你的機器上執行。它打開並編輯磁碟上的真實檔案，透過本機程序發送請求，執行本機 Mock，並讓你的 AI 提示詞和 API 密鑰遠離瀏覽器主控台。模型完全由你配置，每個提議的變更在套用前都以可審閱的卡片呈現。
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](/docs/cloud/introduction) 把同樣的工作流搬到線上。新增檔案、Git 儲存庫或 URL；選擇要暴露哪些操作；然後獲得渲染文件的穩定連結和託管的 MCP 端點。存取可以用檢視密碼或 MCP 存取密鑰保護，付費計畫增加了 Git 同步、自訂網域和更高的額度。
+[Powerduck Cloud](../cloud/introduction) 把同樣的工作流搬到線上。新增檔案、Git 儲存庫或 URL；選擇要暴露哪些操作；然後獲得渲染文件的穩定連結和託管的 MCP 端點。存取可以用檢視密碼或 MCP 存取密鑰保護，付費計畫增加了 Git 同步、自訂網域和更高的額度。
 
 ### 開源函式庫
 
-[這些函式庫](/docs/opensource/)是底層引擎：OpenAPI 剖析器與升級器、多協定 CLI、程式碼產生器、MCP 伺服器、請求執行器、cURL 與 Postman 轉換器，以及可嵌入的編輯器。每個套件都在 npm 上獨立發布，帶有自己的安裝指南和 API 參考——底層技術細節都在這裡。
+[這些函式庫](../opensource/)是底層引擎：OpenAPI 剖析器與升級器、多協定 CLI、程式碼產生器、MCP 伺服器、請求執行器、cURL 與 Postman 轉換器，以及可嵌入的編輯器。每個套件都在 npm 上獨立發布，帶有自己的安裝指南和 API 參考——底層技術細節都在這裡。
 
 ## 對你意味著什麼
 
@@ -75,7 +75,7 @@ Powerduck 在你的機器上執行，打開並儲存真實檔案，可離線工�
 
 ## 接下來去哪裡
 
-- 新來乍到？從[安裝](/docs/overview/installation)和[快速開始](/docs/overview/quickstart)開始。
-- 想要完整的本機工作區？閱讀[桌面用戶端指南](/docs/client/introduction)。
-- 想線上發布 API？閱讀 [Cloud 指南](/docs/cloud/introduction)。
-- 在建構自己的整合？瀏覽[開源函式庫](/docs/opensource/)。
+- 新來乍到？從[安裝](./installation)和[快速開始](./quickstart)開始。
+- 想要完整的本機工作區？閱讀[桌面用戶端指南](../client/introduction)。
+- 想線上發布 API？閱讀 [Cloud 指南](../cloud/introduction)。
+- 在建構自己的整合？瀏覽[開源函式庫](../opensource/)。

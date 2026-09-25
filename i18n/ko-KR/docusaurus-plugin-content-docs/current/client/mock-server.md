@@ -44,4 +44,4 @@ description: "포트, 베이스 경로, 지연, 응답 재정의를 선택해 Op
 
 모크는 다른 모든 모드와 같은 스펙을 읽어 설계 변경 시 항상 계약과 정렬됩니다.
 
-관련: [시나리오 테스트](/docs/client/scenario-testing)、[어시스턴트로 설계하기](/docs/client/design).
+관련: [시나리오 테스트](./scenario-testing)、[어시스턴트로 설계하기](./design).

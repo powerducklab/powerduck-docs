@@ -84,6 +84,6 @@ O domínio personalizado não é uma via de omissão: as mesmas portas aplicam.
 - Cada modo tem o seu indicador ativo.
 - A senha de visualização segue protegendo a documentação e a chave de acesso o MCP.
 
-Veja [Controlo de acesso](/docs/cloud/access-control).
+Veja [Controlo de acesso](./access-control).
 
-Veja também: [Documentos e versões](/docs/cloud/documents-versions)、[Faturação](/docs/cloud/billing).
+Veja também: [Documentos e versões](./documents-versions)、[Faturação](./billing).

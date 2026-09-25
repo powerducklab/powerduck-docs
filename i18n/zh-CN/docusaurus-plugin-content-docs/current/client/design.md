@@ -111,4 +111,4 @@ the change is merged into the document
 - **动作卡片**提供具体的下一步，例如运行场景或打开某个工作区；
 - **数据表卡片**为某个接口或模式呈现具体的示例或测试数据。
 
-相关：[请求工作区](/docs/client/debug)、[场景测试](/docs/client/scenario-testing)、[AI 与模型](/docs/client/ai-models)。
+相关：[请求工作区](./debug)、[场景测试](./scenario-testing)、[AI 与模型](./ai-models)。

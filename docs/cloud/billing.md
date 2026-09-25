@@ -91,4 +91,4 @@ Payments are confirmed through signed provider webhooks (separate endpoints for 
 - Want to publish documentation and MCP online and share stable links? Subscribe to **Cloud Pro** (or Team for multiple seats).
 - Many teams use both: design and test locally on the client, then host the published API on Cloud.
 
-Related: [Cloud introduction](/docs/cloud/introduction), [Desktop Client](/docs/client/introduction).
+Related: [Cloud introduction](./introduction), [Desktop Client](../client/introduction).

@@ -47,23 +47,23 @@ Powerduck 在你的机器上运行，打开并保存真实文件，可离线工�
 
 | 形态 | 它是什么 | 最适合 |
 |---|---|---|
-| [**桌面客户端**](/docs/client/introduction) | 一个本地优先的 Electron 应用，内置 AI 助手和完整的 API 工作区 | 希望一切都在自己机器上、离线工作、密钥和提示词保留在本地的工程师 |
-| [**Powerduck Cloud**](/docs/cloud/introduction) | 用于 OAS 托管、在线文档和托管 MCP 的云服务 | 与他人共享 API、发布稳定链接，以及无需运行任何程序即可提供 MCP |
-| [**开源库**](/docs/opensource/) | 可组合的 `@powerduck/*` npm 包 | 构建你自己的工具、CI 流水线或嵌入式组件 |
+| [**桌面客户端**](../client/introduction) | 一个本地优先的 Electron 应用，内置 AI 助手和完整的 API 工作区 | 希望一切都在自己机器上、离线工作、密钥和提示词保留在本地的工程师 |
+| [**Powerduck Cloud**](../cloud/introduction) | 用于 OAS 托管、在线文档和托管 MCP 的云服务 | 与他人共享 API、发布稳定链接，以及无需运行任何程序即可提供 MCP |
+| [**开源库**](../opensource/) | 可组合的 `@powerduck/*` npm 包 | 构建你自己的工具、CI 流水线或嵌入式组件 |
 
 三种形态共享相同的引擎：桌面客户端和云端都由开源库组装而成，因此无论你在本地运行、通过网络调用还是直接引入包，同一个能力的表现都一致。
 
 ### 桌面客户端
 
-[桌面客户端](/docs/client/introduction)完全在你的机器上运行。它打开并编辑磁盘上的真实文件，通过本地进程发送请求，运行本地 Mock，并让你的 AI 提示词和 API 密钥远离浏览器控制台。模型完全由你配置，每个提议的改动在应用前都以可审阅的卡片呈现。
+[桌面客户端](../client/introduction)完全在你的机器上运行。它打开并编辑磁盘上的真实文件，通过本地进程发送请求，运行本地 Mock，并让你的 AI 提示词和 API 密钥远离浏览器控制台。模型完全由你配置，每个提议的改动在应用前都以可审阅的卡片呈现。
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](/docs/cloud/introduction) 把同样的工作流搬到线上。添加文件、Git 仓库或 URL；选择要暴露哪些操作；然后获得渲染文档的稳定链接和托管的 MCP 端点。访问可以用查看密码或 MCP 访问密钥保护，付费计划增加了 Git 同步、自定义域名和更高的额度。
+[Powerduck Cloud](../cloud/introduction) 把同样的工作流搬到线上。添加文件、Git 仓库或 URL；选择要暴露哪些操作；然后获得渲染文档的稳定链接和托管的 MCP 端点。访问可以用查看密码或 MCP 访问密钥保护，付费计划增加了 Git 同步、自定义域名和更高的额度。
 
 ### 开源库
 
-[这些库](/docs/opensource/)是底层引擎：OpenAPI 解析器与升级器、多协议 CLI、代码生成器、MCP 服务器、请求运行器、cURL 与 Postman 转换器，以及可嵌入的编辑器。每个包都在 npm 上独立发布，带有自己的安装指南和 API 参考——底层技术细节都在这里。
+[这些库](../opensource/)是底层引擎：OpenAPI 解析器与升级器、多协议 CLI、代码生成器、MCP 服务器、请求运行器、cURL 与 Postman 转换器，以及可嵌入的编辑器。每个包都在 npm 上独立发布，带有自己的安装指南和 API 参考——底层技术细节都在这里。
 
 ## 对你意味着什么
 
@@ -75,7 +75,7 @@ Powerduck 在你的机器上运行，打开并保存真实文件，可离线工�
 
 ## 接下来去哪里
 
-- 新来乍到？从[安装](/docs/overview/installation)和[快速开始](/docs/overview/quickstart)开始。
-- 想要完整的本地工作区？阅读[桌面客户端指南](/docs/client/introduction)。
-- 想在线发布 API？阅读 [Cloud 指南](/docs/cloud/introduction)。
-- 在构建自己的集成？浏览[开源库](/docs/opensource/)。
+- 新来乍到？从[安装](./installation)和[快速开始](./quickstart)开始。
+- 想要完整的本地工作区？阅读[桌面客户端指南](../client/introduction)。
+- 想在线发布 API？阅读 [Cloud 指南](../cloud/introduction)。
+- 在构建自己的集成？浏览[开源库](../opensource/)。

@@ -111,4 +111,4 @@ No toda respuesta es un parche.
 - **Tarjetas de acción** aportan un siguiente paso concreto, como ejecutar un escenario o abrir un espacio.
 - **Tarjetas de tabla de datos** presentan datos concretos de ejemplo/prueba para operaciones o esquemas.
 
-Vea también: [Espacio de petición](/docs/client/debug)、[Pruebas de escenario](/docs/client/scenario-testing)、[IA y modelos](/docs/client/ai-models).
+Vea también: [Espacio de petición](./debug)、[Pruebas de escenario](./scenario-testing)、[IA y modelos](./ai-models).

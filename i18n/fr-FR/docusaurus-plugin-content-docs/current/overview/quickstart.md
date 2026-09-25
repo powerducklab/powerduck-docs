@@ -46,10 +46,10 @@ Ouvrez la **documentation** : la même spécification est rendue en documentatio
 
 ## 6. Aller plus loin quand vous êtes prêt
 
-- Enchaînez plusieurs requêtes avec les [tests de scénario](/docs/client/scenario-testing) et exportez un rapport HTML.
-- Lancez le [serveur de simulation local](/docs/client/mock-server) pendant le développement du backend.
-- Modélisez des API de streaming / RPC avec les [six protocoles](/docs/client/protocols).
-- Dérivez les tables, relations et SQL dans le [modèle de données](/docs/client/data-model).
-- Publiez la même spécification en ligne avec [Powerduck Cloud](/docs/cloud/quickstart).
+- Enchaînez plusieurs requêtes avec les [tests de scénario](../client/scenario-testing) et exportez un rapport HTML.
+- Lancez le [serveur de simulation local](../client/mock-server) pendant le développement du backend.
+- Modélisez des API de streaming / RPC avec les [six protocoles](../client/protocols).
+- Dérivez les tables, relations et SQL dans le [modèle de données](../client/data-model).
+- Publiez la même spécification en ligne avec [Powerduck Cloud](../cloud/quickstart).
 
 La boucle centrale est complète. Le reste de la documentation détaille chaque espace de travail.

@@ -111,4 +111,4 @@ Not every response is a patch:
 - **Action cards** offer concrete next steps such as running a scenario or opening a workspace;
 - **Data-table cards** present concrete sample or test rows for an endpoint or schema.
 
-Related: [Request workspace](/docs/client/debug), [Scenario testing](/docs/client/scenario-testing), [AI and models](/docs/client/ai-models).
+Related: [Request workspace](./debug), [Scenario testing](./scenario-testing), [AI and models](./ai-models).

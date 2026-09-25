@@ -111,4 +111,4 @@ the change is merged into the document
 - **액션 카드**는 시나리오 실행이나 워크스페이스 열기 같은 구체적 다음 단계 제공.
 - **데이터 테이블 카드**는 작업이나 스키마의 구체적 샘플/테스트 데이터 제시.
 
-관련: [요청 워크스페이스](/docs/client/debug)、[시나리오 테스트](/docs/client/scenario-testing)、[AI와 모델](/docs/client/ai-models).
+관련: [요청 워크스페이스](./debug)、[시나리오 테스트](./scenario-testing)、[AI와 모델](./ai-models).

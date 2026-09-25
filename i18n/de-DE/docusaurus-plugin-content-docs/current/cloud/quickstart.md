@@ -59,7 +59,7 @@ Wenn sich die API ändert, laden Sie den neuen Inhalt als neue Version hoch, sta
 
 ## Nächste Schritte
 
-- [Dokumente und Versionen](/docs/cloud/documents-versions)
-- [Bereitgestellte Operationen](/docs/cloud/exposure)
-- [Zugriffskontrolle](/docs/cloud/access-control)
-- [Benutzerdefinierte Domains](/docs/cloud/custom-domains)
+- [Dokumente und Versionen](./documents-versions)
+- [Bereitgestellte Operationen](./exposure)
+- [Zugriffskontrolle](./access-control)
+- [Benutzerdefinierte Domains](./custom-domains)

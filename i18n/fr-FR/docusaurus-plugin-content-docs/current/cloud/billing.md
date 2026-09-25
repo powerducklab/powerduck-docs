@@ -89,4 +89,4 @@ La page de facturation sépare les deux.
 
 Comme toute ressource hôte, paiements et abonnements appartiennent à une **organisation** et se consultent avec une portée organisation, donc un utilisateur avec un autre identifiant d'organisation ne peut pas lire les commandes d'une autre équipe.
 
-Voir aussi : [Introduction Cloud](/docs/cloud/introduction)、[Domaines personnalisés](/docs/cloud/custom-domains).
+Voir aussi : [Introduction Cloud](./introduction)、[Domaines personnalisés](./custom-domains).

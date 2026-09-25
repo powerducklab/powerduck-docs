@@ -54,6 +54,6 @@ Una petición necesita una URL completa. Si ni los `servers` de la spec ni el en
 
 ## De la petición única al flujo
 
-Una vez que una llamada aislada funciona, el paso natural es encadenar para pasar un valor de respuesta a la siguiente petición. Ese es el rol de las [pruebas de escenario](/docs/client/scenario-testing).
+Una vez que una llamada aislada funciona, el paso natural es encadenar para pasar un valor de respuesta a la siguiente petición. Ese es el rol de las [pruebas de escenario](./scenario-testing).
 
-Vea también: [Diseñar con el asistente](/docs/client/design)、[Pruebas de escenario](/docs/client/scenario-testing)、[Ajustes](/docs/client/settings).
+Vea también: [Diseñar con el asistente](./design)、[Pruebas de escenario](./scenario-testing)、[Ajustes](./settings).

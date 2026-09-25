@@ -62,4 +62,4 @@ description: "OpenAI 호환 모델을 연결하고, 메인 프로세스를 통�
 - 각 변경을 검증해 적용하는 것은 모델이 아닌 결정론적 호스트입니다.
 - 모든 쓰기는 실행 전 당신의 승인을 받습니다.
 
-관련: [어시스턴트로 설계하기](/docs/client/design)、[설정](/docs/client/settings)、[Cloud 접근 제어](/docs/cloud/access-control).
+관련: [어시스턴트로 설계하기](./design)、[설정](./settings)、[Cloud 접근 제어](../cloud/access-control).

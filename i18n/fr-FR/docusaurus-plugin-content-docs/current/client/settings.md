@@ -76,4 +76,4 @@ Pour toute opération, l'assistant peut générer du code client exécutable (`c
 
 Les demandes au niveau application — bascule thème/langue, configurer un proxy, ignorer une erreur de certificat, changer de version HTTP — sont traitées par les outils de réglages, pas comme des problèmes de conception API. Les changements de réglages demandent confirmation avant application.
 
-Voir aussi : [IA et modèles](/docs/client/ai-models)、[Espace de travail de requête](/docs/client/debug).
+Voir aussi : [IA et modèles](./ai-models)、[Espace de travail de requête](./debug).

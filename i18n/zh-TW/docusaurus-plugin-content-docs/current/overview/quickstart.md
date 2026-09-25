@@ -46,10 +46,10 @@ description: "在幾分鐘內從一份 OpenAPI 檔案走到設計好的介面、
 
 ## 6. 準備好後再深入
 
-- 把多個請求串聯成[場景測試](/docs/client/scenario-testing)，並匯出 HTML 報告；
-- 在後端開發期間執行[本機 Mock 伺服器](/docs/client/mock-server)；
-- 透過[六種協定](/docs/client/protocols)為串流和 RPC API 建模；
-- 在[資料模型](/docs/client/data-model)中推導資料庫表、關係和 SQL；
-- 用 [Powerduck Cloud](/docs/cloud/quickstart) 把同一份規範發布到線上。
+- 把多個請求串聯成[場景測試](../client/scenario-testing)，並匯出 HTML 報告；
+- 在後端開發期間執行[本機 Mock 伺服器](../client/mock-server)；
+- 透過[六種協定](../client/protocols)為串流和 RPC API 建模；
+- 在[資料模型](../client/data-model)中推導資料庫表、關係和 SQL；
+- 用 [Powerduck Cloud](../cloud/quickstart) 把同一份規範發布到線上。
 
 至此你已經走完了完整閉環。文件的其餘部分會深入介紹每個工作區。

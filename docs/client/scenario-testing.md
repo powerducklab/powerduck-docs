@@ -74,4 +74,4 @@ The HTML is standalone, so it can be attached to a ticket or archived with a rel
 - Producing evidence of API behavior for a release or a handoff;
 - Regression-checking a flow after the contract changes.
 
-Related: [Request workspace](/docs/client/debug), [Designing with the assistant](/docs/client/design), [Mock server](/docs/client/mock-server).
+Related: [Request workspace](./debug), [Designing with the assistant](./design), [Mock server](./mock-server).

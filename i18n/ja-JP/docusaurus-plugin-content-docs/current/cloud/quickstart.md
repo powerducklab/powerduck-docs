@@ -59,7 +59,7 @@ API が変わるとき、旧版を置換せず新内容を新バージョンと�
 
 ## 次のステップ
 
-- [文書とバージョン](/docs/cloud/documents-versions)
-- [公開操作](/docs/cloud/exposure)
-- [アクセス制御](/docs/cloud/access-control)
-- [カスタムドメイン](/docs/cloud/custom-domains)
+- [文書とバージョン](./documents-versions)
+- [公開操作](./exposure)
+- [アクセス制御](./access-control)
+- [カスタムドメイン](./custom-domains)

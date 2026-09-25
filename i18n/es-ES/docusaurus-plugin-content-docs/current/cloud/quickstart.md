@@ -59,7 +59,7 @@ Cuando cambie la API, suba el nuevo contenido como una nueva versión en vez de 
 
 ## Siguientes pasos
 
-- [Documentos y versiones](/docs/cloud/documents-versions)
-- [Operaciones expuestas](/docs/cloud/exposure)
-- [Control de acceso](/docs/cloud/access-control)
-- [Dominios personalizados](/docs/cloud/custom-domains)
+- [Documentos y versiones](./documents-versions)
+- [Operaciones expuestas](./exposure)
+- [Control de acceso](./access-control)
+- [Dominios personalizados](./custom-domains)

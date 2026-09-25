@@ -89,4 +89,4 @@ Die Abrechnungsseite trennt beide.
 
 Wie jede Host-Ressource gehören Zahlungen und Abonnements einer **Organisation** und werden mit Organisationsbereich abgefragt, daher kann ein Nutzer mit einer anderen Organisations-ID die Bestellungen eines anderen Teams nicht lesen.
 
-Siehe auch: [Cloud-Einführung](/docs/cloud/introduction)、[Benutzerdefinierte Domains](/docs/cloud/custom-domains).
+Siehe auch: [Cloud-Einführung](./introduction)、[Benutzerdefinierte Domains](./custom-domains).

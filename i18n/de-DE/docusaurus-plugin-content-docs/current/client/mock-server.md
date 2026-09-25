@@ -44,4 +44,4 @@ Wenn Standardbeispiele oder schemaabgeleitete Antworten nicht reichen, geben Üb
 
 Der Mock liest dieselbe Spec wie alle anderen Modi und bleibt bei Entwurfsänderungen am Vertrag ausgerichtet.
 
-Siehe auch: [Szenario-Tests](/docs/client/scenario-testing)、[Mit dem Assistenten entwerfen](/docs/client/design).
+Siehe auch: [Szenario-Tests](./scenario-testing)、[Mit dem Assistenten entwerfen](./design).

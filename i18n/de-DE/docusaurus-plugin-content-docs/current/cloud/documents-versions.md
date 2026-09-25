@@ -84,4 +84,4 @@ Echte Dateien leben in einer Organisation/Dokument/Version-Anordnung im Objektsp
 
 Die Kombination aus unveränderlichen Versionen und einem weich löschenden Lebenszyklus lässt schnell wiederholen, ohne Historie zu verlieren, und ein zu stoppendes Dokument nicht versehentlich exponieren. Pause für vorübergehende Unterbrechung, Archiv für lange Aufbewahrung, fixierte Links, wenn Unveränderlichkeit zählt.
 
-Siehe auch: [Bereitgestellte Operationen](/docs/cloud/exposure)、[Zugriffskontrolle](/docs/cloud/access-control)、[Benutzerdefinierte Domains](/docs/cloud/custom-domains).
+Siehe auch: [Bereitgestellte Operationen](./exposure)、[Zugriffskontrolle](./access-control)、[Benutzerdefinierte Domains](./custom-domains).

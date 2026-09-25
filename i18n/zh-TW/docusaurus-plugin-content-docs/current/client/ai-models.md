@@ -62,4 +62,4 @@ description: "接入任何相容 OpenAI 的模型，透過主程序讓提示詞�
 - 是確定性宿主——而非模型——校驗並套用每項變更；
 - 每次寫入在執行前都由你核准。
 
-相關：[用助手進行設計](/docs/client/design)、[設定](/docs/client/settings)、[Cloud 存取控制](/docs/cloud/access-control)。
+相關：[用助手進行設計](./design)、[設定](./settings)、[Cloud 存取控制](../cloud/access-control)。

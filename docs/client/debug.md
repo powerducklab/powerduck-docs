@@ -54,6 +54,6 @@ A request needs a complete URL. If neither the document's `servers` nor the acti
 
 ## From a single request to a flow
 
-Once a single call works, the natural next step is to chain calls together so that a value from one response feeds the next request. That is a [scenario test](/docs/client/scenario-testing).
+Once a single call works, the natural next step is to chain calls together so that a value from one response feeds the next request. That is a [scenario test](./scenario-testing).
 
-Related: [Designing with the assistant](/docs/client/design), [Scenario testing](/docs/client/scenario-testing), [Settings](/docs/client/settings).
+Related: [Designing with the assistant](./design), [Scenario testing](./scenario-testing), [Settings](./settings).

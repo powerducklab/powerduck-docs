@@ -84,6 +84,6 @@ A custom domain is an additional address, not a bypass. The same gates still app
 - Documentation and MCP each have an enabled flag;
 - A view password still gates documentation, and an MCP access key still gates MCP.
 
-See [Access control](/docs/cloud/access-control).
+See [Access control](./access-control).
 
-Related: [Documents and versions](/docs/cloud/documents-versions), [Billing](/docs/cloud/billing).
+Related: [Documents and versions](./documents-versions), [Billing](./billing).

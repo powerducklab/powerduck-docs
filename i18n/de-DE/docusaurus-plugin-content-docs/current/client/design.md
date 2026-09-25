@@ -111,4 +111,4 @@ Nicht jede Antwort ist ein Patch.
 - **Aktionskarten** liefern einen konkreten nächsten Schritt, wie ein Szenario auszuführen oder einen Arbeitsbereich zu öffnen.
 - **Datentabellenkarten** zeigen konkrete Beispiel-/Testdaten für Operationen oder Schemas.
 
-Siehe auch: [Request-Arbeitsbereich](/docs/client/debug)、[Szenario-Tests](/docs/client/scenario-testing)、[KI und Modelle](/docs/client/ai-models).
+Siehe auch: [Request-Arbeitsbereich](./debug)、[Szenario-Tests](./scenario-testing)、[KI und Modelle](./ai-models).

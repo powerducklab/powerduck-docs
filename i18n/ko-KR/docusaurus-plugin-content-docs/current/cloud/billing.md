@@ -89,4 +89,4 @@ Cloud는 월간 구독 호스팅 서비스입니다.
 
 모든 호스트 자원처럼 결제와 구독은 **조직**에 귀속되고 조직 스코프로 조회돼, 다른 조직 ID를 가진 사용자가 다른 팀의 주문을 읽을 수 없습니다.
 
-관련: [Cloud 소개](/docs/cloud/introduction)、[사용자 지정 도메인](/docs/cloud/custom-domains).
+관련: [Cloud 소개](./introduction)、[사용자 지정 도메인](./custom-domains).

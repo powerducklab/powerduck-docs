@@ -84,4 +84,4 @@ Git 來源追蹤是否啟用同步以及上次同步時間。你可以：
 
 不可變版本與軟刪除生命週期的結合，意味著你可以快速迭代而不丟失歷史，也不會意外暴露你本想停止的文件。臨時下線用暫停，長期保留用歸檔，穩定性重要時固定連結。
 
-相關：[暴露操作](/docs/cloud/exposure)、[存取控制](/docs/cloud/access-control)、[自訂網域](/docs/cloud/custom-domains)。
+相關：[暴露操作](./exposure)、[存取控制](./access-control)、[自訂網域](./custom-domains)。

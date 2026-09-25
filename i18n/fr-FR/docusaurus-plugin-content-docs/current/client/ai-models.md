@@ -62,4 +62,4 @@ Ajouter une capacité signifie donc ajouter un outil au catalogue (avec une desc
 - C'est l'hôte déterministe, pas le modèle, qui valide et applique chaque changement.
 - Toutes les écritures reçoivent votre approbation avant exécution.
 
-Voir aussi : [Concevoir avec l'assistant](/docs/client/design)、[Réglages](/docs/client/settings)、[Contrôle d'accès Cloud](/docs/cloud/access-control).
+Voir aussi : [Concevoir avec l'assistant](./design)、[Réglages](./settings)、[Contrôle d'accès Cloud](../cloud/access-control).

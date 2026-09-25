@@ -48,7 +48,7 @@ The desktop client is an Electron application with two parts:
 - A **main process** (Node.js) that owns file access, outbound HTTP requests, the local mock server, database connections, and the integrated terminal;
 - A **renderer** (the React workspace) that renders the specification, the AI chat, and every tool.
 
-This split matters for security and reliability: requests that need network or filesystem access are handled by the main process, not the web view, so prompts and API keys do not appear in the browser console and direct browser-to-provider CORS restrictions do not apply. See [AI and models](/docs/client/ai-models).
+This split matters for security and reliability: requests that need network or filesystem access are handled by the main process, not the web view, so prompts and API keys do not appear in the browser console and direct browser-to-provider CORS restrictions do not apply. See [AI and models](../client/ai-models).
 
 ## System requirements
 
@@ -58,6 +58,6 @@ This split matters for security and reliability: requests that need network or f
 
 ## Licensing
 
-You can evaluate the desktop client for as long as you like. It is sold as a one-time, **perpetual** license — buy once, own it, with no subscription. A license key is issued at purchase and shown once. Cloud hosting is a separate, subscription-based service. See [Cloud billing](/docs/cloud/billing) for the distinction.
+You can evaluate the desktop client for as long as you like. It is sold as a one-time, **perpetual** license — buy once, own it, with no subscription. A license key is issued at purchase and shown once. Cloud hosting is a separate, subscription-based service. See [Cloud billing](../cloud/billing) for the distinction.
 
-Next: take the [Quickstart](/docs/overview/quickstart).
+Next: take the [Quickstart](./quickstart).

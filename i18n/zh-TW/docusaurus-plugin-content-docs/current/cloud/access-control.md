@@ -65,4 +65,4 @@ Bearer 權杖、基本認證密碼和 API 密鑰值等機密可以寫入但從�
 - **給自己代理用的 MCP：** 啟用 MCP 並產生存取密鑰，讓只有你的用戶端能呼叫；
 - **上游認證：** 讓 MCP 伺服器的認證匹配真實 API 的要求，獨立於誰可以呼叫 MCP 端點。
 
-相關：[暴露操作](/docs/cloud/exposure)、[文件與版本](/docs/cloud/documents-versions)、[自訂網域](/docs/cloud/custom-domains)。
+相關：[暴露操作](./exposure)、[文件與版本](./documents-versions)、[自訂網域](./custom-domains)。

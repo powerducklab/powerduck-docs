@@ -68,13 +68,13 @@ Melden Sie sich mit **Google** oder **GitHub** an. Nach dem OAuth-Handshake gibt
 | Ergebnis | Lizenzschlüssel (einmal gezeigt) | Mitgliedschaft, kein Schlüssel |
 | Wann | Lokal, offline, voller Bereich | Online teilen und veröffentlichen |
 
-Beide ergänzen sich und werden getrennt verkauft. Siehe [Abrechnung](/docs/cloud/billing).
+Beide ergänzen sich und werden getrennt verkauft. Siehe [Abrechnung](./billing).
 
 ## Hier starten
 
-- [Cloud-Schnellstart](/docs/cloud/quickstart)
-- [Dokumente und Versionen](/docs/cloud/documents-versions)
-- [Bereitgestellte Operationen](/docs/cloud/exposure)
-- [Zugriffskontrolle](/docs/cloud/access-control)
-- [Benutzerdefinierte Domains](/docs/cloud/custom-domains)
-- [Abrechnung](/docs/cloud/billing)
+- [Cloud-Schnellstart](./quickstart)
+- [Dokumente und Versionen](./documents-versions)
+- [Bereitgestellte Operationen](./exposure)
+- [Zugriffskontrolle](./access-control)
+- [Benutzerdefinierte Domains](./custom-domains)
+- [Abrechnung](./billing)

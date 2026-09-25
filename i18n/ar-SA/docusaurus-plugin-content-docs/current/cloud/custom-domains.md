@@ -84,6 +84,6 @@ TXT "powerduck-verify=<the-token-shown-for-the-binding>"
 - لكل وضع مؤشّره النشط.
 - كلمة مرور العرض تبقى تحمي التوثيق ومفتاح الوصول يحمي MCP.
 
-انظر [التحكم بالوصول](/docs/cloud/access-control).
+انظر [التحكم بالوصول](./access-control).
 
-انظر أيضاً: [المستندات والنسخ](/docs/cloud/documents-versions)、[الفوترة](/docs/cloud/billing).
+انظر أيضاً: [المستندات والنسخ](./documents-versions)、[الفوترة](./billing).

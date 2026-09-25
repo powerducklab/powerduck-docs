@@ -125,4 +125,4 @@ paths:
 
 En modélisant six protocoles dans un seul document, la conception, le débogage, la simulation, la documentation et MCP sont pilotés par la même source, quel que soit le transport. Demandez à l'assistant d'ajouter une interface de streaming ou RPC, et sa configuration de protocole reste intacte au lieu d'être aplatie en REST.
 
-Voir aussi : [Concevoir avec l'assistant](/docs/client/design)、[Modèle de données](/docs/client/data-model).
+Voir aussi : [Concevoir avec l'assistant](./design)、[Modèle de données](./data-model).

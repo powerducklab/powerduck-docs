@@ -68,13 +68,13 @@ Public readers use a dedicated documentation viewer and need no account unless t
 | Output | A license key (shown once) | Membership, no key |
 | Best for | Local, offline, full workspace | Sharing and publishing online |
 
-The two are complementary and sold separately. See [Billing](/docs/cloud/billing).
+The two are complementary and sold separately. See [Billing](./billing).
 
 ## Start here
 
-- [Cloud quickstart](/docs/cloud/quickstart)
-- [Documents and versions](/docs/cloud/documents-versions)
-- [Exposed operations](/docs/cloud/exposure)
-- [Access control](/docs/cloud/access-control)
-- [Custom domains](/docs/cloud/custom-domains)
-- [Billing](/docs/cloud/billing)
+- [Cloud quickstart](./quickstart)
+- [Documents and versions](./documents-versions)
+- [Exposed operations](./exposure)
+- [Access control](./access-control)
+- [Custom domains](./custom-domains)
+- [Billing](./billing)

@@ -29,14 +29,14 @@ Um único documento impulsiona todos os modos, acessíveis por um seletor compac
 
 | Modo | O que faz |
 |---|---|
-| [**Spec**](/docs/client/design) | Modo principal: chat de IA, documento, pré-visualização ao vivo |
-| [**Espaço de requisição**](/docs/client/debug) | Envia e inspeciona requisições HTTP reais; separadores e ambientes |
-| [**Testes de cenário**](/docs/client/scenario-testing) | Vincula operações em fluxos, executa-os e produz um relatório |
-| [**Documentação**](/docs/client/protocols) | Lê a especificação como documentação API renderizada |
-| [**MCP**](/docs/client/protocols) | Revê e usa o servidor MCP derivado da especificação |
-| [**Servidor de simulação**](/docs/client/mock-server) | Executa uma simulação local durante o desenvolvimento da API |
-| [**Modelo de dados**](/docs/client/data-model) | Derive tabelas e relações, compare com a base e gere SQL |
-| [**Ajustes**](/docs/client/settings) | Tema, idioma, proxy, certificados, preferências do espaço |
+| [**Spec**](./design) | Modo principal: chat de IA, documento, pré-visualização ao vivo |
+| [**Espaço de requisição**](./debug) | Envia e inspeciona requisições HTTP reais; separadores e ambientes |
+| [**Testes de cenário**](./scenario-testing) | Vincula operações em fluxos, executa-os e produz um relatório |
+| [**Documentação**](./protocols) | Lê a especificação como documentação API renderizada |
+| [**MCP**](./protocols) | Revê e usa o servidor MCP derivado da especificação |
+| [**Servidor de simulação**](./mock-server) | Executa uma simulação local durante o desenvolvimento da API |
+| [**Modelo de dados**](./data-model) | Derive tabelas e relações, compare com a base e gere SQL |
+| [**Ajustes**](./settings) | Tema, idioma, proxy, certificados, preferências do espaço |
 
 ## Como colabora com o assistente
 
@@ -46,7 +46,7 @@ Descreve a intenção em linguagem natural, o assistente escolhe a capacidade ad
 - As tarefas de só leitura — listar operações, obter um esquema, executar uma consulta — devolvem os factos em que o assistente baseia a sua resposta.
 - As ações de escrita pedem confirmação antes de executar.
 
-O modelo **configura-o você**. Aponte a app a qualquer fornecedor compatível com OpenAI e escolha-o nos ajustes. Veja [IA e modelos](/docs/client/ai-models).
+O modelo **configura-o você**. Aponte a app a qualquer fornecedor compatível com OpenAI e escolha-o nos ajustes. Veja [IA e modelos](./ai-models).
 
 ## O que significa local-first para você
 
@@ -58,15 +58,15 @@ O modelo **configura-o você**. Aponte a app a qualquer fornecedor compatível c
 
 ## Licença de desktop
 
-O cliente de desktop vende-se como **licença perpétua após compra única**. Compra-se uma vez, possui-se para sempre, funciona por completo sem conexão e não precisa de conta. A chave é gerada na compra e mostrada uma só vez. Distingue-se de Powerduck Cloud, o serviço de alojamento com subscrição mensal. Veja [Faturação da Cloud](/docs/cloud/billing).
+O cliente de desktop vende-se como **licença perpétua após compra única**. Compra-se uma vez, possui-se para sempre, funciona por completo sem conexão e não precisa de conta. A chave é gerada na compra e mostrada uma só vez. Distingue-se de Powerduck Cloud, o serviço de alojamento com subscrição mensal. Veja [Faturação da Cloud](../cloud/billing).
 
 ## Comece aqui
 
-- [Desenhar com o assistente](/docs/client/design)
-- [Espaço de requisição e ambientes](/docs/client/debug)
-- [Testes de cenário e relatórios](/docs/client/scenario-testing)
-- [Protocolos](/docs/client/protocols)
-- [Modelo de dados e diagrama ER](/docs/client/data-model)
-- [Servidor de simulação](/docs/client/mock-server)
-- [IA e modelos](/docs/client/ai-models)
-- [Ajustes](/docs/client/settings)
+- [Desenhar com o assistente](./design)
+- [Espaço de requisição e ambientes](./debug)
+- [Testes de cenário e relatórios](./scenario-testing)
+- [Protocolos](./protocols)
+- [Modelo de dados e diagrama ER](./data-model)
+- [Servidor de simulação](./mock-server)
+- [IA e modelos](./ai-models)
+- [Ajustes](./settings)

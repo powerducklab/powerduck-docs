@@ -62,4 +62,4 @@ Eine Fﾃ､higkeit hinzuzufﾃｼgen bedeutet also ein Werkzeug in den Katalog (mit prﾃ
 - Der deterministische Host, nicht das Modell, validiert und wendet jede ﾃ�nderung an.
 - Alle Schreibvorgﾃ､nge erhalten vor Ausfﾃｼhrung Ihre Zustimmung.
 
-Siehe auch: [Mit dem Assistenten entwerfen](/docs/client/design)縲ーEinstellungen](/docs/client/settings)縲ーCloud-Zugriffskontrolle](/docs/cloud/access-control).
+Siehe auch: [Mit dem Assistenten entwerfen](./design)縲ーEinstellungen](./settings)縲ーCloud-Zugriffskontrolle](../cloud/access-control).

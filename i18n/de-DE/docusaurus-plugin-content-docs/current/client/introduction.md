@@ -29,14 +29,14 @@ Ein einziges Dokument treibt alle Modi an, erreichbar über einen kompakten Umsc
 
 | Modus | Was er tut |
 |---|---|
-| [**Spec**](/docs/client/design) | Hauptmodus: KI-Chat, Dokument, Live-Vorschau |
-| [**Request-Arbeitsbereich**](/docs/client/debug) | Sendet und prüft echte HTTP-Requests; Tabs und Umgebungen |
-| [**Szenario-Tests**](/docs/client/scenario-testing) | Verknüpft Operationen zu Abläufen, führt sie aus und erstellt einen Bericht |
-| [**Dokumentation**](/docs/client/protocols) | Liest die Spec als gerenderte API-Doku |
-| [**MCP**](/docs/client/protocols) | Prüft und nutzt den aus der Spec abgeleiteten MCP-Server |
-| [**Mock-Server**](/docs/client/mock-server) | Führt während der API-Entwicklung einen lokalen Mock aus |
-| [**Datenmodell**](/docs/client/data-model) | Leitet Tabellen und Beziehungen ab, vergleicht mit der DB und erzeugt SQL |
-| [**Einstellungen**](/docs/client/settings) | Theme, Sprache, Proxy, Zertifikate, Arbeitsbereichs-Voreinstellungen |
+| [**Spec**](./design) | Hauptmodus: KI-Chat, Dokument, Live-Vorschau |
+| [**Request-Arbeitsbereich**](./debug) | Sendet und prüft echte HTTP-Requests; Tabs und Umgebungen |
+| [**Szenario-Tests**](./scenario-testing) | Verknüpft Operationen zu Abläufen, führt sie aus und erstellt einen Bericht |
+| [**Dokumentation**](./protocols) | Liest die Spec als gerenderte API-Doku |
+| [**MCP**](./protocols) | Prüft und nutzt den aus der Spec abgeleiteten MCP-Server |
+| [**Mock-Server**](./mock-server) | Führt während der API-Entwicklung einen lokalen Mock aus |
+| [**Datenmodell**](./data-model) | Leitet Tabellen und Beziehungen ab, vergleicht mit der DB und erzeugt SQL |
+| [**Einstellungen**](./settings) | Theme, Sprache, Proxy, Zertifikate, Arbeitsbereichs-Voreinstellungen |
 
 ## Wie Sie mit dem Assistenten zusammenarbeiten
 
@@ -46,7 +46,7 @@ Sie beschreiben die Absicht in natürlicher Sprache, der Assistent wählt die pa
 - Nur-Lese-Aufgaben — Operationen auflisten, Schema holen, Abfrage ausführen — liefern die Fakten, auf die der Assistent seine Antwort gründet.
 - Schreib-Aktionen verlangen vor Ausführung eine Bestätigung.
 
-Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenAI-kompatiblen Anbieter und wählen ihn in den Einstellungen. Siehe [KI und Modelle](/docs/client/ai-models).
+Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenAI-kompatiblen Anbieter und wählen ihn in den Einstellungen. Siehe [KI und Modelle](./ai-models).
 
 ## Was Local-First für Sie bedeutet
 
@@ -58,15 +58,15 @@ Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenA
 
 ## Desktop-Lizenz
 
-Der Desktop-Client wird als **dauerhafte Lizenz nach Einmalkauf** verkauft. Einmal gekauft, für immer behalten, vollständig offline und ohne Konto. Der Schlüssel wird beim Kauf erzeugt und einmal angezeigt. Er unterscheidet sich von Powerduck Cloud, dem monatlich abonnierten Hosting-Dienst. Siehe [Cloud-Abrechnung](/docs/cloud/billing).
+Der Desktop-Client wird als **dauerhafte Lizenz nach Einmalkauf** verkauft. Einmal gekauft, für immer behalten, vollständig offline und ohne Konto. Der Schlüssel wird beim Kauf erzeugt und einmal angezeigt. Er unterscheidet sich von Powerduck Cloud, dem monatlich abonnierten Hosting-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing).
 
 ## Hier starten
 
-- [Mit dem Assistenten entwerfen](/docs/client/design)
-- [Request-Arbeitsbereich und Umgebungen](/docs/client/debug)
-- [Szenario-Tests und Berichte](/docs/client/scenario-testing)
-- [Protokolle](/docs/client/protocols)
-- [Datenmodell und ER-Diagramm](/docs/client/data-model)
-- [Mock-Server](/docs/client/mock-server)
-- [KI und Modelle](/docs/client/ai-models)
-- [Einstellungen](/docs/client/settings)
+- [Mit dem Assistenten entwerfen](./design)
+- [Request-Arbeitsbereich und Umgebungen](./debug)
+- [Szenario-Tests und Berichte](./scenario-testing)
+- [Protokolle](./protocols)
+- [Datenmodell und ER-Diagramm](./data-model)
+- [Mock-Server](./mock-server)
+- [KI und Modelle](./ai-models)
+- [Einstellungen](./settings)

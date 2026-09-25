@@ -84,6 +84,6 @@ Die benutzerdefinierte Domain ist kein Umgehungsweg: Die gleichen Tore gelten.
 - Jeder Modus hat seine Aktiv-Anzeige.
 - Das Ansichtspasswort schützt weiter die Doku und der Zugriffsschlüssel das MCP.
 
-Siehe [Zugriffskontrolle](/docs/cloud/access-control).
+Siehe [Zugriffskontrolle](./access-control).
 
-Siehe auch: [Dokumente und Versionen](/docs/cloud/documents-versions)、[Abrechnung](/docs/cloud/billing).
+Siehe auch: [Dokumente und Versionen](./documents-versions)、[Abrechnung](./billing).

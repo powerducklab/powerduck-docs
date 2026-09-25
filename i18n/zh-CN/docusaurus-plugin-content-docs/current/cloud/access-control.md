@@ -65,4 +65,4 @@ Bearer 令牌、基本认证密码和 API 密钥值等机密可以写入但从�
 - **给自己智能体用的 MCP：** 启用 MCP 并生成访问密钥，让只有你的客户端能调用；
 - **上游认证：** 让 MCP 服务器的认证匹配真实 API 的要求，独立于谁可以调用 MCP 端点。
 
-相关：[暴露操作](/docs/cloud/exposure)、[文档与版本](/docs/cloud/documents-versions)、[自定义域名](/docs/cloud/custom-domains)。
+相关：[暴露操作](./exposure)、[文档与版本](./documents-versions)、[自定义域名](./custom-domains)。

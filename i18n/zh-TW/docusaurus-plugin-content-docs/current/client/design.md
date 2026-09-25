@@ -111,4 +111,4 @@ the change is merged into the document
 - **動作卡片**提供具體的下一步，例如執行場景或打開某個工作區；
 - **資料表卡片**為某個介面或模式呈現具體的範例或測試資料。
 
-相關：[請求工作區](/docs/client/debug)、[場景測試](/docs/client/scenario-testing)、[AI 與模型](/docs/client/ai-models)。
+相關：[請求工作區](./debug)、[場景測試](./scenario-testing)、[AI 與模型](./ai-models)。

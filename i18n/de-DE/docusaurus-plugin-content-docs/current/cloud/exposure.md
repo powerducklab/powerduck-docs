@@ -47,7 +47,7 @@ Bereitstellung legt fest, **welche Operationen erscheinen**, andere Steuerung, *
 - Jeder Modus hat seine Aktiv-Anzeige für Doku und MCP.
 - Zugriff per Passwort (Doku) oder Zugriffsschlüssel (MCP) schützbar.
 
-Die Gesamtheit der Tore steht in [Zugriffskontrolle](/docs/cloud/access-control).
+Die Gesamtheit der Tore steht in [Zugriffskontrolle](./access-control).
 
 ## Plan-Grenzwerte
 
@@ -57,4 +57,4 @@ Pläne begrenzen die Zahl bereitgestellter Operationen.
 - **Pro** — bis zu 1.000.
 - **Team** — bis zu 10.000.
 
-Siehe auch: [Zugriffskontrolle](/docs/cloud/access-control)、[Dokumente und Versionen](/docs/cloud/documents-versions).
+Siehe auch: [Zugriffskontrolle](./access-control)、[Dokumente und Versionen](./documents-versions).

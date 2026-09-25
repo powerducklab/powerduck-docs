@@ -65,4 +65,4 @@ Autres réglages MCP :
 - **MCP pour vos propres agents :** activez le MCP et créez une clé d'accès pour que seuls vos clients appellent.
 - **Authentification amont :** alignez l'authentification du serveur MCP sur les exigences réelles de l'API, indépendamment de qui peut appeler le point de terminaison.
 
-Voir aussi : [Opérations exposées](/docs/cloud/exposure)、[Documents et versions](/docs/cloud/documents-versions)、[Domaines personnalisés](/docs/cloud/custom-domains).
+Voir aussi : [Opérations exposées](./exposure)、[Documents et versions](./documents-versions)、[Domaines personnalisés](./custom-domains).

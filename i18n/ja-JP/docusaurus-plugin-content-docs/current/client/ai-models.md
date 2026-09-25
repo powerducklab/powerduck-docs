@@ -62,4 +62,4 @@ description: "任意の OpenAI 互換モデルを接続し、メインプロセ�
 - 各変更を検証し適用するのはモデルではなく確定的ホストです。
 - すべての書き込みは実行前にあなたの承認を得ます。
 
-関連: [アシスタントで設計する](/docs/client/design)、[設定](/docs/client/settings)、[Cloud アクセス制御](/docs/cloud/access-control)。
+関連: [アシスタントで設計する](./design)、[設定](./settings)、[Cloud アクセス制御](../cloud/access-control)。

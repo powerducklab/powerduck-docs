@@ -54,6 +54,6 @@ description: "탭에서 실제 요청을 보내고, 스코프 간 변수를 관�
 
 ## 단일 요청에서 플로우로
 
-단일 호출이 동작하면 자연스러운 다음 단계는 한 응답 값을 다음 요청에 주도록 호출을 연결하는 것입니다. 그것이 [시나리오 테스트](/docs/client/scenario-testing)입니다.
+단일 호출이 동작하면 자연스러운 다음 단계는 한 응답 값을 다음 요청에 주도록 호출을 연결하는 것입니다. 그것이 [시나리오 테스트](./scenario-testing)입니다.
 
-관련: [어시스턴트로 설계하기](/docs/client/design)、[시나리오 테스트](/docs/client/scenario-testing)、[설정](/docs/client/settings).
+관련: [어시스턴트로 설계하기](./design)、[시나리오 테스트](./scenario-testing)、[설정](./settings).

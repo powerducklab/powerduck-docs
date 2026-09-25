@@ -91,4 +91,4 @@ Cloud 访问遵循对某计划的**有效订阅**，不涉及授权码：
 - 想在线发布文档和 MCP 并分享稳定链接？订阅 **Cloud Pro**（多席位选 Team）。
 - 很多团队两者都用：在客户端本地设计和测试，然后在 Cloud 上托管已发布的 API。
 
-相关：[Cloud 简介](/docs/cloud/introduction)、[桌面客户端](/docs/client/introduction)。
+相关：[Cloud 简介](./introduction)、[桌面客户端](../client/introduction)。

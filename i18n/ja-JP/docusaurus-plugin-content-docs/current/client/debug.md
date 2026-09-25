@@ -54,6 +54,6 @@ description: "タブで実リクエストを送り、スコープ間で変数を
 
 ## 単一リクエストからフローへ
 
-一度単一の呼び出しが動けば、自然な次のステップは、あるレスポンスの値を次のリクエストに渡すよう呼び出しを連結することです。それが[シナリオテスト](/docs/client/scenario-testing)です。
+一度単一の呼び出しが動けば、自然な次のステップは、あるレスポンスの値を次のリクエストに渡すよう呼び出しを連結することです。それが[シナリオテスト](./scenario-testing)です。
 
-関連: [アシスタントで設計する](/docs/client/design)、[シナリオテスト](/docs/client/scenario-testing)、[設定](/docs/client/settings)。
+関連: [アシスタントで設計する](./design)、[シナリオテスト](./scenario-testing)、[設定](./settings)。

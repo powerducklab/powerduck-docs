@@ -84,6 +84,6 @@ TXT "powerduck-verify=<the-token-shown-for-the-binding>"
 - 文档和 MCP 各有启用标记；
 - 查看密码仍为文档把关，MCP 访问密钥仍为 MCP 把关。
 
-参见[访问控制](/docs/cloud/access-control)。
+参见[访问控制](./access-control)。
 
-相关：[文档与版本](/docs/cloud/documents-versions)、[账单](/docs/cloud/billing)。
+相关：[文档与版本](./documents-versions)、[账单](./billing)。

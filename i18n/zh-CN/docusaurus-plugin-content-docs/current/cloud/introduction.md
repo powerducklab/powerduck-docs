@@ -68,13 +68,13 @@ Powerduck Cloud 让一份 OpenAPI 文件变成你可以**分享**的东西。添
 | 产出 | 授权码（仅展示一次） | 会员资格，无授权码 |
 | 最适合 | 本地、离线、完整工作区 | 在线分享和发布 |
 
-两者互补、分开出售。参见[账单](/docs/cloud/billing)。
+两者互补、分开出售。参见[账单](./billing)。
 
 ## 从这里开始
 
-- [Cloud 快速开始](/docs/cloud/quickstart)
-- [文档与版本](/docs/cloud/documents-versions)
-- [暴露操作](/docs/cloud/exposure)
-- [访问控制](/docs/cloud/access-control)
-- [自定义域名](/docs/cloud/custom-domains)
-- [账单](/docs/cloud/billing)
+- [Cloud 快速开始](./quickstart)
+- [文档与版本](./documents-versions)
+- [暴露操作](./exposure)
+- [访问控制](./access-control)
+- [自定义域名](./custom-domains)
+- [账单](./billing)

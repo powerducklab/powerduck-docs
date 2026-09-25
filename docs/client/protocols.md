@@ -125,4 +125,4 @@ The `method` selects the MCP operation: `tools/call`, `tools/list`, `resources/r
 
 Modeling all six protocols in one document means the same source of truth drives design, debugging, mocks, documentation, and MCP regardless of transport. When you ask the assistant to add a streaming or RPC endpoint, it keeps the protocol configuration intact rather than flattening it into a REST-only shape.
 
-Related: [Designing with the assistant](/docs/client/design), [Data model](/docs/client/data-model).
+Related: [Designing with the assistant](./design), [Data model](./data-model).

@@ -80,4 +80,4 @@ Las conexiones se gestionan mediante perfiles guardados (id, nombre, dialecto, h
 
 En este modo el SQL se **genera para revisión**, no se ejecuta contra la base. Usted decide cuándo y cómo aplicarlo, y el acceso de solo lectura protege los datos reales. Puede explorar y repetir el modelo con seguridad antes de tocar la base.
 
-Vea también: [Protocoles](/docs/client/protocols)、[Espacio de petición](/docs/client/debug)、[Ajustes](/docs/client/settings).
+Vea también: [Protocoles](./protocols)、[Espacio de petición](./debug)、[Ajustes](./settings).

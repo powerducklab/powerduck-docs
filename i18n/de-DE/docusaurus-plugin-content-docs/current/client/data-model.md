@@ -80,4 +80,4 @@ Verbindungen werden über gespeicherte Profile verwaltet (id, Name, Dialekt, Hos
 
 In diesem Modus wird SQL **zur Prüfung erzeugt**, nicht gegen die DB ausgeführt. Sie entscheiden, wann und wie anzuwenden, und Nur-Lese-Zugriff schützt die echten Daten. Sie können das Modell sicher erkunden und wiederholen, bevor Sie die DB berühren.
 
-Siehe auch: [Protokolle](/docs/client/protocols)、[Request-Arbeitsbereich](/docs/client/debug)、[Einstellungen](/docs/client/settings).
+Siehe auch: [Protokolle](./protocols)、[Request-Arbeitsbereich](./debug)、[Einstellungen](./settings).

@@ -46,10 +46,10 @@ Open **Documentation** to render the same specification as readable API document
 
 ## 6. Go further when you're ready
 
-- Chain several requests into a [scenario test](/docs/client/scenario-testing) and export an HTML report;
-- Run a [local mock server](/docs/client/mock-server) while the backend is being built;
-- Model streaming and RPC APIs across [six protocols](/docs/client/protocols);
-- Derive database tables, relationships, and SQL in the [data model](/docs/client/data-model);
-- Publish the same specification online with [Powerduck Cloud](/docs/cloud/quickstart).
+- Chain several requests into a [scenario test](../client/scenario-testing) and export an HTML report;
+- Run a [local mock server](../client/mock-server) while the backend is being built;
+- Model streaming and RPC APIs across [six protocols](../client/protocols);
+- Derive database tables, relationships, and SQL in the [data model](../client/data-model);
+- Publish the same specification online with [Powerduck Cloud](../cloud/quickstart).
 
 You now have the full loop. The rest of the documentation covers each workspace in depth.

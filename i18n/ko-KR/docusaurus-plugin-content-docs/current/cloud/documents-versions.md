@@ -84,4 +84,4 @@ Git 소스는 동기화 활성 여부와 마지막 동기화 시각을 추적합
 
 불변 버전과 소프트 삭제 라이프사이클의 조합으로 이력을 잃지 않고 빠르게 반복하며, 멈추려 한 문서를 실수로 공개하지 않습니다. 임시 중단은 일시정지, 장기 보관은 보관, 안정성 중요 시 링크 고정입니다.
 
-관련: [노출 작업](/docs/cloud/exposure)、[접근 통제](/docs/cloud/access-control)、[사용자 지정 도메인](/docs/cloud/custom-domains).
+관련: [노출 작업](./exposure)、[접근 통제](./access-control)、[사용자 지정 도메인](./custom-domains).

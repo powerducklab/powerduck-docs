@@ -44,4 +44,4 @@ Quand les exemples par défaut ou les réponses dérivées du schéma ne suffise
 
 La simulation lit la même spécification que tous les autres modes, donc elle reste alignée sur le contrat quand la conception change.
 
-Voir aussi : [Tests de scénario](/docs/client/scenario-testing)、[Concevoir avec l'assistant](/docs/client/design).
+Voir aussi : [Tests de scénario](./scenario-testing)、[Concevoir avec l'assistant](./design).

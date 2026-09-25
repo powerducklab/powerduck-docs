@@ -80,4 +80,4 @@ As conexões gerem-se por perfis guardados (id, nome, dialeto, host, porta, util
 
 Neste modo o SQL **gera-se para revisão**, não se executa contra a base. Você decide quando e como aplicá-lo, e o acesso de só leitura protege os dados reais. Pode explorar e repetir o modelo com segurança antes de tocar a base.
 
-Veja também: [Protocolos](/docs/client/protocols)、[Espaço de requisição](/docs/client/debug)、[Ajustes](/docs/client/settings).
+Veja também: [Protocolos](./protocols)、[Espaço de requisição](./debug)、[Ajustes](./settings).

@@ -68,13 +68,13 @@ Powerduck Cloud는 OpenAPI 파일을 **공유할 수 있는** 것으로 바꿉�
 | 결과 | 라이선스 키(한 번만 표시) | 멤버십, 키 없음 |
 | 적합 상황 | 로컬, 오프라인, 완전 워크스페이스 | 온라인 공유와 게시 |
 
-둘은 보완하고 따로 판매됩니다. [청구](/docs/cloud/billing)를 보세요.
+둘은 보완하고 따로 판매됩니다. [청구](./billing)를 보세요.
 
 ## 여기서 시작
 
-- [Cloud 빠른 시작](/docs/cloud/quickstart)
-- [문서와 버전](/docs/cloud/documents-versions)
-- [노출 작업](/docs/cloud/exposure)
-- [접근 통제](/docs/cloud/access-control)
-- [사용자 지정 도메인](/docs/cloud/custom-domains)
-- [청구](/docs/cloud/billing)
+- [Cloud 빠른 시작](./quickstart)
+- [문서와 버전](./documents-versions)
+- [노출 작업](./exposure)
+- [접근 통제](./access-control)
+- [사용자 지정 도메인](./custom-domains)
+- [청구](./billing)

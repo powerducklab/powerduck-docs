@@ -68,13 +68,13 @@ Os leitores públicos usam um visualizador próprio e não precisam de conta se 
 | Resultado | Chave de licença (mostrada uma vez) | Membresia, sem chave |
 | Quando | Local, sem conexão, âmbito completo | Compartilhar e publicar online |
 
-Ambos se complementam e vendem-se separadamente. Veja [Faturação](/docs/cloud/billing).
+Ambos se complementam e vendem-se separadamente. Veja [Faturação](./billing).
 
 ## Comece aqui
 
-- [Início rápido da Cloud](/docs/cloud/quickstart)
-- [Documentos e versões](/docs/cloud/documents-versions)
-- [Operações expostas](/docs/cloud/exposure)
-- [Controlo de acesso](/docs/cloud/access-control)
-- [Domínios personalizados](/docs/cloud/custom-domains)
-- [Faturação](/docs/cloud/billing)
+- [Início rápido da Cloud](./quickstart)
+- [Documentos e versões](./documents-versions)
+- [Operações expostas](./exposure)
+- [Controlo de acesso](./access-control)
+- [Domínios personalizados](./custom-domains)
+- [Faturação](./billing)

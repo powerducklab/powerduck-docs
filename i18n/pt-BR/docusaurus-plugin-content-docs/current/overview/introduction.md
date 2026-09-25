@@ -47,23 +47,23 @@ Powerduck roda na sua máquina, abre e salva arquivos reais, funciona sem conex�
 
 | Forma | O que é | Quando usar |
 |---|---|---|
-| [**Cliente de desktop**](/docs/client/introduction) | App Electron local-first com assistente de IA e espaço de trabalho API completo | Engenheiros que querem tudo na sua máquina, trabalhar sem conexão e manter chaves/instruções locais |
-| [**Powerduck Cloud**](/docs/cloud/introduction) | Serviço hospedado para alojamento OAS, documentação online e MCP gerenciado | Para compartilhar APIs, publicar links estáveis e oferecer MCP sem executar nada |
-| [**Bibliotecas de código aberto**](/docs/opensource/) | Pacotes npm `@powerduck/*` combináveis | Para construir suas próprias ferramentas, pipelines CI ou componentes embutidos |
+| [**Cliente de desktop**](../client/introduction) | App Electron local-first com assistente de IA e espaço de trabalho API completo | Engenheiros que querem tudo na sua máquina, trabalhar sem conexão e manter chaves/instruções locais |
+| [**Powerduck Cloud**](../cloud/introduction) | Serviço hospedado para alojamento OAS, documentação online e MCP gerenciado | Para compartilhar APIs, publicar links estáveis e oferecer MCP sem executar nada |
+| [**Bibliotecas de código aberto**](../opensource/) | Pacotes npm `@powerduck/*` combináveis | Para construir suas próprias ferramentas, pipelines CI ou componentes embutidos |
 
 As três formas compartilham o mesmo motor. O cliente de desktop e a nuvem são montados ambos a partir das bibliotecas de código aberto, por isso as capacidades se comportam igual, sejam executadas localmente, chamadas pela rede ou importando os pacotes diretamente.
 
 ### Cliente de desktop
 
-O [cliente de desktop](/docs/client/introduction) roda por completo na sua máquina. Abre e edita arquivos reais em disco, envia requisições por um processo local, executa simulações locais e mantém as instruções de IA e chaves API fora da consola do navegador. Os modelos são livremente configuráveis e as mudanças propostas chegam como cartões revisáveis antes de aplicar.
+O [cliente de desktop](../client/introduction) roda por completo na sua máquina. Abre e edita arquivos reais em disco, envia requisições por um processo local, executa simulações locais e mantém as instruções de IA e chaves API fora da consola do navegador. Os modelos são livremente configuráveis e as mudanças propostas chegam como cartões revisáveis antes de aplicar.
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](/docs/cloud/introduction) leva o mesmo fluxo online. Adicione um arquivo, um repositório Git ou uma URL, escolha as operações a expor e obterá links estáveis à documentação renderizada e um endpoint MCP gerenciado. O acesso pode ser protegido com uma senha de visualização ou uma chave de acesso MCP; os planos pagos adicionam sincronização Git, domínios personalizados e limites mais altos.
+[Powerduck Cloud](../cloud/introduction) leva o mesmo fluxo online. Adicione um arquivo, um repositório Git ou uma URL, escolha as operações a expor e obterá links estáveis à documentação renderizada e um endpoint MCP gerenciado. O acesso pode ser protegido com uma senha de visualização ou uma chave de acesso MCP; os planos pagos adicionam sincronização Git, domínios personalizados e limites mais altos.
 
 ### Bibliotecas de código aberto
 
-As [bibliotecas](/docs/opensource/) são o motor subjacente: analisador e atualizador OpenAPI, CLI multiprotocolo, gerador de código, servidor MCP, executor de requisições, conversores cURL / Postman e editores embutidos. Cada um é publicado de forma independente no npm com guias de instalação dedicados e referências API. Os detalhes técnicos de baixo nível vivem aqui.
+As [bibliotecas](../opensource/) são o motor subjacente: analisador e atualizador OpenAPI, CLI multiprotocolo, gerador de código, servidor MCP, executor de requisições, conversores cURL / Postman e editores embutidos. Cada um é publicado de forma independente no npm com guias de instalação dedicados e referências API. Os detalhes técnicos de baixo nível vivem aqui.
 
 ## O que muda para você
 
@@ -75,7 +75,7 @@ As [bibliotecas](/docs/opensource/) são o motor subjacente: analisador e atuali
 
 ## Para onde ir depois
 
-- Novo aqui? Comece por [Instalação](/docs/overview/installation) e [Início rápido](/docs/overview/quickstart).
-- Precisa do espaço local completo? Leia o [guia do cliente de desktop](/docs/client/introduction).
-- Quer publicar sua API online? Leia o [guia da Cloud](/docs/cloud/introduction).
-- Constrói sua própria integração? Veja as [bibliotecas de código aberto](/docs/opensource/).
+- Novo aqui? Comece por [Instalação](./installation) e [Início rápido](./quickstart).
+- Precisa do espaço local completo? Leia o [guia do cliente de desktop](../client/introduction).
+- Quer publicar sua API online? Leia o [guia da Cloud](../cloud/introduction).
+- Constrói sua própria integração? Veja as [bibliotecas de código aberto](../opensource/).

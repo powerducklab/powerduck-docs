@@ -65,4 +65,4 @@ Additional MCP configuration includes:
 - **MCP for your own agents:** enable MCP and generate an access key, so only your clients can call it;
 - **Upstream auth:** set the MCP server's authentication to match what the real API requires, independently of who may call the MCP endpoint.
 
-Related: [Exposed operations](/docs/cloud/exposure), [Documents and versions](/docs/cloud/documents-versions), [Custom domains](/docs/cloud/custom-domains).
+Related: [Exposed operations](./exposure), [Documents and versions](./documents-versions), [Custom domains](./custom-domains).

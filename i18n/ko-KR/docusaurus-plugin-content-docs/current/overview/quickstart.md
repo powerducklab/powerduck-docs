@@ -46,10 +46,10 @@ description: "OpenAPI 파일에서 설계한 엔드포인트, 실제 요청, 렌
 
 ## 6. 준비되면 더 진행
 
-- 여러 요청을 [시나리오 테스트](/docs/client/scenario-testing)로 연결하고 HTML 보고서 내보내기.
-- 백엔드 개발 중 [로컬 모크 서버](/docs/client/mock-server) 실행.
-- [6개 프로토콜](/docs/client/protocols)로 스트리밍 / RPC API 모델링.
-- [데이터 모델](/docs/client/data-model)에서 데이터베이스 테이블, 관계, SQL 도출.
-- [Powerduck Cloud](/docs/cloud/quickstart)로 같은 스펙을 온라인 게시.
+- 여러 요청을 [시나리오 테스트](../client/scenario-testing)로 연결하고 HTML 보고서 내보내기.
+- 백엔드 개발 중 [로컬 모크 서버](../client/mock-server) 실행.
+- [6개 프로토콜](../client/protocols)로 스트리밍 / RPC API 모델링.
+- [데이터 모델](../client/data-model)에서 데이터베이스 테이블, 관계, SQL 도출.
+- [Powerduck Cloud](../cloud/quickstart)로 같은 스펙을 온라인 게시.
 
 이것으로 핵심 루프가 완료됩니다. 나머지 문서에서 각 워크스페이스를 자세히 설명합니다.

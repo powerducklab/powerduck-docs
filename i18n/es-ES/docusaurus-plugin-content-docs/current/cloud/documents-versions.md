@@ -84,4 +84,4 @@ Los archivos reales viven en una disposición organización/documento/versión e
 
 La combinación de versiones inmutables y un ciclo de vida con borrado lógico permite iterar rápido sin perder historial y no exponer por descuido un documento que debe detenerse. Pausa para interrupción temporal, archivo para conservación a largo plazo, enlaces fijados cuando la inmutabilidad cuenta.
 
-Vea también: [Operaciones expuestas](/docs/cloud/exposure)、[Control de acceso](/docs/cloud/access-control)、[Dominios personalizados](/docs/cloud/custom-domains).
+Vea también: [Operaciones expuestas](./exposure)、[Control de acceso](./access-control)、[Dominios personalizados](./custom-domains).

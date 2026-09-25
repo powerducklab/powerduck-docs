@@ -59,7 +59,7 @@ description: "登入，從上傳、Git 或 URL 新增規範，選擇暴露操作
 
 ## 下一步
 
-- [文件與版本](/docs/cloud/documents-versions)
-- [暴露操作](/docs/cloud/exposure)
-- [存取控制](/docs/cloud/access-control)
-- [自訂網域](/docs/cloud/custom-domains)
+- [文件與版本](./documents-versions)
+- [暴露操作](./exposure)
+- [存取控制](./access-control)
+- [自訂網域](./custom-domains)

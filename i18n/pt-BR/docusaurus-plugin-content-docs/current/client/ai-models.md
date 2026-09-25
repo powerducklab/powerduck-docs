@@ -62,4 +62,4 @@ Adicionar uma capacidade significa adicionar uma ferramenta ao catálogo (com de
 - O host determinista, não o modelo, valida e aplica cada mudança.
 - Toda escrita recebe a sua aprovação antes de executar.
 
-Veja também: [Desenhar com o assistente](/docs/client/design)、[Ajustes](/docs/client/settings)、[Controlo de acesso na Cloud](/docs/cloud/access-control).
+Veja também: [Desenhar com o assistente](./design)、[Ajustes](./settings)、[Controlo de acesso na Cloud](../cloud/access-control).

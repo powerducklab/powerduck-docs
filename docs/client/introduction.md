@@ -29,14 +29,14 @@ One document powers every surface; a compact switcher moves between them.
 
 | Surface | What you use it for |
 |---|---|
-| [**Specification**](/docs/client/design) | The home surface: AI chat, the document, and a live preview |
-| [**Request workspace**](/docs/client/debug) | Send and inspect real HTTP requests, with tabs and environments |
-| [**Scenario testing**](/docs/client/scenario-testing) | Chain endpoints into flows, run them, and get reports |
-| [**Documentation**](/docs/client/protocols) | Read the specification as rendered API documentation |
-| [**MCP**](/docs/client/protocols) | Inspect and use the MCP server derived from the spec |
-| [**Mock server**](/docs/client/mock-server) | Run a local mock of the API while it is being built |
-| [**Data model**](/docs/client/data-model) | Derive tables and relationships, compare with a database, generate SQL |
-| [**Settings**](/docs/client/settings) | Theme, language, proxy, certificates, and workspace preferences |
+| [**Specification**](./design) | The home surface: AI chat, the document, and a live preview |
+| [**Request workspace**](./debug) | Send and inspect real HTTP requests, with tabs and environments |
+| [**Scenario testing**](./scenario-testing) | Chain endpoints into flows, run them, and get reports |
+| [**Documentation**](./protocols) | Read the specification as rendered API documentation |
+| [**MCP**](./protocols) | Inspect and use the MCP server derived from the spec |
+| [**Mock server**](./mock-server) | Run a local mock of the API while it is being built |
+| [**Data model**](./data-model) | Derive tables and relationships, compare with a database, generate SQL |
+| [**Settings**](./settings) | Theme, language, proxy, certificates, and workspace preferences |
 
 ## How the assistant works with you
 
@@ -46,7 +46,7 @@ You describe intent in natural language; the assistant chooses the right capabil
 - Read-only actions — listing operations, getting a schema, running a query — return the facts the assistant grounds its answer in;
 - Write actions ask for confirmation before they run.
 
-The model is **yours to configure**: point the app at any OpenAI-compatible provider and select it in settings. See [AI and models](/docs/client/ai-models).
+The model is **yours to configure**: point the app at any OpenAI-compatible provider and select it in settings. See [AI and models](./ai-models).
 
 ## Why local-first matters to you
 
@@ -58,15 +58,15 @@ The model is **yours to configure**: point the app at any OpenAI-compatible prov
 
 ## The desktop license
 
-The desktop client is sold as a **one-time, perpetual license**: buy once, own it, work fully offline, with no account. A license key is generated at purchase and shown once. It is separate from Powerduck Cloud, which is a monthly hosting subscription. See [Cloud billing](/docs/cloud/billing).
+The desktop client is sold as a **one-time, perpetual license**: buy once, own it, work fully offline, with no account. A license key is generated at purchase and shown once. It is separate from Powerduck Cloud, which is a monthly hosting subscription. See [Cloud billing](../cloud/billing).
 
 ## Start here
 
-- [Designing with the assistant](/docs/client/design)
-- [Request workspace and environments](/docs/client/debug)
-- [Scenario testing and reports](/docs/client/scenario-testing)
-- [Protocols](/docs/client/protocols)
-- [Data model and ER diagram](/docs/client/data-model)
-- [Mock server](/docs/client/mock-server)
-- [AI and models](/docs/client/ai-models)
-- [Settings](/docs/client/settings)
+- [Designing with the assistant](./design)
+- [Request workspace and environments](./debug)
+- [Scenario testing and reports](./scenario-testing)
+- [Protocols](./protocols)
+- [Data model and ER diagram](./data-model)
+- [Mock server](./mock-server)
+- [AI and models](./ai-models)
+- [Settings](./settings)

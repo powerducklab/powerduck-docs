@@ -80,4 +80,4 @@ Les connexions sont gérées via des profils enregistrés (id, nom, dialecte, h�
 
 Dans tout ce mode, le SQL est **généré pour revue**, pas exécuté contre la base. Vous décidez quand et comment l'appliquer, et l'accès en lecture seule protège les données réelles. Vous pouvez explorer et itérer sur le modèle en sécurité avant de toucher la base.
 
-Voir aussi : [Protocoles](/docs/client/protocols)、[Espace de travail de requête](/docs/client/debug)、[Réglages](/docs/client/settings).
+Voir aussi : [Protocoles](./protocols)、[Espace de travail de requête](./debug)、[Réglages](./settings).

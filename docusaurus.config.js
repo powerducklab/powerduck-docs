@@ -227,7 +227,7 @@ const config = {
           },
           {
             label: "Sign in",
-            href: "/signin",
+            href: "https://www.powerduck.com/signin",
             position: "right",
             className: "header-signin-link",
           },

@@ -59,7 +59,7 @@ When the API changes, upload the new content as a new version rather than replac
 
 ## Next steps
 
-- [Documents and versions](/docs/cloud/documents-versions)
-- [Exposed operations](/docs/cloud/exposure)
-- [Access control](/docs/cloud/access-control)
-- [Custom domains](/docs/cloud/custom-domains)
+- [Documents and versions](./documents-versions)
+- [Exposed operations](./exposure)
+- [Access control](./access-control)
+- [Custom domains](./custom-domains)

@@ -84,4 +84,4 @@ The actual files live in object storage under an organization/document/version l
 
 The combination of immutable versions and a soft-delete lifecycle means you can iterate quickly without losing history or accidentally exposing a document you meant to stop. Pause for a temporary outage, archive for long-term retention, and pin links when stability matters.
 
-Related: [Exposed operations](/docs/cloud/exposure), [Access control](/docs/cloud/access-control), [Custom domains](/docs/cloud/custom-domains).
+Related: [Exposed operations](./exposure), [Access control](./access-control), [Custom domains](./custom-domains).

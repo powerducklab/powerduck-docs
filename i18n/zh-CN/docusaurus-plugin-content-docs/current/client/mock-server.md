@@ -44,4 +44,4 @@ Mock 会记录它收到的请求。你可以查询它们（`mock:requests`，可
 
 Mock 与其他每个形态读取同一份规范，因此当设计变化时它始终与契约对齐。
 
-相关：[场景测试](/docs/client/scenario-testing)、[用助手进行设计](/docs/client/design)。
+相关：[场景测试](./scenario-testing)、[用助手进行设计](./design)。

@@ -65,4 +65,4 @@ Otros ajustes MCP:
 - **MCP para sus propios agentes:** activar MCP y crear una clave de acceso para que solo sus clientes llamen.
 - **Autenticación upstream:** alinear la autenticación del servidor MCP con los requisitos reales de la API, independientemente de quién pueda llamar al endpoint.
 
-Vea también: [Operaciones expuestas](/docs/cloud/exposure)、[Documentos y versiones](/docs/cloud/documents-versions)、[Dominios personalizados](/docs/cloud/custom-domains).
+Vea también: [Operaciones expuestas](./exposure)、[Documentos y versiones](./documents-versions)、[Dominios personalizados](./custom-domains).

@@ -74,4 +74,4 @@ O HTML é independente: anexar a tickets ou arquivar por release.
 - Gerar evidência do comportamento da API para release ou entrega.
 - Regressão de fluxo após mudança no contrato.
 
-Veja também: [Espaço de requisição](/docs/client/debug)、[Desenhar com o assistente](/docs/client/design)、[Servidor de simulação](/docs/client/mock-server).
+Veja também: [Espaço de requisição](./debug)、[Desenhar com o assistente](./design)、[Servidor de simulação](./mock-server).

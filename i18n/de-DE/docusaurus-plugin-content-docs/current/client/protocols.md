@@ -125,4 +125,4 @@ paths:
 
 Wenn sechs Protokolle in einem Dokument modelliert sind, werden Entwurf, Debugging, Mocking, Doku und MCP unabhängig vom Transport von derselben Quelle gesteuert. Bitten Sie den Assistenten, eine Streaming- oder RPC-Schnittstelle hinzuzufügen, und ihre Protokollkonfiguration bleibt statt zu REST abgeflacht erhalten.
 
-Siehe auch: [Mit dem Assistenten entwerfen](/docs/client/design)、[Datenmodell](/docs/client/data-model).
+Siehe auch: [Mit dem Assistenten entwerfen](./design)、[Datenmodell](./data-model).

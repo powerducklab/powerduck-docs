@@ -54,6 +54,6 @@ Une requête nécessite une URL complète. Si ni les `servers` du document ni l'
 
 ## De la requête unique au flux
 
-Une fois qu'un appel isolé fonctionne, l'étape naturelle suivante est d'enchaîner les appels pour passer une valeur de réponse à la requête suivante. C'est le rôle des [tests de scénario](/docs/client/scenario-testing).
+Une fois qu'un appel isolé fonctionne, l'étape naturelle suivante est d'enchaîner les appels pour passer une valeur de réponse à la requête suivante. C'est le rôle des [tests de scénario](./scenario-testing).
 
-Voir aussi : [Concevoir avec l'assistant](/docs/client/design)、[Tests de scénario](/docs/client/scenario-testing)、[Réglages](/docs/client/settings).
+Voir aussi : [Concevoir avec l'assistant](./design)、[Tests de scénario](./scenario-testing)、[Réglages](./settings).
