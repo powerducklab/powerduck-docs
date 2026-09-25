@@ -359,7 +359,9 @@ const config = {
   scripts: [{ src: "/docs/session.js", async: true }],
 
   // Plugins
-  plugins: [],
+  // Local plugin that emits the root redirect only during production builds,
+  // avoiding the dev-time static/index.html asset conflict.
+  plugins: ["./src/plugins/root-redirect.mjs"],
 };
 
 export default config;
