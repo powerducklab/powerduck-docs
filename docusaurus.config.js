@@ -14,6 +14,11 @@ const config = {
   url: "https://www.powerduck.com",
   baseUrl: "/docs/",
 
+  // S3/Amplify serves each page as a directory (path/index.html). Emit links
+  // with a trailing slash so they resolve directly (no 301 hop) and the client
+  // router never resolves a sibling link against the wrong base directory.
+  trailingSlash: true,
+
   // GitHub pages deployment
   organizationName: "PowerDuckie",
   projectName: "powerduck-docs",
