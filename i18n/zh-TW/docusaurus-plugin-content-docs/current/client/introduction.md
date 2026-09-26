@@ -29,14 +29,14 @@ description: "Powerduck 桌面用戶端是一個本機優先、AI 驅動的工�
 
 | 形態 | 你用它做什麼 |
 |---|---|
-| [**規範**](./design) | 主形態：AI 對話、文件和即時預覽 |
-| [**請求工作區**](./debug) | 發送並檢查真實 HTTP 請求，支援標籤頁和環境 |
-| [**場景測試**](./scenario-testing) | 把介面串成流程，執行它們並獲得報告 |
-| [**文件**](./protocols) | 把規範閱讀為渲染後的 API 文件 |
-| [**MCP**](./protocols) | 檢查並使用從規範推導的 MCP 伺服器 |
-| [**Mock 伺服器**](./mock-server) | 在 API 開發期間執行本機 Mock |
-| [**資料模型**](./data-model) | 推導表和關係，與資料庫比對，產生 SQL |
-| [**設定**](./settings) | 主題、語言、代理、憑證和工作區偏好 |
+| [**規範**](./design.md) | 主形態：AI 對話、文件和即時預覽 |
+| [**請求工作區**](./debug.md) | 發送並檢查真實 HTTP 請求，支援標籤頁和環境 |
+| [**場景測試**](./scenario-testing.md) | 把介面串成流程，執行它們並獲得報告 |
+| [**文件**](./protocols.md) | 把規範閱讀為渲染後的 API 文件 |
+| [**MCP**](./protocols.md) | 檢查並使用從規範推導的 MCP 伺服器 |
+| [**Mock 伺服器**](./mock-server.md) | 在 API 開發期間執行本機 Mock |
+| [**資料模型**](./data-model.md) | 推導表和關係，與資料庫比對，產生 SQL |
+| [**設定**](./settings.md) | 主題、語言、代理、憑證和工作區偏好 |
 
 ## 助手如何與你協作
 
@@ -46,7 +46,7 @@ description: "Powerduck 桌面用戶端是一個本機優先、AI 驅動的工�
 - 只讀動作——列出操作、取得模式、執行查詢——回傳助手據以支撐其回答的事實；
 - 寫入動作在執行前要求確認。
 
-模型**由你配置**：把應用程式指向任何相容 OpenAI 的服務商，並在設定中選擇它。參見 [AI 與模型](./ai-models)。
+模型**由你配置**：把應用程式指向任何相容 OpenAI 的服務商，並在設定中選擇它。參見 [AI 與模型](./ai-models.md)。
 
 ## 本機優先為什麼對你重要
 
@@ -58,15 +58,15 @@ description: "Powerduck 桌面用戶端是一個本機優先、AI 驅動的工�
 
 ## 桌面授權
 
-桌面用戶端以**一次性、永久授權**的方式出售：一次購買，永久擁有，完全離線工作，無需帳號。授權碼在購買時產生並僅展示一次。它與按月訂閱託管服務的 Powerduck Cloud 相互獨立。參見 [Cloud 帳單](../cloud/billing)。
+桌面用戶端以**一次性、永久授權**的方式出售：一次購買，永久擁有，完全離線工作，無需帳號。授權碼在購買時產生並僅展示一次。它與按月訂閱託管服務的 Powerduck Cloud 相互獨立。參見 [Cloud 帳單](../cloud/billing.md)。
 
 ## 從這裡開始
 
-- [用助手進行設計](./design)
-- [請求工作區與環境](./debug)
-- [場景測試與報告](./scenario-testing)
-- [協定](./protocols)
-- [資料模型與 ER 圖](./data-model)
-- [Mock 伺服器](./mock-server)
-- [AI 與模型](./ai-models)
-- [設定](./settings)
+- [用助手進行設計](./design.md)
+- [請求工作區與環境](./debug.md)
+- [場景測試與報告](./scenario-testing.md)
+- [協定](./protocols.md)
+- [資料模型與 ER 圖](./data-model.md)
+- [Mock 伺服器](./mock-server.md)
+- [AI 與模型](./ai-models.md)
+- [設定](./settings.md)

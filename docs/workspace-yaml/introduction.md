@@ -23,7 +23,7 @@ For those operations, use [`@powerduck/conf-patch`](https://www.npmjs.com/packag
 
 ## Next steps
 
-- [Installation](./installation)
-- [Quickstart](./quickstart)
-- [API Reference](./api-reference)
-- [Examples](./examples)
+- [Installation](./installation.md)
+- [Quickstart](./quickstart.md)
+- [API Reference](./api-reference.md)
+- [Examples](./examples.md)

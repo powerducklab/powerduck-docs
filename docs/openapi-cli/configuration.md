@@ -8,7 +8,7 @@ description: "The complete CliConfig reference for @powerduck/openapi-cli: every
 
 Configuration is resolved with the precedence **CLI arguments > config file >
 defaults**. The resolved object is the `CliConfig` interface returned by
-[`resolveConfig`](./api-reference#resolveconfig).
+[`resolveConfig`](./api-reference.md#resolveconfig).
 
 ## CliConfig
 

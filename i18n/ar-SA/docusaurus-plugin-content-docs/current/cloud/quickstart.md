@@ -59,7 +59,7 @@ description: "سجّل الدخول، وأضف مواصفة عبر ملف أو G
 
 ## خطوات تالية
 
-- [المستندات والنسخ](./documents-versions)
-- [العمليات المعروضة](./exposure)
-- [التحكم بالوصول](./access-control)
-- [النطاقات المخصصة](./custom-domains)
+- [المستندات والنسخ](./documents-versions.md)
+- [العمليات المعروضة](./exposure.md)
+- [التحكم بالوصول](./access-control.md)
+- [النطاقات المخصصة](./custom-domains.md)

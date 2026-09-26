@@ -47,7 +47,7 @@ La exposición define **qué operaciones aparecen**; otros controles, **si el do
 - Cada modo tiene su indicador activo para documentación y MCP.
 - Acceso protegible por contraseña (documentación) o clave de acceso (MCP).
 
-El conjunto completo de puertas está en [Control de acceso](./access-control).
+El conjunto completo de puertas está en [Control de acceso](./access-control.md).
 
 ## Límites por plan
 
@@ -57,4 +57,4 @@ Los planes limitan el número de operaciones expuestas.
 - **Pro** — hasta 1.000.
 - **Team** — hasta 10.000.
 
-Vea también: [Control de acceso](./access-control)、[Documentos y versiones](./documents-versions).
+Vea también: [Control de acceso](./access-control.md)、[Documentos y versiones](./documents-versions.md).

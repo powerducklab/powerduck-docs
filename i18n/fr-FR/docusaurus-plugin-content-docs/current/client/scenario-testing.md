@@ -74,4 +74,4 @@ Le HTML est autonome : vous pouvez le joindre à un ticket ou l'archiver à chaq
 - Produire une preuve du comportement de l'API pour une version ou un transfert.
 - Régression des flux après un changement de contrat.
 
-Voir aussi : [Espace de travail de requête](./debug)、[Concevoir avec l'assistant](./design)、[Serveur de simulation](./mock-server).
+Voir aussi : [Espace de travail de requête](./debug.md)、[Concevoir avec l'assistant](./design.md)、[Serveur de simulation](./mock-server.md).

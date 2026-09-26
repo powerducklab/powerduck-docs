@@ -32,7 +32,7 @@ class MarkdownEditor {
 ### `constructor(container, options?)`
 
 - `container: HTMLElement | string` — a DOM element or CSS selector. If no element matches, throws `MarkdownEditor: mount container not found`.
-- `options?: MarkdownEditorOptions` — see [Configuration](./configuration).
+- `options?: MarkdownEditorOptions` — see [Configuration](./configuration.md).
 
 Builds the layout, creates the `CodeEditor`, wires keyboard shortcuts, and (in `complex` mode) builds the toolbar and status bar. An initial render and status-bar update run on construction.
 
@@ -409,7 +409,7 @@ interface MarkdownEditorOptions {
 }
 ```
 
-Full field-by-field defaults live on the [Configuration](./configuration) page.
+Full field-by-field defaults live on the [Configuration](./configuration.md) page.
 
 ## React subpath
 
@@ -451,5 +451,5 @@ interface MarkdownEditorHandle {
 
 ## Next steps
 
-- [Examples](./examples) — see these APIs in action.
-- [Features](./features) — runtime behavior details.
+- [Examples](./examples.md) — see these APIs in action.
+- [Features](./features.md) — runtime behavior details.

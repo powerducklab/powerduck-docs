@@ -9,7 +9,7 @@ keywords: ["conf-patch quickstart", "patchContent", "setConfigValue", "browser",
 
 This quickstart walks through the two layers. Start with the **core layer** (pure strings, works anywhere), then move to the **file layer** (real files, Node.js/Electron).
 
-Prerequisite: [install the package](./installation) first.
+Prerequisite: [install the package](./installation.md) first.
 
 ---
 
@@ -67,7 +67,7 @@ const cleaned = deleteContentValue(updatedYaml, ["server", "host"], "yaml");
 ```
 
 :::note
-`setContentValue` uses the `add` operation, which **adds or replaces** an existing object property. `deleteContentValue` uses `remove`. See [`patchContent`](./api-reference#patchcontent) for the full operation set.
+`setContentValue` uses the `add` operation, which **adds or replaces** an existing object property. `deleteContentValue` uses `remove`. See [`patchContent`](./api-reference.md#patchcontent) for the full operation set.
 :::
 
 ---
@@ -158,5 +158,5 @@ ipcMain.handle("config:read", async (_event, { filePath }) => {
 
 ## Next steps
 
-- [API reference](./api-reference) — every function, type, and option.
-- [Examples](./examples) — JSON patching, YAML, JSONC with comments, OpenAPI validation, and file locking.
+- [API reference](./api-reference.md) — every function, type, and option.
+- [Examples](./examples.md) — JSON patching, YAML, JSONC with comments, OpenAPI validation, and file locking.

@@ -84,6 +84,6 @@ Le domaine personnalisé n'est pas un contournement : les mêmes portes s'appliq
 - Chaque mode a son indicateur actif.
 - Le mot de passe de consultation continue de protéger la doc, et la clé d'accès le MCP.
 
-Voir [Contrôle d'accès](./access-control).
+Voir [Contrôle d'accès](./access-control.md).
 
-Voir aussi : [Documents et versions](./documents-versions)、[Facturation](./billing).
+Voir aussi : [Documents et versions](./documents-versions.md)、[Facturation](./billing.md).

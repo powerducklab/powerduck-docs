@@ -76,7 +76,7 @@ document.getElementById('output')!.innerHTML = html;
 
 ## What next
 
-- [Configuration](./configuration) — every field on `MarkdownEditorOptions`.
-- [Features](./features) — how math, mindmaps, toolbars, and shortcuts work.
-- [API reference](./api-reference) — the full public surface.
-- [Examples](./examples) — copy-pasteable, complete examples.
+- [Configuration](./configuration.md) — every field on `MarkdownEditorOptions`.
+- [Features](./features.md) — how math, mindmaps, toolbars, and shortcuts work.
+- [API reference](./api-reference.md) — the full public surface.
+- [Examples](./examples.md) — copy-pasteable, complete examples.

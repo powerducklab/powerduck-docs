@@ -34,7 +34,7 @@ It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerd
                           validateOpenApi32()  ─►  diagnostics
 ```
 
-1. An **adapter** parses a source (curl text, a Postman collection) into a list of [`NormalizedRequest`](./api-reference#normalizedrequest) objects.
+1. An **adapter** parses a source (curl text, a Postman collection) into a list of [`NormalizedRequest`](./api-reference.md#normalizedrequest) objects.
 2. The **builder** merges requests by method + path, infers schemas, path parameters, and security, and produces an OpenAPI 3.2 document.
 3. The **validator** checks the output against the OpenAPI schema (via `@powerduck/openapi-parser`) and reports diagnostics.
 
@@ -42,16 +42,16 @@ It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerd
 
 ## Features
 
-- **Two built-in adapters** — [`CurlAdapter`](./api-reference#curladapter) (single, batch, and browser "Copy all as cURL" output) and [`PostmanAdapter`](./api-reference#postmanadapter) (v2.0/v2.1.0, nested folders, auth inheritance).
-- **Zero-config helpers** — [`curlToOpenApi`](./api-reference#curltoopenapi) and [`postmanToOpenApi`](./api-reference) register an adapter and convert in one call.
+- **Two built-in adapters** — [`CurlAdapter`](./api-reference.md#curladapter) (single, batch, and browser "Copy all as cURL" output) and [`PostmanAdapter`](./api-reference.md#postmanadapter) (v2.0/v2.1.0, nested folders, auth inheritance).
+- **Zero-config helpers** — [`curlToOpenApi`](./api-reference.md#curltoopenapi) and [`postmanToOpenApi`](./api-reference.md) register an adapter and convert in one call.
 - **OpenAPI 3.2 output** — every generated document is `openapi: "3.2.0"` and validated.
 - **Multi-request merging** — same method+path operations are combined; query/header/cookie params and body schemas are structurally merged.
 - **Path parameter inference** — numeric IDs, UUIDs, ULIDs, and long hex segments are templated (`/users/{userId}`) when they vary across at least N samples.
 - **Security inference** — Bearer, Basic, and API key (header/query/cookie) detection with proper `securitySchemes`.
 - **All body types** — JSON, XML, form-urlencoded, multipart/form-data (text + file), GraphQL, text, binary.
 - **Postman test-script preservation** — `pm.test()` / `pm.expect()` are emitted as `x-postman-scripts` on each operation.
-- **Diagnostics** — every issue carries a severity, code, and source index; [`strict`](./api-reference#convertoptions) mode throws on errors.
-- **Extensible** — implement [`SourceAdapter`](./api-reference) to add HAR, HTTPie, or Insomnia sources.
+- **Diagnostics** — every issue carries a severity, code, and source index; [`strict`](./api-reference.md#convertoptions) mode throws on errors.
+- **Extensible** — implement [`SourceAdapter`](./api-reference.md) to add HAR, HTTPie, or Insomnia sources.
 
 ---
 
@@ -67,7 +67,7 @@ interface SourceAdapter<I = unknown> {
 }
 ```
 
-Adapters are registered on an [`XToOpenApi`](./api-reference#xtoopenapi) instance through an [`AdapterRegistry`](./api-reference#adapterregistry):
+Adapters are registered on an [`XToOpenApi`](./api-reference.md#xtoopenapi) instance through an [`AdapterRegistry`](./api-reference.md#adapterregistry):
 
 ```typescript
 const converter = new XToOpenApi()
@@ -89,15 +89,15 @@ The two built-in adapters are pre-wired into the zero-config helpers, so most us
 
 | Use case | API |
 |---|---|
-| Convert one curl command or a batch | [`curlToOpenApi`](./api-reference#curltoopenapi) |
-| Convert one Postman collection object/string | [`postmanToOpenApi`](./api-reference) |
-| Custom options, multiple adapters, `"auto"` detection, or a custom adapter | [`new XToOpenApi()`](./api-reference#xtoopenapi) |
+| Convert one curl command or a batch | [`curlToOpenApi`](./api-reference.md#curltoopenapi) |
+| Convert one Postman collection object/string | [`postmanToOpenApi`](./api-reference.md) |
+| Custom options, multiple adapters, `"auto"` detection, or a custom adapter | [`new XToOpenApi()`](./api-reference.md#xtoopenapi) |
 
 ---
 
 ## Next steps
 
-- [Installation](./installation) — add the package and understand the zero-config helpers.
-- [Quickstart](./quickstart) — convert a real curl command, a Postman collection, and a custom adapter.
-- [API reference](./api-reference) — every export, type, option, default, and diagnostic code.
-- [Examples](./examples) — basic curl, batch commands, Postman collections, custom adapters, and path inference.
+- [Installation](./installation.md) — add the package and understand the zero-config helpers.
+- [Quickstart](./quickstart.md) — convert a real curl command, a Postman collection, and a custom adapter.
+- [API reference](./api-reference.md) — every export, type, option, default, and diagnostic code.
+- [Examples](./examples.md) — basic curl, batch commands, Postman collections, custom adapters, and path inference.

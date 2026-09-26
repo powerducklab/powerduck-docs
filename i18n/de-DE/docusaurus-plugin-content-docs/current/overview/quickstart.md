@@ -46,10 +46,10 @@ Wenn weder die `servers` der Spec noch die aktive Umgebung eine Basis-URL liefer
 
 ## 6. Bei Bedarf weitergehen
 
-- Verketten Sie mehrere Requests mit [Szenario-Tests](../client/scenario-testing) und exportieren einen HTML-Bericht.
-- Starten Sie den [lokalen Mock-Server](../client/mock-server) während der Backend-Entwicklung.
-- Modellieren Sie Streaming-/RPC-APIs mit den [sechs Protokollen](../client/protocols).
-- Leiten Sie Tabellen, Beziehungen und SQL im [Datenmodell](../client/data-model) ab.
-- Veröffentlichen Sie dieselbe Spec online mit [Powerduck Cloud](../cloud/quickstart).
+- Verketten Sie mehrere Requests mit [Szenario-Tests](../client/scenario-testing.md) und exportieren einen HTML-Bericht.
+- Starten Sie den [lokalen Mock-Server](../client/mock-server.md) während der Backend-Entwicklung.
+- Modellieren Sie Streaming-/RPC-APIs mit den [sechs Protokollen](../client/protocols.md).
+- Leiten Sie Tabellen, Beziehungen und SQL im [Datenmodell](../client/data-model.md) ab.
+- Veröffentlichen Sie dieselbe Spec online mit [Powerduck Cloud](../cloud/quickstart.md).
 
 Damit ist die zentrale Schleife komplett. Der Rest der Dokumentation beschreibt jeden Arbeitsbereich im Detail.

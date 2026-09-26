@@ -59,7 +59,7 @@ When the API changes, upload the new content as a new version rather than replac
 
 ## Next steps
 
-- [Documents and versions](./documents-versions)
-- [Exposed operations](./exposure)
-- [Access control](./access-control)
-- [Custom domains](./custom-domains)
+- [Documents and versions](./documents-versions.md)
+- [Exposed operations](./exposure.md)
+- [Access control](./access-control.md)
+- [Custom domains](./custom-domains.md)

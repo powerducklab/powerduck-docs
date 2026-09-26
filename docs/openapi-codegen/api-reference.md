@@ -41,7 +41,7 @@ Throws:
 - `Error: Unsupported generator: <language>/<client>` for an unknown combo.
 - Errors from `normalize()` (unknown path/method, invalid document, broken/circular `$ref` unless `softRefMode`).
 
-See [Configuration](./configuration#generateoptions) for the full option table.
+See [Configuration](./configuration.md#generateoptions) for the full option table.
 
 ## register(generator)
 

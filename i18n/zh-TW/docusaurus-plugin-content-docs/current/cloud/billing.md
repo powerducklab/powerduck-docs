@@ -91,4 +91,4 @@ Cloud 存取遵循對某計畫的**有效訂閱**，不涉及授權碼：
 - 想線上發布文件和 MCP 並分享穩定連結？訂閱 **Cloud Pro**（多席位選 Team）。
 - 很多團隊兩者都用：在用戶端本機設計和測試，然後在 Cloud 上託管已發布的 API。
 
-相關：[Cloud 簡介](./introduction)、[桌面用戶端](../client/introduction)。
+相關：[Cloud 簡介](./introduction.md)、[桌面用戶端](../client/introduction.md)。

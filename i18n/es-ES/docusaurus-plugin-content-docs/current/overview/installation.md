@@ -48,7 +48,7 @@ El cliente de escritorio es una app Electron en dos partes.
 - El **proceso principal** (Node.js), que gestiona el acceso a archivos, las peticiones HTTP externas, el servidor de simulación local, las conexiones a bases de datos y el terminal integrado.
 - El **renderer** (el espacio de trabajo React), que muestra la especificación, el chat de IA y las herramientas.
 
-Esta separación cuenta para seguridad y fiabilidad. Las peticiones que requieren red y acceso al sistema de archivos las trata el proceso principal, no la WebView: las instrucciones y claves API no aparecen en la consola del navegador, y las restricciones CORS directas del navegador hacia el proveedor no se aplican. Vea [IA y modelos](../client/ai-models).
+Esta separación cuenta para seguridad y fiabilidad. Las peticiones que requieren red y acceso al sistema de archivos las trata el proceso principal, no la WebView: las instrucciones y claves API no aparecen en la consola del navegador, y las restricciones CORS directas del navegador hacia el proveedor no se aplican. Vea [IA y modelos](../client/ai-models.md).
 
 ## Requisitos
 
@@ -58,6 +58,6 @@ Esta separación cuenta para seguridad y fiabilidad. Las peticiones que requiere
 
 ## Licencia
 
-El cliente de escritorio puede evaluarse libremente. Se vende como licencia **perpetua** tras una compra única, sin suscripción. La clave de licencia se genera en la compra y se muestra una sola vez. El alojamiento en la nube es un servicio de suscripción aparte. Vea [Facturación de Cloud](../cloud/billing) para la distinción.
+El cliente de escritorio puede evaluarse libremente. Se vende como licencia **perpetua** tras una compra única, sin suscripción. La clave de licencia se genera en la compra y se muestra una sola vez. El alojamiento en la nube es un servicio de suscripción aparte. Vea [Facturación de Cloud](../cloud/billing.md) para la distinción.
 
-Después, pase al [Inicio rápido](./quickstart).
+Después, pase al [Inicio rápido](./quickstart.md).

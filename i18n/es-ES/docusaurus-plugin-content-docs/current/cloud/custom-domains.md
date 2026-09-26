@@ -84,6 +84,6 @@ El dominio personalizado no es una vía de omisión: las mismas puertas aplican.
 - Cada modo tiene su indicador activo.
 - La contraseña de visualización sigue protegiendo la documentación y la clave de acceso el MCP.
 
-Vea [Control de acceso](./access-control).
+Vea [Control de acceso](./access-control.md).
 
-Vea también: [Documentos y versiones](./documents-versions)、[Facturación](./billing).
+Vea también: [Documentos y versiones](./documents-versions.md)、[Facturación](./billing.md).

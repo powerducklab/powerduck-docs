@@ -47,7 +47,7 @@ description: "在不修改源文档的情况下选择哪些操作公开可用。
 - 文档和 MCP 各有启用标记；
 - 访问可由查看密码（文档）或访问密钥（MCP）把关。
 
-完整把关项参见[访问控制](./access-control)。
+完整把关项参见[访问控制](./access-control.md)。
 
 ## 计划额度
 
@@ -57,4 +57,4 @@ description: "在不修改源文档的情况下选择哪些操作公开可用。
 - **Pro**——最多 1,000 个；
 - **Team**——最多 10,000 个。
 
-相关：[访问控制](./access-control)、[文档与版本](./documents-versions)。
+相关：[访问控制](./access-control.md)、[文档与版本](./documents-versions.md)。

@@ -62,4 +62,4 @@ Adding a capability then means adding a tool to the catalog (and describing it a
 - The deterministic host — not the model — validates and applies every change;
 - You approve each write before it runs.
 
-Related: [Designing with the assistant](./design), [Settings](./settings), [Cloud access control](../cloud/access-control).
+Related: [Designing with the assistant](./design.md), [Settings](./settings.md), [Cloud access control](../cloud/access-control.md).

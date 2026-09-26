@@ -29,14 +29,14 @@ description: "Powerduck 桌面客户端是一个本地优先、AI 驱动的工�
 
 | 形态 | 你用它做什么 |
 |---|---|
-| [**规范**](./design) | 主形态：AI 对话、文档和实时预览 |
-| [**请求工作区**](./debug) | 发送并检查真实 HTTP 请求，支持标签页和环境 |
-| [**场景测试**](./scenario-testing) | 把接口串成流程，运行它们并获得报告 |
-| [**文档**](./protocols) | 把规范阅读为渲染后的 API 文档 |
-| [**MCP**](./protocols) | 检查并使用从规范推导的 MCP 服务器 |
-| [**Mock 服务器**](./mock-server) | 在 API 开发期间运行本地 Mock |
-| [**数据模型**](./data-model) | 推导表和关系，与数据库比对，生成 SQL |
-| [**设置**](./settings) | 主题、语言、代理、证书和工作区偏好 |
+| [**规范**](./design.md) | 主形态：AI 对话、文档和实时预览 |
+| [**请求工作区**](./debug.md) | 发送并检查真实 HTTP 请求，支持标签页和环境 |
+| [**场景测试**](./scenario-testing.md) | 把接口串成流程，运行它们并获得报告 |
+| [**文档**](./protocols.md) | 把规范阅读为渲染后的 API 文档 |
+| [**MCP**](./protocols.md) | 检查并使用从规范推导的 MCP 服务器 |
+| [**Mock 服务器**](./mock-server.md) | 在 API 开发期间运行本地 Mock |
+| [**数据模型**](./data-model.md) | 推导表和关系，与数据库比对，生成 SQL |
+| [**设置**](./settings.md) | 主题、语言、代理、证书和工作区偏好 |
 
 ## 助手如何与你协作
 
@@ -46,7 +46,7 @@ description: "Powerduck 桌面客户端是一个本地优先、AI 驱动的工�
 - 只读动作——列出操作、获取模式、运行查询——返回助手据以支撑其回答的事实；
 - 写入动作在运行前要求确认。
 
-模型**由你配置**：把应用指向任何兼容 OpenAI 的服务商，并在设置中选择它。参见 [AI 与模型](./ai-models)。
+模型**由你配置**：把应用指向任何兼容 OpenAI 的服务商，并在设置中选择它。参见 [AI 与模型](./ai-models.md)。
 
 ## 本地优先为什么对你重要
 
@@ -58,15 +58,15 @@ description: "Powerduck 桌面客户端是一个本地优先、AI 驱动的工�
 
 ## 桌面授权
 
-桌面客户端以**一次性、永久授权**的方式出售：一次购买，永久拥有，完全离线工作，无需账号。授权码在购买时生成并仅展示一次。它与按月订阅托管服务的 Powerduck Cloud 相互独立。参见 [Cloud 账单](../cloud/billing)。
+桌面客户端以**一次性、永久授权**的方式出售：一次购买，永久拥有，完全离线工作，无需账号。授权码在购买时生成并仅展示一次。它与按月订阅托管服务的 Powerduck Cloud 相互独立。参见 [Cloud 账单](../cloud/billing.md)。
 
 ## 从这里开始
 
-- [用助手进行设计](./design)
-- [请求工作区与环境](./debug)
-- [场景测试与报告](./scenario-testing)
-- [协议](./protocols)
-- [数据模型与 ER 图](./data-model)
-- [Mock 服务器](./mock-server)
-- [AI 与模型](./ai-models)
-- [设置](./settings)
+- [用助手进行设计](./design.md)
+- [请求工作区与环境](./debug.md)
+- [场景测试与报告](./scenario-testing.md)
+- [协议](./protocols.md)
+- [数据模型与 ER 图](./data-model.md)
+- [Mock 服务器](./mock-server.md)
+- [AI 与模型](./ai-models.md)
+- [设置](./settings.md)

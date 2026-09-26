@@ -104,5 +104,5 @@ There is no CLI binary; this is a programmatic-only library.
 
 ## Next steps
 
-- [Quick Start](./quickstart) — generate your first snippet.
-- [Configuration](./configuration) — all generation options.
+- [Quick Start](./quickstart.md) — generate your first snippet.
+- [Configuration](./configuration.md) — all generation options.

@@ -79,7 +79,7 @@ console.log(Object.keys(result.document.paths)); // ["/users", "/users/{userId}"
 
 ### Browser "Copy all as cURL" output
 
-Paste a whole block at once — [`splitCurlCommands`](./api-reference#splitcurlcommands) handles quotes, continuations, prompts, and `curl.exe`.
+Paste a whole block at once — [`splitCurlCommands`](./api-reference.md#splitcurlcommands) handles quotes, continuations, prompts, and `curl.exe`.
 
 ```typescript
 const block = `
@@ -200,7 +200,7 @@ await curlToOpenApi(commands, { inferPathParameters: false });
 
 ## 5. Custom adapter
 
-Implement [`SourceAdapter`](./api-reference) to add a new source (HAR, HTTPie, Insomnia, …). Then register it on `XToOpenApi`.
+Implement [`SourceAdapter`](./api-reference.md) to add a new source (HAR, HTTPie, Insomnia, …). Then register it on `XToOpenApi`.
 
 ```typescript
 import {
@@ -273,7 +273,7 @@ console.log(a.document.paths["/health"]?.get?.operationId);
 
 ## 6. Error handling and strict mode
 
-Non-fatal problems are collected in `result.diagnostics`. Use `strict: true` to throw a [`ConversionError`](./api-reference#conversionerror) instead.
+Non-fatal problems are collected in `result.diagnostics`. Use `strict: true` to throw a [`ConversionError`](./api-reference.md#conversionerror) instead.
 
 ```typescript
 import { curlToOpenApi, ConversionError } from "@powerduck/x-to-openapi";
@@ -303,5 +303,5 @@ Note: inputs larger than 10 MB always throw a `ConversionError`, regardless of `
 
 ## Next steps
 
-- [API reference](./api-reference) — every option default and diagnostic code.
-- [Quickstart](./quickstart) — your first end-to-end conversion.
+- [API reference](./api-reference.md) — every option default and diagnostic code.
+- [Quickstart](./quickstart.md) — your first end-to-end conversion.

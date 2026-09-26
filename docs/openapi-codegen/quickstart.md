@@ -68,7 +68,7 @@ for (const { language, client } of list()) {
 
 Each descriptor is `{ language: string; client: string }`. The identifiers are
 case-sensitive; use them exactly as shown in the
-[API reference generator list](./api-reference#built-in-generators-21-languages-41-clients).
+[API reference generator list](./api-reference.md#built-in-generators-21-languages-41-clients).
 
 You can select one programmatically:
 
@@ -144,6 +144,6 @@ try {
 
 ## What's next?
 
-- [Configuration](./configuration) — `GenerateOptions`, `RequestIR`, `Generator`, `Plugin`.
-- [Examples](./examples) — JavaScript fetch, Python requests, cURL, custom generator, plugin, direct `RequestIR`.
-- [API Reference](./api-reference) — every export.
+- [Configuration](./configuration.md) — `GenerateOptions`, `RequestIR`, `Generator`, `Plugin`.
+- [Examples](./examples.md) — JavaScript fetch, Python requests, cURL, custom generator, plugin, direct `RequestIR`.
+- [API Reference](./api-reference.md) — every export.

@@ -48,7 +48,7 @@ Der Desktop-Client ist eine Electron-App aus zwei Teilen.
 - Der **Hauptprozess** (Node.js), der Dateizugriff, externe HTTP-Requests, den lokalen Mock-Server, Datenbankverbindungen und das integrierte Terminal verwaltet.
 - Der **Renderer** (der React-Arbeitsbereich), der Spec, KI-Chat und Werkzeuge anzeigt.
 
-Diese Trennung zählt für Sicherheit und Zuverlässigkeit. Requests mit Netzwerk- und Dateisystemzugriff behandelt der Hauptprozess, nicht die WebView: Prompts und API-Schlüssel erscheinen nicht in der Browser-Konsole, und direkte Browser-CORS-Einschränkungen zum Anbieter greifen nicht. Siehe [KI und Modelle](../client/ai-models).
+Diese Trennung zählt für Sicherheit und Zuverlässigkeit. Requests mit Netzwerk- und Dateisystemzugriff behandelt der Hauptprozess, nicht die WebView: Prompts und API-Schlüssel erscheinen nicht in der Browser-Konsole, und direkte Browser-CORS-Einschränkungen zum Anbieter greifen nicht. Siehe [KI und Modelle](../client/ai-models.md).
 
 ## Systemanforderungen
 
@@ -58,6 +58,6 @@ Diese Trennung zählt für Sicherheit und Zuverlässigkeit. Requests mit Netzwer
 
 ## Lizenz
 
-Der Desktop-Client kann frei evaluiert werden. Er wird als **dauerhafte** Lizenz nach Einmalkauf verkauft, ohne Abonnement. Der Lizenzschlüssel wird beim Kauf erzeugt und einmal angezeigt. Cloud-Hosting ist ein separater Abonnement-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing) für den Unterschied.
+Der Desktop-Client kann frei evaluiert werden. Er wird als **dauerhafte** Lizenz nach Einmalkauf verkauft, ohne Abonnement. Der Lizenzschlüssel wird beim Kauf erzeugt und einmal angezeigt. Cloud-Hosting ist ein separater Abonnement-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing.md) für den Unterschied.
 
-Weiter geht es mit dem [Schnellstart](./quickstart).
+Weiter geht es mit dem [Schnellstart](./quickstart.md).

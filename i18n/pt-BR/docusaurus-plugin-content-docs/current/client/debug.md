@@ -54,6 +54,6 @@ Uma requisição precisa de uma URL completa. Se nem os `servers` da spec nem o 
 
 ## Da requisição única ao fluxo
 
-Uma vez que uma chamada isolada funciona, o passo natural é encadear para passar um valor de resposta à próxima requisição. Esse é o papel dos [testes de cenário](./scenario-testing).
+Uma vez que uma chamada isolada funciona, o passo natural é encadear para passar um valor de resposta à próxima requisição. Esse é o papel dos [testes de cenário](./scenario-testing.md).
 
-Veja também: [Desenhar com o assistente](./design)、[Testes de cenário](./scenario-testing)、[Ajustes](./settings).
+Veja também: [Desenhar com o assistente](./design.md)、[Testes de cenário](./scenario-testing.md)、[Ajustes](./settings.md).

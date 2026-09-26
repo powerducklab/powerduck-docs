@@ -9,17 +9,17 @@ keywords: ["x-to-openapi quickstart", "curlToOpenApi", "postmanToOpenApi", "XToO
 
 This quickstart covers the three most common paths: the `curlToOpenApi` helper, the `postmanToOpenApi` helper, and the `XToOpenApi` class for custom wiring.
 
-Prerequisite: [install the package](./installation).
+Prerequisite: [install the package](./installation.md).
 
 :::note
-All conversion functions are **async** and return a [`ConvertResult`](./api-reference#convertresult). Always `await` them.
+All conversion functions are **async** and return a [`ConvertResult`](./api-reference.md#convertresult). Always `await` them.
 :::
 
 ---
 
 ## 1. Convert a curl command
 
-Pass a single curl command to [`curlToOpenApi`](./api-reference#curltoopenapi). The result's `document` is the generated OpenAPI 3.2 object.
+Pass a single curl command to [`curlToOpenApi`](./api-reference.md#curltoopenapi). The result's `document` is the generated OpenAPI 3.2 object.
 
 ```typescript
 import { curlToOpenApi } from "@powerduck/x-to-openapi";
@@ -82,7 +82,7 @@ console.log("Document valid:", result.documentValid);
 
 ## 2. Convert a Postman Collection
 
-Pass a parsed collection object (or a JSON string) to [`postmanToOpenApi`](./api-reference). Test scripts are preserved as `x-postman-scripts`.
+Pass a parsed collection object (or a JSON string) to [`postmanToOpenApi`](./api-reference.md). Test scripts are preserved as `x-postman-scripts`.
 
 ```typescript
 import { postmanToOpenApi } from "@powerduck/x-to-openapi";
@@ -133,7 +133,7 @@ const fromText = await postmanToOpenApi('{"info":{"name":"API"},"item":[]}');
 
 ## 3. Use the `XToOpenApi` class with custom options
 
-Use the class when you want explicit control over registered adapters and [`ConvertOptions`](./api-reference#convertoptions).
+Use the class when you want explicit control over registered adapters and [`ConvertOptions`](./api-reference.md#convertoptions).
 
 ```typescript
 import { XToOpenApi, CurlAdapter } from "@powerduck/x-to-openapi";
@@ -179,7 +179,7 @@ const result = await converter.convert("auto", postmanCollectionOrCurlText);
 
 ## 4. Diagnostics and strict mode
 
-By default, conversion collects problems as [`Diagnostic`](./api-reference) entries and still returns a result. Set `strict: true` to throw a [`ConversionError`](./api-reference#conversionerror) on the first error-severity diagnostic.
+By default, conversion collects problems as [`Diagnostic`](./api-reference.md) entries and still returns a result. Set `strict: true` to throw a [`ConversionError`](./api-reference.md#conversionerror) on the first error-severity diagnostic.
 
 ```typescript
 import { curlToOpenApi, ConversionError } from "@powerduck/x-to-openapi";
@@ -198,5 +198,5 @@ try {
 
 ## Next steps
 
-- [Examples](./examples) — batch curl, path parameter inference, Postman auth, and a custom adapter.
-- [API reference](./api-reference) — every export, option, and diagnostic code.
+- [Examples](./examples.md) — batch curl, path parameter inference, Postman auth, and a custom adapter.
+- [API reference](./api-reference.md) — every export, option, and diagnostic code.

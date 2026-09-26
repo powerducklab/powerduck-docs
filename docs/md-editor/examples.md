@@ -100,7 +100,7 @@ new MarkdownEditor('#editor-record', {
 });
 ```
 
-Valid action names are the 22 listed in [Features](./features#toolbar-actions).
+Valid action names are the 22 listed in [Features](./features.md#toolbar-actions).
 
 ## 4. Image upload integration
 
@@ -192,5 +192,5 @@ In `simple` mode there is no toolbar, no status bar, and no line numbers. You ca
 
 ## Next steps
 
-- [API reference](./api-reference) — every method signature.
-- [Configuration](./configuration) — option defaults.
+- [API reference](./api-reference.md) — every method signature.
+- [Configuration](./configuration.md) — option defaults.

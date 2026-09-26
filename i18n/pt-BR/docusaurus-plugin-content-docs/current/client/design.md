@@ -111,4 +111,4 @@ Nem toda resposta é um patch.
 - **Cartões de ação** trazem um próximo passo concreto, como executar um cenário ou abrir um espaço.
 - **Cartões de tabela de dados** apresentam dados concretos de exemplo/teste para operações ou esquemas.
 
-Veja também: [Espaço de requisição](./debug)、[Testes de cenário](./scenario-testing)、[IA e modelos](./ai-models).
+Veja também: [Espaço de requisição](./debug.md)、[Testes de cenário](./scenario-testing.md)、[IA e modelos](./ai-models.md).

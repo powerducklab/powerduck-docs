@@ -84,4 +84,4 @@ Os arquivos reais vivem numa disposição organização/documento/versão no arm
 
 A combinação de versões imutáveis e um ciclo de vida com eliminação lógica permite iterar rápido sem perder histórico e não expor por descuido um documento que deve parar. Pausa para interrupção temporária, arquivo para conservação a longo prazo, links fixados quando a imutabilidade conta.
 
-Veja também: [Operações expostas](./exposure)、[Controlo de acesso](./access-control)、[Domínios personalizados](./custom-domains).
+Veja também: [Operações expostas](./exposure.md)、[Controlo de acesso](./access-control.md)、[Domínios personalizados](./custom-domains.md).

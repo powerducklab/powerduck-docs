@@ -67,8 +67,8 @@ console.log(code);          // a runnable fetch() snippet
 
 ## Next steps
 
-- [Installation](./installation) — npm / yarn / pnpm and browser use.
-- [Quick Start](./quickstart) — generate your first snippet and list generators.
-- [Configuration](./configuration) — `GenerateOptions`, `RequestIR`, `Generator`, `Plugin`.
-- [API Reference](./api-reference) — every export and the full language/client list.
-- [Examples](./examples) — fetch, Python requests, cURL, custom generators, plugins, direct `RequestIR`.
+- [Installation](./installation.md) — npm / yarn / pnpm and browser use.
+- [Quick Start](./quickstart.md) — generate your first snippet and list generators.
+- [Configuration](./configuration.md) — `GenerateOptions`, `RequestIR`, `Generator`, `Plugin`.
+- [API Reference](./api-reference.md) — every export and the full language/client list.
+- [Examples](./examples.md) — fetch, Python requests, cURL, custom generators, plugins, direct `RequestIR`.

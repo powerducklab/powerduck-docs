@@ -84,6 +84,6 @@ TXT "powerduck-verify=<the-token-shown-for-the-binding>"
 - ドキュメントと MCP に各有効マーカー。
 - 閲覧パスワードがドキュメントを、MCP アクセスキーが MCP を引き続き保護。
 
-[アクセス制御](./access-control)をご覧ください。
+[アクセス制御](./access-control.md)をご覧ください。
 
-関連: [文書とバージョン](./documents-versions)、[請求](./billing)。
+関連: [文書とバージョン](./documents-versions.md)、[請求](./billing.md)。

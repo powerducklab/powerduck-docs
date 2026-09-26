@@ -30,28 +30,28 @@ The parser and the converters form the foundation; higher-level workflows build 
 
 | Package | Latest | Purpose |
 |---|---|---|
-| [`@powerduck/openapi-parser`](../openapi-parser/introduction) | 0.3.7 | Parse, validate, and upgrade OpenAPI/Swagger documents |
-| [`@powerduck/conf-patch`](../conf-patch/introduction) | 0.3.6 | Apply structured, validated configuration patches |
-| [`@powerduck/x-to-openapi`](../x-to-openapi/introduction) | 0.2.5 | Convert other formats (such as cURL and Postman) to OpenAPI |
+| [`@powerduck/openapi-parser`](../openapi-parser/introduction.md) | 0.3.7 | Parse, validate, and upgrade OpenAPI/Swagger documents |
+| [`@powerduck/conf-patch`](../conf-patch/introduction.md) | 0.3.6 | Apply structured, validated configuration patches |
+| [`@powerduck/x-to-openapi`](../x-to-openapi/introduction.md) | 0.2.5 | Convert other formats (such as cURL and Postman) to OpenAPI |
 
 ### Workflows
 
 | Package | Latest | Purpose |
 |---|---|---|
-| [`@powerduck/openapi-cli`](../openapi-cli/introduction) | 0.2.12 | Multi-protocol command-line workflows, including scenario runs |
-| [`@powerduck/openapi-codegen`](../openapi-codegen/introduction) | 0.6.3 | Generate client code and other artifacts from a specification |
-| [`@powerduck/openapi-mcp-server`](../openapi-mcp-server/introduction) | 1.3.5 | Serve an OpenAPI specification as an MCP server |
-| [`@powerduck/openapi-request`](../openapi-request/introduction) | 0.2.12 | Execute requests described by a specification |
+| [`@powerduck/openapi-cli`](../openapi-cli/introduction.md) | 0.2.12 | Multi-protocol command-line workflows, including scenario runs |
+| [`@powerduck/openapi-codegen`](../openapi-codegen/introduction.md) | 0.6.3 | Generate client code and other artifacts from a specification |
+| [`@powerduck/openapi-mcp-server`](../openapi-mcp-server/introduction.md) | 1.3.5 | Serve an OpenAPI specification as an MCP server |
+| [`@powerduck/openapi-request`](../openapi-request/introduction.md) | 0.2.12 | Execute requests described by a specification |
 
 ### Embeddable UI
 
 | Package | Latest | Purpose |
 |---|---|---|
-| [`@powerduck/oas-document`](../oas-document/introduction) | 0.1.9 | Render OpenAPI as readable documentation, including a React entry |
-| [`@powerduck/md-editor`](../md-editor/introduction) | 0.11.7 | An embeddable Markdown editor |
-| [`@powerduck/schema-editor`](../schema-editor/introduction) | 0.2.10 | An embeddable JSON Schema editor |
-| [`@powerduck/tree`](../tree/introduction) | 0.7.16 | A tree component for structured data |
-| [`@powerduck/workspace-yaml`](../workspace-yaml/introduction) | 0.2.5 | Workspace YAML integration |
+| [`@powerduck/oas-document`](../oas-document/introduction.md) | 0.1.9 | Render OpenAPI as readable documentation, including a React entry |
+| [`@powerduck/md-editor`](../md-editor/introduction.md) | 0.11.7 | An embeddable Markdown editor |
+| [`@powerduck/schema-editor`](../schema-editor/introduction.md) | 0.2.10 | An embeddable JSON Schema editor |
+| [`@powerduck/tree`](../tree/introduction.md) | 0.7.16 | A tree component for structured data |
+| [`@powerduck/workspace-yaml`](../workspace-yaml/introduction.md) | 0.2.5 | Workspace YAML integration |
 
 ## Which package do I need?
 

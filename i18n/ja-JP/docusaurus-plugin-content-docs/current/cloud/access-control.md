@@ -65,4 +65,4 @@ Bearer トークン、Basic パスワード、API キー値などの機密は書
 - **自分のエージェント向け MCP:** MCP 有効化とアクセスキー生成で、自分のクライアントだけが呼べる。
 - **上流認証:** MCP サーバーの認証を実 API の要求に合わせ、誰が MCP エンドポイントを呼べるかとは独立に保つ。
 
-関連: [公開操作](./exposure)、[文書とバージョン](./documents-versions)、[カスタムドメイン](./custom-domains)。
+関連: [公開操作](./exposure.md)、[文書とバージョン](./documents-versions.md)、[カスタムドメイン](./custom-domains.md)。

@@ -59,7 +59,7 @@ API가 바뀔 때 이전 버전을 교체하지 않고 새 내용을 새 버전�
 
 ## 다음 단계
 
-- [문서와 버전](./documents-versions)
-- [노출 작업](./exposure)
-- [접근 통제](./access-control)
-- [사용자 지정 도메인](./custom-domains)
+- [문서와 버전](./documents-versions.md)
+- [노출 작업](./exposure.md)
+- [접근 통제](./access-control.md)
+- [사용자 지정 도메인](./custom-domains.md)

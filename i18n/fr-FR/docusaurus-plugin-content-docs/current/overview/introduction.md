@@ -47,23 +47,23 @@ Powerduck s'exécute sur votre machine, ouvre et enregistre de vrais fichiers, f
 
 | Forme | Ce que c'est | Quand l'utiliser |
 |---|---|---|
-| [**Client de bureau**](../client/introduction) | Application Electron local-first avec assistant IA et espace de travail API complet | Les ingénieurs qui veulent tout garder sur leur machine, travailler hors ligne et conserver clés et invites en local |
-| [**Powerduck Cloud**](../cloud/introduction) | Service hébergé pour l'hébergement OAS, la documentation en ligne et le MCP géré | Pour partager des API, publier des liens stables et fournir du MCP sans rien exécuter |
-| [**Bibliothèques open source**](../opensource/) | Packages npm `@powerduck/*` combinables | Pour construire vos propres outils, pipelines CI ou composants intégrés |
+| [**Client de bureau**](../client/introduction.md) | Application Electron local-first avec assistant IA et espace de travail API complet | Les ingénieurs qui veulent tout garder sur leur machine, travailler hors ligne et conserver clés et invites en local |
+| [**Powerduck Cloud**](../cloud/introduction.md) | Service hébergé pour l'hébergement OAS, la documentation en ligne et le MCP géré | Pour partager des API, publier des liens stables et fournir du MCP sans rien exécuter |
+| [**Bibliothèques open source**](/opensource/index.md) | Packages npm `@powerduck/*` combinables | Pour construire vos propres outils, pipelines CI ou composants intégrés |
 
 Les trois formes partagent le même moteur. Le client de bureau et le cloud sont tous deux assemblés à partir des bibliothèques open source, donc les capacités se comportent de la même façon, que vous les exécutiez en local, les appeliez sur le réseau ou importiez les paquets directement.
 
 ### Client de bureau
 
-Le [client de bureau](../client/introduction) s'exécute entièrement sur votre machine. Il ouvre et édite de vrais fichiers sur le disque, envoie les requêtes via un processus local, exécute des simulations locales et garde les invites IA et les clés API hors de la console du navigateur. Les modèles sont librement configurables et les modifications proposées arrivent sous forme de cartes révisables avant application.
+Le [client de bureau](../client/introduction.md) s'exécute entièrement sur votre machine. Il ouvre et édite de vrais fichiers sur le disque, envoie les requêtes via un processus local, exécute des simulations locales et garde les invites IA et les clés API hors de la console du navigateur. Les modèles sont librement configurables et les modifications proposées arrivent sous forme de cartes révisables avant application.
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](../cloud/introduction) transporte le même flux de travail en ligne. Ajoutez un fichier, un dépôt Git ou une URL, choisissez les opérations à exposer, et vous obtenez des liens stables vers la documentation rendue et un point de terminaison MCP géré. L'accès peut être protégé par un mot de passe de consultation ou une clé d'accès MCP ; les plans payants ajoutent la synchronisation Git, les domaines personnalisés et des limites plus élevées.
+[Powerduck Cloud](../cloud/introduction.md) transporte le même flux de travail en ligne. Ajoutez un fichier, un dépôt Git ou une URL, choisissez les opérations à exposer, et vous obtenez des liens stables vers la documentation rendue et un point de terminaison MCP géré. L'accès peut être protégé par un mot de passe de consultation ou une clé d'accès MCP ; les plans payants ajoutent la synchronisation Git, les domaines personnalisés et des limites plus élevées.
 
 ### Bibliothèques open source
 
-Les [bibliothèques](../opensource/) sont le moteur sous-jacent : analyseur et surligneur OpenAPI, CLI multiprotocole, générateur de code, serveur MCP, exécuteur de requêtes, convertisseurs cURL / Postman et éditeurs intégrés. Chacun est publié indépendamment sur npm avec des guides d'installation dédiés et des références API. Les détails techniques de bas niveau vivent ici.
+Les [bibliothèques](/opensource/index.md) sont le moteur sous-jacent : analyseur et surligneur OpenAPI, CLI multiprotocole, générateur de code, serveur MCP, exécuteur de requêtes, convertisseurs cURL / Postman et éditeurs intégrés. Chacun est publié indépendamment sur npm avec des guides d'installation dédiés et des références API. Les détails techniques de bas niveau vivent ici.
 
 ## Ce qui change pour vous
 
@@ -75,7 +75,7 @@ Les [bibliothèques](../opensource/) sont le moteur sous-jacent : analyseur et s
 
 ## Où aller ensuite
 
-- Nouveau ici ? Commencez par [Installation](./installation) et [Démarrage rapide](./quickstart).
-- Besoin de l'espace de travail local complet ? Lisez le [guide du client de bureau](../client/introduction).
-- Vous voulez publier votre API en ligne ? Lisez le [guide Cloud](../cloud/introduction).
-- Vous construisez votre propre intégration ? Voir les [bibliothèques open source](../opensource/).
+- Nouveau ici ? Commencez par [Installation](./installation.md) et [Démarrage rapide](./quickstart.md).
+- Besoin de l'espace de travail local complet ? Lisez le [guide du client de bureau](../client/introduction.md).
+- Vous voulez publier votre API en ligne ? Lisez le [guide Cloud](../cloud/introduction.md).
+- Vous construisez votre propre intégration ? Voir les [bibliothèques open source](/opensource/index.md).

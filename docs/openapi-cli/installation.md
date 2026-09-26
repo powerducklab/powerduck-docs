@@ -86,5 +86,5 @@ The published package depends on:
 
 ## Next steps
 
-- [Quick Start](./quickstart) — run your first test suite.
-- [Commands](./commands) — the full flag reference.
+- [Quick Start](./quickstart.md) — run your first test suite.
+- [Commands](./commands.md) — the full flag reference.

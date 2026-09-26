@@ -51,11 +51,11 @@ openapi-mcp serve --transport web --port 3000 --api-key your-admin-key
 
 ## Next steps
 
-- [Installation](./installation) — npm/yarn/pnpm, global install, the `./server` subpath and dependencies.
-- [Quickstart](./quickstart) — CLI and programmatic usage.
-- [Configuration](./configuration) — the complete `ServerConfig`.
-- [API Reference](./api-reference) — every export and CLI command.
-- [Examples](./examples) — recipes.
+- [Installation](./installation.md) — npm/yarn/pnpm, global install, the `./server` subpath and dependencies.
+- [Quickstart](./quickstart.md) — CLI and programmatic usage.
+- [Configuration](./configuration.md) — the complete `ServerConfig`.
+- [API Reference](./api-reference.md) — every export and CLI command.
+- [Examples](./examples.md) — recipes.
 
 ## License
 

@@ -7,7 +7,7 @@ description: "Generation options for @powerduck/openapi-codegen: GenerateOptions
 # Configuration
 
 There is no separate config file. Generation is controlled by the
-`GenerateOptions` object passed to [`generate()`](./api-reference).
+`GenerateOptions` object passed to [`generate()`](./api-reference.md).
 
 ## GenerateOptions
 
@@ -184,7 +184,7 @@ interface GenerateResult {
 
 ## Normalize output shape
 
-Calling `normalize()` directly (see [API reference](./api-reference#normalizeoptions))
+Calling `normalize()` directly (see [API reference](./api-reference.md#normalizeoptions))
 returns an object slightly broader than `RequestIR`:
 
 ```ts

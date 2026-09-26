@@ -68,11 +68,11 @@ const result = await client.send({
 
 ## Next steps
 
-- [Installation](./installation) — package layout, subpath exports and peer capability packages.
-- [Quickstart](./quickstart) — your first request, debugger run and manual session.
-- [Configuration](./configuration) — `CreateClientOptions`, `DebuggerOptions` and per-protocol configuration.
-- [API Reference](./api-reference) — every export grouped by surface area.
-- [Examples](./examples) — runnable recipes for HTTP, SSE, WebSocket, GraphQL, MCP and gRPC.
+- [Installation](./installation.md) — package layout, subpath exports and peer capability packages.
+- [Quickstart](./quickstart.md) — your first request, debugger run and manual session.
+- [Configuration](./configuration.md) — `CreateClientOptions`, `DebuggerOptions` and per-protocol configuration.
+- [API Reference](./api-reference.md) — every export grouped by surface area.
+- [Examples](./examples.md) — runnable recipes for HTTP, SSE, WebSocket, GraphQL, MCP and gRPC.
 
 ## License
 

@@ -111,4 +111,4 @@ the change is merged into the document
 - **アクションカード**は、シナリオの実行やワークスペースを開くなどの具体的な次のステップを提供する。
 - **データテーブルカード**は、操作やスキーマの具体的なサンプルやテストデータを提示する。
 
-関連: [リクエストワークスペース](./debug)、[シナリオテスト](./scenario-testing)、[AI とモデル](./ai-models)。
+関連: [リクエストワークスペース](./debug.md)、[シナリオテスト](./scenario-testing.md)、[AI とモデル](./ai-models.md)。

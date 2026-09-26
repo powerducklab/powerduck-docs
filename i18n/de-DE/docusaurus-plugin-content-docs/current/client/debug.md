@@ -54,6 +54,6 @@ Ein Request braucht eine vollständige URL. Wenn weder die `servers` der Spec no
 
 ## Vom Einzel-Request zum Ablauf
 
-Sobald ein isolierter Aufruf funktioniert, ist der natürliche nächste Schritt das Verketten, um einen Antwortwert an den nächsten Request zu geben. Das leisten die [Szenario-Tests](./scenario-testing).
+Sobald ein isolierter Aufruf funktioniert, ist der natürliche nächste Schritt das Verketten, um einen Antwortwert an den nächsten Request zu geben. Das leisten die [Szenario-Tests](./scenario-testing.md).
 
-Siehe auch: [Mit dem Assistenten entwerfen](./design)、[Szenario-Tests](./scenario-testing)、[Einstellungen](./settings).
+Siehe auch: [Mit dem Assistenten entwerfen](./design.md)、[Szenario-Tests](./scenario-testing.md)、[Einstellungen](./settings.md).

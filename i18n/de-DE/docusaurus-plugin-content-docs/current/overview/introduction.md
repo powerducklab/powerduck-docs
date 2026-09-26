@@ -47,23 +47,23 @@ Powerduck läuft auf Ihrer Maschine, öffnet und speichert echte Dateien, funkti
 
 | Form | Was es ist | Wann nutzen |
 |---|---|---|
-| [**Desktop-Client**](../client/introduction) | Local-First-Electron-App mit KI-Assistent und vollständigem API-Arbeitsbereich | Ingenieure, die alles auf der eigenen Maschine behalten, offline arbeiten und Schlüssel/Prompts lokal halten wollen |
-| [**Powerduck Cloud**](../cloud/introduction) | Gehosteter Dienst für OAS-Hosting, Online-Doku und verwaltetes MCP | Zum Teilen von APIs, Veröffentlichen stabiler Links und Bereitstellen von MCP ohne etwas auszuführen |
-| [**Open-Source-Bibliotheken**](../opensource/) | Kombinierbare `@powerduck/*`-npm-Pakete | Zum Bauen eigener Werkzeuge, CI-Pipelines oder eingebetteter Komponenten |
+| [**Desktop-Client**](../client/introduction.md) | Local-First-Electron-App mit KI-Assistent und vollständigem API-Arbeitsbereich | Ingenieure, die alles auf der eigenen Maschine behalten, offline arbeiten und Schlüssel/Prompts lokal halten wollen |
+| [**Powerduck Cloud**](../cloud/introduction.md) | Gehosteter Dienst für OAS-Hosting, Online-Doku und verwaltetes MCP | Zum Teilen von APIs, Veröffentlichen stabiler Links und Bereitstellen von MCP ohne etwas auszuführen |
+| [**Open-Source-Bibliotheken**](/opensource/index.md) | Kombinierbare `@powerduck/*`-npm-Pakete | Zum Bauen eigener Werkzeuge, CI-Pipelines oder eingebetteter Komponenten |
 
 Alle drei Formen teilen denselben Motor. Desktop-Client und Cloud sind beide aus den Open-Source-Bibliotheken zusammengesetzt, daher verhalten sich die Fähigkeiten gleich — ob lokal ausgeführt, über das Netz aufgerufen oder die Pakete direkt importiert.
 
 ### Desktop-Client
 
-Der [Desktop-Client](../client/introduction) läuft vollständig auf Ihrer Maschine. Er öffnet und bearbeitet echte Dateien auf der Festplatte, sendet Requests über einen lokalen Prozess, führt lokale Mocks aus und hält KI-Prompts und API-Schlüssel aus der Browser-Konsole heraus. Modelle sind frei konfigurierbar, und vorgeschlagene Änderungen kommen vor der Anwendung als prüfbare Karten.
+Der [Desktop-Client](../client/introduction.md) läuft vollständig auf Ihrer Maschine. Er öffnet und bearbeitet echte Dateien auf der Festplatte, sendet Requests über einen lokalen Prozess, führt lokale Mocks aus und hält KI-Prompts und API-Schlüssel aus der Browser-Konsole heraus. Modelle sind frei konfigurierbar, und vorgeschlagene Änderungen kommen vor der Anwendung als prüfbare Karten.
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](../cloud/introduction) trägt denselben Workflow online. Fügen Sie Datei, Git-Repository oder URL hinzu, wählen Sie die bereitzustellenden Operationen, und Sie erhalten stabile Links zur gerenderten Doku und einen verwalteten MCP-Endpunkt. Der Zugriff kann per Ansichtspasswort oder MCP-Zugriffsschlüssel geschützt werden; kostenpflichtige Pläne ergänzen Git-Synchronisierung, benutzerdefinierte Domains und höhere Grenzwerte.
+[Powerduck Cloud](../cloud/introduction.md) trägt denselben Workflow online. Fügen Sie Datei, Git-Repository oder URL hinzu, wählen Sie die bereitzustellenden Operationen, und Sie erhalten stabile Links zur gerenderten Doku und einen verwalteten MCP-Endpunkt. Der Zugriff kann per Ansichtspasswort oder MCP-Zugriffsschlüssel geschützt werden; kostenpflichtige Pläne ergänzen Git-Synchronisierung, benutzerdefinierte Domains und höhere Grenzwerte.
 
 ### Open-Source-Bibliotheken
 
-Die [Bibliotheken](../opensource/) sind der Motor darunter: OpenAPI-Parser und -Upgrader, Multiprotokoll-CLI, Code-Generator, MCP-Server, Request-Runner, cURL-/Postman-Konverter und eingebettete Editoren. Jedes ist unabhängig auf npm veröffentlicht, mit eigenen Installationsanleitungen und API-Referenzen. Die technischen Details auf niedriger Ebene leben hier.
+Die [Bibliotheken](/opensource/index.md) sind der Motor darunter: OpenAPI-Parser und -Upgrader, Multiprotokoll-CLI, Code-Generator, MCP-Server, Request-Runner, cURL-/Postman-Konverter und eingebettete Editoren. Jedes ist unabhängig auf npm veröffentlicht, mit eigenen Installationsanleitungen und API-Referenzen. Die technischen Details auf niedriger Ebene leben hier.
 
 ## Was sich für Sie ändert
 
@@ -75,7 +75,7 @@ Die [Bibliotheken](../opensource/) sind der Motor darunter: OpenAPI-Parser und -
 
 ## Wohin als Nächstes
 
-- Neu hier? Beginnen Sie mit [Installation](./installation) und [Schnellstart](./quickstart).
-- Brauchen Sie den vollständigen lokalen Arbeitsbereich? Lesen Sie den [Desktop-Client-Leitfaden](../client/introduction).
-- Wollen Sie Ihre API online veröffentlichen? Lesen Sie den [Cloud-Leitfaden](../cloud/introduction).
-- Bauen Sie eine eigene Integration? Siehe [Open-Source-Bibliotheken](../opensource/).
+- Neu hier? Beginnen Sie mit [Installation](./installation.md) und [Schnellstart](./quickstart.md).
+- Brauchen Sie den vollständigen lokalen Arbeitsbereich? Lesen Sie den [Desktop-Client-Leitfaden](../client/introduction.md).
+- Wollen Sie Ihre API online veröffentlichen? Lesen Sie den [Cloud-Leitfaden](../cloud/introduction.md).
+- Bauen Sie eine eigene Integration? Siehe [Open-Source-Bibliotheken](/opensource/index.md).

@@ -264,5 +264,5 @@ console.log(result.response.headers);
 
 ## Next Steps
 
-- See [API Reference](./api-reference) for all exported types
-- Browse [Examples](./examples) for protocol-specific recipes
+- See [API Reference](./api-reference.md) for all exported types
+- Browse [Examples](./examples.md) for protocol-specific recipes

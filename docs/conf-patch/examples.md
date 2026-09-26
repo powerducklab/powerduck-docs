@@ -275,5 +275,5 @@ await validateOpenAPIFile(specPath, { allowedRootDirectory: "." });
 
 ## Next steps
 
-- [API reference](./api-reference) — full signatures and every option default.
-- [Quickstart](./quickstart) — your first end-to-end run.
+- [API reference](./api-reference.md) — full signatures and every option default.
+- [Quickstart](./quickstart.md) — your first end-to-end run.

@@ -131,5 +131,5 @@ openapi-mcp serve [options]
 
 ## See also
 
-- [Configuration](./configuration)
-- [Examples](./examples)
+- [Configuration](./configuration.md)
+- [Examples](./examples.md)

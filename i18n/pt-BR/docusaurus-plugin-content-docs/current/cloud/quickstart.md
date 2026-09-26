@@ -59,7 +59,7 @@ Quando muda a API, suba o novo conteúdo como uma nova versão em vez de substit
 
 ## Próximos passos
 
-- [Documentos e versões](./documents-versions)
-- [Operações expostas](./exposure)
-- [Controlo de acesso](./access-control)
-- [Domínios personalizados](./custom-domains)
+- [Documentos e versões](./documents-versions.md)
+- [Operações expostas](./exposure.md)
+- [Controlo de acesso](./access-control.md)
+- [Domínios personalizados](./custom-domains.md)

@@ -65,4 +65,4 @@ Weitere MCP-Einstellungen:
 - **MCP für eigene Agenten:** MCP aktivieren und Zugriffsschlüssel anlegen, damit nur Ihre Clients aufrufen.
 - **Upstream-Authentifizierung:** Die MCP-Server-Authentifizierung an die realen API-Anforderungen angleichen, unabhängig davon, wer den Endpunkt aufrufen darf.
 
-Siehe auch: [Bereitgestellte Operationen](./exposure)、[Dokumente und Versionen](./documents-versions)、[Benutzerdefinierte Domains](./custom-domains).
+Siehe auch: [Bereitgestellte Operationen](./exposure.md)、[Dokumente und Versionen](./documents-versions.md)、[Benutzerdefinierte Domains](./custom-domains.md).

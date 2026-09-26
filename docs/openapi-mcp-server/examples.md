@@ -92,7 +92,7 @@ app.listen(8080, () => console.log("mcp on :8080/mcp"));
 ```
 
 > For session limits, CORS origins, idle reaping, and the fuller route handle
-> (`listSessions`, `closeSession`, `closeAll`), use [`startAdminServer`](./api-reference#admin-server-and-auth-server-subpath)
+> (`listSessions`, `closeSession`, `closeAll`), use [`startAdminServer`](./api-reference.md#admin-server-and-auth-server-subpath)
 > which wraps `attachMcpRoutes` with all of those options. `attachMcpRoutes`
 > itself is an internal implementation detail and is not exported from the
 > package root.
@@ -148,5 +148,5 @@ Omitting the key disables the guard; an empty string throws rather than silently
 
 ## See also
 
-- [Quickstart](./quickstart)
-- [API Reference](./api-reference)
+- [Quickstart](./quickstart.md)
+- [API Reference](./api-reference.md)

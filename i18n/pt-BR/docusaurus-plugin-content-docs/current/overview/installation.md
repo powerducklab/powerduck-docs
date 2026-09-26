@@ -48,7 +48,7 @@ O cliente de desktop é uma app Electron em duas partes.
 - O **processo principal** (Node.js), que gere o acesso a arquivos, as requisições HTTP externas, o servidor de simulação local, as conexões a bases de dados e o terminal integrado.
 - O **renderer** (o espaço de trabalho React), que mostra a especificação, o chat de IA e as ferramentas.
 
-Esta separação conta para segurança e fiabilidade. As requisições que exigem rede e acesso ao sistema de arquivos são tratadas pelo processo principal, não a WebView: as instruções e chaves API não aparecem na consola do navegador, e as restrições CORS diretas do navegador ao fornecedor não se aplicam. Veja [IA e modelos](../client/ai-models).
+Esta separação conta para segurança e fiabilidade. As requisições que exigem rede e acesso ao sistema de arquivos são tratadas pelo processo principal, não a WebView: as instruções e chaves API não aparecem na consola do navegador, e as restrições CORS diretas do navegador ao fornecedor não se aplicam. Veja [IA e modelos](../client/ai-models.md).
 
 ## Requisitos
 
@@ -58,6 +58,6 @@ Esta separação conta para segurança e fiabilidade. As requisições que exige
 
 ## Licença
 
-O cliente de desktop pode ser avaliado livremente. Vende-se como licença **perpétua** após uma compra única, sem subscrição. A chave de licença é gerada na compra e mostrada uma só vez. O alojamento na nuvem é um serviço de subscrição à parte. Veja [Faturação da Cloud](../cloud/billing) para a distinção.
+O cliente de desktop pode ser avaliado livremente. Vende-se como licença **perpétua** após uma compra única, sem subscrição. A chave de licença é gerada na compra e mostrada uma só vez. O alojamento na nuvem é um serviço de subscrição à parte. Veja [Faturação da Cloud](../cloud/billing.md) para a distinção.
 
-Depois, passe ao [Início rápido](./quickstart).
+Depois, passe ao [Início rápido](./quickstart.md).

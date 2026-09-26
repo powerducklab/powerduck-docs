@@ -202,6 +202,6 @@ unsubscribe();
 
 ## Next steps
 
-- Read the [API Reference](./api-reference) for all exported functions and types
-- See [Configuration](./configuration) for all `SendOptions` fields
-- Browse [Examples](./examples) for protocol-specific recipes
+- Read the [API Reference](./api-reference.md) for all exported functions and types
+- See [Configuration](./configuration.md) for all `SendOptions` fields
+- Browse [Examples](./examples.md) for protocol-specific recipes

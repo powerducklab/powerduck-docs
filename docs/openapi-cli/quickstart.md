@@ -45,7 +45,7 @@ Use a JSON config file for complex setups:
 openapi-cli --config openapi-cli.config.json
 ```
 
-See the [Commands](./commands) page for every flag.
+See the [Commands](./commands.md) page for every flag.
 
 ## 2. Write a minimal spec to test
 
@@ -111,7 +111,7 @@ if (report.summary.failed > 0 || report.summary.errors > 0) {
 ```
 
 `resolveConfig` accepts the same shape as the CLI (see
-[Configuration](./configuration)). `runTests` returns a `TestReport`
+[Configuration](./configuration.md)). `runTests` returns a `TestReport`
 containing `summary`, `results`, `config`, `generatedAt`, and `version`.
 
 ## 4. Exit codes for CI
@@ -124,7 +124,7 @@ containing `summary`, `results`, `config`, `generatedAt`, and `version`.
 
 ## What's next?
 
-- [Configuration](./configuration) — every `CliConfig` field and default.
-- [Commands](./commands) — every CLI flag.
-- [Examples](./examples) — auth, filtering, reports, and assertions.
-- [API Reference](./api-reference) — every exported function and type.
+- [Configuration](./configuration.md) — every `CliConfig` field and default.
+- [Commands](./commands.md) — every CLI flag.
+- [Examples](./examples.md) — auth, filtering, reports, and assertions.
+- [API Reference](./api-reference.md) — every exported function and type.

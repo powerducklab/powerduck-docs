@@ -44,4 +44,4 @@ For cases where the default example or schema-derived response is not enough, re
 
 The mock reads the same specification as every other surface, so it stays aligned with the contract as the design changes.
 
-Related: [Scenario testing](./scenario-testing), [Designing with the assistant](./design).
+Related: [Scenario testing](./scenario-testing.md), [Designing with the assistant](./design.md).

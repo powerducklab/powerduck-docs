@@ -87,7 +87,7 @@ In `complex` mode, the toolbar is built from the 22 actions below, in this defau
 | 21 | `help` | Keyboard shortcuts |
 | 22 | `theme` | Toggle theme |
 
-Several actions open popup dialogs or template pickers: image, video, YouTube, table, math (templates), mindmap (templates), callout (type grid), and help. Configure the toolbar with the `toolbar` option as described in [Configuration](./configuration#toolbarconfig).
+Several actions open popup dialogs or template pickers: image, video, YouTube, table, math (templates), mindmap (templates), callout (type grid), and help. Configure the toolbar with the `toolbar` option as described in [Configuration](./configuration.md#toolbarconfig).
 
 ## Keyboard shortcuts
 
@@ -156,5 +156,5 @@ List items matching `- [ ]` or `- [x]` (with arbitrary whitespace inside the bra
 
 ## Next steps
 
-- [Configuration](./configuration) — tune these features through options.
-- [API reference](./api-reference) — programmatically drive the editor.
+- [Configuration](./configuration.md) — tune these features through options.
+- [API reference](./api-reference.md) — programmatically drive the editor.

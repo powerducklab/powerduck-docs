@@ -54,6 +54,6 @@ description: "在標籤頁中發送真實請求，跨作用域管理變數，並
 
 ## 從單個請求到流程
 
-一旦單個呼叫可用，自然的下一步是把呼叫串聯起來，讓一個回應中的值餵給下一個請求。那就是[場景測試](./scenario-testing)。
+一旦單個呼叫可用，自然的下一步是把呼叫串聯起來，讓一個回應中的值餵給下一個請求。那就是[場景測試](./scenario-testing.md)。
 
-相關：[用助手進行設計](./design)、[場景測試](./scenario-testing)、[設定](./settings)。
+相關：[用助手進行設計](./design.md)、[場景測試](./scenario-testing.md)、[設定](./settings.md)。

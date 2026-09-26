@@ -56,9 +56,9 @@ The library runs in modern evergreen browsers that ship CodeMirror 6, KaTeX, mar
 
 ## Next steps
 
-- [Installation](./installation) — install the package and know the import paths.
-- [Quick start](./quickstart) — mount your first editor in vanilla JS or React.
-- [Configuration](./configuration) — every option on `MarkdownEditorOptions`.
-- [Features](./features) — deep dives into each built-in feature.
-- [API reference](./api-reference) — every exported class, function, and type.
-- [Examples](./examples) — complete, runnable snippets.
+- [Installation](./installation.md) — install the package and know the import paths.
+- [Quick start](./quickstart.md) — mount your first editor in vanilla JS or React.
+- [Configuration](./configuration.md) — every option on `MarkdownEditorOptions`.
+- [Features](./features.md) — deep dives into each built-in feature.
+- [API reference](./api-reference.md) — every exported class, function, and type.
+- [Examples](./examples.md) — complete, runnable snippets.

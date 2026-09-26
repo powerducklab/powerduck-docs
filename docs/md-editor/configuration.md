@@ -106,7 +106,7 @@ interface ToolbarItemOverride {
 }
 ```
 
-The full list of valid action names is documented in [Features](./features#toolbar-actions).
+The full list of valid action names is documented in [Features](./features.md#toolbar-actions).
 
 ## `MentionOptions`
 
@@ -126,7 +126,7 @@ interface MentionOptions {
 | `minChars` | `number` | `0` | Minimum query length before the dropdown appears. |
 | `maxItems` | `number` | `8` | Maximum items shown in the dropdown. |
 
-`MentionItem` itself is documented in the [API reference](./api-reference).
+`MentionItem` itself is documented in the [API reference](./api-reference.md).
 
 ## `DocLinkOptions`
 
@@ -178,5 +178,5 @@ Task-list checkboxes, `:::doc-link` cards, and @mention badges are always enable
 
 ## Next steps
 
-- [Features](./features) — how each option manifests at runtime.
-- [API reference](./api-reference) — the full type surface.
+- [Features](./features.md) — how each option manifests at runtime.
+- [API reference](./api-reference.md) — the full type surface.

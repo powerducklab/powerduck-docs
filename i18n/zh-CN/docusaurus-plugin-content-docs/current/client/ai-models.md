@@ -62,4 +62,4 @@ description: "接入任何兼容 OpenAI 的模型，通过主进程让提示词�
 - 是确定性宿主——而非模型——校验并应用每项改动；
 - 每次写入在运行前都由你批准。
 
-相关：[用助手进行设计](./design)、[设置](./settings)、[Cloud 访问控制](../cloud/access-control)。
+相关：[用助手进行设计](./design.md)、[设置](./settings.md)、[Cloud 访问控制](../cloud/access-control.md)。

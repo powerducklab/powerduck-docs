@@ -89,4 +89,4 @@ A página de faturação separa ambos.
 
 Como qualquer recurso hospedado, os pagamentos e subscrições pertencem a uma **Organização** e consultam-se com âmbito de organização, por isso um utilizador com outro ID de organização não pode ler os pedidos doutra equipe.
 
-Veja também: [Introdução à Cloud](./introduction)、[Domínios personalizados](./custom-domains).
+Veja também: [Introdução à Cloud](./introduction.md)、[Domínios personalizados](./custom-domains.md).

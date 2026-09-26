@@ -46,10 +46,10 @@ description: "在几分钟内从一份 OpenAPI 文件走到设计好的接口、
 
 ## 6. 准备好后再深入
 
-- 把多个请求串联成[场景测试](../client/scenario-testing)，并导出 HTML 报告；
-- 在后端开发期间运行[本地 Mock 服务器](../client/mock-server)；
-- 通过[六种协议](../client/protocols)为流式和 RPC API 建模；
-- 在[数据模型](../client/data-model)中推导数据库表、关系和 SQL；
-- 用 [Powerduck Cloud](../cloud/quickstart) 把同一份规范发布到线上。
+- 把多个请求串联成[场景测试](../client/scenario-testing.md)，并导出 HTML 报告；
+- 在后端开发期间运行[本地 Mock 服务器](../client/mock-server.md)；
+- 通过[六种协议](../client/protocols.md)为流式和 RPC API 建模；
+- 在[数据模型](../client/data-model.md)中推导数据库表、关系和 SQL；
+- 用 [Powerduck Cloud](../cloud/quickstart.md) 把同一份规范发布到线上。
 
 至此你已经走完了完整闭环。文档的其余部分会深入介绍每个工作区。

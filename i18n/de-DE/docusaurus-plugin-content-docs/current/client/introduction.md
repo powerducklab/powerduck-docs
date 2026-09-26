@@ -29,14 +29,14 @@ Ein einziges Dokument treibt alle Modi an, erreichbar über einen kompakten Umsc
 
 | Modus | Was er tut |
 |---|---|
-| [**Spec**](./design) | Hauptmodus: KI-Chat, Dokument, Live-Vorschau |
-| [**Request-Arbeitsbereich**](./debug) | Sendet und prüft echte HTTP-Requests; Tabs und Umgebungen |
-| [**Szenario-Tests**](./scenario-testing) | Verknüpft Operationen zu Abläufen, führt sie aus und erstellt einen Bericht |
-| [**Dokumentation**](./protocols) | Liest die Spec als gerenderte API-Doku |
-| [**MCP**](./protocols) | Prüft und nutzt den aus der Spec abgeleiteten MCP-Server |
-| [**Mock-Server**](./mock-server) | Führt während der API-Entwicklung einen lokalen Mock aus |
-| [**Datenmodell**](./data-model) | Leitet Tabellen und Beziehungen ab, vergleicht mit der DB und erzeugt SQL |
-| [**Einstellungen**](./settings) | Theme, Sprache, Proxy, Zertifikate, Arbeitsbereichs-Voreinstellungen |
+| [**Spec**](./design.md) | Hauptmodus: KI-Chat, Dokument, Live-Vorschau |
+| [**Request-Arbeitsbereich**](./debug.md) | Sendet und prüft echte HTTP-Requests; Tabs und Umgebungen |
+| [**Szenario-Tests**](./scenario-testing.md) | Verknüpft Operationen zu Abläufen, führt sie aus und erstellt einen Bericht |
+| [**Dokumentation**](./protocols.md) | Liest die Spec als gerenderte API-Doku |
+| [**MCP**](./protocols.md) | Prüft und nutzt den aus der Spec abgeleiteten MCP-Server |
+| [**Mock-Server**](./mock-server.md) | Führt während der API-Entwicklung einen lokalen Mock aus |
+| [**Datenmodell**](./data-model.md) | Leitet Tabellen und Beziehungen ab, vergleicht mit der DB und erzeugt SQL |
+| [**Einstellungen**](./settings.md) | Theme, Sprache, Proxy, Zertifikate, Arbeitsbereichs-Voreinstellungen |
 
 ## Wie Sie mit dem Assistenten zusammenarbeiten
 
@@ -46,7 +46,7 @@ Sie beschreiben die Absicht in natürlicher Sprache, der Assistent wählt die pa
 - Nur-Lese-Aufgaben — Operationen auflisten, Schema holen, Abfrage ausführen — liefern die Fakten, auf die der Assistent seine Antwort gründet.
 - Schreib-Aktionen verlangen vor Ausführung eine Bestätigung.
 
-Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenAI-kompatiblen Anbieter und wählen ihn in den Einstellungen. Siehe [KI und Modelle](./ai-models).
+Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenAI-kompatiblen Anbieter und wählen ihn in den Einstellungen. Siehe [KI und Modelle](./ai-models.md).
 
 ## Was Local-First für Sie bedeutet
 
@@ -58,15 +58,15 @@ Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenA
 
 ## Desktop-Lizenz
 
-Der Desktop-Client wird als **dauerhafte Lizenz nach Einmalkauf** verkauft. Einmal gekauft, für immer behalten, vollständig offline und ohne Konto. Der Schlüssel wird beim Kauf erzeugt und einmal angezeigt. Er unterscheidet sich von Powerduck Cloud, dem monatlich abonnierten Hosting-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing).
+Der Desktop-Client wird als **dauerhafte Lizenz nach Einmalkauf** verkauft. Einmal gekauft, für immer behalten, vollständig offline und ohne Konto. Der Schlüssel wird beim Kauf erzeugt und einmal angezeigt. Er unterscheidet sich von Powerduck Cloud, dem monatlich abonnierten Hosting-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing.md).
 
 ## Hier starten
 
-- [Mit dem Assistenten entwerfen](./design)
-- [Request-Arbeitsbereich und Umgebungen](./debug)
-- [Szenario-Tests und Berichte](./scenario-testing)
-- [Protokolle](./protocols)
-- [Datenmodell und ER-Diagramm](./data-model)
-- [Mock-Server](./mock-server)
-- [KI und Modelle](./ai-models)
-- [Einstellungen](./settings)
+- [Mit dem Assistenten entwerfen](./design.md)
+- [Request-Arbeitsbereich und Umgebungen](./debug.md)
+- [Szenario-Tests und Berichte](./scenario-testing.md)
+- [Protokolle](./protocols.md)
+- [Datenmodell und ER-Diagramm](./data-model.md)
+- [Mock-Server](./mock-server.md)
+- [KI und Modelle](./ai-models.md)
+- [Einstellungen](./settings.md)

@@ -48,7 +48,7 @@ Le client de bureau est une application Electron en deux parties.
 - Le **processus principal** (Node.js), qui gère l'accès aux fichiers, les requêtes HTTP externes, le serveur de simulation local, les connexions aux bases de données et le terminal intégré.
 - Le **renderer** (l'espace de travail React), qui affiche la spécification, le chat IA et les outils.
 
-Cette séparation compte pour la sécurité et la fiabilité. Les requêtes nécessitant un accès réseau et au système de fichiers sont traitées par le processus principal, pas par la WebView : les invites et les clés API n'apparaissent pas dans la console du navigateur, et les restrictions CORS directes du navigateur vers le fournisseur ne s'appliquent pas. Voir [IA et modèles](../client/ai-models).
+Cette séparation compte pour la sécurité et la fiabilité. Les requêtes nécessitant un accès réseau et au système de fichiers sont traitées par le processus principal, pas par la WebView : les invites et les clés API n'apparaissent pas dans la console du navigateur, et les restrictions CORS directes du navigateur vers le fournisseur ne s'appliquent pas. Voir [IA et modèles](../client/ai-models.md).
 
 ## Configuration requise
 
@@ -58,6 +58,6 @@ Cette séparation compte pour la sécurité et la fiabilité. Les requêtes néc
 
 ## Licence
 
-Le client de bureau peut être évalué librement. Il est vendu sous licence **perpétuelle** après un achat unique, sans abonnement. La clé de licence est générée à l'achat et affichée une seule fois. L'hébergement cloud est un service par abonnement distinct. Voir [Facturation Cloud](../cloud/billing) pour la distinction.
+Le client de bureau peut être évalué librement. Il est vendu sous licence **perpétuelle** après un achat unique, sans abonnement. La clé de licence est générée à l'achat et affichée une seule fois. L'hébergement cloud est un service par abonnement distinct. Voir [Facturation Cloud](../cloud/billing.md) pour la distinction.
 
-Ensuite, passez au [Démarrage rapide](./quickstart).
+Ensuite, passez au [Démarrage rapide](./quickstart.md).

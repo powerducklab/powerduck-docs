@@ -108,5 +108,5 @@ node -e "const core = require('@powerduck/conf-patch/core'); console.log('core e
 
 ## Next steps
 
-- [Quickstart](./quickstart) — patch a string in the browser and a file on disk.
-- [API reference](./api-reference) — every export, type, and option.
+- [Quickstart](./quickstart.md) — patch a string in the browser and a file on disk.
+- [API reference](./api-reference.md) — every export, type, and option.

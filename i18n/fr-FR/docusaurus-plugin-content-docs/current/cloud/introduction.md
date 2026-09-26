@@ -68,13 +68,13 @@ Les lecteurs publics utilisent un visualiseur dédié et n'ont pas besoin de com
 | Résultat | Clé de licence (affichée une fois) | Adhésion, pas de clé |
 | Quand | Local, hors ligne, espace complet | Partage et publication en ligne |
 
-Les deux se complètent et sont vendus séparément. Voir [Facturation](./billing).
+Les deux se complètent et sont vendus séparément. Voir [Facturation](./billing.md).
 
 ## Commencez ici
 
-- [Démarrage rapide Cloud](./quickstart)
-- [Documents et versions](./documents-versions)
-- [Opérations exposées](./exposure)
-- [Contrôle d'accès](./access-control)
-- [Domaines personnalisés](./custom-domains)
-- [Facturation](./billing)
+- [Démarrage rapide Cloud](./quickstart.md)
+- [Documents et versions](./documents-versions.md)
+- [Opérations exposées](./exposure.md)
+- [Contrôle d'accès](./access-control.md)
+- [Domaines personnalisés](./custom-domains.md)
+- [Facturation](./billing.md)

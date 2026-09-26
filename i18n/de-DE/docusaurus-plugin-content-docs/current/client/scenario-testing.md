@@ -74,4 +74,4 @@ Das HTML ist eigenständig: an Tickets anhängen oder pro Release archivieren.
 - Verhaltensnachweis der API für Release oder Übergabe erzeugen.
 - Ablauf-Regression nach Vertragsänderung.
 
-Siehe auch: [Request-Arbeitsbereich](./debug)、[Mit dem Assistenten entwerfen](./design)、[Mock-Server](./mock-server).
+Siehe auch: [Request-Arbeitsbereich](./debug.md)、[Mit dem Assistenten entwerfen](./design.md)、[Mock-Server](./mock-server.md).

@@ -111,4 +111,4 @@ Toutes les réponses ne sont pas des correctifs.
 - Les **cartes action** fournissent une prochaine étape concrète, comme exécuter un scénario ou ouvrir un espace de travail.
 - Les **cartes table de données** présentent des données d'exemple/de test concrètes pour des opérations ou schémas.
 
-Voir aussi : [Espace de travail de requête](./debug)、[Tests de scénario](./scenario-testing)、[IA et modèles](./ai-models).
+Voir aussi : [Espace de travail de requête](./debug.md)、[Tests de scénario](./scenario-testing.md)、[IA et modèles](./ai-models.md).

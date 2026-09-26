@@ -68,13 +68,13 @@ Powerduck Cloud 讓一份 OpenAPI 檔案變成你可以**分享**的東西。新
 | 產出 | 授權碼（僅展示一次） | 會員資格，無授權碼 |
 | 最適合 | 本機、離線、完整工作區 | 線上分享和發布 |
 
-兩者互補、分開出售。參見[帳單](./billing)。
+兩者互補、分開出售。參見[帳單](./billing.md)。
 
 ## 從這裡開始
 
-- [Cloud 快速開始](./quickstart)
-- [文件與版本](./documents-versions)
-- [暴露操作](./exposure)
-- [存取控制](./access-control)
-- [自訂網域](./custom-domains)
-- [帳單](./billing)
+- [Cloud 快速開始](./quickstart.md)
+- [文件與版本](./documents-versions.md)
+- [暴露操作](./exposure.md)
+- [存取控制](./access-control.md)
+- [自訂網域](./custom-domains.md)
+- [帳單](./billing.md)

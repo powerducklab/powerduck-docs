@@ -54,6 +54,6 @@ description: "在标签页中发送真实请求，跨作用域管理变量，并
 
 ## 从单个请求到流程
 
-一旦单个调用可用，自然的下一步是把调用串联起来，让一个响应中的值喂给下一个请求。那就是[场景测试](./scenario-testing)。
+一旦单个调用可用，自然的下一步是把调用串联起来，让一个响应中的值喂给下一个请求。那就是[场景测试](./scenario-testing.md)。
 
-相关：[用助手进行设计](./design)、[场景测试](./scenario-testing)、[设置](./settings)。
+相关：[用助手进行设计](./design.md)、[场景测试](./scenario-testing.md)、[设置](./settings.md)。

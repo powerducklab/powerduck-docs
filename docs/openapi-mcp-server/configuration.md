@@ -102,5 +102,5 @@ positional `(app, specProvider, contextProvider, routeGuard?)` arguments.
 
 ## See also
 
-- [API Reference](./api-reference)
-- [Examples](./examples)
+- [API Reference](./api-reference.md)
+- [Examples](./examples.md)

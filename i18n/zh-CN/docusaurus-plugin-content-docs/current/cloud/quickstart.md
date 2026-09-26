@@ -59,7 +59,7 @@ description: "登录，从上传、Git 或 URL 添加规范，选择暴露操作
 
 ## 下一步
 
-- [文档与版本](./documents-versions)
-- [暴露操作](./exposure)
-- [访问控制](./access-control)
-- [自定义域名](./custom-domains)
+- [文档与版本](./documents-versions.md)
+- [暴露操作](./exposure.md)
+- [访问控制](./access-control.md)
+- [自定义域名](./custom-domains.md)

@@ -46,10 +46,10 @@ description: "OpenAPI ファイルから、設計したエンドポイント、�
 
 ## 6. 準備ができたらさらに進む
 
-- 複数のリクエストを[シナリオテスト](../client/scenario-testing)に連結し、HTML レポートをエクスポートする。
-- バックエンド開発中に[ローカルモックサーバー](../client/mock-server)を実行する。
-- [6 つのプロトコル](../client/protocols)でストリーミング / RPC API をモデル化する。
-- [データモデル](../client/data-model)でデータベーステーブル、リレーション、SQL を導き出す。
-- [Powerduck Cloud](../cloud/quickstart)で同じ仕様をオンライン公開する。
+- 複数のリクエストを[シナリオテスト](../client/scenario-testing.md)に連結し、HTML レポートをエクスポートする。
+- バックエンド開発中に[ローカルモックサーバー](../client/mock-server.md)を実行する。
+- [6 つのプロトコル](../client/protocols.md)でストリーミング / RPC API をモデル化する。
+- [データモデル](../client/data-model.md)でデータベーステーブル、リレーション、SQL を導き出す。
+- [Powerduck Cloud](../cloud/quickstart.md)で同じ仕様をオンライン公開する。
 
 これでコアループが完成です。残りのドキュメントでは各ワークスペースを詳しく説明します。

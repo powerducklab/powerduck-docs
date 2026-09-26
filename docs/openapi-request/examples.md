@@ -251,6 +251,6 @@ const sample = sampleFromSchema(schema);
 
 ## See also
 
-- [Quickstart](./quickstart)
-- [API Reference](./api-reference)
-- [Configuration](./configuration)
+- [Quickstart](./quickstart.md)
+- [API Reference](./api-reference.md)
+- [Configuration](./configuration.md)

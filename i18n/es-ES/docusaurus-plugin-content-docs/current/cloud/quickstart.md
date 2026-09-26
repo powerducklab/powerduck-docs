@@ -59,7 +59,7 @@ Cuando cambie la API, suba el nuevo contenido como una nueva versión en vez de 
 
 ## Siguientes pasos
 
-- [Documentos y versiones](./documents-versions)
-- [Operaciones expuestas](./exposure)
-- [Control de acceso](./access-control)
-- [Dominios personalizados](./custom-domains)
+- [Documentos y versiones](./documents-versions.md)
+- [Operaciones expuestas](./exposure.md)
+- [Control de acceso](./access-control.md)
+- [Dominios personalizados](./custom-domains.md)

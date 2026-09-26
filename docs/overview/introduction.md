@@ -47,23 +47,23 @@ Powerduck runs on your machine, opens and saves real files, works offline, and k
 
 | Surface | What it is | Best for |
 |---|---|---|
-| [**Desktop Client**](../client/introduction) | A local-first Electron application with an AI assistant and a full API workspace | Engineers who want everything on their machine, work offline, and keep keys and prompts local |
-| [**Powerduck Cloud**](../cloud/introduction) | A hosted service for OAS hosting, online documentation, and managed MCP | Sharing APIs with others, publishing stable links, and serving MCP without running anything |
-| [**Open Source libraries**](../opensource/) | Composable `@powerduck/*` npm packages | Building your own tooling, CI pipelines, or embedded components |
+| [**Desktop Client**](../client/introduction.md) | A local-first Electron application with an AI assistant and a full API workspace | Engineers who want everything on their machine, work offline, and keep keys and prompts local |
+| [**Powerduck Cloud**](../cloud/introduction.md) | A hosted service for OAS hosting, online documentation, and managed MCP | Sharing APIs with others, publishing stable links, and serving MCP without running anything |
+| [**Open Source libraries**](../opensource/index.md) | Composable `@powerduck/*` npm packages | Building your own tooling, CI pipelines, or embedded components |
 
 The three surfaces share the same engines: the desktop client and the cloud are both assembled from the open-source libraries, so a capability behaves the same whether you run it locally, call it over the network, or import a package directly.
 
 ### Desktop Client
 
-The [desktop client](../client/introduction) runs entirely on your machine. It opens and edits real files on disk, sends requests through a local process, runs a local mock, and keeps your AI prompts and API keys out of the browser console. The model is fully yours to configure, and every proposed change arrives as a reviewable card before it is applied.
+The [desktop client](../client/introduction.md) runs entirely on your machine. It opens and edits real files on disk, sends requests through a local process, runs a local mock, and keeps your AI prompts and API keys out of the browser console. The model is fully yours to configure, and every proposed change arrives as a reviewable card before it is applied.
 
 ### Powerduck Cloud
 
-[Powerduck Cloud](../cloud/introduction) takes the same workflow online. Add a file, a Git repository, or a URL; choose which operations to expose; and get stable links for rendered documentation and a managed MCP endpoint. Access can be protected with a view password or an MCP access key, and paid plans add Git sync, custom domains, and higher limits.
+[Powerduck Cloud](../cloud/introduction.md) takes the same workflow online. Add a file, a Git repository, or a URL; choose which operations to expose; and get stable links for rendered documentation and a managed MCP endpoint. Access can be protected with a view password or an MCP access key, and paid plans add Git sync, custom domains, and higher limits.
 
 ### Open Source libraries
 
-The [libraries](../opensource/) are the engines underneath: an OpenAPI parser and upgrader, a multi-protocol CLI, a code generator, an MCP server, a request runner, converters for cURL and Postman, and embeddable editors. Each is published independently on npm with its own installation guide and API reference — this is where the low-level technical detail lives.
+The [libraries](../opensource/index.md) are the engines underneath: an OpenAPI parser and upgrader, a multi-protocol CLI, a code generator, an MCP server, a request runner, converters for cURL and Postman, and embeddable editors. Each is published independently on npm with its own installation guide and API reference — this is where the low-level technical detail lives.
 
 ## What changes for you
 
@@ -75,7 +75,7 @@ The [libraries](../opensource/) are the engines underneath: an OpenAPI parser an
 
 ## Where to go next
 
-- New here? Start with [Installation](./installation) and the [Quickstart](./quickstart).
-- Want the full local workspace? Read the [Desktop Client guide](../client/introduction).
-- Want to publish an API online? Read the [Cloud guide](../cloud/introduction).
-- Building your own integration? Browse the [Open Source libraries](../opensource/).
+- New here? Start with [Installation](./installation.md) and the [Quickstart](./quickstart.md).
+- Want the full local workspace? Read the [Desktop Client guide](../client/introduction.md).
+- Want to publish an API online? Read the [Cloud guide](../cloud/introduction.md).
+- Building your own integration? Browse the [Open Source libraries](../opensource/index.md).

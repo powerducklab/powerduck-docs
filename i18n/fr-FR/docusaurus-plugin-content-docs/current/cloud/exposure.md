@@ -47,7 +47,7 @@ L'exposition définit **quelles opérations apparaissent**, tandis que d'autres 
 - Chaque mode a son indicateur actif pour documentation et MCP.
 - L'accès peut être protégé par mot de passe (documentation) ou clé d'accès (MCP).
 
-Voir l'ensemble des portes dans [Contrôle d'accès](./access-control).
+Voir l'ensemble des portes dans [Contrôle d'accès](./access-control.md).
 
 ## Limites de plan
 
@@ -57,4 +57,4 @@ Les plans limitent le nombre d'opérations exposées.
 - **Pro** — jusqu'à 1 000.
 - **Team** — jusqu'à 10 000.
 
-Voir aussi : [Contrôle d'accès](./access-control)、[Documents et versions](./documents-versions).
+Voir aussi : [Contrôle d'accès](./access-control.md)、[Documents et versions](./documents-versions.md).

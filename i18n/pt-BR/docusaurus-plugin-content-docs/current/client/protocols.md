@@ -125,4 +125,4 @@ paths:
 
 Quando seis protocolos se modelam num documento, projeto, depuração, simulação, documentação e MCP impulsionam-se desde a mesma fonte, independentemente do transporte. Peça ao assistente que adicione uma interface de streaming ou RPC e a sua configuração de protocolo conserva-se em vez de se aplanar a REST.
 
-Veja também: [Desenhar com o assistente](./design)、[Modelo de dados](./data-model).
+Veja também: [Desenhar com o assistente](./design.md)、[Modelo de dados](./data-model.md).

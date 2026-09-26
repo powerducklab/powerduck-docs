@@ -95,6 +95,6 @@ await handle.close();
 
 ## What's next
 
-- [Configuration](./configuration) — the full `ServerConfig`.
-- [Examples](./examples) — more programmatic recipes.
-- [API Reference](./api-reference) — every export.
+- [Configuration](./configuration.md) — the full `ServerConfig`.
+- [Examples](./examples.md) — more programmatic recipes.
+- [API Reference](./api-reference.md) — every export.

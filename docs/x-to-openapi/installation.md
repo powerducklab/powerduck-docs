@@ -65,7 +65,7 @@ The package has `"sideEffects": false`, so tree-shaking drops unused adapters.
 
 ## Zero-config helpers
 
-Most users only need two functions. They construct an [`XToOpenApi`](./api-reference#xtoopenapi), register the matching adapter, and call `convert`:
+Most users only need two functions. They construct an [`XToOpenApi`](./api-reference.md#xtoopenapi), register the matching adapter, and call `convert`:
 
 ```typescript
 import {
@@ -74,7 +74,7 @@ import {
 } from "@powerduck/x-to-openapi";
 ```
 
-Use the full [`XToOpenApi`](./api-reference#xtoopenapi) class when you want custom options, multiple adapters, `"auto"` detection, or a custom adapter.
+Use the full [`XToOpenApi`](./api-reference.md#xtoopenapi) class when you want custom options, multiple adapters, `"auto"` detection, or a custom adapter.
 
 ---
 
@@ -92,5 +92,5 @@ node -e "const x = require('@powerduck/x-to-openapi'); console.log(typeof x.curl
 
 ## Next steps
 
-- [Quickstart](./quickstart) — convert a curl command, a Postman collection, and register a custom adapter.
-- [API reference](./api-reference) — every export and option.
+- [Quickstart](./quickstart.md) — convert a curl command, a Postman collection, and register a custom adapter.
+- [API reference](./api-reference.md) — every export and option.

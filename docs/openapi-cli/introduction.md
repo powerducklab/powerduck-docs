@@ -73,9 +73,9 @@ generateJsonReport(report, "./reports");
 
 ## Next steps
 
-- [Installation](./installation) — install globally or as a dev dependency.
-- [Quick Start](./quickstart) — run your first test suite.
-- [Configuration](./configuration) — the complete `CliConfig` reference.
-- [Commands](./commands) — every CLI flag and exit code.
-- [API Reference](./api-reference) — every exported function and type.
-- [Examples](./examples) — ready-to-run recipes.
+- [Installation](./installation.md) — install globally or as a dev dependency.
+- [Quick Start](./quickstart.md) — run your first test suite.
+- [Configuration](./configuration.md) — the complete `CliConfig` reference.
+- [Commands](./commands.md) — every CLI flag and exit code.
+- [API Reference](./api-reference.md) — every exported function and type.
+- [Examples](./examples.md) — ready-to-run recipes.

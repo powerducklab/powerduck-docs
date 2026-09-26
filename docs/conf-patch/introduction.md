@@ -52,9 +52,9 @@ Pure functions that operate on **strings**. No `node:fs`, no `node:path`, no Nod
 
 | Function | Purpose |
 |---|---|
-| [`patchContent`](./api-reference#patchcontent) | Apply an array of RFC 6902 operations to a config string |
-| [`setContentValue`](./api-reference#setcontentvalue) | Set or create a nested value (uses `add`) |
-| [`deleteContentValue`](./api-reference#deletecontentvalue) | Remove a key or array element (uses `remove`) |
+| [`patchContent`](./api-reference.md#patchcontent) | Apply an array of RFC 6902 operations to a config string |
+| [`setContentValue`](./api-reference.md#setcontentvalue) | Set or create a nested value (uses `add`) |
+| [`deleteContentValue`](./api-reference.md#deletecontentvalue) | Remove a key or array element (uses `remove`) |
 
 ### File layer — `@powerduck/conf-patch` (Node.js / Electron)
 
@@ -62,13 +62,13 @@ Async functions that read and write real files, wrapping the core layer with ato
 
 | Function | Purpose |
 |---|---|
-| [`readConfigFile`](./api-reference#readconfigfile) | Read UTF-8 text from a file path or `file://` URL |
-| [`writeConfigFile`](./api-reference#writeconfigfile) | Write content atomically, optionally under a lock |
-| [`patchConfigFile`](./api-reference#patchconfigfile) | Read-patch-write transaction inside a file lock |
-| [`setConfigValue`](./api-reference#setconfigvalue) | Set a nested value in a file |
-| [`deleteConfigValue`](./api-reference#deleteconfigvalue) | Delete a nested value from a file |
-| [`withFileLock`](./api-reference#withfilelock) | Run arbitrary work under an exclusive lock |
-| [`releaseAllLocalLocks`](./api-reference#releasealllocallocks) | Release all locks owned by the current process |
+| [`readConfigFile`](./api-reference.md#readconfigfile) | Read UTF-8 text from a file path or `file://` URL |
+| [`writeConfigFile`](./api-reference.md#writeconfigfile) | Write content atomically, optionally under a lock |
+| [`patchConfigFile`](./api-reference.md#patchconfigfile) | Read-patch-write transaction inside a file lock |
+| [`setConfigValue`](./api-reference.md#setconfigvalue) | Set a nested value in a file |
+| [`deleteConfigValue`](./api-reference.md#deleteconfigvalue) | Delete a nested value from a file |
+| [`withFileLock`](./api-reference.md#withfilelock) | Run arbitrary work under an exclusive lock |
+| [`releaseAllLocalLocks`](./api-reference.md#releasealllocallocks) | Release all locks owned by the current process |
 
 ---
 
@@ -80,7 +80,7 @@ Async functions that read and write real files, wrapping the core layer with ato
 | **JSONC** | `.jsonc` | JSON with comments and trailing commas. Comments are preserved. |
 | **YAML** | `.yaml`, `.yml` | YAML 1.2. AST mutation preserves comments, anchors, and indentation. |
 
-[`detectFormat`](./api-reference#detectformat) maps file extensions to a [`ConfigFormat`](./api-reference#configformat). Any other extension throws unless you pass `format` explicitly.
+[`detectFormat`](./api-reference.md#detectformat) maps file extensions to a [`ConfigFormat`](./api-reference.md#configformat). Any other extension throws unless you pass `format` explicitly.
 
 ---
 
@@ -95,7 +95,7 @@ conf-patch implements a focused subset of RFC 6902. The supported operations are
 | `"remove"` | Removes an existing key or array element (path must exist) |
 
 :::caution
-`"move"`, `"copy"`, and `"test"` are **not** supported. The [`JsonPatchOp`](./api-reference#jsonpatchop) type restricts `op` to `"add" | "replace" | "remove"`.
+`"move"`, `"copy"`, and `"test"` are **not** supported. The [`JsonPatchOp`](./api-reference.md#jsonpatchop) type restricts `op` to `"add" | "replace" | "remove"`.
 :::
 
 Behavior notes:
@@ -118,16 +118,16 @@ Behavior notes:
 
 conf-patch can validate OpenAPI/Swagger documents as a secure wrapper around `@powerduck/openapi-parser`:
 
-- [`validateOpenAPISpec`](./api-reference#validateopenapispec) validates raw content (JSON or YAML).
-- [`validateOpenAPIFile`](./api-reference#validateopenapifile) validates from a file path.
+- [`validateOpenAPISpec`](./api-reference.md#validateopenapispec) validates raw content (JSON or YAML).
+- [`validateOpenAPIFile`](./api-reference.md#validateopenapifile) validates from a file path.
 - Input handling enforces size limits, path sandboxing (`allowedRootDirectory`), structural complexity guards, deadlines, and `AbortSignal` cancellation.
-- Failures throw [`OpenApiValidationError`](./api-reference#openapivalidationerror) with a machine-readable `code`.
+- Failures throw [`OpenApiValidationError`](./api-reference.md#openapivalidationerror) with a machine-readable `code`.
 
 ---
 
 ## Next steps
 
-- [Installation](./installation) — add conf-patch to your project and learn the two entry points.
-- [Quickstart](./quickstart) — patch a string in the browser and a file on disk.
-- [API reference](./api-reference) — every export, type, and option.
-- [Examples](./examples) — runnable recipes for JSON, YAML, JSONC, OpenAPI validation, and locking.
+- [Installation](./installation.md) — add conf-patch to your project and learn the two entry points.
+- [Quickstart](./quickstart.md) — patch a string in the browser and a file on disk.
+- [API reference](./api-reference.md) — every export, type, and option.
+- [Examples](./examples.md) — runnable recipes for JSON, YAML, JSONC, OpenAPI validation, and locking.

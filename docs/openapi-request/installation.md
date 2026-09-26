@@ -84,5 +84,5 @@ Both imports resolve once the package is installed.
 
 ## Next steps
 
-- [Quickstart](./quickstart)
-- [Configuration](./configuration)
+- [Quickstart](./quickstart.md)
+- [Configuration](./configuration.md)

@@ -47,7 +47,7 @@ description: "원본 문서를 바꾸지 않고 어떤 작업을 공개할지 �
 - 문서와 MCP에 각 활성 표시.
 - 접근은 보기 비밀번호(문서)나 접근 키(MCP)로 보호 가능.
 
-전체 관문은 [접근 통제](./access-control)를 보세요.
+전체 관문은 [접근 통제](./access-control.md)를 보세요.
 
 ## 플랜 한도
 
@@ -57,4 +57,4 @@ description: "원본 문서를 바꾸지 않고 어떤 작업을 공개할지 �
 - **Pro**——최대 1,000.
 - **Team**——최대 10,000.
 
-관련: [접근 통제](./access-control)、[문서와 버전](./documents-versions).
+관련: [접근 통제](./access-control.md)、[문서와 버전](./documents-versions.md).

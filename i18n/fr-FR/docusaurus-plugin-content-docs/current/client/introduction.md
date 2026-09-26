@@ -29,14 +29,14 @@ Un seul document pilote tous les modes, accessibles via un sélecteur compact.
 
 | Mode | Ce qu'il fait |
 |---|---|
-| [**Spécification**](./design) | Mode principal : chat IA, document, aperçu en direct |
-| [**Espace de travail de requête**](./debug) | Envoie et inspecte de vraies requêtes HTTP ; onglets et environnements |
-| [**Tests de scénario**](./scenario-testing) | Enchaîne des opérations en flux, les exécute et produit un rapport |
-| [**Documentation**](./protocols) | Lit la spécification comme documentation API rendue |
-| [**MCP**](./protocols) | Vérifie et utilise le serveur MCP dérivé de la spécification |
-| [**Serveur de simulation**](./mock-server) | Exécute une simulation locale pendant le développement de l'API |
-| [**Modèle de données**](./data-model) | Dérive tables et relations, compare avec la base et génère du SQL |
-| [**Réglages**](./settings) | Thème, langue, proxy, certificats, préférences de l'espace de travail |
+| [**Spécification**](./design.md) | Mode principal : chat IA, document, aperçu en direct |
+| [**Espace de travail de requête**](./debug.md) | Envoie et inspecte de vraies requêtes HTTP ; onglets et environnements |
+| [**Tests de scénario**](./scenario-testing.md) | Enchaîne des opérations en flux, les exécute et produit un rapport |
+| [**Documentation**](./protocols.md) | Lit la spécification comme documentation API rendue |
+| [**MCP**](./protocols.md) | Vérifie et utilise le serveur MCP dérivé de la spécification |
+| [**Serveur de simulation**](./mock-server.md) | Exécute une simulation locale pendant le développement de l'API |
+| [**Modèle de données**](./data-model.md) | Dérive tables et relations, compare avec la base et génère du SQL |
+| [**Réglages**](./settings.md) | Thème, langue, proxy, certificats, préférences de l'espace de travail |
 
 ## Comment vous collaborez avec l'assistant
 
@@ -46,7 +46,7 @@ Vous décrivez l'intention en langage naturel, l'assistant choisit la capacité 
 - Les tâches en lecture seule — lister les opérations, récupérer un schéma, exécuter une requête — renvoient les faits sur lesquels l'assistant fonde sa réponse.
 - Les actions d'écriture demandent confirmation avant exécution.
 
-Le modèle, **c'est vous qui le configurez**. Pointez l'application vers n'importe quel fournisseur compatible OpenAI et choisissez-le dans les réglages. Voir [IA et modèles](./ai-models).
+Le modèle, **c'est vous qui le configurez**. Pointez l'application vers n'importe quel fournisseur compatible OpenAI et choisissez-le dans les réglages. Voir [IA et modèles](./ai-models.md).
 
 ## Ce que local-first signifie pour vous
 
@@ -58,15 +58,15 @@ Le modèle, **c'est vous qui le configurez**. Pointez l'application vers n'impor
 
 ## Licence de bureau
 
-Le client de bureau est vendu sous licence **perpétuelle après un achat unique**. Vous l'achetez une fois, le possédez pour toujours, il fonctionne entièrement hors ligne et ne nécessite aucun compte. La clé est générée à l'achat et affichée une seule fois. Il est distinct de Powerduck Cloud, le service d'hébergement par abonnement mensuel. Voir [Facturation Cloud](../cloud/billing).
+Le client de bureau est vendu sous licence **perpétuelle après un achat unique**. Vous l'achetez une fois, le possédez pour toujours, il fonctionne entièrement hors ligne et ne nécessite aucun compte. La clé est générée à l'achat et affichée une seule fois. Il est distinct de Powerduck Cloud, le service d'hébergement par abonnement mensuel. Voir [Facturation Cloud](../cloud/billing.md).
 
 ## Commencez ici
 
-- [Concevoir avec l'assistant](./design)
-- [Espace de travail de requête et environnements](./debug)
-- [Tests de scénario et rapports](./scenario-testing)
-- [Protocoles](./protocols)
-- [Modèle de données et diagramme ER](./data-model)
-- [Serveur de simulation](./mock-server)
-- [IA et modèles](./ai-models)
-- [Réglages](./settings)
+- [Concevoir avec l'assistant](./design.md)
+- [Espace de travail de requête et environnements](./debug.md)
+- [Tests de scénario et rapports](./scenario-testing.md)
+- [Protocoles](./protocols.md)
+- [Modèle de données et diagramme ER](./data-model.md)
+- [Serveur de simulation](./mock-server.md)
+- [IA et modèles](./ai-models.md)
+- [Réglages](./settings.md)

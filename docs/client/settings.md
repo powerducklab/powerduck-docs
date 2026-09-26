@@ -76,4 +76,4 @@ For any operation, the assistant can generate ready-to-run client code (`clientc
 
 Application-level requests — switching the theme or language, setting a proxy, ignoring a certificate error, or changing the HTTP version — are handled with the settings tools rather than treated as API-design questions. Settings changes ask for confirmation before they are applied.
 
-Related: [AI and models](./ai-models), [Request workspace](./debug).
+Related: [AI and models](./ai-models.md), [Request workspace](./debug.md).

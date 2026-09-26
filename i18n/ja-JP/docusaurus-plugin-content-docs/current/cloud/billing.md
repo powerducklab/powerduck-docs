@@ -91,4 +91,4 @@ Cloud アクセスは、キーなしである計画の**有効サブスクリプ
 - ドキュメントと MCP をオンライン公開し安定リンクを共有したい? **Cloud Pro** をサブスク（複数席は Team）。
 - 多くのチームは両方使います。クライアントでローカル設計・テストし、Cloud で公開 API をホスト。
 
-関連: [Cloud 紹介](./introduction)、[デスクトップクライアント](../client/introduction)。
+関連: [Cloud 紹介](./introduction.md)、[デスクトップクライアント](../client/introduction.md)。

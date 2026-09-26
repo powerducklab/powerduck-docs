@@ -84,6 +84,6 @@ TXT "powerduck-verify=<the-token-shown-for-the-binding>"
 - 문서와 MCP에 각 활성 표시.
 - 보기 비밀번호가 문서를, MCP 접근 키가 MCP를 계속 보호.
 
-[접근 통제](./access-control)를 보세요.
+[접근 통제](./access-control.md)를 보세요.
 
-관련: [문서와 버전](./documents-versions)、[청구](./billing).
+관련: [문서와 버전](./documents-versions.md)、[청구](./billing.md).

@@ -33,7 +33,7 @@ machine-readable error code.
 
 ## Next steps
 
-- [Installation](./installation) — install and requirements
-- [Quickstart](./quickstart) — upgrade your first document
-- [API Reference](./api-reference) — every export, error code, and option
-- [Examples](./examples) — error handling, options, and CommonJS usage
+- [Installation](./installation.md) — install and requirements
+- [Quickstart](./quickstart.md) — upgrade your first document
+- [API Reference](./api-reference.md) — every export, error code, and option
+- [Examples](./examples.md) — error handling, options, and CommonJS usage

@@ -41,7 +41,7 @@ npm install -g @powerduck/openapi-mcp-server
 npx openapi-mcp --help
 ```
 
-The CLI has a single `serve` command (see [Quickstart](./quickstart)).
+The CLI has a single `serve` command (see [Quickstart](./quickstart.md)).
 
 ## ESM / CommonJS
 
@@ -83,5 +83,5 @@ npx openapi-mcp --help
 
 ## Next steps
 
-- [Quickstart](./quickstart)
-- [Configuration](./configuration)
+- [Quickstart](./quickstart.md)
+- [Configuration](./configuration.md)

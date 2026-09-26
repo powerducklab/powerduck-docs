@@ -71,5 +71,5 @@ The package marks `*.css` files as side effects in `package.json`, so bundlers d
 
 ## Next steps
 
-- [Quick start](./quickstart) — mount your first editor.
-- [Configuration](./configuration) — every option on `MarkdownEditorOptions`.
+- [Quick start](./quickstart.md) — mount your first editor.
+- [Configuration](./configuration.md) — every option on `MarkdownEditorOptions`.

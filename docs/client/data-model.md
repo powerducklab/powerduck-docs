@@ -80,4 +80,4 @@ Connections are managed as saved profiles (id, name, dialect, host, port, user, 
 
 Throughout this surface, SQL is **produced for review**, not run against your database. You decide when and how to apply it, and read-only access protects live data. This makes it safe to explore the model and iterate before touching the database.
 
-Related: [Protocols](./protocols), [Request workspace](./debug), [Settings](./settings).
+Related: [Protocols](./protocols.md), [Request workspace](./debug.md), [Settings](./settings.md).
