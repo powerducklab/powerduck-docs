@@ -211,6 +211,10 @@ const config = {
                 to: "/overview/introduction",
               },
               {
+                label: "Blog",
+                href: "https://www.powerduck.com/blog/",
+              },
+              {
                 label: "Live Demo",
                 href: "https://www.powerduck.com/demo/",
               },
