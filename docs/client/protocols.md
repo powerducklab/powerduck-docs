@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: Protocols
-description: "Model HTTP, SSE, WebSocket, GraphQL, gRPC, and MCP in one OpenAPI document using the x-protocol extension and its exact configuration shapes."
+description: "Model HTTP, SSE, WebSocket, GraphQL, gRPC, MCP, and A2A in one OpenAPI document using the x-protocol extension and its exact configuration shapes."
 ---
 
 # Protocols
 
-Real systems are not REST-only. Powerduck models six protocols on ordinary OpenAPI path items using the `x-protocol` extension, so streaming and RPC operations live in the same specification as HTTP instead of being tracked in separate tools — or silently converted into REST.
+Real systems are not REST-only. Powerduck models seven protocols on ordinary OpenAPI path items using the `x-protocol` extension, so streaming and RPC operations live in the same specification as HTTP instead of being tracked in separate tools — or silently converted into REST.
 
 Every non-HTTP operation is still a normal path item with an HTTP method and a `responses."200".description`:
 
-- `graphql`, `grpc`, and `mcp` use **post**;
+- `graphql`, `grpc`, `mcp`, and `a2a` use **post**;
 - `sse` and `websocket` typically use **get**;
 - `http` is the default and omits `x-protocol`.
 
@@ -123,6 +123,10 @@ The `method` selects the MCP operation: `tools/call`, `tools/list`, `resources/r
 
 ## Why this matters
 
-Modeling all six protocols in one document means the same source of truth drives design, debugging, mocks, documentation, and MCP regardless of transport. When you ask the assistant to add a streaming or RPC endpoint, it keeps the protocol configuration intact rather than flattening it into a REST-only shape.
+Modeling these protocols in one document keeps design, debugging and documentation connected to the same source of truth. Execution, mocking and generated MCP support depend on each transport; A2A currently covers JSON-RPC debugging and documentation, not agent server generation. When you ask the assistant to add a streaming or RPC endpoint, it keeps the protocol configuration intact rather than flattening it into a REST-only shape.
 
 Related: [Designing with the assistant](./design.md), [Data model](./data-model.md).
+
+## A2A
+
+Use `x-protocol: a2a` with `x-a2a` for agent messages and tasks over JSON-RPC, REST or desktop gRPC. A2A 1.0 supports all three bindings; 0.3 supports JSON-RPC. Versions have different wire structures. See [A2A agents](./a2a.md) for configuration, examples, discovery and limitations.

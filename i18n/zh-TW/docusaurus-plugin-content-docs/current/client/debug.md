@@ -57,3 +57,7 @@ description: "在標籤頁中發送真實請求，跨作用域管理變數，並
 一旦單個呼叫可用，自然的下一步是把呼叫串聯起來，讓一個回應中的值餵給下一個請求。那就是[場景測試](./scenario-testing.md)。
 
 相關：[用助手進行設計](./design.md)、[場景測試](./scenario-testing.md)、[設定](./settings.md)。
+
+## A2A
+
+使用 `x-protocol: a2a` 與 `x-a2a` 設計、除錯和記錄智能體訊息與任務。A2A 1.0 支援 JSON-RPC、REST 與桌面版 gRPC；0.3 支援 JSON-RPC。參閱 [A2A 智能體](./a2a.md)，了解協議欄位、卡片驗證、伺服器產生與可執行範例。

@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: Protocolos
-description: "Modele HTTP, SSE, WebSocket, GraphQL, gRPC e MCP num único documento OpenAPI pela extensão x-protocol e as suas formas exatas de configuração."
+description: "Modele HTTP, SSE, WebSocket, GraphQL, gRPC e MCP / A2A num único documento OpenAPI pela extensão x-protocol e as suas formas exatas de configuração."
 ---
 
 # Protocolos
 
-Os sistemas reais não são só REST. Powerduck modela seis protocolos em entradas de caminho OpenAPI comuns pela extensão `x-protocol`. As operações de streaming e RPC vivem na mesma spec que REST, sem uma ferramenta à parte nem conversão forçada a formas REST.
+Os sistemas reais não são só REST. Powerduck modela sete protocolos em entradas de caminho OpenAPI comuns pela extensão `x-protocol`. As operações de streaming e RPC vivem na mesma spec que REST, sem uma ferramenta à parte nem conversão forçada a formas REST.
 
 Cada operação não HTTP continua a ser uma entrada de caminho comum com método HTTP e `responses."200".description`.
 
-- `graphql`, `grpc`, `mcp` usam **post**.
+- `graphql`, `grpc`, `mcp`, `a2a` usam **post**.
 - `sse`, `websocket` usam geralmente **get**.
 - `http` é o valor por defeito e omite-se `x-protocol`.
 
@@ -123,6 +123,10 @@ paths:
 
 ## Porquê importa
 
-Quando seis protocolos se modelam num documento, projeto, depuração, simulação, documentação e MCP impulsionam-se desde a mesma fonte, independentemente do transporte. Peça ao assistente que adicione uma interface de streaming ou RPC e a sua configuração de protocolo conserva-se em vez de se aplanar a REST.
+Quando sete protocolos se modelam num documento, projeto, depuração, simulação, documentação e MCP impulsionam-se desde a mesma fonte, independentemente do transporte. Peça ao assistente que adicione uma interface de streaming ou RPC e a sua configuração de protocolo conserva-se em vez de se aplanar a REST.
 
 Veja também: [Desenhar com o assistente](./design.md)、[Modelo de dados](./data-model.md).
+
+## A2A
+
+Use `x-protocol: a2a` e `x-a2a` para projetar, depurar e documentar mensagens e tarefas. A2A 1.0 oferece JSON-RPC, REST e gRPC no desktop; 0.3 usa JSON-RPC. Veja [Agentes A2A](./a2a.md) para extensões, verificação de assinaturas, geração de servidor e demonstração executável.

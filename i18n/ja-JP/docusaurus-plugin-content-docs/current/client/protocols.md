@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: プロトコル
-description: "x-protocol 拡張とその正確な設定形を使い、1 つの OpenAPI 文書で HTTP、SSE、WebSocket、GraphQL、gRPC、MCP をモデル化します。"
+description: "x-protocol 拡張とその正確な設定形を使い、1 つの OpenAPI 文書で HTTP、SSE、WebSocket、GraphQL、gRPC、MCP / A2A をモデル化します。"
 ---
 
 # プロトコル
 
-実システムは REST だけではありません。Powerduck は `x-protocol` 拡張を使い、通常の OpenAPI パス項目に 6 つのプロトコルをモデル化します。ストリーミングや RPC 操作を REST と同じ仕様に含め、別ツールで追跡したり REST に無理に変換したりしません。
+実システムは REST だけではありません。Powerduck は `x-protocol` 拡張を使い、通常の OpenAPI パス項目に 7 つのプロトコルをモデル化します。ストリーミングや RPC 操作を REST と同じ仕様に含め、別ツールで追跡したり REST に無理に変換したりしません。
 
 各非 HTTP 操作は、HTTP メソッドと `responses."200".description` を持つ通常のパス項目のままです。
 
-- `graphql`、`grpc`、`mcp` は **post** を使う。
+- `graphql`、`grpc`、`mcp`, `a2a` は **post** を使う。
 - `sse`、`websocket` は通常 **get** を使う。
 - `http` がデフォルトで、`x-protocol` は省略します。
 
@@ -126,3 +126,7 @@ paths:
 1 つの文書で全 6 プロトコルをモデル化すると、トランスポートに関わらず設計、デバッグ、モック、ドキュメント、MCP が同じ情報源で駆動されます。アシスタントにストリーミングや RPC インターフェースの追加を依頼しても、プロトコル設定が完全に保たれ、REST 専用形に平坦化されません。
 
 関連: [アシスタントで設計する](./design.md)、[データモデル](./data-model.md)。
+
+## A2A
+
+`x-protocol: a2a` と `x-a2a` でエージェントのメッセージとタスクを設計、デバッグ、文書化できます。1.0 は JSON-RPC、REST、デスクトップ gRPC、0.3 は JSON-RPC に対応します。[A2A エージェント](./a2a.md)で拡張フィールド、署名検証、サーバー生成、実行可能なデモを確認してください。

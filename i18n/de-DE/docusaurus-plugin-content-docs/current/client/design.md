@@ -112,3 +112,7 @@ Nicht jede Antwort ist ein Patch.
 - **Datentabellenkarten** zeigen konkrete Beispiel-/Testdaten für Operationen oder Schemas.
 
 Siehe auch: [Request-Arbeitsbereich](./debug.md)、[Szenario-Tests](./scenario-testing.md)、[KI und Modelle](./ai-models.md).
+
+## A2A
+
+Mit `x-protocol: a2a` und `x-a2a` entwerfen, debuggen und dokumentieren Sie Agentennachrichten und Aufgaben. A2A 1.0 unterstützt JSON-RPC, REST und Desktop-gRPC, 0.3 nur JSON-RPC. [A2A-Agenten](./a2a.md) beschreibt Erweiterungen, Signaturprüfung, Servergenerierung und die ausführbare Demo.

@@ -112,3 +112,7 @@ the change is merged into the document
 - **데이터 테이블 카드**는 작업이나 스키마의 구체적 샘플/테스트 데이터 제시.
 
 관련: [요청 워크스페이스](./debug.md)、[시나리오 테스트](./scenario-testing.md)、[AI와 모델](./ai-models.md).
+
+## A2A
+
+`x-protocol: a2a`와 `x-a2a`로 에이전트 메시지와 작업을 설계, 디버깅하고 문서화합니다. 1.0은 JSON-RPC, REST, 데스크톱 gRPC를, 0.3은 JSON-RPC를 지원합니다. 확장 필드, 서명 검증, 서버 생성 및 실행 가능한 데모는 [A2A 에이전트](./a2a.md)를 참고하세요.

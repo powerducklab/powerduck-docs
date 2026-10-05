@@ -57,3 +57,7 @@ A request needs a complete URL. If neither the document's `servers` nor the acti
 Once a single call works, the natural next step is to chain calls together so that a value from one response feeds the next request. That is a [scenario test](./scenario-testing.md).
 
 Related: [Designing with the assistant](./design.md), [Scenario testing](./scenario-testing.md), [Settings](./settings.md).
+
+## A2A agents
+
+Design and debug versioned agent messages, task operations and SSE updates with `x-protocol: a2a`. See [A2A agents](./a2a.md) for the extension fields and JSON-RPC, REST and desktop gRPC bindings.

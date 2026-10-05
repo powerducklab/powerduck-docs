@@ -112,3 +112,7 @@ the change is merged into the document
 - **データテーブルカード**は、操作やスキーマの具体的なサンプルやテストデータを提示する。
 
 関連: [リクエストワークスペース](./debug.md)、[シナリオテスト](./scenario-testing.md)、[AI とモデル](./ai-models.md)。
+
+## A2A
+
+`x-protocol: a2a` と `x-a2a` でエージェントのメッセージとタスクを設計、デバッグ、文書化できます。1.0 は JSON-RPC、REST、デスクトップ gRPC、0.3 は JSON-RPC に対応します。[A2A エージェント](./a2a.md)で拡張フィールド、署名検証、サーバー生成、実行可能なデモを確認してください。

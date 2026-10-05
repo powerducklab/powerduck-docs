@@ -57,3 +57,7 @@ description: "在标签页中发送真实请求，跨作用域管理变量，并
 一旦单个调用可用，自然的下一步是把调用串联起来，让一个响应中的值喂给下一个请求。那就是[场景测试](./scenario-testing.md)。
 
 相关：[用助手进行设计](./design.md)、[场景测试](./scenario-testing.md)、[设置](./settings.md)。
+
+## A2A
+
+使用 `x-protocol: a2a` 与 `x-a2a` 设计、调试和记录智能体消息与任务。A2A 1.0 支持 JSON-RPC、REST 和桌面端 gRPC；0.3 支持 JSON-RPC。参阅 [A2A 智能体](./a2a.md)，了解协议字段、Agent Card 验签、服务端生成与可运行 demo。

@@ -112,3 +112,7 @@ Toutes les réponses ne sont pas des correctifs.
 - Les **cartes table de données** présentent des données d'exemple/de test concrètes pour des opérations ou schémas.
 
 Voir aussi : [Espace de travail de requête](./debug.md)、[Tests de scénario](./scenario-testing.md)、[IA et modèles](./ai-models.md).
+
+## A2A
+
+Utilisez `x-protocol: a2a` et `x-a2a` pour concevoir, déboguer et documenter messages et tâches. A2A 1.0 prend en charge JSON-RPC, REST et gRPC sur ordinateur ; 0.3 utilise JSON-RPC. Consultez [Agents A2A](./a2a.md) pour les extensions, la vérification des signatures, la génération de serveur et la démo exécutable.

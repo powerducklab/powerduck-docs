@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: Protocoles
-description: "Modélisez HTTP, SSE, WebSocket, GraphQL, gRPC et MCP dans un seul document OpenAPI via l'extension x-protocol et ses formes de configuration exactes."
+description: "Modélisez HTTP, SSE, WebSocket, GraphQL, gRPC et MCP / A2A dans un seul document OpenAPI via l'extension x-protocol et ses formes de configuration exactes."
 ---
 
 # Protocoles
 
-Les systèmes réels ne sont pas uniquement REST. Powerduck modélise six protocoles dans des entrées de chemin OpenAPI ordinaires via l'extension `x-protocol`. Les opérations de streaming et RPC vivent dans la même spécification que REST, sans outil séparé ni conversion forcée en REST.
+Les systèmes réels ne sont pas uniquement REST. Powerduck modélise sept protocoles dans des entrées de chemin OpenAPI ordinaires via l'extension `x-protocol`. Les opérations de streaming et RPC vivent dans la même spécification que REST, sans outil séparé ni conversion forcée en REST.
 
 Chaque opération non HTTP reste une entrée de chemin ordinaire avec méthode HTTP et `responses."200".description`.
 
-- `graphql`, `grpc`, `mcp` utilisent **post**.
+- `graphql`, `grpc`, `mcp`, `a2a` utilisent **post**.
 - `sse`, `websocket` utilisent généralement **get**.
 - `http` est la valeur par défaut et `x-protocol` est omis.
 
@@ -123,6 +123,10 @@ paths:
 
 ## Pourquoi ça compte
 
-En modélisant six protocoles dans un seul document, la conception, le débogage, la simulation, la documentation et MCP sont pilotés par la même source, quel que soit le transport. Demandez à l'assistant d'ajouter une interface de streaming ou RPC, et sa configuration de protocole reste intacte au lieu d'être aplatie en REST.
+En modélisant sept protocoles dans un seul document, la conception, le débogage, la simulation, la documentation et MCP sont pilotés par la même source, quel que soit le transport. Demandez à l'assistant d'ajouter une interface de streaming ou RPC, et sa configuration de protocole reste intacte au lieu d'être aplatie en REST.
 
 Voir aussi : [Concevoir avec l'assistant](./design.md)、[Modèle de données](./data-model.md).
+
+## A2A
+
+Utilisez `x-protocol: a2a` et `x-a2a` pour concevoir, déboguer et documenter messages et tâches. A2A 1.0 prend en charge JSON-RPC, REST et gRPC sur ordinateur ; 0.3 utilise JSON-RPC. Consultez [Agents A2A](./a2a.md) pour les extensions, la vérification des signatures, la génération de serveur et la démo exécutable.

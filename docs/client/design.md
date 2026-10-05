@@ -112,3 +112,7 @@ Not every response is a patch:
 - **Data-table cards** present concrete sample or test rows for an endpoint or schema.
 
 Related: [Request workspace](./debug.md), [Scenario testing](./scenario-testing.md), [AI and models](./ai-models.md).
+
+## A2A agents
+
+Design and debug versioned agent messages, task operations and SSE updates with `x-protocol: a2a`. See [A2A agents](./a2a.md) for the extension fields and JSON-RPC, REST and desktop gRPC bindings.

@@ -57,3 +57,7 @@ Ein Request braucht eine vollständige URL. Wenn weder die `servers` der Spec no
 Sobald ein isolierter Aufruf funktioniert, ist der natürliche nächste Schritt das Verketten, um einen Antwortwert an den nächsten Request zu geben. Das leisten die [Szenario-Tests](./scenario-testing.md).
 
 Siehe auch: [Mit dem Assistenten entwerfen](./design.md)、[Szenario-Tests](./scenario-testing.md)、[Einstellungen](./settings.md).
+
+## A2A
+
+Mit `x-protocol: a2a` und `x-a2a` entwerfen, debuggen und dokumentieren Sie Agentennachrichten und Aufgaben. A2A 1.0 unterstützt JSON-RPC, REST und Desktop-gRPC, 0.3 nur JSON-RPC. [A2A-Agenten](./a2a.md) beschreibt Erweiterungen, Signaturprüfung, Servergenerierung und die ausführbare Demo.

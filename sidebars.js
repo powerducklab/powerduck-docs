@@ -25,6 +25,7 @@ const sidebars = {
         'client/debug',
         'client/scenario-testing',
         'client/protocols',
+        'client/a2a',
         'client/data-model',
         'client/mock-server',
         'client/ai-models',

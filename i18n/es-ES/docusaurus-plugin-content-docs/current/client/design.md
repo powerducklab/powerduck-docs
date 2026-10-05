@@ -112,3 +112,7 @@ No toda respuesta es un parche.
 - **Tarjetas de tabla de datos** presentan datos concretos de ejemplo/prueba para operaciones o esquemas.
 
 Vea también: [Espacio de petición](./debug.md)、[Pruebas de escenario](./scenario-testing.md)、[IA y modelos](./ai-models.md).
+
+## A2A
+
+Usa `x-protocol: a2a` y `x-a2a` para diseñar, depurar y documentar mensajes y tareas. A2A 1.0 admite JSON-RPC, REST y gRPC de escritorio; 0.3 usa JSON-RPC. Consulta [Agentes A2A](./a2a.md) para las extensiones, la verificación de firmas, la generación del servidor y la demo ejecutable.

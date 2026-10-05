@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: Protokolle
-description: "Modellieren Sie HTTP, SSE, WebSocket, GraphQL, gRPC und MCP in einem einzigen OpenAPI-Dokument über die x-protocol-Erweiterung und ihre genauen Konfigurationsformen."
+description: "Modellieren Sie HTTP, SSE, WebSocket, GraphQL, gRPC und MCP / A2A in einem einzigen OpenAPI-Dokument über die x-protocol-Erweiterung und ihre genauen Konfigurationsformen."
 ---
 
 # Protokolle
 
-Echte Systeme bestehen nicht nur aus REST. Powerduck modelliert sechs Protokolle in gewöhnlichen OpenAPI-Pfadeinträgen über die `x-protocol`-Erweiterung. Streaming- und RPC-Operationen leben in derselben Spec wie REST, ohne separates Werkzeug oder erzwungene Umwandlung in REST.
+Echte Systeme bestehen nicht nur aus REST. Powerduck modelliert sieben Protokolle in gewöhnlichen OpenAPI-Pfadeinträgen über die `x-protocol`-Erweiterung. Streaming- und RPC-Operationen leben in derselben Spec wie REST, ohne separates Werkzeug oder erzwungene Umwandlung in REST.
 
 Jede Nicht-HTTP-Operation bleibt ein gewöhnlicher Pfadeintrag mit HTTP-Methode und `responses."200".description`.
 
-- `graphql`, `grpc`, `mcp` nutzen **post**.
+- `graphql`, `grpc`, `mcp`, `a2a` nutzen **post**.
 - `sse`, `websocket` nutzen meist **get**.
 - `http` ist die Standardeinstellung, und `x-protocol` wird weggelassen.
 
@@ -123,6 +123,10 @@ paths:
 
 ## Warum es zählt
 
-Wenn sechs Protokolle in einem Dokument modelliert sind, werden Entwurf, Debugging, Mocking, Doku und MCP unabhängig vom Transport von derselben Quelle gesteuert. Bitten Sie den Assistenten, eine Streaming- oder RPC-Schnittstelle hinzuzufügen, und ihre Protokollkonfiguration bleibt statt zu REST abgeflacht erhalten.
+Wenn sieben Protokolle in einem Dokument modelliert sind, werden Entwurf, Debugging, Mocking, Doku und MCP unabhängig vom Transport von derselben Quelle gesteuert. Bitten Sie den Assistenten, eine Streaming- oder RPC-Schnittstelle hinzuzufügen, und ihre Protokollkonfiguration bleibt statt zu REST abgeflacht erhalten.
 
 Siehe auch: [Mit dem Assistenten entwerfen](./design.md)、[Datenmodell](./data-model.md).
+
+## A2A
+
+Mit `x-protocol: a2a` und `x-a2a` entwerfen, debuggen und dokumentieren Sie Agentennachrichten und Aufgaben. A2A 1.0 unterstützt JSON-RPC, REST und Desktop-gRPC, 0.3 nur JSON-RPC. [A2A-Agenten](./a2a.md) beschreibt Erweiterungen, Signaturprüfung, Servergenerierung und die ausführbare Demo.

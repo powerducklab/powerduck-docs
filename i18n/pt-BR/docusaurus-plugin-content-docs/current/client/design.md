@@ -112,3 +112,7 @@ Nem toda resposta é um patch.
 - **Cartões de tabela de dados** apresentam dados concretos de exemplo/teste para operações ou esquemas.
 
 Veja também: [Espaço de requisição](./debug.md)、[Testes de cenário](./scenario-testing.md)、[IA e modelos](./ai-models.md).
+
+## A2A
+
+Use `x-protocol: a2a` e `x-a2a` para projetar, depurar e documentar mensagens e tarefas. A2A 1.0 oferece JSON-RPC, REST e gRPC no desktop; 0.3 usa JSON-RPC. Veja [Agentes A2A](./a2a.md) para extensões, verificação de assinaturas, geração de servidor e demonstração executável.

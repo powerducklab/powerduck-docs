@@ -112,3 +112,7 @@ the change is merged into the document
 - **資料表卡片**為某個介面或模式呈現具體的範例或測試資料。
 
 相關：[請求工作區](./debug.md)、[場景測試](./scenario-testing.md)、[AI 與模型](./ai-models.md)。
+
+## A2A
+
+使用 `x-protocol: a2a` 與 `x-a2a` 設計、除錯和記錄智能體訊息與任務。A2A 1.0 支援 JSON-RPC、REST 與桌面版 gRPC；0.3 支援 JSON-RPC。參閱 [A2A 智能體](./a2a.md)，了解協議欄位、卡片驗證、伺服器產生與可執行範例。

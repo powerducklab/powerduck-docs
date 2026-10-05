@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: 프로토콜
-description: "x-protocol 확장과 그 정확한 설정 형태를 사용해 단일 OpenAPI 문서에서 HTTP, SSE, WebSocket, GraphQL, gRPC, MCP를 모델링합니다."
+description: "x-protocol 확장과 그 정확한 설정 형태를 사용해 단일 OpenAPI 문서에서 HTTP, SSE, WebSocket, GraphQL, gRPC, MCP / A2A를 모델링합니다."
 ---
 
 # 프로토콜
 
-실제 시스템은 REST만이 아닙니다. Powerduck은 `x-protocol` 확장을 사용해 일반 OpenAPI 경로 항목에 6개 프로토콜을 모델링합니다. 스트리밍과 RPC 작업을 REST와 같은 스펙에 담아 별도 도구로 추적하거나 REST로 강제 변환하지 않습니다.
+실제 시스템은 REST만이 아닙니다. Powerduck은 `x-protocol` 확장을 사용해 일반 OpenAPI 경로 항목에 7개 프로토콜을 모델링합니다. 스트리밍과 RPC 작업을 REST와 같은 스펙에 담아 별도 도구로 추적하거나 REST로 강제 변환하지 않습니다.
 
 각 비 HTTP 작업은 HTTP 메서드와 `responses."200".description`을 가진 일반 경로 항목 그대로입니다.
 
-- `graphql`, `grpc`, `mcp`는 **post** 사용.
+- `graphql`, `grpc`, `mcp`, `a2a`는 **post** 사용.
 - `sse`, `websocket`은 보통 **get** 사용.
 - `http`가 기본이고 `x-protocol`은 생략합니다.
 
@@ -123,6 +123,10 @@ paths:
 
 ## 왜 중요한가
 
-단일 문서에서 6개 프로토콜을 모델링하면 전송과 무관하게 설계, 디버깅, 모킹, 문서, MCP가 같은 정보원으로 구동됩니다. 어시스턴트에 스트리밍이나 RPC 인터페이스 추가를 요청해도 프로토콜 설정이 온전히 유지되고 REST 전용 형태로 평탄화되지 않습니다.
+단일 문서에서 7개 프로토콜을 모델링하면 전송과 무관하게 설계, 디버깅, 모킹, 문서, MCP가 같은 정보원으로 구동됩니다. 어시스턴트에 스트리밍이나 RPC 인터페이스 추가를 요청해도 프로토콜 설정이 온전히 유지되고 REST 전용 형태로 평탄화되지 않습니다.
 
 관련: [어시스턴트로 설계하기](./design.md)、[데이터 모델](./data-model.md).
+
+## A2A
+
+`x-protocol: a2a`와 `x-a2a`로 에이전트 메시지와 작업을 설계, 디버깅하고 문서화합니다. 1.0은 JSON-RPC, REST, 데스크톱 gRPC를, 0.3은 JSON-RPC를 지원합니다. 확장 필드, 서명 검증, 서버 생성 및 실행 가능한 데모는 [A2A 에이전트](./a2a.md)를 참고하세요.

@@ -57,3 +57,7 @@ Uma requisição precisa de uma URL completa. Se nem os `servers` da spec nem o 
 Uma vez que uma chamada isolada funciona, o passo natural é encadear para passar um valor de resposta à próxima requisição. Esse é o papel dos [testes de cenário](./scenario-testing.md).
 
 Veja também: [Desenhar com o assistente](./design.md)、[Testes de cenário](./scenario-testing.md)、[Ajustes](./settings.md).
+
+## A2A
+
+Use `x-protocol: a2a` e `x-a2a` para projetar, depurar e documentar mensagens e tarefas. A2A 1.0 oferece JSON-RPC, REST e gRPC no desktop; 0.3 usa JSON-RPC. Veja [Agentes A2A](./a2a.md) para extensões, verificação de assinaturas, geração de servidor e demonstração executável.

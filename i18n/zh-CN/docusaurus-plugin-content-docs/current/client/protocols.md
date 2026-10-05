@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: 协议
-description: "使用 x-protocol 扩展及其确切配置形态，在一份 OpenAPI 文档中为 HTTP、SSE、WebSocket、GraphQL、gRPC 和 MCP 建模。"
+description: "使用 x-protocol 扩展及其确切配置形态，在一份 OpenAPI 文档中为 HTTP、SSE、WebSocket、GraphQL、gRPC 和 MCP / A2A 建模。"
 ---
 
 # 协议
 
-真实系统并非只支持 REST。Powerduck 使用 `x-protocol` 扩展在普通 OpenAPI 路径项上为六种协议建模，让流式和 RPC 操作与 HTTP 存在于同一份规范中，而不是在单独工具里跟踪——或被悄悄转换成 REST。
+真实系统并非只支持 REST。Powerduck 使用 `x-protocol` 扩展在普通 OpenAPI 路径项上为七种协议建模，让流式和 RPC 操作与 HTTP 存在于同一份规范中，而不是在单独工具里跟踪——或被悄悄转换成 REST。
 
 每个非 HTTP 操作仍是一个带 HTTP 方法和 `responses."200".description` 的普通路径项：
 
-- `graphql`、`grpc` 和 `mcp` 使用 **post**；
+- `graphql`、`grpc` 和 `mcp`, `a2a` 使用 **post**；
 - `sse` 和 `websocket` 通常使用 **get**；
 - `http` 是默认值，省略 `x-protocol`。
 
@@ -123,6 +123,10 @@ paths:
 
 ## 为什么这很重要
 
-在一份文档中为全部六种协议建模，意味着无论传输方式如何，设计、调试、Mock、文档和 MCP 都由同一个事实来源驱动。当你让助手添加流式或 RPC 接口时，它会保持协议配置完整，而不是把它拍平成仅支持 REST 的形态。
+在一份文档中为全部七种协议建模，意味着无论传输方式如何，设计、调试、Mock、文档和 MCP 都由同一个事实来源驱动。当你让助手添加流式或 RPC 接口时，它会保持协议配置完整，而不是把它拍平成仅支持 REST 的形态。
 
 相关：[用助手进行设计](./design.md)、[数据模型](./data-model.md)。
+
+## A2A
+
+使用 `x-protocol: a2a` 与 `x-a2a` 设计、调试和记录智能体消息与任务。A2A 1.0 支持 JSON-RPC、REST 和桌面端 gRPC；0.3 支持 JSON-RPC。参阅 [A2A 智能体](./a2a.md)，了解协议字段、Agent Card 验签、服务端生成与可运行 demo。

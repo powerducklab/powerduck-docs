@@ -1,16 +1,16 @@
 ---
 sidebar_position: 5
 title: 協定
-description: "使用 x-protocol 擴充及其確切配置形態，在一份 OpenAPI 文件中為 HTTP、SSE、WebSocket、GraphQL、gRPC 和 MCP 建模。"
+description: "使用 x-protocol 擴充及其確切配置形態，在一份 OpenAPI 文件中為 HTTP、SSE、WebSocket、GraphQL、gRPC 和 MCP / A2A 建模。"
 ---
 
 # 協定
 
-真實系統並非只支援 REST。Powerduck 使用 `x-protocol` 擴充在普通 OpenAPI 路徑項上為六種協定建模，讓串流和 RPC 操作與 HTTP 存在於同一份規範中，而不是在單獨工具裡追蹤——或被悄悄轉換成 REST。
+真實系統並非只支援 REST。Powerduck 使用 `x-protocol` 擴充在普通 OpenAPI 路徑項上為七種協定建模，讓串流和 RPC 操作與 HTTP 存在於同一份規範中，而不是在單獨工具裡追蹤——或被悄悄轉換成 REST。
 
 每個非 HTTP 操作仍是一個帶 HTTP 方法和 `responses."200".description` 的普通路徑項：
 
-- `graphql`、`grpc` 和 `mcp` 使用 **post**；
+- `graphql`、`grpc` 和 `mcp`, `a2a` 使用 **post**；
 - `sse` 和 `websocket` 通常使用 **get**；
 - `http` 是預設值，省略 `x-protocol`。
 
@@ -123,6 +123,10 @@ paths:
 
 ## 為什麼這很重要
 
-在一份文件中為全部六種協定建模，意味著無論傳輸方式如何，設計、除錯、Mock、文件和 MCP 都由同一個事實來源驅動。當你讓助手新增串流或 RPC 介面時，它會保持協定配置完整，而不是把它拍平成僅支援 REST 的形態。
+在一份文件中為全部七種協定建模，意味著無論傳輸方式如何，設計、除錯、Mock、文件和 MCP 都由同一個事實來源驅動。當你讓助手新增串流或 RPC 介面時，它會保持協定配置完整，而不是把它拍平成僅支援 REST 的形態。
 
 相關：[用助手進行設計](./design.md)、[資料模型](./data-model.md)。
+
+## A2A
+
+使用 `x-protocol: a2a` 與 `x-a2a` 設計、除錯和記錄智能體訊息與任務。A2A 1.0 支援 JSON-RPC、REST 與桌面版 gRPC；0.3 支援 JSON-RPC。參閱 [A2A 智能體](./a2a.md)，了解協議欄位、卡片驗證、伺服器產生與可執行範例。

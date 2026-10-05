@@ -57,3 +57,7 @@ Une requête nécessite une URL complète. Si ni les `servers` du document ni l'
 Une fois qu'un appel isolé fonctionne, l'étape naturelle suivante est d'enchaîner les appels pour passer une valeur de réponse à la requête suivante. C'est le rôle des [tests de scénario](./scenario-testing.md).
 
 Voir aussi : [Concevoir avec l'assistant](./design.md)、[Tests de scénario](./scenario-testing.md)、[Réglages](./settings.md).
+
+## A2A
+
+Utilisez `x-protocol: a2a` et `x-a2a` pour concevoir, déboguer et documenter messages et tâches. A2A 1.0 prend en charge JSON-RPC, REST et gRPC sur ordinateur ; 0.3 utilise JSON-RPC. Consultez [Agents A2A](./a2a.md) pour les extensions, la vérification des signatures, la génération de serveur et la démo exécutable.
