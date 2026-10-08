@@ -216,7 +216,7 @@ const config = {
               },
               {
                 label: "Live Demo",
-                href: "https://www.powerduck.com/demo/",
+                href: "https://www.powerduck.com/app/",
               },
               {
                 label: "Open Source",
