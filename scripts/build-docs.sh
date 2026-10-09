@@ -20,13 +20,16 @@ DOCS_TARGET="${DOCS_TARGET:-$ROOT_DIR/../website/docs}"
 
 cd "$ROOT_DIR"
 
-echo "==> [1/3] Clearing previous build"
+echo "==> [1/4] Clearing previous build"
 npx docusaurus clear
 
-echo "==> [2/3] Building all locales"
+echo "==> [2/4] Building all locales"
 npx docusaurus build
 
-echo "==> [3/3] Syncing build -> $DOCS_TARGET"
+echo "==> [3/4] Ensuring gtag is present on every page (redirect shells included)"
+node "$ROOT_DIR/scripts/inject-ga.mjs" "$ROOT_DIR/build"
+
+echo "==> [4/4] Syncing build -> $DOCS_TARGET"
 mkdir -p "$DOCS_TARGET"
 rsync -a --delete "$ROOT_DIR/build/" "$DOCS_TARGET/"
 
