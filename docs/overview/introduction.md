@@ -37,7 +37,7 @@ Powerduck works with OpenAPI 3.2 and reads existing 3.0 and 3.1 documents (and S
 - State an outcome in plain language — "create the order endpoints", "set up test data", "run the checkout flow and give me a report" — and the assistant selects the right tool and proposes the change;
 - Every change arrives as a **reviewable card**; nothing is applied until you approve;
 - When you refine one API, the assistant stays on that API and changes only what you asked, instead of drifting across the document;
-- Bring **any OpenAI-compatible model**. On the desktop, prompts and keys never leave your machine.
+- Local files stay on disk. Remote AI sends relevant context to your configured model service, using its credentials. Publishing to Cloud uploads selected content. Optional usage statistics are off by default and controlled separately; local work needs no account.
 
 ## Local-first by default
 

@@ -37,7 +37,7 @@ Powerduck soporta OpenAPI 3.2 y actualiza al vuelo documentos 3.0 / 3.1 existent
 - Describa el resultado en lenguaje natural — «crea el endpoint de pedidos», «prepara datos de prueba», «ejecuta el flujo de pago y haz un informe» — y elige las herramientas adecuadas y propone cambios.
 - Cada cambio llega como una **tarjeta revisable**. Nada se aplica antes de su aprobación.
 - Al refinar una API, el asistente se queda en esa API y solo cambia lo pedido, sin alterar el resto del documento.
-- Puede traer **cualquier modelo compatible con OpenAI**. En el escritorio, las instrucciones y claves nunca salen de la máquina.
+- Los archivos se leen y guardan localmente. La IA remota envía el contexto pertinente al servicio de modelo configurado con sus credenciales. Publicar en Cloud sube el contenido seleccionado. Las estadísticas opcionales están desactivadas por defecto y se controlan por separado. Las funciones locales no requieren cuenta.
 
 ## Local-first por defecto
 

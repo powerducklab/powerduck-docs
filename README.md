@@ -91,3 +91,18 @@ MIT License. See [LICENSE](LICENSE) for details.
 - [Website](https://www.powerduck.com)
 - [GitHub](https://github.com/powerducklab)
 - [Contact](mailto:contact@neatico.com)
+
+## Local onboarding and contract tutorials
+
+The English, Simplified Chinese and Japanese quickstarts start with the native
+local Mock example; a model and Cloud account are optional. The client section
+contains coding-Agent, real backend contract-error, and code-scan tutorials.
+The contract sample uses the response validator introduced in
+`@powerduck/dev-mcp-server@0.7.6`; its string-versus-number failure is real.
+
+Build every locale with `bash scripts/build-docs.sh`. This reuses Docusaurus
+canonical/hreflang/sitemap generation and syncs static output into
+`../website/docs`; it does not itself deploy the site. Do not build a single
+locale into the shared output and then publish it as all locales. Verify the
+English, `zh-CN` and `ja-JP` URLs and no-JavaScript article body before release.
+Japanese content has not received native-speaker proofreading.

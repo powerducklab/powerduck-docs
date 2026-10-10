@@ -1,55 +1,43 @@
 ---
 sidebar_position: 3
-title: Quickstart
-description: "Go from an OpenAPI file to a designed endpoint, a live request, and rendered documentation in a few minutes."
+title: "First local request, without an account or model"
+description: "First local request, without an account or model"
 ---
 
-# Quickstart
+# First local request, without an account or model
 
-This short path takes you through the core loop: open a specification, change it through the AI assistant, send a request, and view the result as documentation. Everything uses the same OpenAPI document.
+## Try the local example
 
-## 1. Open a specification
+In an empty desktop workspace choose **Try the example**, then start the run.
+Powerduck creates an independent sample, starts its existing local Mock, sends
+`GET /orders/summary` to the assigned port and displays the real response.
+“Example complete” appears only after HTTP 200. The Mock stops after the request
+or when you close the example. You can run it again; there is no forced tour.
+Install the app first; this local path needs no internet, login or model key.
 
-Launch the client and open a specification using whichever source you have. All of the following are supported through the same import flow and are converted or upgraded to OpenAPI 3.2 automatically:
+## Open your own contract
 
-- An **OpenAPI or Swagger file** on disk (Swagger 2.0 and OpenAPI 3.0/3.1 are upgraded);
-- A **Postman collection**;
-- A **cURL command**;
-- A **Git repository**;
-- A **URL** pointing at a specification.
+Use **Open** to import a YAML/JSON OpenAPI document. The sample never overwrites
+an existing file. Free use has a specification-slot limit; if it is full, close
+or remove an unneeded document after saving it. Do not discard unsaved work just
+to run an example. **Scan code to OpenAPI** is an alternative for an existing
+codebase; review unknown fields before trusting the result.
 
-You can also drag a file directly into the workspace. If you have nothing to start from, ask the assistant to create an initial skeleton from a short description.
+## Verify an actual backend
 
-## 2. Ask the assistant to add an endpoint
+A successful Mock request does not establish backend conformance. Follow the
+[contract error example](../client/contract-example.md), then [connect a coding
+Agent](../client/coding-agent.md) if desired. Manual validation needs no model.
 
-In the chat, describe what you need, for example:
+## Optional models and common failures
 
-> Add a `GET /products` endpoint that returns a paginated list of products.
+- **No model configured:** local requests, Mock and manual contract checks still work. Configure a model in Settings only to use AI.
+- **Model service connection failed:** inspect the model endpoint, key and proxy under Settings. Do not publish keys or request headers in bug reports.
+- **Target API unreachable:** check the server is running and verify the URL, port and request settings in Debug & Test.
+- **HTTP 401/403:** review the target API’s Auth settings and permissions. This is not a request to log in to Powerduck.
+- **Contract check failed:** read the assertion’s field path and expected type; fix the backend or review an incorrect contract, then re-run.
 
-The assistant responds with a **patch card** rather than editing the document directly. The card shows the operations it intends to change, along with the affected paths and resources. Review it and choose **Apply** or **Reject**. Nothing reaches the document until you apply it.
-
-For a broad request such as "build an e-commerce API," the assistant asks a clarifying question first, then proposes focused patches of two to five operations at a time.
-
-## 3. Refine one operation without drift
-
-Open an operation and refine it in place — for example, add a query parameter or extend the response schema. In focused mode, the assistant emits granular patches that touch only the field you asked about and preserves every other field of the operation. This is what keeps repeated back-and-forth edits on the same API from wandering or overwriting existing work.
-
-## 4. Send a real request
-
-Switch to the **Request workspace** for the operation and send it. The request is executed through the local main process. The response, status, headers, and timing are shown alongside the operation, and the request workspace supports environments and variables for values that change between runs.
-
-If the request cannot be built because the base URL is missing from both the specification's `servers` and the active environment, the app asks you to provide one rather than guessing.
-
-## 5. View documentation
-
-Open **Documentation** to render the same specification as readable API documentation. Because the viewer reads the live document, the documentation always matches what you just designed.
-
-## 6. Go further when you're ready
-
-- Chain several requests into a [scenario test](../client/scenario-testing.md) and export an HTML report;
-- Run a [local mock server](../client/mock-server.md) while the backend is being built;
-- Model streaming and RPC APIs across [six protocols](../client/protocols.md);
-- Derive database tables, relationships, and SQL in the [data model](../client/data-model.md);
-- Publish the same specification online with [Powerduck Cloud](../cloud/quickstart.md).
-
-You now have the full loop. The rest of the documentation covers each workspace in depth.
+Local files are read/written on your computer. Remote models receive relevant
+context; Cloud publishing uploads selected content. Optional usage statistics
+are off by default in Settings and are separate from license verification.
+[Download desktop](https://www.powerduck.com/download.html) · [Desktop license](https://www.powerduck.com/pricing?product=client)

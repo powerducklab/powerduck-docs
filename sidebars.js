@@ -21,6 +21,9 @@ const sidebars = {
       collapsed: false,
       items: [
         'client/introduction',
+        'client/coding-agent',
+        'client/contract-example',
+        'client/code-to-openapi',
         'client/design',
         'client/debug',
         'client/scenario-testing',

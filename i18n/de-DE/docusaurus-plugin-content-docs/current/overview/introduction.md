@@ -37,7 +37,7 @@ Powerduck unterstützt OpenAPI 3.2 und hebt bestehende 3.0-/3.1-Dokumente (und S
 - Beschreiben Sie das Ergebnis in natürlicher Sprache — „erstelle den Bestell-Endpunkt", „bereite Testdaten vor", „führe den Zahlungsablauf aus und erstelle einen Bericht" — und er wählt die passenden Werkzeuge und schlägt Änderungen vor.
 - Jede Änderung kommt als **prüfbare Karte**. Nichts wird vor Ihrer Zustimmung angewendet.
 - Wenn Sie eine API verfeinern, bleibt der Assistent bei dieser API und ändert nur das Geforderte, ohne den Rest des Dokuments zu stören.
-- Sie können **jedes OpenAI-kompatible Modell** mitbringen. Auf dem Desktop verlassen Prompts und Schlüssel nie die Maschine.
+- Dateien werden lokal gelesen und gespeichert. Remote-KI sendet relevanten Kontext mit den Zugangsdaten an den konfigurierten Modelldienst. Cloud-Veröffentlichung lädt ausgewählte Inhalte hoch. Optionale Nutzungsstatistiken sind standardmäßig deaktiviert und separat steuerbar. Lokale Funktionen benötigen kein Konto.
 
 ## Standardmäßig Local-First
 
