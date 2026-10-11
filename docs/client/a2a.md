@@ -15,7 +15,7 @@ Use A2A when one agent delegates work to another agent. MCP exposes tools and re
 3. In the Protocol tab, choose a method and click **Generate request body**. Review the preview, then choose **Replace request body** to apply it. Cancel or change the method to keep the existing draft.
 4. Edit `params` in the Body tab. Use Auth and Headers for credentials; sending adds the selected `A2A-Version` header.
 5. Send the request. Inspect the complete JSON-RPC envelope: HTTP 200 can still contain `error`. Successful 1.0 responses wrap a `task` or `message` inside `result`; 0.3 uses its own response structures.
-6. Save the request to the specification. Version, endpoint, method and documented schemas stay in `x-a2a`; the current request draft is retained by the standard Powerduck request extension.
+6. Use **Save to spec** to add a quick request. For an existing operation, **Save** keeps local debugging settings; **Update spec** explicitly updates its definition. Version, endpoint, method and documented schemas belong in `x-a2a`; local request drafts are not exported in the OAS. Use **Edit documentation** to edit the protocol contract.
 
 Message IDs and JSON-RPC request IDs are separate. A new example creates fresh IDs. To continue a conversation, preserve the returned context/task identifiers in the next message as required by the selected protocol version.
 

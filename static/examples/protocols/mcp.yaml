@@ -1,0 +1,80 @@
+openapi: 3.2.0
+info:
+  title: Powerduck MCP reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: mcp
+paths:
+  /mcp/tools/echo:
+    post:
+      operationId: mcp_echo
+      summary: mcp echo
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - mcp
+      x-protocol: mcp
+      x-session: true
+      x-mcp:
+        endpoint: 'http://127.0.0.1:3000/mcp'
+        transport: streamable-http
+        method: tools/call
+        name: echo
+        argumentsSchema:
+          type: object
+          properties:
+            message:
+              type: string
+          required:
+            - message
+        arguments:
+          message: Hello
+        responseSchema:
+          type: object
+          properties:
+            content:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    const: text
+                  text:
+                    type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        type:
+                          const: text
+                        text:
+                          type: string
+              example:
+                content:
+                  - type: text
+                    text: Hello
+                isError: false
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

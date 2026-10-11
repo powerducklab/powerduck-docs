@@ -1,0 +1,84 @@
+openapi: 3.2.0
+info:
+  title: Powerduck GraphQL reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: graphql
+paths:
+  /graphql:
+    post:
+      operationId: get_message
+      summary: get message
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - graphql
+      x-protocol: graphql
+      x-graphql:
+        endpoint: 'http://127.0.0.1:4000/graphql'
+        query: 'query Message($id: ID!) { message(id: $id) { id message } }'
+        operationName: Message
+        variablesSchema:
+          type: object
+          required:
+            - id
+          properties:
+            id:
+              type: string
+        variables:
+          id: example-1
+        responseSchema:
+          type: object
+          properties:
+            data:
+              type: object
+              properties:
+                message:
+                  type: object
+                  required:
+                    - message
+                  properties:
+                    message:
+                      type: string
+                    id:
+                      type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: object
+                        required:
+                          - message
+                        properties:
+                          message:
+                            type: string
+                          id:
+                            type: string
+              example:
+                data:
+                  message:
+                    id: example-1
+                    message: Hello
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

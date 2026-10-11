@@ -1,0 +1,194 @@
+openapi: 3.2.0
+info:
+  title: Powerduck A2A reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: a2a
+paths:
+  /a2a:
+    post:
+      operationId: agent_message
+      summary: agent message
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - a2a
+      x-protocol: a2a
+      x-a2a:
+        endpoint: 'http://127.0.0.1:9999/a2a'
+        version: '1.0'
+        binding: JSONRPC
+        method: SendMessage
+        requestSchema:
+          type: object
+          required:
+            - message
+          properties:
+            message:
+              type: object
+              required:
+                - messageId
+                - role
+                - parts
+              properties:
+                messageId:
+                  type: string
+                role:
+                  type: string
+                  enum:
+                    - ROLE_USER
+                    - ROLE_AGENT
+                parts:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      text:
+                        type: string
+                    required:
+                      - text
+        responseSchema:
+          type: object
+          required:
+            - jsonrpc
+            - id
+          properties:
+            jsonrpc:
+              const: '2.0'
+            id:
+              type: string
+            result:
+              type: object
+              properties:
+                message:
+                  type: object
+                  required:
+                    - messageId
+                    - role
+                    - parts
+                  properties:
+                    messageId:
+                      type: string
+                    role:
+                      type: string
+                      enum:
+                        - ROLE_USER
+                        - ROLE_AGENT
+                    parts:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          text:
+                            type: string
+                        required:
+                          - text
+                task:
+                  type: object
+            error:
+              type: object
+              required:
+                - code
+                - message
+              properties:
+                code:
+                  type: integer
+                message:
+                  type: string
+          oneOf:
+            - required:
+                - result
+            - required:
+                - error
+        example:
+          jsonrpc: '2.0'
+          id: example-1
+          method: SendMessage
+          params:
+            message:
+              messageId: example-message
+              role: ROLE_USER
+              parts:
+                - text: Hello
+      responses:
+        '200':
+          description: 'JSON-RPC envelope: inspect result or error even on HTTP 200'
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - jsonrpc
+                  - id
+                properties:
+                  jsonrpc:
+                    const: '2.0'
+                  id:
+                    type: string
+                  result:
+                    type: object
+                    properties:
+                      message:
+                        type: object
+                        required:
+                          - messageId
+                          - role
+                          - parts
+                        properties:
+                          messageId:
+                            type: string
+                          role:
+                            type: string
+                            enum:
+                              - ROLE_USER
+                              - ROLE_AGENT
+                          parts:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                text:
+                                  type: string
+                              required:
+                                - text
+                      task:
+                        type: object
+                  error:
+                    type: object
+                    required:
+                      - code
+                      - message
+                    properties:
+                      code:
+                        type: integer
+                      message:
+                        type: string
+                oneOf:
+                  - required:
+                      - result
+                  - required:
+                      - error
+              example:
+                jsonrpc: '2.0'
+                id: example-1
+                result:
+                  message:
+                    messageId: reply-1
+                    role: ROLE_AGENT
+                    parts:
+                      - text: Hello
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

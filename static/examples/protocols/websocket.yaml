@@ -1,0 +1,63 @@
+openapi: 3.2.0
+info:
+  title: Powerduck WebSocket reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: websocket
+paths:
+  /ws:
+    get:
+      operationId: chat_session
+      summary: chat session
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - websocket
+      x-protocol: websocket
+      x-session: true
+      x-websocket:
+        url: 'ws://127.0.0.1:8080/ws'
+        subprotocols:
+          - chat.v1
+        headers: {}
+        messages:
+          - id: send-message
+            name: Send message
+            type: json
+            body: '{"message":"Hello"}'
+            requestSchema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                id:
+                  type: string
+            responseSchema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                id:
+                  type: string
+      responses:
+        '101':
+          description: Switching protocols. Message schemas are defined in x-websocket.messages.
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

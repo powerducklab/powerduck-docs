@@ -12,7 +12,9 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "validate:examples": "node scripts/validate-protocol-examples.cjs",
+    "prebuild": "npm run validate:examples"
   },
   "dependencies": {
     "@babel/code-frame": "^8.0.0",
@@ -27,7 +29,8 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
-    "@docusaurus/types": "3.10.2"
+    "@docusaurus/types": "3.10.2",
+    "@powerduck/openapi-parser": "0.3.10"
   },
   "browserslist": {
     "production": [

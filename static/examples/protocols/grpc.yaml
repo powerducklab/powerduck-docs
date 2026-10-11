@@ -1,0 +1,81 @@
+openapi: 3.2.0
+info:
+  title: Powerduck gRPC reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: grpc
+paths:
+  /grpc/powerduck.examples.Echo/Echo:
+    post:
+      operationId: grpc_echo
+      summary: grpc echo
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - grpc
+      x-protocol: grpc
+      x-grpc:
+        address: '127.0.0.1:50051'
+        service: powerduck.examples.Echo
+        method: Echo
+        kind: unary
+        reflection: false
+        protoPaths:
+          - ./echo.proto
+        includeDirs:
+          - .
+        messages:
+          - id: echo
+            name: Echo
+            type: json
+            body: '{"message":"Hello"}'
+            requestSchema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                id:
+                  type: string
+            responseSchema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                id:
+                  type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+                  id:
+                    type: string
+              example:
+                message: Hello from Powerduck
+                id: example-1
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

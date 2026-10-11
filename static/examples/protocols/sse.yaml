@@ -1,0 +1,45 @@
+openapi: 3.2.0
+info:
+  title: Powerduck SSE reference example
+  version: 1.0.0
+  description: 'Official example, not a hosted API. Local services must be started separately.'
+servers:
+  - url: 'http://127.0.0.1:8080'
+tags:
+  - name: sse
+paths:
+  /events:
+    get:
+      operationId: stream_events
+      summary: stream events
+      description: >-
+        Official Powerduck example definition. Replace the example endpoint with your own service
+        before sending.
+      tags:
+        - sse
+      x-protocol: sse
+      responses:
+        '200':
+          description: Server-sent events
+          content:
+            text/event-stream:
+              itemSchema:
+                type: object
+                required:
+                  - message
+                properties:
+                  message:
+                    type: string
+                  id:
+                    type: string
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+        id:
+          type: string

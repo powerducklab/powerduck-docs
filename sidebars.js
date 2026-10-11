@@ -28,6 +28,7 @@ const sidebars = {
         'client/debug',
         'client/scenario-testing',
         'client/protocols',
+        'client/request-saving-and-examples',
         'client/a2a',
         'client/data-model',
         'client/mock-server',
