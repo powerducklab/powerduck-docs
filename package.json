@@ -30,7 +30,7 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@powerduck/openapi-parser": "0.3.10"
+    "@powerduck/openapi-parser": "0.3.11"
   },
   "browserslist": {
     "production": [
@@ -45,6 +45,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22.0.0"
   }
 }
