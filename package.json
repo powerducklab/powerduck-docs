@@ -14,7 +14,10 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "validate:examples": "node scripts/validate-protocol-examples.cjs",
-    "prebuild": "npm run validate:examples"
+    "prebuild": "npm run validate:examples",
+    "audit:localization": "node scripts/audit-localization.mjs",
+    "audit:pages": "node scripts/audit-built-pages.mjs build",
+    "test:quality": "node --test scripts/content-quality.test.mjs scripts/installation-localization.test.mjs"
   },
   "dependencies": {
     "@babel/code-frame": "^8.0.0",
@@ -30,7 +33,8 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/tsconfig": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@powerduck/openapi-parser": "0.3.12"
+    "@powerduck/openapi-parser": "0.3.12",
+    "cheerio": "1.0.0-rc.12"
   },
   "browserslist": {
     "production": [
