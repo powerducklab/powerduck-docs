@@ -25,11 +25,11 @@ import { createClient } from "@powerduck/openapi-request";
 
 const client = createClient({
   writeBack: {
-    mergeExamples: true,
+    overwriteExamples: true,
     // ... other WriteBackOptions
   },
   response: {
-    preserveOriginalBody: false,
+    includeExamples: false,
     // ... other ToResponseOptions
   },
 });
@@ -62,6 +62,14 @@ const debugger2 = createDebugger({
 });
 ```
 
+### Write-back and captured examples
+
+`WriteBackOptions` supports `strategy` (`"merge"` or `"replace"`, default `"merge"`), `keepExistingDescription` (default `true`), `allowedStatusCodes` (empty means all), `protectComponentRefs` (default `true`), `overwriteExamples` (default `true`), and `requirePassingTests`. The send pipeline applies the test gate; calling `writeBackResponse` directly does not.
+
+`ToResponseOptions` supports `includeExamples` (default `true`), `maxExampleChars` (default `4000`), and `maxEventPreviewChars` (default `200`). Disable captured examples or review them before publishing: live responses can contain credentials or personal data.
+
+The send pipeline normally returns a modified copy in `patchedSpec`; it does not mutate the input document or save a file. Set per-call `writeBack: false` to skip that step. The factory's `writeBack` object configures merging; the per-call boolean enables or disables it.
+
 ## `SendOptions`
 
 The primary input object for `prepare()` and `send()`. This is where you pass the spec, target, values, and all request-level configuration.
@@ -76,6 +84,7 @@ The primary input object for `prepare()` and `send()`. This is where you pass th
 | `variables` | `Record<string, string>` | No | Environment variables referenced as `{{name}}` |
 | `globals` | `Record<string, string>` | No | Postman-style globals |
 | `localVariables` | `Record<string, string>` | No | Local variables |
+| `collectionVariables` | `Record<string, string>` | No | Collection-level variables |
 | `auth` | `AuthConfig` | No | Authentication configuration |
 | `scripts` | `ScriptConfig` | No | Pre-request and test scripts |
 | `runner` | `RuntimeRunOptions` | No | Full postman-runtime option passthrough (highest precedence) |
@@ -85,9 +94,30 @@ The primary input object for `prepare()` and `send()`. This is where you pass th
 | `grpc` | `any` | No | gRPC-specific options |
 | `timeout` | `number` | No | Per-request timeout in ms (convenience shortcut for `runner.timeout.request`) |
 
+`SendOptions` also accepts these execution and streaming controls:
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `fetch` | `typeof fetch` | Host-supplied isolated fetch transport where supported; HTTP/SSE still use postman-runtime. |
+| `writeBack` | `boolean` | Set to `false` to leave `patchedSpec` undefined while still producing `responseFragment`. |
+| `signal` | `AbortSignal` | Cancel execution or sampling; a partial result can still be returned. |
+| `maxEvents` | `number` | Maximum retained streaming events. |
+| `maxStreamMs` | `number` | Maximum streaming sampling duration in milliseconds. |
+| `maxResponseSize` | `number` | Response byte limit. |
+| `maxBufferChars` | `number` | SSE parser buffer limit before an event boundary; default `4194304` characters. |
+| `maxEventChars` | `number` | Retained data limit per SSE event; default `1048576` characters. |
+| `inheritEventId` | `boolean` | Inherit the last SSE event ID when absent; default `true`. Set to `false` for stricter schema inference. |
+| `onEvent` | `(event: StreamEvent) => void` | Receive streaming events. |
+| `onConsole` | `(log: ConsoleLog) => void` | Receive script console output. |
+| `onAssertion` | `(assertion: AssertionResult) => void` | Receive assertion results. |
+| `onResponseStart` | `(info: ResponseStartInfo) => void` | Inspect early HTTP/SSE headers and `streaming` classification. |
+| `onOpen` | `(info) => void` | Receive WebSocket connection details: URL, protocol and headers. |
+
+Protocol adapters may interpret limits differently. Keep UI callbacks lightweight; throwing callbacks are caught by the execution layer. For HTTP requester settings, use `runner.requester`; its `maxResponseSize` must be positive if provided, not zero.
+
 ### `OperationTarget`
 
-Identifies a single operation. Use `operationId` OR `method` + `path` (not both).
+Identifies a single operation. Prefer either `operationId` or `method` + `path`. If both are provided, `operationId` takes precedence.
 
 | Field | Type | Description |
 | --- | --- | --- |
@@ -141,7 +171,7 @@ const result = await client.send({
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `type` | `"bearer" \| "basic" \| "apikey" \| "none"` | Auth type |
+| `type` | `AuthConfig["type"]` | Auth type |
 | `token` | `string` | Bearer token (for `type: "bearer"`) |
 | `username` | `string` | Basic auth username (for `type: "basic"`) |
 | `password` | `string` | Basic auth password (for `type: "basic"`) |
@@ -172,6 +202,8 @@ const result3 = await client.send({
 });
 ```
 
+Advanced auth types are `digest`, `oauth1`, `oauth2`, `jwt`, `hawk`, `aws4`, `ntlm`, `asap`, and `edgegrid`. Pass their HTTP/SSE/GraphQL Postman helper fields through `parameters: Record<string, string | boolean | number>`. The optional `oauth2: OAuth2FlowConfig` enables token acquisition and refresh for the OAuth 2.0 type; do not assume every auth helper applies to every protocol.
+
 ### `ScriptConfig`
 
 | Field | Type | Description |
@@ -191,45 +223,58 @@ interface ScriptSource {
 }
 ```
 
+Set `scripts.fromSpecExtensions: false` when you do not intend to execute scripts embedded in an imported specification. The current default is `true`; do not rely on a future default change.
+
 ## Protocol-Specific Options
 
 ### HTTP / SSE
 
-HTTP is the default adapter. Streaming is detected automatically from declared `text/event-stream` content type (SSE) or by probing live response headers with `probeStreamingResponse()`.
+HTTP is the default adapter. Declared `text/event-stream` content indicates SSE intent; execution also classifies the live response when headers arrive. `probeStreamingResponse()` is a separate explicit probe, not an automatic prerequisite for every call.
 
 No additional configuration is required for basic HTTP requests. Use `SendOptions.runner` for advanced postman-runtime configuration.
 
 ### WebSocket
 
 ```typescript
+import { createManualSession } from "@powerduck/openapi-request";
+
 const session = createManualSession({
-  protocol: "websocket",
+  kind: "websocket",
   url: "wss://api.example.com/ws",
-  // WebSocketOptions can be passed through SendOptions.websocket
+  // Manual-session options are distinct from SendOptions.websocket.
 });
 ```
 
 ### MCP
 
 ```typescript
+import { createManualSession } from "@powerduck/openapi-request";
+
 const session = createManualSession({
-  protocol: "mcp",
-  transport: "http",  // or "stdio"
-  url: "https://api.example.com/mcp",
+  kind: "mcp",
+  endpoint: "https://api.example.com/mcp",
 });
 ```
+
+The default MCP manual session uses Streamable HTTP and `endpoint`. For stdio, pass `kind: "mcp"`, `transport: "stdio"`, and a local `command` with optional `args`; starting that session launches the configured process.
 
 ### gRPC
 
 gRPC requires an address plus a descriptor source (`.proto` files or server reflection), and a fully-qualified service and method:
 
 ```typescript
+import { createManualSession } from "@powerduck/openapi-request";
+
 const session = createManualSession({
-  protocol: "grpc",
-  url: "grpc.example.com:50051",
-  // gRPC options passed through SendOptions.grpc
+  kind: "grpc",
+  address: "localhost:50051",
+  service: "powerduck.examples.Echo",
+  method: "Echo",
+  protoPaths: ["./echo.proto"],
 });
 ```
+
+Manual session factories return an unopened session. Call `open()` before sending, and `close()` during cleanup. The gRPC example requires a matching local server and proto file; manual-session options are not the same object as `SendOptions.grpc`.
 
 ## Complete Example
 
@@ -237,7 +282,7 @@ const session = createManualSession({
 import { createClient } from "@powerduck/openapi-request";
 
 const client = createClient({
-  writeBack: { mergeExamples: true },
+  writeBack: { overwriteExamples: true },
 });
 
 const result = await client.send({

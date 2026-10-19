@@ -1,13 +1,13 @@
 ---
 sidebar_position: 4
 title: "API Reference"
-description: "Complete API reference for @powerduck/conf-patch v0.3.4: every exported function, type, option, default, and error code across the core layer, file layer, OpenAPI validation, and utilities."
+description: "Complete API reference for @powerduck/conf-patch: every exported function, type, option, default, and error code across the core layer, file layer, OpenAPI validation, and utilities."
 keywords: ["conf-patch API", "patchContent", "setConfigValue", "file locking", "OpenApiValidationError", "types"]
 ---
 
 # API Reference
 
-Complete reference for `@powerduck/conf-patch` **v0.3.4**. Every exported symbol is documented with its exact signature and defaults.
+Complete reference for `@powerduck/conf-patch`. Every exported symbol is documented with its exact signature and defaults.
 
 There are two entry points:
 
@@ -78,7 +78,7 @@ function setContentValue(
 **Returns:** the updated content (`string`).
 
 ```typescript
-setContentValue("name: app\n", ["server", "port"], 8080, "yaml");
+setContentValue("server:\n  port: 3000\n", ["server", "port"], 8080, "yaml");
 ```
 
 ---
@@ -294,7 +294,7 @@ await withFileLock("state.json", async () => {
 
 ### `releaseAllLocalLocks`
 
-Unlinks every lock file owned by the current process. Designed for Electron's `app.whenReady` quit path (e.g. `app.on("will-quit", ...)`). Failures per lock are swallowed.
+Unlinks every lock file owned by the current process. Use it during application shutdown after active file transactions have finished. For asynchronous Electron cleanup, prevent the initial quit event and resume quitting after cleanup completes (see the examples). Failures per lock are swallowed.
 
 ```typescript
 function releaseAllLocalLocks(): Promise<void>;
@@ -322,7 +322,7 @@ function validateOpenAPISpec(
 
 **Returns:** the validated document on success (`Promise<AnyOpenAPIDocument>`).
 
-**Throws:** [`OpenApiValidationError`](#openapivalidationerror) on any failure.
+**Throws:** `TypeError` for empty or non-string input; [`OpenApiValidationError`](#openapivalidationerror) for invalid options or failures during validation.
 
 ---
 
@@ -340,7 +340,7 @@ function validateOpenAPIFile(
 ```typescript
 import { validateOpenAPIFile } from "@powerduck/conf-patch";
 
-const doc = await validateOpenAPIFile("openapi.yaml", {
+const doc = await validateOpenAPIFile("./configs/openapi.yaml", {
   allowedRootDirectory: "./configs",
 });
 ```
@@ -366,7 +366,7 @@ const doc = await validateOpenAPIFile("openapi.yaml", {
 
 ### `OpenApiValidationError`
 
-Structured error thrown on validation failure. Safe to expose across an application boundary.
+Structured error thrown on validation failure. Map errors at the application boundary before returning them to a client; messages and causes can contain local paths or document details.
 
 ```typescript
 class OpenApiValidationError extends Error {

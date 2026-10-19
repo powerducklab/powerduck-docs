@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: KI und Modelle
-description: "Binden Sie ein OpenAI-kompatibles Modell an, halten Sie Prompts und Schlüssel über den Hauptprozess lokal, nutzen Sie native Funktionsaufrufe mit automatischem Fallback und behalten Sie denselben Workflow im Web bei."
+description: "OpenAI-kompatible Modelle konfigurieren, Desktop- und Web-Transport verstehen, Werkzeugaufrufe mit Fallback nutzen und übertragene Daten prüfen."
 ---
 
 # KI und Modelle
 
-Die Fähigkeit des Assistenten hängt vom zugrunde liegenden Modell ab, daher bindet Powerduck Sie nicht an einen bestimmten Anbieter. Sie wählen und konfigurieren das Modell, die App ruft es über einen sicheren lokalen Pfad auf, und jede Änderung läuft durch dieselben prüfbaren Karten.
+In Powerduck wählen und konfigurieren Sie das Modell des Assistenten. Auf dem Desktop gehen Anfragen über den Hauptprozess an Ihren gewählten Endpunkt; Dokumentänderungen erscheinen weiterhin als überprüfbare Karten.
 
 ## Ein Modell mitbringen
 
@@ -16,7 +16,7 @@ Konfigurieren Sie in den Einstellungen den Assistenten zu einem beliebigen **Ope
 - Geben Sie Anzeigename, Basis-URL, API-Schlüssel und Modell-ID an.
 - Legen Sie mehrere Profile an und wählen zwischen ihnen.
 
-Die App nimmt nicht an, das Modell stamme von einem bestimmten Anbieter. Selbst gehostete oder OpenAI-kompatible Dritt-Endpunkte funktionieren gleich, wichtig für Teams mit eigener Modellstrategie.
+Ein bestimmter Anbieter wird nicht vorausgesetzt. Selbst gehostete und externe OpenAI-kompatible Endpunkte lassen sich auf dieselbe Weise verwenden, sodass Teams ihre eigene Modellrichtlinie umsetzen können.
 
 ## Erweiterte Funktionen und eleganter Fallback
 
@@ -25,20 +25,20 @@ Jedes Profil hat eine Schalter **Erweiterte Funktionen**, standardmäßig an.
 - An, nutzt die App den **nativen Funktionsaufruf** des Modells: Sie sendet den Werkzeugkatalog über das Netz und lässt das Modell das passende Werkzeug direkt wählen und aufrufen.
 - Wenn ein Endpunkt native Werkzeugargumente ablehnt — kleine Modelle ohne Werkzeugunterstützung — wird dieser Endpunkt gemerkt und ein einziger neuer Versuch über ein **inhaltsbasiertes Fallback-Protokoll** unternommen.
 
-Ziel ist immer ein Ergebnis: Starke Modelle nehmen den präzisen nativen Pfad, werkzeuglose Modelle werden auf ein einfacheres Protokoll zurückgestuft, statt den Zug zu verlieren. Für Profile, die immer den Basispfad nehmen sollen, lassen sich erweiterte Funktionen abschalten.
+Der Fallback verbessert die Kompatibilität, garantiert aber keinen Erfolg: Netzwerk-, Authentifizierungs- und Modellfehler sind weiterhin möglich. Deaktivieren Sie erweiterte Fähigkeiten für Profile, die stets den Basismodus verwenden sollen.
 
-Werkzeuggesteuerte Arbeit hat ebenfalls Grenzen: Der Agent führt eine begrenzte Zahl an Werkzeug-Zügen aus (Standard 3) und dedupliziert Aufrufe, damit ein Werkzeug nicht zweimal in einer Schleife läuft.
+Auch Werkzeugaufrufe sind begrenzt: Der Agent nutzt standardmäßig drei Werkzeugrunden und entfernt wiederholte Aufrufe innerhalb desselben Laufs.
 
 ## Warum Requests über den Hauptprozess gehen
 
 Auf dem Desktop-Client wird der fertige Request vom **Node-Hauptprozess** ausgegeben, nicht der WebView. Zwei konkrete Vorteile.
 
 - **Keine Browser-CORS-Mauer.** Cross-Origin-Einschränkungen des Webs blockieren Aufrufe zum Modell-Endpunkt nicht.
-- **Prompts und Schlüssel aus der Browser-Konsole.** Request-URL, Authentifizierungs-Header, System-Prompt und Werkzeugliste erscheinen nicht im Netzwerk-Panel des Renderers.
+- **Die HTTP-Anfrage läuft außerhalb des Renderers.** Dessen Netzwerkpanel zeigt den HTTP-Austausch des Hauptprozesses nicht an. Das garantiert jedoch nicht, dass Prompts oder Schlüssel nicht im Renderer-Speicher, in Protokollen oder anderen Entwicklerwerkzeugen vorkommen.
 
-Das Gateway ist bewusst beschränkt, kein offener Proxy.
+Das Desktop-Gateway prüft die Anfragestruktur und begrenzt den Ressourcenverbrauch:
 
-- Es validiert Ziele (Loopback und erlaubte Hosts), bereinigt Header und verhindert Zeilenumbruch-Einschleusung über Antwort-Header.
+- Nur HTTP(S)-URLs werden akzeptiert; Headernamen und -werte, Bodygröße, Zeitlimits und parallele Anfragen werden geprüft. Lokale und private Endpunkte sind erlaubt. Das ist weder eine Host-Zulassungsliste noch eine Datenschutzgarantie des Anbieters;
 - Requests sind abbrechbar (`ai:cancel`).
 
 ## Desktop und Web
@@ -58,7 +58,7 @@ Eine Fähigkeit hinzuzufügen bedeutet also ein Werkzeug in den Katalog (mit pr�
 
 ## Datenschutz
 
-- Auf dem Desktop bleiben API-Schlüssel und Prompts lokal und werden dem Renderer nicht offengelegt.
+- Prompts, ausgewählter Kontext, Werkzeugbeschreibungen und Zugangsdaten werden an den konfigurierten Modellendpunkt gesendet. Ein gehosteter Anbieter erhält diese Daten. Verwenden Sie einen vertrauenswürdigen lokalen Endpunkt, wenn Ihre Richtlinie lokale Inferenz verlangt;
 - Der deterministische Host, nicht das Modell, validiert und wendet jede Änderung an.
 - Alle Schreibvorgänge erhalten vor Ausführung Ihre Zustimmung.
 

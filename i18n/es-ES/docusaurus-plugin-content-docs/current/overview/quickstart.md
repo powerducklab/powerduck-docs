@@ -1,55 +1,31 @@
 ---
 sidebar_position: 3
-title: Inicio rápido
-description: "En pocos minutos recorra el endpoint diseñado, una petición real y la documentación renderizada desde su archivo OpenAPI."
+title: "Tu primera solicitud local, sin cuenta ni modelo de IA"
+description: "Tu primera solicitud local, sin cuenta ni modelo de IA"
 ---
 
-# Inicio rápido
+# Tu primera solicitud local, sin cuenta ni modelo de IA
 
-Este breve recorrido atraviesa el bucle central: abrir una especificación, modificarla con el asistente de IA, enviar una petición y ver el resultado como documentación, usando el mismo documento OpenAPI en todas partes.
+## Prueba el ejemplo local
 
-## 1. Abrir una especificación
+En un espacio de trabajo vacío de la aplicación de escritorio, elige **Probar el ejemplo** e inicia la ejecución. Powerduck crea un ejemplo independiente, inicia el servidor Mock local, envía `GET /orders/summary` al puerto asignado y muestra la respuesta real. El ejemplo solo se da por terminado tras recibir HTTP 200. El servidor Mock se detiene después de la solicitud o al cerrar el ejemplo. Puedes ejecutarlo de nuevo cuando quieras. Instala primero la aplicación: este recorrido local no necesita Internet, una cuenta ni una clave de un modelo de IA.
 
-Arranque el cliente y abra una especificación desde cualquier fuente soportada. Todas pasan por el mismo flujo de importación y se convierten o actualizan a OpenAPI 3.2:
+## Abre tu propia especificación
 
-- Un **archivo OpenAPI o Swagger** en disco (Swagger 2.0, OpenAPI 3.0 / 3.1 actualizados).
-- Una **colección de Postman**.
-- Un **comando cURL**.
-- Un **repositorio Git**.
-- Una **URL** que apunta a una especificación.
+Usa **Abrir** para importar un documento OpenAPI en YAML o JSON. El ejemplo nunca sobrescribe archivos existentes. La versión gratuita limita el número de especificaciones. Si alcanzas el límite, guarda y cierra o retira un documento que ya no necesites. No descartes cambios sin guardar solo para ejecutar el ejemplo. También puedes generar OpenAPI a partir de un proyecto existente; revisa los campos inciertos antes de confiar en el resultado.
 
-También puede arrastrar y soltar un archivo directamente en el espacio de trabajo. Sin punto de partida, pida al asistente que cree un esqueleto inicial a partir de una breve descripción.
+## Verifica un servidor real
 
-## 2. Pedir al asistente que añada un endpoint
+Una solicitud Mock correcta no demuestra que tu servidor cumpla la especificación. Sigue el [ejemplo de error del contrato](/docs/es-ES/client/contract-example/) y, si quieres, [conecta un asistente de programación](/docs/es-ES/client/coding-agent/). La validación manual no necesita un modelo de IA.
 
-En el chat, describa lo que necesita. Por ejemplo:
+## Modelos opcionales y errores habituales
 
-> Añade un endpoint `GET /products` que devuelva una lista paginada de productos.
+- **No hay ningún modelo configurado:** las solicitudes locales, el servidor Mock y las comprobaciones manuales siguen funcionando. Configura un modelo en los ajustes solo si quieres usar IA.
+- **Error de conexión al modelo:** revisa la URL del servicio, la clave y el proxy en los ajustes. No publiques claves ni cabeceras de solicitudes en informes de errores.
+- **No se puede acceder a la API:** comprueba que el servidor esté en funcionamiento y revisa la URL, el puerto y los ajustes de la solicitud en el depurador.
+- **HTTP 401/403:** revisa la autenticación y los permisos de la API de destino. No es una petición para iniciar sesión en Powerduck.
+- **Error de validación del contrato:** consulta la ruta del campo y el tipo esperado en la aserción. Corrige el servidor o la especificación, si es incorrecta, y vuelve a comprobarlo.
 
-El asistente no edita directamente el documento; responde con una **tarjeta de parche**. La tarjeta muestra la operación a modificar y las rutas/recursos afectados. Revise, luego elija **Aplicar** o **Rechazar**. Nada llega al documento antes de aplicarse.
+Los archivos locales se leen y guardan en tu ordenador. Los modelos remotos reciben el contexto necesario; al publicar en la nube, se sube el contenido seleccionado. Las estadísticas de uso opcionales están desactivadas por defecto en los ajustes y son independientes de la verificación de la licencia.
 
-Para una petición amplia como «construye una API de comercio electrónico», el asistente hace primero preguntas de aclaración y luego propone parches centrados en 2 a 5 operaciones cada vez.
-
-## 3. Refinar una sola operación sin desviaciones
-
-Abra la operación y refínela en el sitio — añada un parámetro de consulta o extienda el esquema de respuesta. En modo foco, el asistente genera parches finos que solo tocan los campos pedidos y preservan todo lo demás de la operación. Esto evita alterar o sobrescribir el trabajo existente en ediciones repetidas sobre la misma API.
-
-## 4. Enviar una petición real
-
-Pase al **espacio de trabajo de petición** de la operación y envíe. La petición se ejecuta mediante el proceso principal local. La respuesta, el estado, las cabeceras y el tiempo aparecen junto a la operación, y para valores que cambian en cada ejecución puede usar entornos y variables.
-
-Si ni los `servers` de la especificación ni el entorno activo proporcionan una URL base, la app no adivina: pide introducir la URL base.
-
-## 5. Ver la documentación
-
-Abra la **documentación**: la misma especificación se renderiza como documentación de API legible. El visor lee el documento en vivo, por lo que la documentación coincide siempre con lo recién diseñado.
-
-## 6. Ir más lejos cuando esté listo
-
-- Encadene varias peticiones con las [pruebas de escenario](../client/scenario-testing.md) y exporte un informe HTML.
-- Arranque el [servidor de simulación local](../client/mock-server.md) durante el desarrollo del backend.
-- Modele APIs de streaming / RPC con los [seis protocolos](../client/protocols.md).
-- Derive tablas, relaciones y SQL en el [modelo de datos](../client/data-model.md).
-- Publique la misma especificación en línea con [Powerduck Cloud](../cloud/quickstart.md).
-
-Con esto el bucle central está completo. El resto de la documentación detalla cada espacio de trabajo.
+[Descargar](https://www.powerduck.com/download.html) · [Licencia de escritorio](https://www.powerduck.com/pricing?product=client)

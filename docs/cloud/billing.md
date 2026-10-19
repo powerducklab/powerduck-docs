@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Billing & Licensing
-description: "Two products, two models: the desktop client is a one-time perpetual license that produces a key; Cloud is a monthly subscription with no key. Payment is routed by region through Antom or Paddle."
+description: "Two products, two models: the desktop client is a one-time perpetual license that produces a key; Cloud offers a Free plan and paid subscriptions without a license key. Payment is routed by region through Antom or Paddle."
 ---
 
 # Billing & Licensing
@@ -11,8 +11,8 @@ Powerduck sells **two distinct products with two different payment models**. Kee
 | | Desktop Client | Powerduck Cloud |
 |---|---|---|
 | What you buy | The desktop application | A hosted service |
-| Model | One-time purchase | Monthly subscription |
-| Valid for | Perpetual — own it forever | The current billing period |
+| Model | One-time purchase | Free plan or paid subscription |
+| Valid for | Perpetual — own it forever | Free access or the paid billing period |
 | Delivered as | A **license key**, shown once | Membership, **no key** |
 | Works offline | Yes | No (it is a hosted service) |
 
@@ -45,9 +45,9 @@ Activation validates the key format, hashes it, looks up the hash, checks the st
 
 Every key state change is recorded as a license event — created, activated, suspended, reactivated, or revoked — so the lifecycle remains auditable.
 
-## Cloud subscription
+## Cloud plans and subscriptions
 
-Cloud access follows an **active subscription** to a plan, with no license key involved:
+Cloud offers a **Free plan** and paid subscriptions, with no license key involved. Annual prices below are monthly equivalents charged annually:
 
 | Plan | Monthly | Billed annually |
 |---|---|---|
@@ -66,7 +66,7 @@ Plans are not enforced by hard-coding plan names across the codebase. Each plan 
 | OAS hosting | Yes | Yes | Yes |
 | Git source | No | Yes | Yes |
 | Documentation | Yes | Yes | Yes |
-| MCP | No | Yes | Yes |
+| MCP | Yes | Yes | Yes |
 | Custom domain | No | Yes | Yes |
 | Max documents | 3 | 100 | 1,000 |
 | Max versions | 20 | 200 | 1,000 |
@@ -88,7 +88,7 @@ Payments are confirmed through signed provider webhooks (separate endpoints for 
 ## Which should I buy?
 
 - Want the full local workspace, offline work, and permanent ownership? Buy the **desktop license** once.
-- Want to publish documentation and MCP online and share stable links? Subscribe to **Cloud Pro** (or Team for multiple seats).
+- Want to publish documentation and MCP online and share stable links? Start with **Cloud Free**. Choose **Pro** for higher quotas, Git sources and custom domains, or **Team** for multiple seats.
 - Many teams use both: design and test locally on the client, then host the published API on Cloud.
 
 Related: [Cloud introduction](./introduction.md), [Desktop Client](../client/introduction.md).

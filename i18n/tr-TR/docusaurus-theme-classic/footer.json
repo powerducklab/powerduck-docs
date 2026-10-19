@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "Belgeler"
+  },
+  "link.title.Libraries": {
+    "message": "Kütüphaneler"
+  },
+  "link.title.Community": {
+    "message": "Topluluk"
+  },
+  "link.title.Legal": {
+    "message": "Yasal bilgiler"
+  },
+  "link.item.label.Overview": {
+    "message": "Genel bakış"
+  },
+  "link.item.label.Website": {
+    "message": "Resmî site"
+  },
+  "link.item.label.Contact": {
+    "message": "İletişim"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Gizlilik politikası"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Kullanım koşulları"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "İade politikası"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

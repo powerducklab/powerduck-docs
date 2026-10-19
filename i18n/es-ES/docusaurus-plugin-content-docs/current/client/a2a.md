@@ -97,9 +97,7 @@ El repositorio React incluye `examples/a2a-demo`, una calculadora de sumas sin c
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# En otra terminal, dentro del mismo directorio:
 npm test
 ```
 

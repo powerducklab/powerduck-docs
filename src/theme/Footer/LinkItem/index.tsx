@@ -15,13 +15,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import type {Props} from '@theme/Footer/LinkItem';
-import sameDomainPath from '../../../utils/sameDomainPath';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import sameDomainPath, {localizedSitePath} from '../../../utils/sameDomainPath';
 
 export default function FooterLinkItem({item}: Props): ReactNode {
   const {to, href, label, prependBaseUrlToHref, className, ...props} = item;
   const toUrl = useBaseUrl(to);
   const normalizedHref = useBaseUrl(href, {forcePrependBaseUrl: true});
-  const sitePath = sameDomainPath(href);
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const rawSitePath = sameDomainPath(href);
+  const sitePath = rawSitePath ? localizedSitePath(rawSitePath, currentLocale) : null;
 
   if (sitePath) {
     return (

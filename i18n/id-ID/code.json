@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "Navigasi utama"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Bilah samping dokumentasi"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Perluas kategori “{label}”"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Ciutkan kategori “{label}”"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(dibuka di tab baru)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Beralih antara mode terang dan gelap (saat ini: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "mode sistem"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "mode terang"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "mode gelap"
+  }
+}

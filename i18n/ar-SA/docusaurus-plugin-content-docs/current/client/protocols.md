@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` و`headers` اختياريان.
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName` و`variablesSchema` و`variables` اختيارية.
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` هي `unary` أو `server_streaming` أو `client_streaming` أو `bidi_streaming`.
@@ -110,13 +119,16 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 يختار `method` عملية MCP: `tools/call` و`tools/list` و`resources/read` و`resources/list` و`resources/templates/list` و`prompts/get` و`prompts/list`. يُستخدَم `name` و`uri` و`argumentsSchema` و`arguments` حسب العملية.
 
 ## قواعد بنيوية
 
-- كل نوع وسائط في `requestBody` أو `responses` يحتاج `schema` أو `$ref`، باستثناء `text/event-stream` مع `itemSchema`.
+- في العقود التي ينشئها المساعد، أضف `schema` أو `$ref` لأنواع الوسائط ضمن `requestBody` أو `responses`. يستخدم `text/event-stream` الحقل `itemSchema` من OAS 3.2 لوصف كل حدث. هذه قاعدة تأليف في Powerduck وليست شرطاً عاماً لكل مستند OpenAPI.
 - كل معامل يحتاج `schema` (أو `content`).
 - عند تعديل عملية، يُحفَظ البروتوكول والضبط المختاران: لا تتحول عمليات RPC أو البث إلى REST صامتاً.
 - استخدم أشكال الامتداد الدقيقة أعلاه؛ لا تخترع مفاتيح مثل `externalUrl` ولا تستخدم `ws` كاسم بروتوكول.
@@ -128,5 +140,7 @@ paths:
 انظر أيضاً: [التصميم مع المساعد](./design.md)、[نموذج البيانات](./data-model.md).
 
 ## A2A
+
+يدعم A2A 1.0 تصحيح JSON-RPC وREST وgRPC لسطح المكتب وتوثيقها، إضافةً إلى إنشاء خادم موائم رسائل عديم الحالة. أما المهام الدائمة والتسليم عبر الإشعارات الفورية فتتطلب تنفيذاً خاصاً بك.
 
 استخدم `x-protocol: a2a` و`x-a2a` لتصميم رسائل الوكلاء والمهام وتصحيحها وتوثيقها. يدعم A2A 1.0 وسائل JSON-RPC وREST وgRPC لسطح المكتب، ويدعم 0.3 JSON-RPC. راجع [وكلاء A2A](./a2a.md) للامتدادات والتحقق من التوقيع وإنشاء الخادم والمثال القابل للتشغيل.

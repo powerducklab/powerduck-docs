@@ -106,3 +106,39 @@ canonical/hreflang/sitemap generation and syncs static output into
 locale into the shared output and then publish it as all locales. Verify the
 English, `zh-CN` and `ja-JP` URLs and no-JavaScript article body before release.
 Japanese content has not received native-speaker proofreading.
+
+
+## Localization and page-quality checks
+
+The target language registry in `src/data/locales.json` mirrors the desktop app's
+16 languages. A configured locale does **not** mean all articles are translated.
+Run `npm run audit:localization` for the actual per-file inventory, or pass
+`--require-complete` to `scripts/audit-localization.mjs` for a strict release gate.
+This deliberately fails until every article has a translation and metadata.
+
+The navigation, footer, fallback notices and local-request quickstart now cover
+all 16 locales. Long-form article coverage remains incomplete. Do not describe
+these packages as fully translated or native-speaker certified. Maintain product
+terms, commands, security advice and troubleshooting steps when reviewing prose.
+
+The installation guides for tree, schema-editor, workspace-yaml, oas-document
+and openapi-parser now have full translations in all 15 non-English locales.
+`installation-localization.test.mjs` verifies all 75 translations retain the
+original executable code, inline API identifiers and table rows. The overview
+introduction has also been added in Italian, Russian, Hindi, Indonesian,
+Vietnamese and Turkish. These additions do not make the remaining articles
+complete; use the coverage inventory for the current outstanding work.
+
+`content-quality.mjs` excludes untranslated English fallback pages from locale
+sitemaps and hreflang sets. Those pages display an explicit notice, mark the
+article text as English, use `noindex,follow`, and canonicalize to the English
+article. Real translations retain their own canonical and reciprocal alternates.
+Do not create English copies just to satisfy the coverage gate.
+Changing only a title or front matter while leaving the English body unchanged
+does not qualify as a translation.
+
+After the **full multilingual build**, run `npm run audit:pages` and
+`npm run test:quality`. The first checks every rendered article for unique titles,
+canonical/description/H1 metadata, self-alternates and existing social images.
+The build script runs both the coverage inventory and HTML audit before syncing.
+A single-locale build changes URL bases and cannot validate production hreflang.

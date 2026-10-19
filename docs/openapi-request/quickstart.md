@@ -11,7 +11,7 @@ This guide walks through the three entry points in order: the UI-first client, t
 
 ## Prerequisites
 
-- Node.js 18 or later
+- Node.js 22.12.0 or later
 - An OpenAPI 3.2 document loaded as a JavaScript object
 
 ## 1. UI-first client
@@ -133,7 +133,7 @@ batchResult.results.forEach((r, i) => {
 ```typescript
 import { createDebugger } from "@powerduck/openapi-request";
 
-const debugger = createDebugger({
+const requestDebugger = createDebugger({
   // Optional: custom adapter list
   // adapters: [new HttpAdapter(), new WebSocketAdapter()],
   // Optional: extra adapters added to the defaults
@@ -142,7 +142,7 @@ const debugger = createDebugger({
 });
 
 // Single request
-const result = await debugger.send({
+const result = await requestDebugger.send({
   spec,
   target: { operationId: "getUserById" },
   values: { path: { id: "42" } },
@@ -150,7 +150,7 @@ const result = await debugger.send({
 });
 
 // Batch request
-const batch = await debugger.sendMany(
+const batch = await requestDebugger.sendMany(
   spec,
   [
     { target: { operationId: "listUsers" } },
@@ -160,7 +160,7 @@ const batch = await debugger.sendMany(
 );
 
 // Export as Postman-compatible collection
-const collection = debugger.toCollection(spec, {
+const collection = requestDebugger.toCollection(spec, {
   name: "My API Collection",
 });
 ```

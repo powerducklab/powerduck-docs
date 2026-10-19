@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` と `headers` は任意です。
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName`、`variablesSchema`、`variables` は任意です。
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` は `unary`、`server_streaming`、`client_streaming`、`bidi_streaming` のいずれかです。
@@ -110,13 +119,16 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `method` は MCP 操作を選びます。`tools/call`、`tools/list`、`resources/read`、`resources/list`、`resources/templates/list`、`prompts/get`、`prompts/list`。`name`、`uri`、`argumentsSchema`、`arguments` はメソッドに応じて使います。
 
 ## 構造ルール
 
-- `requestBody` または `responses` 配下の各メディアタイプには `schema` か `$ref` が必要です。唯一の例外は `itemSchema` を使う `text/event-stream`。
+- アシスタントが生成するコントラクトでは、`requestBody` または `responses` のメディアタイプに `schema` または `$ref` を指定します。`text/event-stream` は OAS 3.2 の `itemSchema` で個々のイベントを記述します。これは Powerduck の記述規約であり、すべての OpenAPI 文書に共通する必須条件ではありません。
 - 各パラメータには `schema`（または `content`）が必要です。
 - 操作を編集するとき、選択プロトコルとその設定は**保持**されます。RPC やストリーミング操作が REST に黙って変換されることはありません。
 - 上記の正確な拡張形を使い、`externalUrl` のようなキーを捏造したり `ws` をプロトコル名に使ったりしないでください。
@@ -128,5 +140,7 @@ paths:
 関連: [アシスタントで設計する](./design.md)、[データモデル](./data-model.md)。
 
 ## A2A
+
+A2A 1.0 は JSON-RPC、REST、デスクトップ gRPC のデバッグと文書化、およびステートレスなメッセージアダプターサーバーの生成に対応します。永続タスクとプッシュ配信は独自実装が必要です。
 
 `x-protocol: a2a` と `x-a2a` でエージェントのメッセージとタスクを設計、デバッグ、文書化できます。1.0 は JSON-RPC、REST、デスクトップ gRPC、0.3 は JSON-RPC に対応します。[A2A エージェント](./a2a.md)で拡張フィールド、署名検証、サーバー生成、実行可能なデモを確認してください。

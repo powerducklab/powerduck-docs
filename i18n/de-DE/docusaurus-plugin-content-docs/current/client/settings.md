@@ -11,14 +11,16 @@ Die Einstellungen des Desktop-Clients decken das Aussehen der App und die Art, w
 ## Erscheinung
 
 - **Theme** — zwischen hell und dunkel wechseln (`theme.get`, `theme.set`); der Wechsel gilt app-weit und wird gespeichert.
-- **Oberflächensprache** — aus zehn Sprachen wählen oder dem System automatisch folgen.
+- **Oberflächensprache** — wählen Sie eine von sechzehn Sprachen oder folgen Sie automatisch der Systemsprache:
 
 | | | |
 |---|---|---|
 | English (US) | 简体中文 | 繁體中文 |
 | 日本語 | 한국어 | Français |
 | Deutsch | Español | Português (Brasil) |
-| العربية | | |
+| العربية | Italiano | Русский |
+| हिन्दी | Bahasa Indonesia | Tiếng Việt |
+| Türkçe | | |
 
 Arabisch wird von rechts nach links gerendert. Die Wahl `auto` folgt der Systemsprache.
 

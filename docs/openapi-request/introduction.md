@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "OpenAPI 3.2 collection debugger and protocol client from @powerduck/openapi-request v0.2.8: HTTP/SSE/WebSocket, gRPC, MCP and GraphQL adapters, UI-first client, scripted debugger, manual sessions, and response write-back."
+description: "OpenAPI 3.2 collection debugger and protocol client from @powerduck/openapi-request: HTTP/SSE/WebSocket, gRPC, MCP and GraphQL adapters, UI-first client, scripted debugger, manual sessions, and response write-back."
 keywords: ["openapi-request", "powerduck", "collection debugger", "SSE", "websocket", "grpc", "mcp", "graphql", "introduction"]
 ---
 
 # @powerduck/openapi-request Introduction
 
-`@powerduck/openapi-request` is an OpenAPI 3.2 collection debugger and request runtime. It turns an OpenAPI document into something you can actually drive: it plans a request from the document, sends it, classifies streaming responses, feeds observed data back into the document, and speaks six wire protocols behind one small surface.
+`@powerduck/openapi-request` is an OpenAPI 3.2 collection debugger and request runtime. It turns an OpenAPI document into something you can actually drive: it plans a request from the document, sends it, classifies streaming responses, can produce an updated document from observed responses, and speaks six wire protocols behind one small surface.
 
 - **Package name:** `@powerduck/openapi-request`
 - **Version:** <img src="https://img.shields.io/npm/v/@powerduck/openapi-request"/>
@@ -36,7 +36,7 @@ The core is transport-agnostic; behaviour is supplied by protocol adapters regis
 
 - **OpenAPI 3.2 collection model** — operations are located by `operationId` or `method`+`path`, and requests are planned from parameters, request bodies and examples.
 - **Streaming detection** — `isStreamingOperation()`, `isSseContentType()` and `isStreamingContentType()` classify a response from declared content types, and `probeStreamingResponse()` inspects live response headers.
-- **Response write-back** — observed responses are inferred into JSON Schemas and merged back into the document with `inferSchema()`, `mergeSchema()`, `toResponseObject()` and `writeBackResponse()`.
+- **Response write-back** — `inferSchema()`, `mergeSchema()`, `toResponseObject()` and `writeBackResponse()` derive response schemas and return an updated document. By default, `send()` returns it as `patchedSpec` when write-back succeeds; set `writeBack: false` to disable this. The input document is not mutated and no file is saved automatically. Check `writeBackSkippedReason` and `writeBackWarnings` before persisting the result.
 - **Schema helpers** — `sampleFromSchema()` produces example payloads from a schema.
 - **Lazy heavy dependencies** — gRPC (`@grpc/grpc-js`, `@grpc/proto-loader`) and MCP (`@modelcontextprotocol/sdk`) are loaded on first use, so HTTP-only consumers never pay for them.
 
@@ -50,6 +50,20 @@ npm install @powerduck/openapi-request
 
 ```typescript
 import { createClient } from "@powerduck/openapi-request";
+
+const spec = {
+  openapi: "3.2.0",
+  info: { title: "Users", version: "1.0.0" },
+  paths: {
+    "/users/{id}": {
+      get: {
+        operationId: "getUserById",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string" } }],
+        responses: { "200": { description: "User" } },
+      },
+    },
+  },
+};
 
 const client = createClient();
 

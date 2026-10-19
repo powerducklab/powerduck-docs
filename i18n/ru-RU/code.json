@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "Основная навигация"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Боковая панель документации"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Развернуть раздел «{label}»"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Свернуть раздел «{label}»"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(открывается в новой вкладке)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Переключить светлую и тёмную тему (сейчас: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "системная тема"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "светлая тема"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "тёмная тема"
+  }
+}

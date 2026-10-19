@@ -1,19 +1,19 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "Overview of @powerduck/x-to-openapi v0.2.5 — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture."
+description: "Overview of @powerduck/x-to-openapi — an extensible TypeScript framework that converts curl commands and Postman Collections into valid OpenAPI 3.2 documents via a plugin adapter architecture."
 keywords: ["x-to-openapi", "curl", "postman", "OpenAPI 3.2", "converter", "adapter", "Reverse engineering"]
 ---
 
 # @powerduck/x-to-openapi
 
-**@powerduck/x-to-openapi** is a production-grade, extensible TypeScript framework that converts source formats — **curl commands** and **Postman Collections (v2.0 / v2.1.0)** — into valid **OpenAPI 3.2** documents. It is built for CI pipelines, API documentation generation, and reverse-engineering HTTP traffic.
+**@powerduck/x-to-openapi** is a production-grade, extensible TypeScript framework that converts source formats — **curl commands** and **Postman Collections (v2.0 / v2.1.0)** — into **OpenAPI 3.2** documents. It is built for CI pipelines, API documentation generation, and reverse-engineering HTTP traffic.
 
-It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerduck/openapi-parser) for document validation and upgrade to OpenAPI 3.2.
+It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerduck/openapi-parser) for document validation.
 
 - **Version:** <img src="https://img.shields.io/npm/v/@powerduck/x-to-openapi"/>
 - **License:** MIT
-- **Node.js requirement:** `>= 18.0.0`
+- **Node.js requirement:** `>= 22.12.0`
 - **Output:** OpenAPI **3.2.0** only
 - **Source:** [github.com/powerducklab/x-to-openapi](https://github.com/powerducklab/x-to-openapi)
 
@@ -44,13 +44,13 @@ It builds on [`@powerduck/openapi-parser`](https://www.npmjs.com/package/@powerd
 
 - **Two built-in adapters** — [`CurlAdapter`](./api-reference.md#curladapter) (single, batch, and browser "Copy all as cURL" output) and [`PostmanAdapter`](./api-reference.md#postmanadapter) (v2.0/v2.1.0, nested folders, auth inheritance).
 - **Zero-config helpers** — [`curlToOpenApi`](./api-reference.md#curltoopenapi) and [`postmanToOpenApi`](./api-reference.md) register an adapter and convert in one call.
-- **OpenAPI 3.2 output** — every generated document is `openapi: "3.2.0"` and validated.
+- **OpenAPI 3.2 output** — every generated document declares `openapi: "3.2.0"`. Validation is enabled by default; check the returned diagnostics, or enable strict mode to reject errors.
 - **Multi-request merging** — same method+path operations are combined; query/header/cookie params and body schemas are structurally merged.
 - **Path parameter inference** — numeric IDs, UUIDs, ULIDs, and long hex segments are templated (`/users/{userId}`) when they vary across at least N samples.
 - **Security inference** — Bearer, Basic, and API key (header/query/cookie) detection with proper `securitySchemes`.
 - **All body types** — JSON, XML, form-urlencoded, multipart/form-data (text + file), GraphQL, text, binary.
 - **Postman test-script preservation** — `pm.test()` / `pm.expect()` are emitted as `x-postman-scripts` on each operation.
-- **Diagnostics** — every issue carries a severity, code, and source index; [`strict`](./api-reference.md#convertoptions) mode throws on errors.
+- **Diagnostics** — every issue carries a severity and code, with source details where available; [`strict`](./api-reference.md#convertoptions) mode throws on errors.
 - **Extensible** — implement [`SourceAdapter`](./api-reference.md) to add HAR, HTTPie, or Insomnia sources.
 
 ---

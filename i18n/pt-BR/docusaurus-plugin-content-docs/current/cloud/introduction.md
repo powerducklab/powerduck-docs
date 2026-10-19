@@ -8,7 +8,7 @@ description: "Ponha a sua especificação OpenAPI online em minutos. Publique do
 
 Powerduck Cloud torna um arquivo OpenAPI em algo **compartilhável**. Adicione a sua spec, escolha o que expor e depois compartilhe links estáveis à documentação renderizada e um servidor MCP gerenciado. Sem auto-hospedagem nem executar nada.
 
-É o mesmo fluxo orientado a contrato e impulsionado por IA que o cliente de desktop, online para equipes e consumidores.
+O Cloud leva para a web o fluxo de trabalho do aplicativo de desktop, baseado no contrato da API e assistido por IA, para equipes e usuários de APIs. O plano Free inclui hospedagem de documentação e MCP dentro dos seus limites. Os planos pagos aumentam a capacidade e oferecem fontes Git e domínios personalizados. A API da sua aplicação continua rodando no seu próprio backend.
 
 ## O fluxo
 
@@ -57,18 +57,18 @@ Inicie sessão com **Google** ou **GitHub**. Após o handshake OAuth, Powerduck 
 - **Hub** — publicar e explorar documentação e servidores MCP públicos.
 - **Settings** e **Activity** — perfil, preferências, registo de auditoria.
 
-Os leitores públicos usam um visualizador próprio e não precisam de conta se o documento não pede senha.
+Leitores públicos usam um visualizador dedicado e não precisam criar uma conta Powerduck. Se houver uma senha de visualização, precisam informá-la. Essa senha é independente do login em uma conta.
 
 ## Cloud versus cliente de desktop
 
 | | Cliente de desktop | Cloud |
 |---|---|---|
 | Execução | A sua máquina | Hospedado |
-| Modelo | Licença perpétua, compra única | Subscrição mensal |
-| Resultado | Chave de licença (mostrada uma vez) | Membresia, sem chave |
+| Modelo | Licença perpétua, compra única | Plano gratuito e assinaturas pagas |
+| Resultado | Chave de licença (mostrada uma vez) | Recursos do plano, sem chave de licença |
 | Quando | Local, sem conexão, âmbito completo | Compartilhar e publicar online |
 
-Ambos se complementam e vendem-se separadamente. Veja [Faturação](./billing.md).
+Os dois produtos se complementam. O Cloud oferece um plano Free; as assinaturas pagas do Cloud e as licenças de desktop são adquiridas separadamente. Veja [Faturamento](./billing.md).
 
 ## Comece aqui
 
@@ -77,4 +77,4 @@ Ambos se complementam e vendem-se separadamente. Veja [Faturação](./billing.md
 - [Operações expostas](./exposure.md)
 - [Controlo de acesso](./access-control.md)
 - [Domínios personalizados](./custom-domains.md)
-- [Faturação](./billing.md)
+- [Faturamento](./billing.md)

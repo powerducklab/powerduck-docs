@@ -97,9 +97,7 @@ React リポジトリの `examples/a2a-demo` は数値の合計を返します�
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# 別のターミナルで同じディレクトリに移動して実行：
 npm test
 ```
 

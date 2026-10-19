@@ -1,55 +1,31 @@
 ---
 sidebar_position: 3
-title: Démarrage rapide
-description: "En quelques minutes, parcourez la conception d'un point de terminaison, une requête réelle et la documentation rendue depuis votre fichier OpenAPI."
+title: "Votre première requête locale, sans compte ni modèle d’IA"
+description: "Votre première requête locale, sans compte ni modèle d’IA"
 ---
 
-# Démarrage rapide
+# Votre première requête locale, sans compte ni modèle d’IA
 
-Ce court parcours traverse la boucle centrale : ouvrir une spécification, la modifier avec l'assistant IA, envoyer une requête et voir le résultat sous forme de documentation, en utilisant le même document OpenAPI partout.
+## Essayer l’exemple local
 
-## 1. Ouvrir une spécification
+Dans un espace de travail vide de l’application de bureau, choisissez **Essayer l’exemple**, puis lancez l’exécution. Powerduck crée un exemple indépendant, démarre le serveur Mock local, envoie `GET /orders/summary` au port attribué et affiche la réponse réelle. L’exemple n’est marqué comme terminé qu’après une réponse HTTP 200. Le serveur Mock s’arrête après la requête ou à la fermeture de l’exemple. Vous pouvez relancer l’exemple à tout moment. Installez d’abord l’application : ce parcours local ne nécessite ni connexion Internet, ni compte, ni clé de modèle d’IA.
 
-Lancez le client et ouvrez une spécification depuis n'importe quelle source prise en charge. Toutes passent par le même flux d'import et sont converties ou mises à niveau vers OpenAPI 3.2 :
+## Ouvrir votre propre spécification
 
-- Un **fichier OpenAPI ou Swagger** sur le disque (Swagger 2.0, OpenAPI 3.0 / 3.1 mis à niveau).
-- Une **collection Postman**.
-- Une **commande cURL**.
-- Un **dépôt Git**.
-- Une **URL** pointant vers une spécification.
+Utilisez **Ouvrir** pour importer un document OpenAPI au format YAML ou JSON. L’exemple ne remplace jamais un fichier existant. La version gratuite limite le nombre de spécifications ouvertes. Si la limite est atteinte, enregistrez puis fermez ou retirez un document dont vous n’avez plus besoin. Ne perdez pas des modifications non enregistrées pour lancer l’exemple. Vous pouvez aussi générer une spécification OpenAPI à partir d’un projet existant ; vérifiez les champs incertains avant de vous fier au résultat.
 
-Vous pouvez aussi glisser-déposer un fichier directement dans l'espace de travail. Sans point de départ, demandez à l'assistant de créer un squelette initial à partir d'une courte description.
+## Vérifier un serveur réel
 
-## 2. Demander à l'assistant d'ajouter un point de terminaison
+Une réponse correcte du serveur Mock ne prouve pas que votre serveur respecte la spécification. Suivez l’[exemple d’erreur de contrat](/docs/fr-FR/client/contract-example/), puis [connectez un assistant de programmation](/docs/fr-FR/client/coding-agent/) si vous le souhaitez. La validation manuelle ne nécessite aucun modèle d’IA.
 
-Dans le chat, décrivez ce dont vous avez besoin. Par exemple :
+## Modèles facultatifs et erreurs courantes
 
-> Ajoute un point de terminaison `GET /products` qui renvoie une liste paginée de produits.
+- **Aucun modèle configuré :** les requêtes locales, le serveur Mock et les vérifications manuelles fonctionnent quand même. Configurez un modèle dans les paramètres uniquement si vous souhaitez utiliser l’IA.
+- **Échec de connexion au modèle :** vérifiez l’URL du service, la clé et le proxy dans les paramètres. Ne publiez jamais de clés ni d’en-têtes de requête dans un rapport de bug.
+- **API inaccessible :** vérifiez que le serveur fonctionne, puis contrôlez l’URL, le port et les paramètres de la requête dans l’outil de débogage.
+- **HTTP 401 ou 403 :** vérifiez l’authentification et les autorisations de l’API cible. Il ne s’agit pas d’une demande de connexion à Powerduck.
+- **Échec de validation :** consultez le chemin du champ et le type attendu dans l’assertion. Corrigez le serveur ou une erreur dans la spécification, puis relancez la vérification.
 
-L'assistant ne modifie pas directement le document ; il répond avec une **carte de correctif**. La carte montre l'opération à modifier et les chemins/ressources affectés. Vérifiez, puis choisissez **Appliquer** ou **Rejeter**. Rien n'atteint le document avant application.
+Les fichiers locaux sont lus et enregistrés sur votre ordinateur. Les modèles distants reçoivent le contexte nécessaire ; la publication dans le cloud transmet le contenu sélectionné. Les statistiques d’utilisation facultatives sont désactivées par défaut dans les paramètres et sont indépendantes de la vérification de licence.
 
-Pour une demande large comme « construis une API e-commerce », l'assistant pose d'abord des questions de clarification, puis propose des correctifs concentrés sur 2 à 5 opérations à la fois.
-
-## 3. Affiner une seule opération sans dérive
-
-Ouvrez l'opération et affinez-la sur place — ajoutez un paramètre de requête ou étendez le schéma de réponse. En mode focus, l'assistant génère des correctifs fins qui ne touchent que les champs demandés et préserve tout le reste de l'opération. Cela évite de perturber ou d'écraser le travail existant lors d'éditions répétées sur la même API.
-
-## 4. Envoyer une requête réelle
-
-Passez à l'**espace de travail de requête** de l'opération et envoyez. La requête s'exécute via le processus principal local. La réponse, l'état, les en-têtes et la durée s'affichent à côté de l'opération, et vous pouvez utiliser des environnements et des variables pour les valeurs changeant à chaque exécution.
-
-Si ni les `servers` de la spécification ni l'environnement actif ne fournissent d'URL de base, l'application ne devine pas : elle demande de saisir l'URL de base.
-
-## 5. Voir la documentation
-
-Ouvrez la **documentation** : la même spécification est rendue en documentation API lisible. Le visualiseur lit le document en direct, donc la documentation correspond toujours à ce que vous venez de concevoir.
-
-## 6. Aller plus loin quand vous êtes prêt
-
-- Enchaînez plusieurs requêtes avec les [tests de scénario](../client/scenario-testing.md) et exportez un rapport HTML.
-- Lancez le [serveur de simulation local](../client/mock-server.md) pendant le développement du backend.
-- Modélisez des API de streaming / RPC avec les [six protocoles](../client/protocols.md).
-- Dérivez les tables, relations et SQL dans le [modèle de données](../client/data-model.md).
-- Publiez la même spécification en ligne avec [Powerduck Cloud](../cloud/quickstart.md).
-
-La boucle centrale est complète. Le reste de la documentation détaille chaque espace de travail.
+[Télécharger](https://www.powerduck.com/download.html) · [Licence de bureau](https://www.powerduck.com/pricing?product=client)

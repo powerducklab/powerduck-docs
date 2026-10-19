@@ -69,8 +69,7 @@ Build the MCP server by hand and mount it on your own Express app:
 ```typescript
 import express from "express";
 import {
-  buildMcpServer,
-  attachSseRoutes,
+  attachMcpRoutes,
   loadOpenApiSpec,
 } from "@powerduck/openapi-mcp-server";
 
@@ -86,16 +85,18 @@ const contextProvider = () => ({
 const app = express();
 app.use(express.json());
 
-attachSseRoutes(app, specProvider, contextProvider);
+const routes = attachMcpRoutes(app, {
+  specProvider,
+  contextProvider,
+  maxSessions: 64,
+  sessionIdleMs: 600000,
+});
+console.log(routes.listSessions());
 
 app.listen(8080, () => console.log("mcp on :8080/mcp"));
 ```
 
-> For session limits, CORS origins, idle reaping, and the fuller route handle
-> (`listSessions`, `closeSession`, `closeAll`), use [`startAdminServer`](./api-reference.md#admin-server-and-auth-server-subpath)
-> which wraps `attachMcpRoutes` with all of those options. `attachMcpRoutes`
-> itself is an internal implementation detail and is not exported from the
-> package root.
+> `attachMcpRoutes` is exported from the package root. Its options control session limits, CORS origins and idle cleanup; the returned handle exposes `listSessions`, `closeSession`, `closeAll` and `dispose`. Call `dispose()` during shutdown to stop the background sweeper and close sessions. Use [`startAdminServer`](../api-reference/#admin-server-and-auth-server-subpath) when you also need the admin console.
 
 ## 5. Generate tools, prompts and resources from a spec
 
@@ -137,7 +138,7 @@ console.log(result.status, result.data);
 
 ```typescript
 import express from "express";
-import { createAuthMiddleware } from "@powerduck/openapi-mcp-server/server";
+import { createAuthMiddleware } from "@powerduck/openapi-mcp-server";
 
 const app = express();
 app.use("/admin", createAuthMiddleware(process.env.ADMIN_API_KEY));
@@ -148,5 +149,5 @@ Omitting the key disables the guard; an empty string throws rather than silently
 
 ## See also
 
-- [Quickstart](./quickstart.md)
-- [API Reference](./api-reference.md)
+- [Quickstart](../quickstart/)
+- [API Reference](../api-reference/)

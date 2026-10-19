@@ -13,6 +13,6 @@ Use **developer MCP** to let a coding Agent inspect a contract and verify a back
 4. Ask the Agent to read an operation and its response schema before changing your backend. Ask it to call `run_contract_tests` with the backend’s explicit local `baseUrl` after the change.
 5. Review the reported assertions and proposed code patch. Re-run after applying an accepted fix.
 
-The developer MCP server needs Node.js 20.11+. Your Agent may send tool results or code context to its configured remote model. A model is optional for manual local requests and contract testing; your own provider bills your key, while hosted model credits are separate. No Cloud subscription is required for local work.
+The developer MCP server needs Node.js 22.12.0+. Your Agent may send tool results or code context to its configured remote model. A model is optional for manual local requests and contract testing; your own provider bills your key, while hosted model credits are separate. No Cloud subscription is required for local work.
 
 [Download desktop](https://www.powerduck.com/download.html) · [Quickstart](https://www.powerduck.com/docs/overview/quickstart/)

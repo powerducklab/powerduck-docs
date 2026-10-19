@@ -26,7 +26,7 @@ Builds an OpenAPI navigation tree.
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `showInternal` | `boolean` | `false` | Hide `x-internal` operations |
+| `showInternal` | `boolean` | `false` | Show nodes marked `x-internal` or `x-scalar-ignore` when enabled |
 | `showComponents` | `boolean` | `true` | Show components section |
 | `showWebhooks` | `boolean` | `true` | Show webhooks |
 | `defaultExpandDepth` | `number` | `2` | Default expansion depth |

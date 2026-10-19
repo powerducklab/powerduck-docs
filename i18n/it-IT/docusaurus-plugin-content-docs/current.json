@@ -1,0 +1,14 @@
+{
+  "sidebar.tutorialSidebar.category.Overview": {
+    "message": "Panoramica",
+    "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Source": {
+    "message": "Open source",
+    "description": "The label for category 'Open Source' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Client": {
+    "message": "Applicazione desktop",
+    "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
+  }
+}

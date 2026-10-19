@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Facturation
-description: "Le cloud est un abonnement mensuel et le bureau une licence perpétuelle achat unique. Comprenez plans et autorisations, le choix du fournisseur de paiement et le cycle de vie de l'abonnement."
+description: "Découvrez les différences entre la licence de bureau perpétuelle, l’offre Cloud gratuite et les abonnements payants, ainsi que leurs quotas, droits et moyens de paiement."
 ---
 
 # Facturation
@@ -10,9 +10,9 @@ Powerduck a deux modèles d'achat distincts qui ne se mélangent pas.
 
 | | Client de bureau | Powerduck Cloud |
 |---|---|---|
-| Achat | Unique | Abonnement mensuel |
+| Achat | Unique | Offre gratuite ou abonnement payant |
 | Reçu | Clé de licence perpétuelle | Adhésion hébergée |
-| Expiration | Aucune | Renouvellement en fin de période |
+| Expiration | Aucune | Accès gratuit ou période de facturation payée |
 | Affiché après achat | Clé une seule fois | Pas de clé |
 
 ## Licence de bureau
@@ -28,7 +28,7 @@ Cela reste entièrement distinct de l'abonnement Cloud : acheter un abonnement C
 
 ## Abonnement Cloud
 
-Le cloud est un service d'hébergement par abonnement mensuel.
+Cloud propose une **offre Free** avec hébergement de documentation et de MCP, ainsi que des abonnements payants. Pro ajoute des quotas plus élevés, les sources Git et les domaines personnalisés ; Team permet d’inclure plusieurs membres. Aucune clé de licence n’est nécessaire.
 
 - **Pro** — 19 $/mois.
 - **Team** — 49 $/mois.
@@ -43,12 +43,14 @@ Les capacités se décident par **autorisations**, pas en comparant des codes de
 | Autorisation | Free | Pro | Team |
 |---|---|---|---|
 | Hébergement de documents | Oui | Oui | Oui |
+| MCP | Oui | Oui | Oui |
 | Source Git | Non | Oui | Oui |
 | Domaine personnalisé | Non | Oui | Oui |
-| Documents maximum | 3 | 20 | 100 |
-| Versions max/document | 3 | 100 | 500 |
+| Documents maximum | 3 | 100 | 1,000 |
+| Versions max/document | 20 | 200 | 1,000 |
 | Opérations exposées max | 10 | 1 000 | 10 000 |
-| Taille de téléversement max | 1 MB | 10 MB | 50 MB |
+| Taille de téléversement max | 1 MiB | 10 MiB | 50 MiB |
+| Membres maximum | 1 | 1 | 10 |
 
 ## Fournisseur de paiement
 
@@ -89,4 +91,4 @@ La page de facturation sépare les deux.
 
 Comme toute ressource hôte, paiements et abonnements appartiennent à une **organisation** et se consultent avec une portée organisation, donc un utilisateur avec un autre identifiant d'organisation ne peut pas lire les commandes d'une autre équipe.
 
-Voir aussi : [Introduction Cloud](./introduction.md)、[Domaines personnalisés](./custom-domains.md).
+Voir aussi : [Introduction Cloud](./introduction.md), [Domaines personnalisés](./custom-domains.md).

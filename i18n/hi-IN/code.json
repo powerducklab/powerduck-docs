@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "मुख्य नेविगेशन"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "दस्तावेज़ साइडबार"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "“{label}” श्रेणी खोलें"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "“{label}” श्रेणी समेटें"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(नए टैब में खुलता है)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "हल्के और गहरे मोड के बीच बदलें (अभी: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "सिस्टम मोड"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "हल्का मोड"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "गहरा मोड"
+  }
+}

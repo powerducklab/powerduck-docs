@@ -13,6 +13,6 @@ description: "OpenAPI をコーディング Agent に接続する"
 4. 変更前に Agent に操作と応答 schema を読ませます。変更後は実際のバックエンドの `baseUrl` を指定して `run_contract_tests` を実行させます。
 5. 検証結果とコード差分を確認し、適用後に再検証します。
 
-Node.js 20.11+ が必要です。Agent はコードやツール結果を設定済みのリモートモデルへ送る場合があります。手動リクエストと契約検証にモデルは不要です。持ち込みキーは提供者が請求し、ホスト型モデルと Cloud は別料金です。ローカル機能に Cloud の購入は不要です。
+Node.js 22.12.0+ が必要です。Agent はコードやツール結果を設定済みのリモートモデルへ送る場合があります。手動リクエストと契約検証にモデルは不要です。持ち込みキーは提供者が請求し、ホスト型モデルと Cloud は別料金です。ローカル機能に Cloud の購入は不要です。
 
-[Download desktop](https://www.powerduck.com/download.html) · [Quickstart](../overview/quickstart.md)
+[デスクトップ版をダウンロード](https://www.powerduck.com/ja/download/) · [クイックスタート](/docs/ja-JP/overview/quickstart/)

@@ -1,0 +1,14 @@
+{
+  "sidebar.tutorialSidebar.category.Overview": {
+    "message": "परिचय",
+    "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Source": {
+    "message": "ओपन सोर्स",
+    "description": "The label for category 'Open Source' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Client": {
+    "message": "डेस्कटॉप ऐप",
+    "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "डेस्कटॉप ऐप"
+  },
+  "item.label.Pricing": {
+    "message": "कीमतें"
+  },
+  "item.label.Resources": {
+    "message": "संसाधन"
+  },
+  "item.label.Sign in": {
+    "message": "साइन इन करें"
+  },
+  "item.label.Download": {
+    "message": "डाउनलोड करें"
+  },
+  "item.label.Spec Editor": {
+    "message": "स्पेसिफ़िकेशन एडिटर"
+  },
+  "item.label.API Debug": {
+    "message": "API डीबगर"
+  },
+  "item.label.MCP Server": {
+    "message": "MCP सर्वर"
+  },
+  "item.label.API Docs": {
+    "message": "API दस्तावेज़"
+  },
+  "item.label.Cloud Docs": {
+    "message": "क्लाउड दस्तावेज़"
+  },
+  "item.label.Documentation": {
+    "message": "दस्तावेज़"
+  },
+  "item.label.Live Demo": {
+    "message": "ऑनलाइन डेमो"
+  },
+  "item.label.Open Source": {
+    "message": "ओपन सोर्स"
+  },
+  "item.label.Blog": {
+    "message": "ब्लॉग"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

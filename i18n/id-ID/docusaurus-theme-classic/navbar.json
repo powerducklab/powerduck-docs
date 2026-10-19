@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "Aplikasi desktop"
+  },
+  "item.label.Pricing": {
+    "message": "Harga"
+  },
+  "item.label.Resources": {
+    "message": "Referensi"
+  },
+  "item.label.Sign in": {
+    "message": "Masuk"
+  },
+  "item.label.Download": {
+    "message": "Unduh"
+  },
+  "item.label.Spec Editor": {
+    "message": "Editor spesifikasi"
+  },
+  "item.label.API Debug": {
+    "message": "Debugger API"
+  },
+  "item.label.MCP Server": {
+    "message": "Server MCP"
+  },
+  "item.label.API Docs": {
+    "message": "Dokumentasi API"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Dokumentasi cloud"
+  },
+  "item.label.Documentation": {
+    "message": "Dokumentasi"
+  },
+  "item.label.Live Demo": {
+    "message": "Demo online"
+  },
+  "item.label.Open Source": {
+    "message": "Sumber terbuka"
+  },
+  "item.label.Blog": {
+    "message": "Blog"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

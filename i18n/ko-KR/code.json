@@ -44,20 +44,16 @@
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
-    "description": "The name for the system color mode"
+    "message": "시스템 설정"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "밝은 모드",
-    "description": "The name for the light color mode"
+    "message": "밝은 모드"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "어두운 모드",
-    "description": "The name for the dark color mode"
+    "message": "어두운 모드"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "어두운 모드와 밝은 모드 전환하기 (현재 {mode})",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "밝은 모드와 어두운 모드 전환 (현재: {mode})"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "탐색 경로",
@@ -167,24 +163,20 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "사이드바 분류 '{label}' 펼치기",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "{label} 카테고리 펼치기"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "사이드바 분류 '{label}' 접기",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "{label} 카테고리 접기"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "(새 탭에서 열림)"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "언어",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "메인",
-    "description": "The ARIA label for the main navigation"
+    "message": "주 탐색 메뉴"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "이 페이지에서",
@@ -239,8 +231,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "문서 사이드바",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "문서 사이드바"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "사이드바 닫기",

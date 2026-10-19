@@ -74,7 +74,7 @@ app.listen(3000);
 
 > For the fuller `attachMcpRoutes(app, options)` handle (with `maxSessions`,
 > `allowedOrigins`, `sessionIdleMs`, `listSessions`, `closeSession`, etc.),
-> import from the transport module directly. It is the same function that powers
+> import from `@powerduck/openapi-mcp-server`. It is the same function that powers
 > the admin server.
 
 ## 5. Admin server with auth

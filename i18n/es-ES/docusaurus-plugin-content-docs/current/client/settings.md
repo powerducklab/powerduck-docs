@@ -11,14 +11,16 @@ Los ajustes del cliente de escritorio cubren el aspecto de la app y cómo se env
 ## Apariencia
 
 - **Tema** — alternar entre claro y oscuro (`theme.get`, `theme.set`); el cambio se aplica a toda la app y se guarda.
-- **Idioma de la interfaz** — elegir entre diez idiomas o seguir automáticamente el sistema.
+- **Idioma de la interfaz** — elija entre dieciséis idiomas o siga automáticamente el idioma del sistema:
 
 | | | |
 |---|---|---|
 | English (US) | 简体中文 | 繁體中文 |
 | 日本語 | 한국어 | Français |
 | Deutsch | Español | Português (Brasil) |
-| العربية | | |
+| العربية | Italiano | Русский |
+| हिन्दी | Bahasa Indonesia | Tiếng Việt |
+| Türkçe | | |
 
 El árabe se renderiza de derecha a izquierda. La opción `auto` sigue el idioma del sistema.
 

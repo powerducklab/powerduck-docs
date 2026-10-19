@@ -1,55 +1,31 @@
 ---
 sidebar_position: 3
-title: Início rápido
-description: "Em poucos minutos percorra o endpoint desenhado, uma requisição real e a documentação renderizada a partir do seu arquivo OpenAPI."
+title: "Sua primeira requisição local, sem conta nem modelo de IA"
+description: "Sua primeira requisição local, sem conta nem modelo de IA"
 ---
 
-# Início rápido
+# Sua primeira requisição local, sem conta nem modelo de IA
 
-Este breve percurso atravessa o ciclo central: abrir uma especificação, modificá-la com o assistente de IA, enviar uma requisição e ver o resultado como documentação, usando o mesmo documento OpenAPI em toda parte.
+## Experimente o exemplo local
 
-## 1. Abrir uma especificação
+Em um espaço de trabalho vazio do aplicativo para desktop, escolha **Experimentar o exemplo** e inicie a execução. O Powerduck cria um exemplo independente, inicia o servidor Mock local, envia `GET /orders/summary` para a porta atribuída e mostra a resposta real. O exemplo só é concluído após uma resposta HTTP 200. O servidor Mock é encerrado após a requisição ou quando você fecha o exemplo. Você pode executá-lo novamente quando quiser. Instale o aplicativo primeiro: esse fluxo local não exige internet, conta ou chave de um modelo de IA.
 
-Arranque o cliente e abra uma especificação a partir de qualquer fonte suportada. Todas passam pelo mesmo fluxo de importação e são convertidas ou atualizadas a OpenAPI 3.2:
+## Abra sua própria especificação
 
-- Um **arquivo OpenAPI ou Swagger** em disco (Swagger 2.0, OpenAPI 3.0 / 3.1 atualizados).
-- Uma **coleção do Postman**.
-- Um **comando cURL**.
-- Um **repositório Git**.
-- Uma **URL** que aponta para uma especificação.
+Use **Abrir** para importar um documento OpenAPI em YAML ou JSON. O exemplo nunca sobrescreve arquivos existentes. O uso gratuito limita o número de especificações. Se atingir o limite, salve e feche ou remova um documento de que não precisa mais. Não descarte alterações não salvas apenas para executar o exemplo. Você também pode gerar OpenAPI a partir de um projeto existente; revise campos incertos antes de confiar no resultado.
 
-Também pode arrastar e soltar um arquivo diretamente no espaço de trabalho. Sem ponto de partida, peça ao assistente que crie um esqueleto inicial a partir de uma breve descrição.
+## Verifique um backend real
 
-## 2. Pedir ao assistente que adicione um endpoint
+Uma requisição Mock bem-sucedida não comprova que o backend está de acordo com a especificação. Siga o [exemplo de erro de contrato](/docs/pt-BR/client/contract-example/) e, se quiser, [conecte um assistente de programação](/docs/pt-BR/client/coding-agent/). A validação manual não exige um modelo de IA.
 
-No chat, descreva o que precisa. Por exemplo:
+## Modelos opcionais e erros comuns
 
-> Adiciona um endpoint `GET /products` que devolve uma lista paginada de produtos.
+- **Nenhum modelo configurado:** requisições locais, Mock e verificações manuais continuam funcionando. Configure um modelo nos ajustes apenas se quiser usar IA.
+- **Falha na conexão com o modelo:** confira o endpoint, a chave e o proxy nos ajustes. Não publique chaves nem cabeçalhos de requisições em relatos de bugs.
+- **API inacessível:** confira se o servidor está funcionando e verifique a URL, a porta e os ajustes da requisição no depurador.
+- **HTTP 401/403:** revise a autenticação e as permissões da API de destino. Isso não significa que você precisa entrar na sua conta do Powerduck.
+- **Falha na validação do contrato:** confira o caminho do campo e o tipo esperado na asserção. Corrija o backend ou uma especificação incorreta e execute a verificação novamente.
 
-O assistente não edita diretamente o documento; responde com um **cartão de patch**. O cartão mostra a operação a modificar e as rotas/recursos afetados. Reveja, depois escolha **Aplicar** ou **Rejeitar**. Nada chega ao documento antes de aplicar.
+Os arquivos locais são lidos e gravados no seu computador. Modelos remotos recebem o contexto necessário; a publicação na nuvem envia o conteúdo selecionado. As estatísticas de uso opcionais ficam desativadas por padrão nos ajustes e são independentes da verificação de licença.
 
-Para um pedido amplo como «constrói uma API de comércio eletrónico», o assistente faz primeiro perguntas de esclarecimento e depois propõe patches focados em 2 a 5 operações de cada vez.
-
-## 3. Refinar uma só operação sem desvios
-
-Abra a operação e refine-a no local — adicione um parâmetro de consulta ou estenda o esquema de resposta. Em modo foco, o assistente gera patches finos que só tocam os campos pedidos e preservam tudo o resto da operação. Isto evita alterar ou sobrescrever o trabalho existente em edições repetidas sobre a mesma API.
-
-## 4. Enviar uma requisição real
-
-Passe ao **espaço de trabalho de requisição** da operação e envie. A requisição executa pelo processo principal local. A resposta, o estado, os cabeçalhos e o tempo aparecem junto à operação, e para valores que mudam em cada execução pode usar ambientes e variáveis.
-
-Se nem os `servers` da especificação nem o ambiente ativo fornecem uma URL base, a app não adivinha: pede introduzir a URL base.
-
-## 5. Ver a documentação
-
-Abra a **documentação**: a mesma especificação renderiza-se como documentação de API legível. O visualizador lê o documento ao vivo, por isso a documentação coincide sempre com o recém-desenhado.
-
-## 6. Ir mais longe quando estiver pronto
-
-- Encadeie várias requisições com os [testes de cenário](../client/scenario-testing.md) e exporte um relatório HTML.
-- Arranque o [servidor de simulação local](../client/mock-server.md) durante o desenvolvimento do backend.
-- Modele APIs de streaming / RPC com os [seis protocolos](../client/protocols.md).
-- Derive tabelas, relações e SQL no [modelo de dados](../client/data-model.md).
-- Publique a mesma especificação online com [Powerduck Cloud](../cloud/quickstart.md).
-
-Com isto o ciclo central está completo. O resto da documentação detalha cada espaço de trabalho.
+[Baixar](https://www.powerduck.com/download.html) · [Licença para desktop](https://www.powerduck.com/pricing?product=client)

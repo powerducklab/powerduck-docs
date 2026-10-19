@@ -120,7 +120,7 @@ const result = await postmanToOpenApi(collection, {
 });
 
 // The Postman test script survives on the operation:
-console.log(result.document.paths["/users/{userId}"]?.get?.["x-postman-scripts"]);
+console.log(result.document.paths["/users/123"]?.get?.["x-postman-scripts"]);
 ```
 
 A JSON string also works:

@@ -8,7 +8,7 @@ description: "Bringen Sie Ihre OpenAPI-Spec in Minuten online. Veröffentlichen 
 
 Powerduck Cloud macht aus einer OpenAPI-Datei etwas **Teilbares**. Fügen Sie Ihre Spec hinzu, wählen Sie die bereitzustellenden Inhalte, dann geben Sie stabile Links zur gerenderten Dokumentation und einem verwalteten MCP-Server weiter. Kein Selbsthosting oder Ausführen nötig.
 
-Es ist derselbe vertragsorientierte, KI-unterstützte Workflow wie der Desktop-Client, online für Teams und Nutzer.
+Cloud bringt den API-vertragsbasierten, KI-gestützten Arbeitsablauf des Desktop-Clients für Teams und API-Nutzer ins Web. Der Free-Plan umfasst das Hosting von Dokumentation und MCP innerhalb seiner Kontingente. Bezahlte Pläne bieten höhere Kontingente, Git-Quellen und eigene Domains. Ihre eigentliche API läuft weiterhin auf Ihrem eigenen Backend.
 
 ## Der Ablauf
 
@@ -57,18 +57,18 @@ Melden Sie sich mit **Google** oder **GitHub** an. Nach dem OAuth-Handshake gibt
 - **Hub** — öffentliche Doku und MCP-Server veröffentlichen und erkunden.
 - **Settings** und **Activity** — Profil, Voreinstellungen, Audit-Protokoll.
 
-Öffentliche Leser nutzen einen eigenen Viewer und brauchen kein Konto, wenn das Dokument kein Passwort verlangt.
+Öffentliche Leser verwenden einen eigenen Dokumentationsbetrachter und benötigen kein Powerduck-Konto. Ist ein Ansichtspasswort gesetzt, müssen sie es eingeben. Dieses Passwort ist unabhängig von einer Kontoanmeldung.
 
 ## Cloud versus Desktop-Client
 
 | | Desktop-Client | Cloud |
 |---|---|---|
 | Ausführung | Ihre Maschine | Gehostet |
-| Modell | Dauerlizenz Einmalkauf | Monatsabonnement |
-| Ergebnis | Lizenzschlüssel (einmal gezeigt) | Mitgliedschaft, kein Schlüssel |
+| Modell | Dauerlizenz Einmalkauf | Kostenloser Plan und kostenpflichtige Abonnements |
+| Ergebnis | Lizenzschlüssel (einmal gezeigt) | Planabhängige Nutzungsrechte, kein Lizenzschlüssel |
 | Wann | Lokal, offline, voller Bereich | Online teilen und veröffentlichen |
 
-Beide ergänzen sich und werden getrennt verkauft. Siehe [Abrechnung](./billing.md).
+Beide Produkte ergänzen sich. Cloud bietet einen Free-Plan; kostenpflichtige Cloud-Abonnements und Desktop-Lizenzen werden separat erworben. Siehe [Abrechnung](./billing.md).
 
 ## Hier starten
 

@@ -15,7 +15,8 @@ import isInternalUrl from '@docusaurus/isInternalUrl';
 import {isRegexpStringMatch} from '@docusaurus/theme-common';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import type {Props} from '@theme/NavbarItem/NavbarNavLink';
-import sameDomainPath from '../../utils/sameDomainPath';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import sameDomainPath, {localizedSitePath} from '../../utils/sameDomainPath';
 
 export default function NavbarNavLink({
   activeBasePath,
@@ -33,7 +34,9 @@ export default function NavbarNavLink({
   const activeBaseUrl = useBaseUrl(activeBasePath);
   const normalizedHref = useBaseUrl(href, {forcePrependBaseUrl: true});
   const isExternalLink = label && href && !isInternalUrl(href);
-  const sitePath = sameDomainPath(href);
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const rawSitePath = sameDomainPath(href);
+  const sitePath = rawSitePath ? localizedSitePath(rawSitePath, currentLocale) : null;
 
   // Link content is set through html XOR label
   const linkContentProps = html

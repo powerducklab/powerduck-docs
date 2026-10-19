@@ -52,7 +52,7 @@ The model is **yours to configure**: point the app at any OpenAI-compatible prov
 
 - **Your real files.** The app opens, edits, and saves the actual files on disk and tracks local changes.
 - **No CORS wall.** Requests go through the local process, not the web view, so cross-origin restrictions do not block your calls.
-- **Prompts and keys stay private.** They are handled locally and never appear in a browser network panel.
+- **You choose the model endpoint.** The desktop sends model requests through its main process, but prompts, relevant context, and credentials still go to your configured provider. Local-first does not mean remote AI requests transfer no data.
 - **Works offline.** Design, mock, and documentation need no network; it is only required for live requests, Git sync, or a hosted model.
 - **Local runtimes.** The mock, scenario runner, database access, and terminal all run on your machine.
 

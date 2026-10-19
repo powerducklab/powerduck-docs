@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "App desktop"
+  },
+  "item.label.Pricing": {
+    "message": "Prezzi"
+  },
+  "item.label.Resources": {
+    "message": "Risorse"
+  },
+  "item.label.Sign in": {
+    "message": "Accedi"
+  },
+  "item.label.Download": {
+    "message": "Scarica"
+  },
+  "item.label.Spec Editor": {
+    "message": "Editor delle specifiche"
+  },
+  "item.label.API Debug": {
+    "message": "Debugger API"
+  },
+  "item.label.MCP Server": {
+    "message": "Server MCP"
+  },
+  "item.label.API Docs": {
+    "message": "Documentazione API"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Documentazione cloud"
+  },
+  "item.label.Documentation": {
+    "message": "Documentazione"
+  },
+  "item.label.Live Demo": {
+    "message": "Demo online"
+  },
+  "item.label.Open Source": {
+    "message": "Open source"
+  },
+  "item.label.Blog": {
+    "message": "Blog"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

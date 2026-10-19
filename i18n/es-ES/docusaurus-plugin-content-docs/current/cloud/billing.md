@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Facturación
-description: "La nube es una suscripción mensual y el escritorio una licencia perpetua de compra única. Entienda planes y autorizaciones, la elección del proveedor de pago y el ciclo de vida de la suscripción."
+description: "Conozca las diferencias entre la licencia de escritorio perpetua, el plan Cloud gratuito y las suscripciones de pago, con sus límites, permisos y formas de pago."
 ---
 
 # Facturación
@@ -10,9 +10,9 @@ Powerduck tiene dos modelos de compra separados que no se mezclan.
 
 | | Cliente de escritorio | Powerduck Cloud |
 |---|---|---|
-| Compra | Única | Suscripción mensual |
+| Compra | Única | Plan gratuito o suscripción de pago |
 | Recibe | Clave de licencia perpetua | Membresía hospedada |
-| Caducidad | Ninguna | Renovación al final del período |
+| Caducidad | Ninguna | Acceso gratuito o período de facturación pagado |
 | Mostrado tras comprar | Clave una vez | Sin clave |
 
 ## Licencia de escritorio
@@ -28,7 +28,7 @@ Esto permanece totalmente separado de la suscripción de Cloud: comprar una susc
 
 ## Suscripción de Cloud
 
-La nube es un servicio de hospedaje con suscripción mensual.
+Cloud ofrece un **plan Free** con alojamiento de documentación y MCP, además de suscripciones de pago. Pro añade límites más amplios, fuentes Git y dominios personalizados; Team permite varios miembros. No se necesita clave de licencia.
 
 - **Pro** — 19 $/mes.
 - **Team** — 49 $/mes.
@@ -43,12 +43,14 @@ Las capacidades se deciden mediante **autorizaciones**, no comparando códigos d
 | Autorización | Free | Pro | Team |
 |---|---|---|---|
 | Hospedaje de documentos | Sí | Sí | Sí |
+| MCP | Sí | Sí | Sí |
 | Fuente Git | No | Sí | Sí |
 | Dominio personalizado | No | Sí | Sí |
-| Máx. documentos | 3 | 20 | 100 |
-| Máx. versiones/documento | 3 | 100 | 500 |
+| Máx. documentos | 3 | 100 | 1,000 |
+| Máx. versiones/documento | 20 | 200 | 1,000 |
 | Máx. operaciones expuestas | 10 | 1.000 | 10.000 |
-| Máx. tamaño de subida | 1 MB | 10 MB | 50 MB |
+| Máx. tamaño de subida | 1 MiB | 10 MiB | 50 MiB |
+| Máx. miembros | 1 | 1 | 10 |
 
 ## Proveedor de pago
 
@@ -89,4 +91,4 @@ La página de facturación separa ambos.
 
 Como cualquier recurso hospedado, los pagos y suscripciones pertenecen a una **Organización** y se consultan con ámbito de organización, por lo que un usuario con otro ID de organización no puede leer los pedidos de otro equipo.
 
-Vea también: [Introducción a Cloud](./introduction.md)、[Dominios personalizados](./custom-domains.md).
+Vea también: [Introducción a Cloud](./introduction.md), [Dominios personalizados](./custom-domains.md).

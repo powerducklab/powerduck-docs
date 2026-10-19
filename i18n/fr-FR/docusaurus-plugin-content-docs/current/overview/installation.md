@@ -21,13 +21,13 @@ Récupérez le programme d'installation pour votre plateforme sur le [site web P
 ## macOS
 
 1. Ouvrez le `.dmg` et glissez Powerduck dans **Applications**.
-2. Au premier lancement, macOS peut demander confirmation pour ouvrir une application téléchargée hors de l'App Store. Autorisez dans la boîte de dialogue, ou faites un clic droit sur l'application et choisissez **Ouvrir**.
+2. Au premier lancement, macOS peut demander de confirmer l'ouverture d'une application téléchargée hors de l'App Store. Vérifiez qu'elle provient de la page officielle avant de l'ouvrir ; ne désactivez pas les contrôles de sécurité du système.
 3. Deux builds sont publiés : `arm64` pour Apple Silicon (série M) et `x64` pour les Mac Intel. Téléchargez celui qui correspond à votre machine.
 
 ## Windows
 
 1. Lancez le programme d'installation NSIS (`.exe`) et suivez la configuration.
-2. Si SmartSign indique un éditeur non reconnu, choisissez **Informations complémentaires**, puis **Exécuter**.
+2. Si SmartScreen signale un éditeur inconnu, vérifiez d'abord que le programme d'installation provient de la page officielle. Ne continuez qu'après avoir vérifié sa source ; ne contournez pas l'avertissement pour un téléchargement non fiable.
 
 ## Linux
 
@@ -48,11 +48,11 @@ Le client de bureau est une application Electron en deux parties.
 - Le **processus principal** (Node.js), qui gère l'accès aux fichiers, les requêtes HTTP externes, le serveur de simulation local, les connexions aux bases de données et le terminal intégré.
 - Le **renderer** (l'espace de travail React), qui affiche la spécification, le chat IA et les outils.
 
-Cette séparation compte pour la sécurité et la fiabilité. Les requêtes nécessitant un accès réseau et au système de fichiers sont traitées par le processus principal, pas par la WebView : les invites et les clés API n'apparaissent pas dans la console du navigateur, et les restrictions CORS directes du navigateur vers le fournisseur ne s'appliquent pas. Voir [IA et modèles](../client/ai-models.md).
+Le client de bureau envoie les requêtes au modèle par le processus principal, ce qui évite les restrictions CORS entre le navigateur et le fournisseur. Les instructions, le contexte pertinent et les identifiants sont néanmoins envoyés au point d'accès du modèle configuré ; un modèle hébergé ne fonctionne pas hors ligne. Cette séparation ne garantit pas non plus qu'aucun secret n'apparaisse dans les journaux ou les outils de développement. Voir [IA et modèles](../client/ai-models.md).
 
 ## Configuration requise
 
-- macOS à jour, Windows 10 ou version ultérieure, ou une distribution de bureau Linux majeure.
+- macOS 11 ou version ultérieure, Windows 10 ou version ultérieure, ou une distribution Linux de bureau courante compatible avec Electron 37.
 - De l'espace disque pour l'application. Les spécifications ouvertes restent à leur emplacement d'origine.
 - Le réseau n'est nécessaire que pour envoyer des requêtes, synchroniser des sources Git ou appeler un modèle IA hébergé ; le reste fonctionne hors ligne.
 

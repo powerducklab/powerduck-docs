@@ -19,7 +19,7 @@ machine-readable error code.
 - **Package name:** `@powerduck/openapi-parser`
 - **Version:** <img src="https://img.shields.io/npm/v/@powerduck/openapi-parser"/>
 - **License:** MIT
-- **Node.js:** >= 18
+- **Node.js:** >= 22.12.0
 
 ## Features
 

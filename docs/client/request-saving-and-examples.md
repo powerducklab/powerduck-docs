@@ -30,14 +30,14 @@ Protocol schema editing remains available through Edit documentation. It changes
 
 These are maintained **example definitions**, not public Powerduck API services. All endpoints point to local services you provide. Importing a file does not start those services, connect automatically or grant credentials.
 
-- [All protocols](pathname:///docs/examples/protocols/all-protocols.yaml)
-- [HTTP and custom PURGE](pathname:///docs/examples/protocols/http.yaml)
-- [SSE](pathname:///docs/examples/protocols/sse.yaml)
-- [WebSocket](pathname:///docs/examples/protocols/websocket.yaml)
-- [GraphQL](pathname:///docs/examples/protocols/graphql.yaml)
-- [gRPC](pathname:///docs/examples/protocols/grpc.yaml) and [echo.proto](pathname:///docs/examples/protocols/echo.proto)
-- [MCP Streamable HTTP](pathname:///docs/examples/protocols/mcp.yaml)
-- [A2A 1.0 JSON-RPC](pathname:///docs/examples/protocols/a2a.yaml)
+- [All protocols](https://www.powerduck.com/docs/examples/protocols/all-protocols.yaml)
+- [HTTP and custom PURGE](https://www.powerduck.com/docs/examples/protocols/http.yaml)
+- [SSE](https://www.powerduck.com/docs/examples/protocols/sse.yaml)
+- [WebSocket](https://www.powerduck.com/docs/examples/protocols/websocket.yaml)
+- [GraphQL](https://www.powerduck.com/docs/examples/protocols/graphql.yaml)
+- [gRPC](https://www.powerduck.com/docs/examples/protocols/grpc.yaml) and [echo.proto](https://www.powerduck.com/docs/examples/protocols/echo.proto)
+- [MCP Streamable HTTP](https://www.powerduck.com/docs/examples/protocols/mcp.yaml)
+- [A2A 1.0 JSON-RPC](https://www.powerduck.com/docs/examples/protocols/a2a.yaml)
 
 For gRPC, download `echo.proto` beside the YAML file, then select its actual local path in the client if necessary. The server must implement `powerduck.examples.Echo/Echo` on port 50051. The other examples likewise require a matching server; they are not demonstrations of live backend validation.
 
@@ -53,7 +53,7 @@ Every operation has an ordinary OAS method, operationId, summary and responses. 
 | `x-graphql` | `endpoint`, `query`, `operationName`, `variablesSchema`, public `variables`, `responseSchema`. |
 | `x-grpc` | `address`, `service`, `method`, `kind`, `reflection`, `protoPaths`, `includeDirs`, documented `messages`. `kind` supports unary/server_streaming/client_streaming/bidi_streaming. Local proto paths are deployment-specific. |
 | `x-mcp` | `transport`, `endpoint`, `method`, and method-specific `name`, `argumentsSchema`, public `arguments`, `responseSchema`. Resource operations use `uri`; do not combine unrelated method fields. |
-| `x-a2a` | Explicit `version`, `binding`, `endpoint`, `method`, `requestSchema`, `responseSchema` and public `example`. 0.3 and 1.0 payloads are different; see [A2A](pathname:///docs/client/a2a/). |
+| `x-a2a` | Explicit `version`, `binding`, `endpoint`, `method`, `requestSchema`, `responseSchema` and public `example`. 0.3 and 1.0 payloads are different; see [A2A](./a2a.md). |
 | `x-response-stream` | Optional GraphQL streaming intent, used when the actual server and transport support streaming. Not required for ordinary GraphQL requests. |
 
 SSE uses standard `responses.200.content.text/event-stream.itemSchema` to describe each event payload. HTTP uses standard parameters, requestBody, responses and security schemes. Do not invent an `x-sse` configuration block or store debugging state as a contract extension.

@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "Dokumentasi"
+  },
+  "link.title.Libraries": {
+    "message": "Pustaka"
+  },
+  "link.title.Community": {
+    "message": "Komunitas"
+  },
+  "link.title.Legal": {
+    "message": "Informasi hukum"
+  },
+  "link.item.label.Overview": {
+    "message": "Ringkasan"
+  },
+  "link.item.label.Website": {
+    "message": "Situs resmi"
+  },
+  "link.item.label.Contact": {
+    "message": "Hubungi kami"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Kebijakan privasi"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Ketentuan penggunaan"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Kebijakan pengembalian dana"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

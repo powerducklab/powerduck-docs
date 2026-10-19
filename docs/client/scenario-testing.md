@@ -58,12 +58,12 @@ When exporting, choose a language. Ten languages are built in:
 9. Português — Brasil (Portuguese, Brazil)
 10. العربية (Arabic)
 
-An **other/custom** option lets you type a language of your own.
+An **other/custom** option accepts another language, but built-in report labels fall back to English when no translation exists; entering a language does not translate the report automatically.
 
-Reports are safe to share as-is:
+Review the exported report before sharing:
 
-- **Credentials are redacted** automatically, so tokens and secrets do not appear;
-- **Large payloads are folded** rather than pasted in full, keeping the report readable.
+- **Known credential fields are redacted** automatically. Arbitrary payloads, URLs, and custom fields can still contain sensitive data; inspect and remove it before sharing;
+- **Large payloads are folded** for readability. Collapsing a section does not remove its data from the exported HTML.
 
 The HTML is standalone, so it can be attached to a ticket or archived with a release.
 

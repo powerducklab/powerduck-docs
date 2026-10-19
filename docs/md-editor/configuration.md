@@ -7,7 +7,7 @@ keywords: ["configuration", "options", "toolbar", "mention", "doclink", "rendere
 
 # Configuration
 
-The `MarkdownEditor` constructor accepts a single `MarkdownEditorOptions` object. This page documents every field with its type, default, and behavior, plus the related option types.
+The `MarkdownEditor` constructor accepts a container element or selector followed by a `MarkdownEditorOptions` object. This page documents every field with its type, default, and behavior, plus the related option types.
 
 ## `MarkdownEditorOptions`
 
@@ -43,7 +43,7 @@ interface MarkdownEditorOptions {
 | `preview` | `boolean` | `true` | Show the preview pane. When `false`, only the editor pane is built. |
 | `onChange` | `(value: string) => void` | — | Called with the full document string on every edit. |
 | `toolbar` | `ToolbarConfig` | all actions | Configure which toolbar actions appear and override their labels/icons. |
-| `onImageUpload` | `(file: File) => Promise<string>` | — | Hook invoked when an image file is pasted, dropped, or selected. Resolve to the image URL, which is inserted as `![alt](url)`. |
+| `onImageUpload` | `(file: File) => Promise<string>` | — | Hook invoked when an image file is pasted or dropped into the editor. Resolve to the image URL, which is inserted as `![alt](url)`. The image dialog accepts a URL; it does not provide a file picker. |
 | `mention` | `MentionOptions` | — | @mention dropdown configuration. When omitted, typing `@` does not open a dropdown. |
 | `docLink` | `DocLinkOptions` | — | Document-link inserter configuration. When omitted, typing the trigger character does not open a dropdown. |
 | `renderDebounce` | `number \| false` | adaptive | Preview debounce in milliseconds. `false` renders synchronously on every edit; a number sets a fixed delay; when omitted, `adaptiveDebounceMs(value.length)` is used (120 ms base, up to 600 ms). |
@@ -72,7 +72,7 @@ type ToolbarConfig = string[] | Record<string, ToolbarItemOverride>;
 
 ### Array form (include-list)
 
-Only the listed actions are shown, in the order you provide them:
+Only the listed actions are shown. Their order remains the built-in toolbar order; the array filters visibility, not ordering:
 
 ```ts
 new MarkdownEditor('#editor', {
@@ -162,6 +162,7 @@ interface RendererOptions {
   tips?: boolean;
   html?: boolean;
   breaks?: boolean;
+  theme?: 'light' | 'dark';
 }
 ```
 
@@ -173,6 +174,7 @@ interface RendererOptions {
 | `tips` | `boolean` | `true` | Enable admonition/tip blocks. |
 | `html` | `boolean` | `false` | Allow raw HTML in the markdown source. `false` is the safer default. |
 | `breaks` | `boolean` | `false` | Convert soft line breaks to `<br>`. |
+| `theme` | `'light' \| 'dark'` | — | With `renderMarkdown`, wrap the HTML in a themed container. `Renderer.render` returns unwrapped HTML; style its container yourself. |
 
 Task-list checkboxes, `:::doc-link` cards, and @mention badges are always enabled and are not toggleable via `RendererOptions`.
 

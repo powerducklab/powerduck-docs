@@ -6,7 +6,7 @@ description: "Every export of @powerduck/openapi-codegen: generate, registry, pl
 
 # API Reference
 
-Complete API documentation for `@powerduck/openapi-codegen` v0.5.3.
+Complete API documentation for `@powerduck/openapi-codegen`.
 
 ## Top-level functions
 
@@ -114,10 +114,10 @@ Resolves `$ref`s, merges path/operation parameters, picks a request body media
 type, generates example values, resolves security, and computes `baseUrl`.
 Throws for unknown paths/methods and unsupported methods.
 
-## Built-in generators (21 languages, 41 clients)
+## Built-in generators (21 languages, 41 clients) {#built-in-generators-21-languages-41-clients}
 
 The exact `language` / `client` identifiers, as registered in
-`src/emitters/index.ts`. Identifiers are case-sensitive.
+`src/emitters/index.ts`. Lookups are case-insensitive; the table lists the canonical identifiers.
 
 | Language | `language` | `client` values |
 |----------|-----------|-----------------|

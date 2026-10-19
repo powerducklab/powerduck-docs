@@ -4,11 +4,11 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Overview": {
-    "message": "Overview",
+    "message": "Überblick",
     "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Desktop Client": {
-    "message": "Desktop Client",
+    "message": "Desktop-App",
     "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.Powerduck Cloud": {

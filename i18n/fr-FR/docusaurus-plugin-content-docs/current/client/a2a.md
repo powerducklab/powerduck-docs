@@ -97,9 +97,7 @@ Le dépôt React contient `examples/a2a-demo`, un calculateur de sommes sans cl�
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# Dans un autre terminal, dans le même dossier :
 npm test
 ```
 

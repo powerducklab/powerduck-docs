@@ -8,7 +8,7 @@ description: "Ponga su especificación OpenAPI en línea en minutos. Publique do
 
 Powerduck Cloud convierte un archivo OpenAPI en algo **compartible**. Añada su spec, elija qué exponer y luego comparta enlaces estables a la documentación renderizada y un servidor MCP gestionado. Sin auto-hospedaje ni ejecutar nada.
 
-Es el mismo flujo orientado a contrato e impulsado por IA que el cliente de escritorio, en línea para equipos y consumidores.
+Cloud lleva a la web el flujo de trabajo del cliente de escritorio, basado en el contrato de la API y asistido por IA, para equipos y usuarios de API. El plan Free incluye alojamiento de documentación y MCP dentro de sus límites. Los planes de pago amplían la capacidad y añaden fuentes Git y dominios personalizados. La API de su aplicación sigue ejecutándose en su propio backend.
 
 ## El flujo
 
@@ -57,18 +57,18 @@ Inicie sesión con **Google** o **GitHub**. Tras el handshake OAuth, Powerduck e
 - **Hub** — publicar y explorar documentación y servidores MCP públicos.
 - **Settings** y **Activity** — perfil, preferencias, registro de auditoría.
 
-Los lectores públicos usan un visor propio y no necesitan cuenta si el documento no pide contraseña.
+Los lectores públicos usan un visor específico y no necesitan crear una cuenta de Powerduck. Si se configura una contraseña de visualización, deben introducirla. Esa contraseña es independiente del inicio de sesión en una cuenta.
 
 ## Cloud versus cliente de escritorio
 
 | | Cliente de escritorio | Cloud |
 |---|---|---|
 | Ejecución | Su máquina | Hospedado |
-| Modelo | Licencia perpetua, compra única | Suscripción mensual |
-| Resultado | Clave de licencia (mostrada una vez) | Membresía, sin clave |
+| Modelo | Licencia perpetua, compra única | Plan gratuito y suscripciones de pago |
+| Resultado | Clave de licencia (mostrada una vez) | Funciones del plan, sin clave de licencia |
 | Cuándo | Local, sin conexión, ámbito completo | Compartir y publicar en línea |
 
-Ambos se complementan y se venden por separado. Vea [Facturación](./billing.md).
+Los dos productos se complementan. Cloud ofrece un plan Free; las suscripciones de pago de Cloud y las licencias de escritorio se compran por separado. Consulte [Facturación](./billing.md).
 
 ## Empiece aquí
 

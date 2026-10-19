@@ -17,13 +17,13 @@ for `$ref` dereferencing.
 
 ## Why openapi-cli
 
-- **CI-ready** — a non-zero exit code signals test failure, so the tool drops
+- **CI-ready** — by default, a non-zero exit code signals test failure or an execution error, so the tool drops
   straight into GitHub Actions, GitLab CI, or any pipeline.
 - **Multi-protocol out of the box** — one spec can describe HTTP, SSE,
   WebSocket, GraphQL, gRPC, and MCP operations; the same runner handles all of
   them.
 - **Two assertion styles** — declarative `x-tests` arrays for simple checks,
-  and full Postman `pm.test()` / `pm.expect()` scripts for complex ones.
+  and Postman-style `pm.test()` / `pm.expect()` scripts for complex ones.
 - **Three report formats** — machine-readable JSON, colored human-readable CLI
   output, and a self-contained interactive HTML report.
 - **Local or remote specs** — load a document from a file path or an

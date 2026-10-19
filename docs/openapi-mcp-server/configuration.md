@@ -81,24 +81,23 @@ Passed as the third argument to `buildMcpServer()`:
 | `pageSize` | `number` | 100 | Max entries per list response (capped at 500). |
 | `instructions` | `string` | built-in | Human usage hint exposed via MCP `instructions`. |
 
-## Transport layer options (via `startAdminServer`)
+## Transport layer options (`AttachMcpRoutesOptions`)
 
-The internal `attachMcpRoutes` function powers the admin server's HTTP transport.
-These options are configured through [`ServerConfig`](#serverconfig) fields when
-using `startAdminServer()`. The public `attachSseRoutes()` function accepts only
-positional `(app, specProvider, contextProvider, routeGuard?)` arguments.
+Import `attachMcpRoutes` from `@powerduck/openapi-mcp-server` and pass an options object as its second argument. The legacy `attachSseRoutes()` wrapper accepts only positional `(app, specProvider, contextProvider, routeGuard?)` arguments.
 
-| ServerConfig field | Type | Default | Description |
+| Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| `maxSessions` (internal) | `number` | 64 | Concurrent session cap. |
-| `sessionIdleMs` (internal) | `number` | 600000 | Idle reaper timeout; 0 disables. |
-| `allowedOrigins` | `string[]` | undefined | Allowed CORS origins; enables DNS-rebinding protection. |
+| `specProvider` | `SpecProvider` | — (required) | Supplies the document for new sessions. |
+| `contextProvider` | `ContextProvider` | — (required) | Supplies the upstream context for each call. |
+| `routeGuard` | `RequestHandler` | undefined | Middleware applied to every MCP route. |
+| `maxSessions` | `number` | 64 | Concurrent session cap. |
+| `sessionIdleMs` | `number` | 600000 | Idle timeout in milliseconds; 0 disables it. |
+| `allowedOrigins` | `string[]` | undefined | Allowed origins; a non-empty list enables DNS-rebinding protection. |
 | `allowedHosts` | `string[]` | undefined | Allowed `Host` header values. |
-| `enableLegacySse` (internal) | `boolean` | `true` | Mount the deprecated HTTP+SSE transport. |
+| `enableLegacySse` | `boolean` | `true` | Mount the deprecated HTTP+SSE transport. |
+| `onEvent` | `(event: McpSessionEvent) => void` | undefined | Receives lifecycle events; must never throw. |
 
-> These are implementation details of the admin server. For most use cases,
-> `startAdminServer(config)` with the documented `ServerConfig` fields is
-> sufficient. `attachMcpRoutes` itself is not exported from the package root.
+> These are options for `attachMcpRoutes`, not additional `ServerConfig` fields. The admin server forwards its origin and host settings, but uses the transport's default session limit and idle timeout. Use the public transport function directly when you need to customize those limits.
 
 ## See also
 

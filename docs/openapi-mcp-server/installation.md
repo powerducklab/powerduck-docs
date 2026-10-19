@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "Installation"
-description: "Installing @powerduck/openapi-mcp-server v1.3.0 via npm/yarn/pnpm or globally, the openapi-mcp CLI, the ./server subpath, Node >=20.11, and its runtime dependencies."
+description: "Installing @powerduck/openapi-mcp-server via npm/yarn/pnpm or globally, the openapi-mcp CLI, the ./server subpath, Node >=22.12.0, and its runtime dependencies."
 keywords: ["installation", "openapi-mcp", "cli", "global install", "subpath", "modelcontextprotocol"]
 ---
 
@@ -9,7 +9,7 @@ keywords: ["installation", "openapi-mcp", "cli", "global install", "subpath", "m
 
 ## Requirements
 
-- **Node.js `>=20.11`** (declared in `engines`).
+- **Node.js `>=22.12.0`** (declared in `engines`).
 
 ## Install
 
@@ -38,7 +38,7 @@ The package registers the `openapi-mcp` binary.
 npm install -g @powerduck/openapi-mcp-server
 
 # or run without installing
-npx openapi-mcp --help
+npx --package @powerduck/openapi-mcp-server openapi-mcp --help
 ```
 
 The CLI has a single `serve` command (see [Quickstart](./quickstart.md)).
@@ -78,7 +78,7 @@ These are installed automatically with the package:
 ## Verify
 
 ```bash
-npx openapi-mcp --help
+npx --package @powerduck/openapi-mcp-server openapi-mcp --help
 ```
 
 ## Next steps

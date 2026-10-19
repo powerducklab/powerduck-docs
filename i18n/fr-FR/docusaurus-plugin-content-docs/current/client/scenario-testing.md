@@ -58,12 +58,12 @@ Après exécution, vous pouvez exporter un **rapport HTML autonome**. Ce n'est p
 9. Português — Brasil (portugais — Brésil)
 10. العربية (arabe)
 
-Une option **Autre/personnalisé** permet de saisir directement une langue.
+L'option **Autre/personnalisé** accepte une autre langue, mais les libellés intégrés du rapport restent en anglais si aucune traduction n'existe. Saisir une langue ne traduit pas automatiquement le rapport.
 
-Le rapport est partageable en sécurité.
+Vérifiez le rapport exporté avant de le partager :
 
-- Les **identifiants sont masqués automatiquement**, donc jetons et clés n'apparaissent pas.
-- Les **grosses charges utiles sont repliées** pour garder le rapport lisible au lieu de tout coller.
+- **Les champs d'identifiants reconnus sont masqués automatiquement.** Les contenus arbitraires, URL et champs personnalisés peuvent encore contenir des données sensibles ; vérifiez-les et supprimez-les avant le partage ;
+- **Les contenus volumineux sont repliés** pour faciliter la lecture. Replier une section ne supprime pas ses données du HTML exporté.
 
 Le HTML est autonome : vous pouvez le joindre à un ticket ou l'archiver à chaque version.
 

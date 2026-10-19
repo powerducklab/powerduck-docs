@@ -52,7 +52,7 @@ Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenA
 
 - **Ihre echten Dateien.** Sie öffnen, bearbeiten und speichern echte Dateien auf der Festplatte und verfolgen lokale Änderungen.
 - **Keine CORS-Mauer.** Requests laufen über einen lokalen Prozess, nicht die WebView, daher blockieren Cross-Origin-Einschränkungen Aufrufe nicht.
-- **Prompts und Schlüssel privat.** Lokal verarbeitet, erscheinen sie nicht im Browser-Netzwerk-Panel.
+- **Sie wählen den Modellendpunkt.** Der Desktop-Client sendet Modellanfragen über den Hauptprozess; Prompts, relevanter Kontext und Zugangsdaten gehen trotzdem an den konfigurierten Anbieter. Lokale Arbeitsweise bedeutet nicht, dass entfernte KI-Anfragen keine Daten übertragen.
 - **Funktioniert offline.** Entwurf, Mocking und Doku brauchen kein Netzwerk; nur echte Requests, Git-Sync und gehostete Modelle.
 - **Lokal ausgeführte Umgebungen.** Mocks, Szenario-Runner, Datenbankzugriff und Terminal laufen auf Ihrer Maschine.
 

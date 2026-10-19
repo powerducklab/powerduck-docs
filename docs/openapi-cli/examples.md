@@ -72,7 +72,7 @@ Run only a subset of operations by method, tag, path regex, or operationId:
 # Only GET and POST requests
 openapi-cli --spec openapi.json --method get,post
 
-# Only operations tagged "public" and "v2"
+# Only operations tagged "public" or "v2"
 openapi-cli --spec openapi.json --tag public,v2
 
 # Only paths under /api/v2
@@ -82,17 +82,15 @@ openapi-cli --spec openapi.json --path "^/api/v2"
 openapi-cli --spec openapi.json --operation-id getUser,createUser
 ```
 
-Equivalent programmatic configuration:
+Programmatic configuration combining these filters (different filter categories are combined with AND; tags within one category are matched with OR):
 
 ```typescript
 const config = resolveConfig({
   spec: "./openapi.json",
-  filter: {
-    methods: ["get", "post"],
-    tags: ["public", "v2"],
-    paths: ["^/api/v2"],
-    operationIds: ["getUser", "createUser"],
-  },
+  method: "get,post",
+  tag: "public,v2",
+  path: "^/api/v2",
+  operationId: "getUser,createUser",
 });
 ```
 
@@ -170,7 +168,7 @@ Assertion types:
 
 ## 6. Postman scripts
 
-Embed a full Postman test script via `x-postman-scripts`:
+Embed a Postman-style test script via `x-postman-scripts`:
 
 ```json
 {
@@ -203,11 +201,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
       - run: npm ci
       - name: Run API tests
-        run: npx @powerduck/openapi-cli --spec openapi.json --server ${{ secrets.API_URL }} --output ./reports
+        run: npx @powerduck/openapi-cli --spec openapi.json --server "$API_URL" --bearer "$BEARER_TOKEN" --output ./reports
         env:
+          API_URL: ${{ secrets.API_URL }}
           BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
       - name: Upload reports
         if: always()
@@ -217,5 +216,4 @@ jobs:
           path: ./reports
 ```
 
-The CLI exits `1` on failure so the job fails automatically; use
-`--no-fail-on-error` when you only want reports without failing the pipeline.
+By default, failed tests return exit code `1`, and configuration or fatal runtime errors return `2`, so the CI job fails. Use `--no-fail-on-error` to keep a completed test run from failing the pipeline; it does not suppress configuration or fatal errors.

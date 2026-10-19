@@ -333,6 +333,7 @@ body {
 }
 
 .navbar__brand {
+  flex-shrink: 0;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: -0.02em;
@@ -353,6 +354,7 @@ body {
 }
 
 .navbar__link {
+  white-space: nowrap;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--muted);
@@ -958,4 +960,21 @@ body {
   .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
     padding: 1.5rem 1.25rem !important;
   }
+}
+
+/* Translation notices are secondary context, not warning alerts. */
+.translation-notice { margin-block: 0 1.5rem; padding: .85rem 1rem; border: 1px solid var(--line); border-radius: 8px; background: var(--bg-soft); color: var(--muted); font-size: .875rem; line-height: 1.6; }
+.translation-notice a { white-space: nowrap; margin-inline-start: .5rem; }
+/* Code direction is invariant; do not mirror it in the Arabic build. */
+/* rtl:begin:ignore */
+html[dir="rtl"] pre, html[dir="rtl"] code { direction: ltr; unicode-bidi: isolate; }
+html[dir="rtl"] pre { text-align: left; }
+/* rtl:end:ignore */
+
+/* Keep translated navigation on one line on small desktop viewports. */
+@media (min-width: 997px) and (max-width: 1199px) {
+  .navbar { padding-inline: .5rem; }
+  .navbar__link { padding-inline: .4rem; font-size: .8125rem; }
+  .navbar__items--right { gap: 0; }
+  .navbar__brand { margin-inline-end: .5rem; }
 }

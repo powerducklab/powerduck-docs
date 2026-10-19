@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "दस्तावेज़"
+  },
+  "link.title.Libraries": {
+    "message": "लाइब्रेरी"
+  },
+  "link.title.Community": {
+    "message": "समुदाय"
+  },
+  "link.title.Legal": {
+    "message": "कानूनी जानकारी"
+  },
+  "link.item.label.Overview": {
+    "message": "परिचय"
+  },
+  "link.item.label.Website": {
+    "message": "आधिकारिक वेबसाइट"
+  },
+  "link.item.label.Contact": {
+    "message": "संपर्क करें"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "गोपनीयता नीति"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "उपयोग की शर्तें"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "रिफ़ंड नीति"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

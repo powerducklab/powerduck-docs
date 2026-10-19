@@ -1,13 +1,13 @@
 ---
 sidebar_position: 5
 title: "API Reference"
-description: "Complete API reference for @powerduck/openapi-mcp-server v1.3.0: spec loading, tool/prompt/resource generation, request building and execution, MCP server and transports, admin server, auth, service registry, and the openapi-mcp CLI."
+description: "Complete API reference for @powerduck/openapi-mcp-server: spec loading, tool/prompt/resource generation, request building and execution, MCP server and transports, admin server, auth, service registry, and the openapi-mcp CLI."
 keywords: ["api reference", "generateTools", "buildMcpServer", "startStdioServer", "startAdminServer", "openapi-mcp"]
 ---
 
 # API Reference
 
-Every public export of `@powerduck/openapi-mcp-server` v1.3.0, grouped by area.
+Every public export of `@powerduck/openapi-mcp-server`, grouped by area.
 
 ## Spec loading
 
@@ -66,29 +66,25 @@ Type exports: `OperationEntry`, `DuplicateOperationId`.
 
 ## MCP server and transports
 
-| Export | Signature | Description |
-| --- | --- | --- |
+| Export | Description |
+| --- | --- |
 | `buildMcpServer(specProvider, contextProvider?, options?)` | Builds an SDK `Server` wiring tools/prompts/resources handlers. Positional. |
 | `startStdioServer(spec, context?, options?)` | Serve one document over stdio; returns `{ closed, close() }`. |
-| `attachSseRoutes(app, specProvider, contextProvider?, routeGuard?)` | Mount Streamable HTTP (`/mcp`) and legacy SSE (`/sse`) routes on an Express app. Returns `{ activeSessionCount, closeAll }`. |
+| `attachMcpRoutes(app, options)` | Mount Streamable HTTP (`/mcp`) and optional legacy SSE (`/sse`) routes. Accepts `AttachMcpRoutesOptions` and returns `McpRouteHandle`. |
+| `attachSseRoutes(app, specProvider, contextProvider, routeGuard?)` | Deprecated positional wrapper. Returns `{ activeSessionCount, closeAll }`. |
+| `createStreamableSessionHost(options)` | Creates a standalone Streamable HTTP session host for custom transport integrations. |
 
-Types: `SpecProvider = () => Document | null`, `ContextProvider = () => ExecutionContext`.
+Types: `SpecProvider = () => Document | null`, `ContextProvider = () => ExecutionContext`, `AttachMcpRoutesOptions`, `McpRouteHandle`, `StreamableSessionHost`, `StreamableSessionHostOptions`, `McpSessionEvent`, `McpSessionInfo`, `SessionCloseReason`, `SessionKind`.
 
-> For session limits (`maxSessions`), CORS origins (`allowedOrigins`), idle
-> reaping (`sessionIdleMs`), DNS-rebinding protection, and the fuller route
-> handle (`listSessions`, `closeSession`, `closeAll`, `dispose`), use
-> [`startAdminServer`](#admin-server-and-auth-server-subpath) which wraps the
-> internal `attachMcpRoutes` with all of those options. `attachMcpRoutes`
-> itself is an internal implementation detail and is not exported from the
-> package root.
+`attachMcpRoutes` is exported from the package root. Configure `maxSessions`, `allowedOrigins`, `sessionIdleMs` and DNS-rebinding protection in its options. The handle exposes `activeSessionCount`, `pendingSessionCount`, `listSessions`, `closeSession`, `closeAll` and `dispose`. Use `dispose()` during shutdown to stop the sweeper as well as close sessions.
 
-## Admin server and auth (`./server` subpath)
+## Admin server and auth (`./server` subpath) {#admin-server-and-auth-server-subpath}
 
-Import from `@powerduck/openapi-mcp-server/server`.
+Import `startAdminServer` from `@powerduck/openapi-mcp-server/server` or the package root. Import `createAuthMiddleware` from the package root; it is not exported by the `./server` subpath.
 
 | Export | Signature | Description |
 | --- | --- | --- |
-| `startAdminServer(config: ServerConfig)` | `Promise<AdminServerHandle>` | Start the Express admin app with Web UI + MCP routes. Returns `{ app, server, port, close() }`. |
+| `startAdminServer(config)` | `Promise<AdminServerHandle>` | Start the Express admin app with Web UI + MCP routes. Returns `{ app, server, port, close() }`. |
 | `createAuthMiddleware(apiKey?)` | `RequestHandler` | Bearer / `x-api-key` guard. Omit the key to disable. Positional. |
 
 ## Runtime and utilities
@@ -131,5 +127,5 @@ openapi-mcp serve [options]
 
 ## See also
 
-- [Configuration](./configuration.md)
-- [Examples](./examples.md)
+- [Configuration](../configuration/)
+- [Examples](../examples/)

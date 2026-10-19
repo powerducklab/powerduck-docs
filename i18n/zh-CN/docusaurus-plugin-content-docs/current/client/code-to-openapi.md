@@ -13,4 +13,4 @@ description: "从已有代码生成 OpenAPI"
 
 此流程需要桌面版，不同语言和框架支持范围不同。静态扫描无需模型 Key；未能确定的字段应保留未知状态。
 
-[Download desktop](https://www.powerduck.com/download.html) · [Quickstart](../overview/quickstart.md)
+[下载桌面客户端](https://www.powerduck.com/zh-CN/download/) · [快速入门](/docs/zh-CN/overview/quickstart/)

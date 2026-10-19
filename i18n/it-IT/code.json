@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "Navigazione principale"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Barra laterale della documentazione"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Espandi la categoria «{label}»"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Comprimi la categoria «{label}»"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(si apre in una nuova scheda)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Passa dalla modalità chiara a quella scura (attuale: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "modalità di sistema"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "modalità chiara"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "modalità scura"
+  }
+}

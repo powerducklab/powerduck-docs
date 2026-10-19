@@ -1,13 +1,13 @@
 ---
 sidebar_position: 6
 title: "Examples"
-description: "Runnable examples for @powerduck/openapi-request: HTTP with SendOptions, SSE streaming, WebSocket sessions, GraphQL operations, MCP tool calls, gRPC unary calls, and response write-back."
+description: "Integration examples for @powerduck/openapi-request: HTTP, SSE, WebSocket, GraphQL, MCP, gRPC, and response write-back."
 keywords: ["examples", "sse", "websocket", "graphql", "mcp", "grpc", "writeback", "openapi-request"]
 ---
 
 # Examples
 
-Practical recipes built from the public surface. All assume `spec` is a loaded OpenAPI 3.2 document.
+These integration examples use the public API. Supply a loaded OpenAPI 3.2 document as `spec`, with the operation IDs and paths used in each example. Replace example URLs, tokens and local file paths with your own. Network examples need a reachable service; they are not standalone mock servers.
 
 ## 1. HTTP request with SendOptions
 
@@ -44,7 +44,7 @@ const result = await dbg.send({
 });
 
 console.log(result.response.status);   // e.g. 200
-console.log(result.response.body);     // parsed response body
+console.log(result.response.body);     // body value returned by the adapter
 console.log(result.response.headers);  // response headers
 console.log(result.response.timings.durationMs); // request duration in ms
 ```
@@ -97,14 +97,15 @@ console.log(plan.stream.kind);   // "sse"
 console.log(plan.display.mode);   // "event-list"
 ```
 
-### Classify a live response
+### Probe a live endpoint
 
 ```typescript
 import { probeStreamingResponse } from "@powerduck/openapi-request";
 
-const response = await fetch(url);
-const kind = probeStreamingResponse(response);
-// Returns a StreamKind: "sse" | "ndjson" | "chunked" | "none" | ...
+const probe = await probeStreamingResponse("https://api.example.com/events");
+console.log(probe.kind, probe.status); // "sse" | "ndjson" | "chunked" | "none"
+// The probe performs a request; consume or cancel its response body.
+await probe.response.body?.cancel();
 ```
 
 ### Parse an SSE stream
@@ -112,9 +113,20 @@ const kind = probeStreamingResponse(response);
 ```typescript
 import { SseParser } from "@powerduck/openapi-request/http";
 
+const response = await fetch("https://api.example.com/events");
+if (!response.ok || !response.body) throw new Error("SSE response unavailable");
 const parser = new SseParser();
-for await (const event of parser.stream(bodyStream)) {
-  console.log(event.event, event.data);
+const reader = response.body.getReader();
+try {
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    for (const event of parser.push(value)) console.log(event.event, event.data);
+  }
+  for (const event of parser.flush()) console.log(event.event, event.data);
+} finally {
+  await reader.cancel();
+  reader.releaseLock();
 }
 ```
 
@@ -124,24 +136,22 @@ for await (const event of parser.stream(bodyStream)) {
 import { createManualSession } from "@powerduck/openapi-request";
 
 const session = createManualSession({
-  protocol: "websocket",
+  kind: "websocket",
   url: "wss://api.example.com/ws",
 });
 
-// Open the connection
-await session.open();
-
-// Subscribe to events
-const unsubscribe = session.subscribe((event) => {
-  console.log("Event:", event.type, event.data);
+// Subscribe before opening so connection events are included.
+const subscription = session.onEvent((event) => {
+  console.log("Event:", event.kind, event.data);
 });
-
-// Send a message
-await session.send({ type: "subscribe", channel: "updates" });
-
-// ... later
-await session.close();
-unsubscribe();
+try {
+  await session.open();
+  await session.send({ type: "subscribe", channel: "updates" });
+  // Keep the session open for as long as your application needs it.
+} finally {
+  await session.close();
+  subscription.unsubscribe();
+}
 ```
 
 ## 4. GraphQL operation
@@ -152,17 +162,27 @@ import {
   runGraphQL,
 } from "@powerduck/openapi-request/graphql";
 
-const config = {
-  endpoint: "https://api.example.com/graphql",
-  headers: { Authorization: `Bearer ${token}` },
-};
+const endpoint = "https://api.example.com/graphql";
+const headers = { Authorization: `Bearer ${token}` };
 
-// Introspect, generate operations, and write them into OpenAPI.
-await discoverAndWriteGraphQLSchema(config);
+// Returns a new spec; introspection must be enabled by the server.
+const discovered = await discoverAndWriteGraphQLSchema(spec, endpoint, { headers });
+console.log(discovered.spec, discovered.warnings);
 
-// Execute a query.
-const data = await runGraphQL(config, "GetUser", { id: "42" });
-console.log(data);
+// Execute an explicit query with a matching server schema.
+const result = await runGraphQL({
+  endpoint,
+  headers,
+  query: "query GetUser($id: ID!) { user(id: $id) { id name } }",
+  operationName: "GetUser",
+  variables: { id: "42" },
+  useGet: false,
+}, {
+  spec,
+  target: { operationId: "getUserById" },
+  timeout: 15000,
+});
+console.log(result.response.body);
 ```
 
 ## 5. MCP tool call (HTTP and stdio)
@@ -172,23 +192,30 @@ import { createManualSession } from "@powerduck/openapi-request";
 
 // Streamable HTTP
 const httpSession = createManualSession({
-  protocol: "mcp",
-  transport: "http",
-  url: "https://mcp.example.com/mcp",
+  kind: "mcp",
+  endpoint: "https://mcp.example.com/mcp",
   headers: { Authorization: `Bearer ${token}` },
 });
 
 // stdio child process
 const stdioSession = createManualSession({
-  protocol: "mcp",
+  kind: "mcp",
   transport: "stdio",
   command: "node",
   args: ["./mcp-server.js"],
 });
 
-await httpSession.open();
-await httpSession.send({ tool: "get_user", arguments: { id: "42" } });
-await httpSession.close();
+// Only the HTTP session is opened here. Opening stdioSession starts its process.
+try {
+  await httpSession.open();
+  const outcome = await httpSession.send({
+    method: "tools/call",
+    params: { name: "get_user", arguments: { id: "42" } },
+  });
+  console.log(outcome);
+} finally {
+  await httpSession.close();
+}
 ```
 
 ## 6. gRPC unary call
@@ -203,6 +230,8 @@ const result = await grpcCall({
   protoPaths: ["./protos/helloworld.proto"],
   metadata: { "x-tenant": "acme" },
   deadlineMs: 5000,
+}, {
+  messages: [{ name: "World" }],
 });
 
 console.log(result.messages); // decoded response(s)
@@ -232,18 +261,21 @@ const updated = writeBackResponse(
   fragment,
   {
     // Optional: WriteBackOptions
-    mergeExamples: true,
+    overwriteExamples: true,
   },
 );
 ```
+
+`writeBackResponse()` returns a modified copy; it does not save a file. Review captured examples before publishing them. Unlike the debugger send pipeline, this low-level function does not enforce `requirePassingTests`.
 
 ### Infer schema and sample from response
 
 ```typescript
 import { inferSchema, sampleFromSchema } from "@powerduck/openapi-request";
 
-// Infer a JSON Schema from the response body
-const schema = inferSchema(result.response.body);
+// Use this for JSON responses; handle parse errors for non-JSON bodies.
+const body = result.response.body;
+const schema = inferSchema(typeof body === "string" ? JSON.parse(body) : body);
 
 // Generate a realistic sample from the schema
 const sample = sampleFromSchema(schema);

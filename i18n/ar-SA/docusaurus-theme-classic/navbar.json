@@ -1,70 +1,57 @@
 {
   "title": {
-    "message": "Powerduck",
-    "description": "The title in the navbar"
+    "message": "Powerduck"
   },
   "logo.alt": {
-    "message": "Powerduck Logo",
-    "description": "The alt text of navbar logo"
+    "message": "Powerduck"
   },
   "item.label.Client": {
-    "message": "Client",
-    "description": "Navbar item with label Client"
+    "message": "تطبيق سطح المكتب"
   },
   "item.label.Cloud": {
     "message": "Cloud",
     "description": "Navbar item with label Cloud"
   },
   "item.label.Pricing": {
-    "message": "Pricing",
-    "description": "Navbar item with label Pricing"
+    "message": "الأسعار"
   },
   "item.label.Resources": {
-    "message": "Resources",
-    "description": "Navbar item with label Resources"
+    "message": "الموارد"
   },
   "item.label.Sign in": {
-    "message": "Sign in",
-    "description": "Navbar item with label Sign in"
+    "message": "تسجيل الدخول"
   },
   "item.label.Download": {
-    "message": "Download",
-    "description": "Navbar item with label Download"
+    "message": "تنزيل"
   },
   "item.label.Spec Editor": {
-    "message": "Spec Editor",
-    "description": "Navbar item with label Spec Editor"
+    "message": "محرر المواصفات"
   },
   "item.label.API Debug": {
-    "message": "API Debug",
-    "description": "Navbar item with label API Debug"
+    "message": "تصحيح أخطاء API"
   },
   "item.label.MCP Server": {
-    "message": "MCP Server",
-    "description": "Navbar item with label MCP Server"
+    "message": "خادم MCP"
   },
   "item.label.API Docs": {
-    "message": "API Docs",
-    "description": "Navbar item with label API Docs"
+    "message": "توثيق API"
   },
   "item.label.Hub": {
-    "message": "Hub",
-    "description": "Navbar item with label Hub"
+    "message": "Hub"
   },
   "item.label.Cloud Docs": {
-    "message": "Cloud Docs",
-    "description": "Navbar item with label Cloud Docs"
+    "message": "توثيق الخدمات السحابية"
   },
   "item.label.Documentation": {
-    "message": "Documentation",
-    "description": "Navbar item with label Documentation"
+    "message": "التوثيق"
   },
   "item.label.Live Demo": {
-    "message": "Live Demo",
-    "description": "Navbar item with label Live Demo"
+    "message": "عرض تجريبي"
   },
   "item.label.Open Source": {
-    "message": "Open Source",
-    "description": "Navbar item with label Open Source"
+    "message": "المصدر المفتوح"
+  },
+  "item.label.Blog": {
+    "message": "المدونة"
   }
 }

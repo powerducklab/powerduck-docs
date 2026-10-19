@@ -1,13 +1,13 @@
 ---
 sidebar_position: 2
 title: "Installation"
-description: "Installing @powerduck/openapi-request v0.2.4 via npm/yarn/pnpm, its subpath exports (./http, ./ws, ./grpc, ./mcp, ./graphql), and the optional gRPC and MCP capability packages."
+description: "Installing @powerduck/openapi-request via npm/yarn/pnpm, its subpath exports (./http, ./ws, ./grpc, ./mcp, ./graphql), and the optional gRPC and MCP capability packages."
 keywords: ["installation", "install", "subpath exports", "grpc-js", "modelcontextprotocol", "openapi-request"]
 ---
 
 # Installation
 
-`@powerduck/openapi-request` ships dual ESM and CommonJS builds with bundled TypeScript declarations.
+`@powerduck/openapi-request` ships dual ESM and CommonJS builds with bundled TypeScript declarations. Requires Node.js `>= 22.12.0`.
 
 ## Install
 

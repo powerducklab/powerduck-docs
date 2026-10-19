@@ -97,9 +97,7 @@ paths:
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# في نافذة طرفية أخرى، داخل المجلد نفسه:
 npm test
 ```
 

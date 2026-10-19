@@ -44,20 +44,16 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
-    "description": "The name for the system color mode"
+    "message": "وضع النظام"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "الوضع الفاتح",
-    "description": "The name for the light color mode"
+    "message": "الوضع الفاتح"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "الوضع الداكن",
-    "description": "The name for the dark color mode"
+    "message": "الوضع الداكن"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "التبديل بين الوضع الداكن والفاتح (الحالي {mode})",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "التبديل بين الوضع الفاتح والداكن (الحالي: {mode})"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "التنقل التفصيلي",
@@ -167,24 +163,20 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "توسيع فئة «{label}»"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "طي فئة «{label}»"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "(يفتح في علامة تبويب جديدة)"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "اللُغـات",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
-    "description": "The ARIA label for the main navigation"
+    "message": "التنقل الرئيسي"
   },
   "theme.NotFound.p1": {
     "message": "لم نتمكن من العثور على ما كنت تبحث عنه.",
@@ -239,8 +231,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "الشريط الجانبي للوثائق"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
     "message": "Expand the dropdown",

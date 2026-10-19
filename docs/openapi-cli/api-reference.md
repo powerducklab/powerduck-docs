@@ -6,8 +6,7 @@ description: "Every export of @powerduck/openapi-cli: functions, types, and the 
 
 # API Reference
 
-Complete API documentation for `@powerduck/openapi-cli` v0.2.3. All exports are
-available from the package root.
+API reference for the batch runner, scenario runner, configuration, assertions, and reporters in `@powerduck/openapi-cli`. The exports listed below are available from the package root.
 
 ## Exports overview
 
@@ -39,6 +38,17 @@ available from the package root.
 | `AuthConfig` | type | Authentication configuration |
 | `TlsConfig` | type | TLS / certificate configuration |
 | `FilterConfig` | type | Operation filter |
+| `collectOperations` | function | Collect operations with the batch filter applied |
+| `executeStep` | async function | Execute one operation with per-step overrides |
+| `buildSummary` | function | Calculate counts and pass rate from test results |
+| `formatAssertionError` | function | Convert an assertion error to readable text |
+| `buildImplicitAssertions` | function | Build protocol-specific default assertions |
+| `runScenario` | async function | Run ordered steps with shared variables and data-driven iterations |
+| `resolveSteps` | function | Resolve all scenario references before sending requests |
+| `applyExtracts` | function | Extract response values into string variables |
+| `stepRef` | function | Normalize a step reference |
+| `ScenarioDefinition`, `ScenarioStep`, `ScenarioStepRequest`, `ScenarioExtract` | types | Scenario input and extraction definitions |
+| `ScenarioStatus`, `ScenarioStepResult`, `ScenarioEvent`, `ScenarioEventType`, `ScenarioReport`, `RunScenarioOptions` | types | Scenario results, live events, and execution options |
 
 ## runTests
 
@@ -47,8 +57,7 @@ runTests(config: CliConfig): Promise<TestReport>
 ```
 
 Loads the spec with `loadSpec`, collects operations (honoring `config.filter`),
-executes them with bounded concurrency (`min(config.concurrency ?? 5,
-queue.length)`), runs declarative and Postman assertions, adds implicit protocol
+executes them with bounded concurrency (`min(config.concurrency ?? 5, queue.length)`), runs declarative and Postman assertions, adds implicit protocol
 assertions when no user assertions exist, sorts results by path then method,
 and returns a `TestReport`.
 
@@ -71,7 +80,7 @@ resolveConfig(args: CliArgs): CliConfig
 ```
 
 Merges `args` (CLI flags), an optional JSON config file (`args.config`), and
-`DEFAULT_CONFIG`. Loads `args.env` if present, then expands `${ENV_VAR}`
+`DEFAULT_CONFIG`. Loads the resolved `envFile` if present, then expands `${ENV_VAR}`
 references in `serverUrl`, `proxy`, header values, `auth.token`, and variable
 values. Throws `"No OpenAPI spec path provided..."` when no spec is given, and
 `Invalid proxy URL: <url>` when `proxy` is unparseable.
@@ -128,7 +137,7 @@ body is parsed as JSON and must be an object with a `paths` object. Internal
 isRemoteSpec(specPath: string): boolean
 ```
 
-Returns `true` when `specPath` matches `/^https?:\/\//i`.
+Returns `true` when the trimmed `specPath` matches `/^https?:\/\//i`.
 
 ## DEFAULT_CONFIG
 
@@ -211,6 +220,8 @@ interface DeclarativeAssertion {
 generateJsonReport(report: TestReport, outputDir: string): string
 ```
 
+The report may contain request headers, bodies, variables, and authentication settings; redact sensitive values before sharing or persisting it.
+
 Creates `outputDir` (recursively) and writes `report.json` as
 `JSON.stringify(report, null, 2)`. Returns the absolute file path.
 
@@ -254,6 +265,13 @@ interface TestResult {
   protocol: ProtocolName | string;
   status: TestStatus;
   durationMs: number;
+  request?: {
+    method?: string;
+    url?: string;
+    headers?: Record<string, string>;
+    body?: unknown;
+    target?: string;
+  };
   response?: {
     status?: number;
     statusText?: string;
@@ -295,7 +313,197 @@ interface AssertionResult {
 }
 ```
 
-## Implicit assertions
+## Scenario runner
+
+### runScenario
+
+```ts
+runScenario(definition: ScenarioDefinition, options: RunScenarioOptions): Promise<ScenarioReport>
+```
+
+Runs steps in order with a shared variable scope per scenario iteration. It resolves all operation references before execution and ignores the batch filter, so any operation in the spec may be targeted. Variables start from config and scenario values; extracted values become available to later steps. `stopOnFailure` defaults to `true`. `options.signal` cancels the run and remaining steps are reported as skipped; exceptions from `onEvent` listeners do not abort execution.
+
+Scenario-level `data` runs the whole sequence with a fresh scope per row. `iterations` can request additional repetitions; the effective count is the greater of the declared count and row count, with a maximum of 1000. Step-level `request.data` repeats that step and only the last execution's extracts persist into the shared scope.
+
+### Scenario types
+
+The following declarations describe scenario inputs and outputs. `ScenarioDataRow` and `ScenarioIterations` are supporting shapes shown here for clarity; they are not named exports from the package root. Their shapes are available through the public interfaces.
+
+```ts
+import type { RequestValues } from "@powerduck/openapi-request";
+
+interface ScenarioExtract {
+  name: string;
+  from: "body" | "header" | "status";
+  path?: string;
+  key?: string;
+}
+
+type ScenarioDataRow = Record<string, string>;
+
+interface ScenarioStepRequest {
+  values?: RequestValues;
+  serverUrl?: string;
+  extract?: ScenarioExtract[];
+  assertions?: DeclarativeAssertion[];
+  data?: ScenarioDataRow[];
+}
+
+interface ScenarioStep {
+  ref?: string;
+  method?: string;
+  path?: string;
+  name?: string;
+  request?: ScenarioStepRequest;
+  skip?: boolean;
+}
+
+interface ScenarioDefinition {
+  name: string;
+  description?: string;
+  steps: ScenarioStep[];
+  variables?: Record<string, string>;
+  stopOnFailure?: boolean;
+  data?: ScenarioDataRow[];
+  iterations?: number;
+}
+
+type ScenarioStatus = "passed" | "failed" | "error" | "cancelled";
+
+interface ScenarioStepResult extends TestResult {
+  index: number;
+  ref: string;
+  name?: string;
+  scenarioIteration?: number;
+  scenarioIterations?: number;
+  stepIteration?: number;
+  stepIterations?: number;
+  extracted?: Record<string, string>;
+  variablesAfter?: Record<string, string>;
+  notRun?: boolean;
+  notRunReason?: string;
+}
+
+type ScenarioEventType =
+  | "scenario:start"
+  | "step:start"
+  | "step:finish"
+  | "step:skip"
+  | "scenario:finish"
+  | "scenario:cancel";
+
+interface ScenarioEvent {
+  type: ScenarioEventType;
+  scenario: string;
+  stepIndex?: number;
+  step?: ScenarioStepResult;
+  status?: ScenarioStatus;
+  message?: string;
+  scenarioIteration?: number;
+  scenarioIterations?: number;
+  stepIteration?: number;
+  stepIterations?: number;
+}
+
+interface ScenarioIterations {
+  scenarioCount: number;
+  stepCounts: number[];
+}
+
+interface ScenarioReport {
+  name: string;
+  description?: string;
+  status: ScenarioStatus;
+  summary: TestSummary;
+  steps: ScenarioStepResult[];
+  variables: Record<string, string>;
+  iterations?: ScenarioIterations;
+  config: CliConfig;
+  startedAt: string;
+  durationMs: number;
+  generatedAt: string;
+  version: string;
+}
+
+interface RunScenarioOptions {
+  config: CliConfig;
+  spec?: unknown;
+  onEvent?: (event: ScenarioEvent) => void;
+  signal?: AbortSignal;
+}
+```
+
+### stepRef and resolveSteps
+
+```ts
+stepRef(step: ScenarioStep): string
+resolveSteps(definition: ScenarioDefinition, operations: OperationInfo[]): ResolvedStep[]
+```
+
+`stepRef` prefers an explicit `method` and `path`, otherwise normalizes `ref` while preserving a bare operationId. `resolveSteps` returns entries containing `step`, `op`, and the normalized `ref`; it throws if any reference cannot be found, including skipped steps.
+
+### applyExtracts
+
+```ts
+applyExtracts(extracts: ScenarioExtract[] | undefined, response: TestResult["response"]): Record<string, string>
+```
+
+Reads body values via JSONPath, headers case-insensitively, or the response status. Missing and null values are omitted; other values are converted to strings, with objects serialized as JSON.
+
+## Runner helpers
+
+The helper signatures use supporting types that are not named root exports. Infer them from the public functions instead of importing internal files:
+
+```ts
+import { collectOperations, executeStep, resolveSteps } from "@powerduck/openapi-cli";
+
+type OperationInfo = ReturnType<typeof collectOperations>[number];
+type StepExecutionOptions = Parameters<typeof executeStep>[2];
+type StepExecution = Awaited<ReturnType<typeof executeStep>>;
+type ResolvedStep = ReturnType<typeof resolveSteps>[number];
+```
+
+### collectOperations
+
+```ts
+collectOperations(spec: any, config: CliConfig): OperationInfo[]
+```
+
+Collects standard and additional operations, assigns an operationId fallback, infers each protocol, and applies `config.filter`. Each entry contains `path`, `method`, `operation`, `pathItem`, `operationId`, and `protocol`.
+
+### executeStep
+
+```ts
+executeStep(client: ReturnType<typeof createClient>, op: OperationInfo, options: StepExecutionOptions): Promise<StepExecution>
+```
+
+The `client` comes from `createClient` in `@powerduck/openapi-request`. Options require `config` and `spec`, with optional `signal`, `variables`, `values`, `serverUrl`, and `extraAssertions`. The result contains `result`, normalized `response`, optional `request`, and the script-produced variable scope `env`. Batch and scenario runners share this execution path.
+
+### buildSummary
+
+```ts
+buildSummary(results: TestResult[], durationMs: number): TestSummary
+```
+
+Counts passed, failed, error, and skipped results. The pass rate is passed divided by total, rounded to one decimal place; an empty result set has a rate of zero.
+
+### formatAssertionError
+
+```ts
+formatAssertionError(error: unknown): string | undefined
+```
+
+Returns a readable message from a string, Error, `message` or `msg` field, then falls back to serialization. Falsy input yields `undefined`.
+
+### buildImplicitAssertions
+
+```ts
+buildImplicitAssertions(protocol: string, response: TestResult["response"]): AssertionResult[]
+```
+
+Builds the checks listed under [Implicit assertions](#implicit-assertions). Unknown protocols produce no implicit checks.
+
+## Implicit assertions {#implicit-assertions}
 
 When an operation defines neither `x-tests` nor a Postman script, the runner
 adds one protocol-specific implicit assertion:
@@ -303,7 +511,7 @@ adds one protocol-specific implicit assertion:
 | Protocol | Implicit check |
 |----------|----------------|
 | `http`, `sse` | HTTP status is `2xx` |
-| `graphql` | HTTP status `2xx` **and** no top-level `errors` array |
+| `graphql` | HTTP status `2xx` **and** no non-empty top-level `errors` array |
 | `grpc` | gRPC status code is `0` (OK) |
 | `mcp` | JSON-RPC response has `result` and no `error` |
 | `websocket` | Connection reached `open` with no error event |

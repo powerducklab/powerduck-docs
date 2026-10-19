@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "Documentazione"
+  },
+  "link.title.Libraries": {
+    "message": "Librerie"
+  },
+  "link.title.Community": {
+    "message": "Community"
+  },
+  "link.title.Legal": {
+    "message": "Informazioni legali"
+  },
+  "link.item.label.Overview": {
+    "message": "Panoramica"
+  },
+  "link.item.label.Website": {
+    "message": "Sito ufficiale"
+  },
+  "link.item.label.Contact": {
+    "message": "Contatti"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Informativa sulla privacy"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Condizioni d’uso"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Politica di rimborso"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

@@ -8,7 +8,7 @@ description: "Mettez votre spécification OpenAPI en ligne en quelques minutes. 
 
 Powerduck Cloud transforme un fichier OpenAPI en quelque chose de **partageable**. Ajoutez votre spécification, choisissez ce qui est exposé, puis transmettez des liens stables vers la documentation rendue et un serveur MCP géré. Pas besoin d'auto-héberger ou d'exécuter quoi que ce soit.
 
-C'est le même flux contrat-d'abord et assisté par IA que le client de bureau, transporté en ligne pour les équipes et les consommateurs.
+Cloud reprend le fonctionnement du client de bureau, fondé sur le contrat API et assisté par l’IA, pour le proposer en ligne aux équipes et aux utilisateurs d’API. L’offre Free inclut l’hébergement de la documentation et de MCP dans la limite de ses quotas. Les offres payantes augmentent ces quotas et ajoutent les sources Git et les domaines personnalisés. Votre API métier reste exécutée sur votre propre backend.
 
 ## Le parcours
 
@@ -57,18 +57,18 @@ Connectez-vous avec **Google** ou **GitHub**. Après la poignée de main OAuth, 
 - **Hub** — publiez et explorez documents et serveurs MCP publics.
 - **Settings** et **Activity** — profil, préférences, journal d'audit.
 
-Les lecteurs publics utilisent un visualiseur dédié et n'ont pas besoin de compte si le document n'exige pas de mot de passe.
+Les lecteurs publics utilisent un visualiseur dédié et n'ont pas besoin de créer un compte Powerduck. Si un mot de passe de consultation est défini, ils doivent le saisir. Ce mot de passe est distinct d'une connexion à un compte.
 
 ## Cloud versus client de bureau
 
 | | Client de bureau | Cloud |
 |---|---|---|
 | Exécution | Votre machine | Hébergé |
-| Modèle | Licence perpétuelle achat unique | Abonnement mensuel |
-| Résultat | Clé de licence (affichée une fois) | Adhésion, pas de clé |
+| Modèle | Licence perpétuelle achat unique | Offre gratuite et abonnements payants |
+| Résultat | Clé de licence (affichée une fois) | Droits liés à l’offre, sans clé de licence |
 | Quand | Local, hors ligne, espace complet | Partage et publication en ligne |
 
-Les deux se complètent et sont vendus séparément. Voir [Facturation](./billing.md).
+Les deux produits sont complémentaires. Cloud propose une offre Free ; les abonnements Cloud payants et les licences de bureau s’achètent séparément. Voir [Facturation](./billing.md).
 
 ## Commencez ici
 

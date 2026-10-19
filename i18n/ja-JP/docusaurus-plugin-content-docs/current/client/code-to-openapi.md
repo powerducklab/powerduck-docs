@@ -13,4 +13,4 @@ description: "既存コードから OpenAPI を生成する"
 
 デスクトップ専用です。言語やフレームワークによって対応範囲が異なります。静的スキャンにモデルキーは不要です。不明な項目を推測で確定しないでください。
 
-[Download desktop](https://www.powerduck.com/download.html) · [Quickstart](../overview/quickstart.md)
+[デスクトップ版をダウンロード](https://www.powerduck.com/ja/download/) · [クイックスタート](/docs/ja-JP/overview/quickstart/)

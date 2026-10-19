@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "Examples"
-description: "Server selector, custom theming, and core-only usage."
+description: "Skip automatic upgrades, use the core without React, customize themes, and understand rendering performance limits."
 ---
 
 # Examples

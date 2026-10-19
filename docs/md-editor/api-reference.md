@@ -121,7 +121,7 @@ class Renderer {
 }
 ```
 
-- **`constructor(options?)`** — builds a markdown-it instance with `linkify: true` and `typographer: true`, then conditionally registers math, mindmap, code-highlight, tips, task-list, doc-link, mention, and video plugins.
+- **`constructor(options?)`** — builds a markdown-it instance with `linkify: true` and `typographer: true`, conditionally enables math, mindmap, code highlighting, and tips, and always registers task-list, doc-link, mention, and video plugins.
 - **`render(source)`** — synchronously renders source to an HTML string.
 - **`hydrate(container)`** — after the HTML is inserted into the DOM, hydrates mindmap placeholders into SVG diagrams. No-op when mindmaps are disabled; failures are swallowed.
 
@@ -131,7 +131,7 @@ class Renderer {
 function renderMarkdown(source: string, options?: RendererOptions): string;
 ```
 
-Creates a throwaway `Renderer` and returns `renderer.render(source)`. Use this to render markdown consistently without mounting an editor.
+Creates a temporary `Renderer` and renders the source. When `theme` is set, wraps the result in a themed container; `Renderer.render` itself does not add this wrapper. Use this to render Markdown without mounting an editor.
 
 ### `interface RendererOptions`
 
@@ -143,6 +143,7 @@ interface RendererOptions {
   tips?: boolean;       // default true
   html?: boolean;       // default false
   breaks?: boolean;     // default false
+  theme?: 'light' | 'dark'; // wrapper added by renderMarkdown only
 }
 ```
 
@@ -184,8 +185,21 @@ class StatusBar {
   destroy(): void;
 }
 
+interface StatusBarState {
+  charCount: number;
+  wordCount: number;
+  blockCount: number;
+  mode: 'simple' | 'complex';
+  autoPreview: boolean;
+}
+interface StatusBarCallbacks {
+  onRefreshPreview: () => void;
+}
+
 function countText(value: string): { charCount: number; wordCount: number };
 ```
+
+`StatusBarState` and `StatusBarCallbacks` describe the accepted shapes but are not re-exported from the main entry.
 
 - **`countText(value)`** — returns `charCount` (the raw string length) and `wordCount` (whitespace-split tokens after trimming).
 - **`StatusBar.update(state)`** — displays `chars · words`, a render-block count, and a "Refresh preview" button that only appears when `autoPreview` is off.
@@ -231,6 +245,12 @@ interface SourceBlock {
 ## Scheduling utilities
 
 ```ts
+interface DebouncedFn<A extends unknown[]> {
+  (...args: A): void;
+  cancel(): void;
+  flush(): void;
+}
+
 function debounce<A extends unknown[]>(
   fn: (...args: A) => void,
   wait: number,
@@ -242,8 +262,10 @@ function scheduleIdle(callback: () => void, timeout?: number): number;
 function cancelIdle(handle: number): void;
 ```
 
+`DebouncedFn` describes the return value but is not re-exported from the main entry.
+
 - **`debounce(fn, wait)`** — trailing-edge debounce. The returned function also has `.cancel()` and `.flush()`.
-- **`adaptiveDebounceMs(docLength, base = 120, max = 600)`** — returns `min(max, base + floor(docLength / 20000) * 60)`.
+- **`adaptiveDebounceMs(docLength, base = 120, max = 600)`** — returns `min(max, base + floor(max(0, docLength) / 20000) * 60)`.
 - **`scheduleIdle(callback, timeout = 300)`** — uses `requestIdleCallback` when available, otherwise `setTimeout(0)`.
 - **`cancelIdle(handle)`** — cancels the scheduled idle callback.
 

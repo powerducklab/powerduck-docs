@@ -58,12 +58,12 @@ Beim Export wählen Sie die Sprache; zehn sind eingebaut.
 9. Português — Brasil (Portugiesisch — Brasilien)
 10. العربية (Arabisch)
 
-Eine Option **Sonstiges/Benutzerdefiniert** erlaubt die direkte Spracheingabe.
+Mit **Andere/Benutzerdefiniert** können Sie eine weitere Sprache eingeben. Fehlt eine Übersetzung, bleiben die eingebauten Berichtsbeschriftungen jedoch englisch; die Eingabe einer Sprache übersetzt den Bericht nicht automatisch.
 
-Der Bericht ist sicher teilbar.
+Prüfen Sie den exportierten Bericht vor dem Teilen:
 
-- **Anmeldedaten werden automatisch maskiert**, daher erscheinen Token und Schlüssel nicht.
-- **Große Nutzlasten sind eingeklappt**, um den Bericht statt alles einzufügen lesbar zu halten.
+- **Bekannte Felder mit Zugangsdaten werden automatisch maskiert.** Beliebige Nutzdaten, URLs und benutzerdefinierte Felder können weiterhin sensible Daten enthalten. Prüfen und entfernen Sie diese vor dem Teilen;
+- **Große Nutzdaten werden eingeklappt**, damit der Bericht lesbar bleibt. Das Einklappen entfernt keine Daten aus der exportierten HTML-Datei.
 
 Das HTML ist eigenständig: an Tickets anhängen oder pro Release archivieren.
 

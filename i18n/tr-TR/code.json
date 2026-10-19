@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "Ana gezinme"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Belge kenar çubuğu"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "“{label}” kategorisini genişlet"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "“{label}” kategorisini daralt"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(yeni sekmede açılır)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Açık ve koyu mod arasında geçiş yap (geçerli: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "sistem modu"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "açık mod"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "koyu mod"
+  }
+}

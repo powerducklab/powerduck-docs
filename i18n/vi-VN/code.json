@@ -1,0 +1,29 @@
+{
+  "theme.NavBar.navAriaLabel": {
+    "message": "Điều hướng chính"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Thanh bên tài liệu"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Mở rộng danh mục “{label}”"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Thu gọn danh mục “{label}”"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(mở trong thẻ mới)"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Chuyển giữa chế độ sáng và tối (hiện tại: {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "chế độ hệ thống"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "chế độ sáng"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "chế độ tối"
+  }
+}

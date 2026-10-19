@@ -1,0 +1,114 @@
+[
+  {
+    "code": "en-US",
+    "docs": "en",
+    "web": "en",
+    "label": "English (US)",
+    "rtl": false
+  },
+  {
+    "code": "es-ES",
+    "docs": "es-ES",
+    "web": "es",
+    "label": "Español",
+    "rtl": false
+  },
+  {
+    "code": "fr-FR",
+    "docs": "fr-FR",
+    "web": "fr",
+    "label": "Français",
+    "rtl": false
+  },
+  {
+    "code": "de-DE",
+    "docs": "de-DE",
+    "web": "de",
+    "label": "Deutsch",
+    "rtl": false
+  },
+  {
+    "code": "pt-BR",
+    "docs": "pt-BR",
+    "web": "pt-BR",
+    "label": "Português (Brasil)",
+    "rtl": false
+  },
+  {
+    "code": "ja-JP",
+    "docs": "ja-JP",
+    "web": "ja",
+    "label": "日本語",
+    "rtl": false
+  },
+  {
+    "code": "ko-KR",
+    "docs": "ko-KR",
+    "web": "ko-KR",
+    "label": "한국어",
+    "rtl": false
+  },
+  {
+    "code": "zh-CN",
+    "docs": "zh-CN",
+    "web": "zh-CN",
+    "label": "简体中文",
+    "rtl": false
+  },
+  {
+    "code": "zh-TW",
+    "docs": "zh-TW",
+    "web": "zh-TW",
+    "label": "繁體中文",
+    "rtl": false
+  },
+  {
+    "code": "it-IT",
+    "docs": "it-IT",
+    "web": "it-IT",
+    "label": "Italiano",
+    "rtl": false
+  },
+  {
+    "code": "ru-RU",
+    "docs": "ru-RU",
+    "web": "ru-RU",
+    "label": "Русский",
+    "rtl": false
+  },
+  {
+    "code": "ar-SA",
+    "docs": "ar-SA",
+    "web": "ar-SA",
+    "label": "العربية",
+    "rtl": true
+  },
+  {
+    "code": "hi-IN",
+    "docs": "hi-IN",
+    "web": "hi-IN",
+    "label": "हिन्दी",
+    "rtl": false
+  },
+  {
+    "code": "id-ID",
+    "docs": "id-ID",
+    "web": "id-ID",
+    "label": "Bahasa Indonesia",
+    "rtl": false
+  },
+  {
+    "code": "vi-VN",
+    "docs": "vi-VN",
+    "web": "vi-VN",
+    "label": "Tiếng Việt",
+    "rtl": false
+  },
+  {
+    "code": "tr-TR",
+    "docs": "tr-TR",
+    "web": "tr-TR",
+    "label": "Türkçe",
+    "rtl": false
+  }
+]

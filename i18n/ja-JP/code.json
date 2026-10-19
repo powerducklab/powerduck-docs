@@ -44,20 +44,16 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "システムモード",
-    "description": "The name for the system color mode"
+    "message": "システム設定"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "ライトモード",
-    "description": "The name for the light color mode"
+    "message": "ライトモード"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "ダークモード",
-    "description": "The name for the dark color mode"
+    "message": "ダークモード"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "ダークモードを切り替える(現在は{mode})",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "ダークモードとライトモードを切り替える（現在：{mode}）"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "パンくずリストのナビゲーション",
@@ -167,20 +163,16 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "'{label}'の目次を開く",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "「{label}」カテゴリを展開"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "'{label}'の目次を隠す",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "「{label}」カテゴリを折りたたむ"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "（新しいタブで開く）"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "ナビゲーション",
-    "description": "The ARIA label for the main navigation"
+    "message": "メインナビゲーション"
   },
   "theme.NotFound.p1": {
     "message": "お探しのページが見つかりませんでした",
@@ -231,8 +223,7 @@
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "ドキュメントのサイドバー",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "ドキュメントのサイドバー"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "サイドバーを隠す",

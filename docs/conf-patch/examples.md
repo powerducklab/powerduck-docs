@@ -91,6 +91,8 @@ await setConfigValue("config.yaml", ["features", "darkMode"], true);
 Use numeric segments for sequence indexes. `add` **inserts**, `replace` replaces in place, `remove` deletes:
 
 ```typescript
+import { patchConfigFile } from "@powerduck/conf-patch";
+
 await patchConfigFile("config.yaml", [
   { op: "add", path: ["plugins", 1], value: { name: "metrics", enable: true } },
   { op: "replace", path: ["plugins", 0, "enable"], value: false },
@@ -170,7 +172,7 @@ try {
 }
 
 // (b) Validate from a file (requires allowedRootDirectory)
-const fileDoc = await validateOpenAPIFile("./openapi.yaml", {
+const fileDoc = await validateOpenAPIFile("./configs/openapi.yaml", {
   allowedRootDirectory: "./configs",
   // Optional hardening:
   // timeoutMs: 10000,
@@ -184,7 +186,7 @@ Cancellation via `AbortSignal`:
 const controller = new AbortController();
 setTimeout(() => controller.abort(), 5000);
 
-await validateOpenAPISpec(content, { signal: controller.signal }).catch(
+await validateOpenAPISpec(specContent, { signal: controller.signal }).catch(
   (error) => {
     // Throws OpenApiValidationError with code "OPERATION_ABORTED" on abort.
     console.error(error.code);
@@ -228,10 +230,19 @@ Notes:
 - On shutdown (e.g. Electron `will-quit`), release outstanding locks:
 
 ```typescript
+import { app } from "electron";
 import { releaseAllLocalLocks } from "@powerduck/conf-patch";
 
-app.on("will-quit", async () => {
-  await releaseAllLocalLocks();
+let locksReleased = false;
+app.on("will-quit", (event) => {
+  if (locksReleased) return;
+  event.preventDefault();
+  void releaseAllLocalLocks()
+    .catch((error) => console.error("Lock cleanup failed", error))
+    .finally(() => {
+      locksReleased = true;
+      app.quit();
+    });
 });
 ```
 

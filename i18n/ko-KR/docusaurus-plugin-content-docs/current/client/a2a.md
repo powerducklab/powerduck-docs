@@ -97,9 +97,7 @@ React 저장소의 `examples/a2a-demo`는 숫자를 더하는 서비스입니다
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# 다른 터미널에서 같은 디렉터리로 이동하여 실행:
 npm test
 ```
 

@@ -21,13 +21,13 @@ Get the installer for your platform from the [Powerduck website](https://www.pow
 ## macOS
 
 1. Open the `.dmg` and drag Powerduck into **Applications**.
-2. On first launch, macOS may ask you to confirm that you want to open an app downloaded outside the App Store. Allow it from the dialog, or right-click the app and choose **Open**.
+2. On first launch, macOS may ask you to confirm an app downloaded outside the App Store. Verify that it came from the official download page before opening it; do not disable system security checks.
 3. Two builds are published: an `arm64` build for Apple Silicon (M-series) and an `x64` build for Intel Macs. Download the one that matches your machine.
 
 ## Windows
 
 1. Run the NSIS installer (`.exe`) and follow the setup steps.
-2. If SmartScreen shows an unrecognized-publisher prompt, choose **More info** and **Run anyway**.
+2. If SmartScreen shows an unrecognized-publisher prompt, first check that the installer came from the official download page. Continue only after verifying the source; do not bypass the warning for an untrusted download.
 
 ## Linux
 
@@ -48,11 +48,11 @@ The desktop client is an Electron application with two parts:
 - A **main process** (Node.js) that owns file access, outbound HTTP requests, the local mock server, database connections, and the integrated terminal;
 - A **renderer** (the React workspace) that renders the specification, the AI chat, and every tool.
 
-This split matters for security and reliability: requests that need network or filesystem access are handled by the main process, not the web view, so prompts and API keys do not appear in the browser console and direct browser-to-provider CORS restrictions do not apply. See [AI and models](../client/ai-models.md).
+The desktop AI transport sends completion requests through the main process, so browser-to-provider CORS restrictions do not apply. Prompts, relevant context, and credentials are still sent to the model endpoint you configure; using a hosted model is not an offline operation. This process boundary is not a guarantee that secrets can never appear in logs or developer tools. See [AI and models](../client/ai-models.md).
 
 ## System requirements
 
-- A current release of macOS, Windows 10 or later, or a mainstream Linux desktop distribution;
+- macOS 11 or later, Windows 10 or later, or a mainstream Linux desktop distribution compatible with Electron 37;
 - Enough disk for the application; the specifications you open remain in their original locations;
 - Network access only when you send requests, sync a Git source, or call a hosted AI model — the app otherwise works offline.
 

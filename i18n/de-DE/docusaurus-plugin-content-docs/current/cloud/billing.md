@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Abrechnung
-description: "Die Cloud ist ein Monatsabonnement und der Desktop eine dauerhafte Einmalkauflizenz. Verstehen Sie Pläne und Berechtigungen, die Wahl des Zahlungsanbieters und den Abonnementlebenszyklus."
+description: "Unterschiede zwischen der unbefristeten Desktop-Lizenz, dem kostenlosen Cloud-Plan und bezahlten Abonnements: Kontingente, Nutzungsrechte und Zahlung."
 ---
 
 # Abrechnung
@@ -10,9 +10,9 @@ Powerduck hat zwei getrennte Kaufmodelle, die sich nicht mischen.
 
 | | Desktop-Client | Powerduck Cloud |
 |---|---|---|
-| Kauf | Einmalig | Monatsabonnement |
+| Kauf | Einmalig | Kostenloser Plan oder kostenpflichtiges Abonnement |
 | Erhalten | Dauerhafter Lizenzschlüssel | Gehostete Mitgliedschaft |
-| Ablauf | Keiner | Erneuerung am Periodenende |
+| Ablauf | Keiner | Kostenloser Zugang oder bezahlter Abrechnungszeitraum |
 | Nach Kauf gezeigt | Schlüssel einmal | Kein Schlüssel |
 
 ## Desktop-Lizenz
@@ -28,7 +28,7 @@ Das bleibt vollständig vom Cloud-Abonnement getrennt: Ein Cloud-Abo kaufen erze
 
 ## Cloud-Abonnement
 
-Die Cloud ist ein monatlich abonnierter Hosting-Dienst.
+Cloud bietet den **Free-Plan** mit Dokumentations- und MCP-Hosting sowie bezahlte Abonnements. Pro ergänzt höhere Kontingente, Git-Quellen und eigene Domains; Team unterstützt mehrere Mitglieder. Ein Lizenzschlüssel ist nicht erforderlich.
 
 - **Pro** — 19 $/Monat.
 - **Team** — 49 $/Monat.
@@ -43,12 +43,14 @@ Fähigkeiten werden über **Berechtigungen** entschieden, nicht durch Plan-Code-
 | Berechtigung | Free | Pro | Team |
 |---|---|---|---|
 | Dokument-Hosting | Ja | Ja | Ja |
+| MCP | Ja | Ja | Ja |
 | Git-Quelle | Nein | Ja | Ja |
 | Benutzerdefinierte Domain | Nein | Ja | Ja |
-| Max. Dokumente | 3 | 20 | 100 |
-| Max. Versionen/Dokument | 3 | 100 | 500 |
+| Max. Dokumente | 3 | 100 | 1,000 |
+| Max. Versionen/Dokument | 20 | 200 | 1,000 |
 | Max. bereitgestellte Operationen | 10 | 1.000 | 10.000 |
-| Max. Upload-Größe | 1 MB | 10 MB | 50 MB |
+| Max. Upload-Größe | 1 MiB | 10 MiB | 50 MiB |
+| Max. Mitglieder | 1 | 1 | 10 |
 
 ## Zahlungsanbieter
 
@@ -89,4 +91,4 @@ Die Abrechnungsseite trennt beide.
 
 Wie jede Host-Ressource gehören Zahlungen und Abonnements einer **Organisation** und werden mit Organisationsbereich abgefragt, daher kann ein Nutzer mit einer anderen Organisations-ID die Bestellungen eines anderen Teams nicht lesen.
 
-Siehe auch: [Cloud-Einführung](./introduction.md)、[Benutzerdefinierte Domains](./custom-domains.md).
+Siehe auch: [Cloud-Einführung](./introduction.md), [Benutzerdefinierte Domains](./custom-domains.md).

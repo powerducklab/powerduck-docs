@@ -13,6 +13,6 @@ description: "让编程 Agent 读取并验证 OpenAPI"
 4. 先让 Agent 读取接口及响应 schema，再修改后端。修改后调用 `run_contract_tests`，显式传入真实后端的本地 `baseUrl`。
 5. 审查断言结果及代码补丁，接受修改后重新验证。
 
-开发者 MCP 需要 Node.js 20.11+。Agent 可能向其远程模型发送代码上下文和工具结果。手动请求和契约验证无需模型；自带 Key 由模型提供者计费，托管模型额度另行计费。本地功能不需要购买 Cloud。
+开发者 MCP 需要 Node.js 22.12.0+。Agent 可能向其远程模型发送代码上下文和工具结果。手动请求和契约验证无需模型；自带 Key 由模型提供者计费，托管模型额度另行计费。本地功能不需要购买 Cloud。
 
-[Download desktop](https://www.powerduck.com/download.html) · [Quickstart](../overview/quickstart.md)
+[下载桌面客户端](https://www.powerduck.com/zh-CN/download/) · [快速入门](/docs/zh-CN/overview/quickstart/)

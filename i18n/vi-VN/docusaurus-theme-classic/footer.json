@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "Tài liệu"
+  },
+  "link.title.Libraries": {
+    "message": "Thư viện"
+  },
+  "link.title.Community": {
+    "message": "Cộng đồng"
+  },
+  "link.title.Legal": {
+    "message": "Thông tin pháp lý"
+  },
+  "link.item.label.Overview": {
+    "message": "Tổng quan"
+  },
+  "link.item.label.Website": {
+    "message": "Trang web chính thức"
+  },
+  "link.item.label.Contact": {
+    "message": "Liên hệ"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Chính sách quyền riêng tư"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Điều khoản sử dụng"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Chính sách hoàn tiền"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

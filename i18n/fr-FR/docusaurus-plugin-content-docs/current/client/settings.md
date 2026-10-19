@@ -11,14 +11,16 @@ Les réglages du client de bureau couvrent l'apparence de l'application et la fa
 ## Apparence
 
 - **Thème** — basculez entre clair et sombre (`theme.get`, `theme.set`) ; le changement s'applique à toute l'application et est persisté.
-- **Langue de l'interface** — choisissez parmi dix langues ou suivez le système automatiquement.
+- **Langue de l’interface** — choisissez parmi seize langues ou suivez automatiquement la langue du système :
 
 | | | |
 |---|---|---|
 | English (US) | 简体中文 | 繁體中文 |
 | 日本語 | 한국어 | Français |
 | Deutsch | Español | Português (Brasil) |
-| العربية | | |
+| العربية | Italiano | Русский |
+| हिन्दी | Bahasa Indonesia | Tiếng Việt |
+| Türkçe | | |
 
 L'arabe se rend de droite à gauche. Le choix `auto` suit la langue du système.
 

@@ -97,9 +97,7 @@ React 倉庫的 `examples/a2a-demo` 提供求和服務，不需 AI 金鑰或外�
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# 在另一個終端機中，切換至同一目錄：
 npm test
 ```
 

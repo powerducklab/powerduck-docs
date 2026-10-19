@@ -1,13 +1,13 @@
 ---
 sidebar_position: 4
 title: "API Reference"
-description: "Complete API reference for @powerduck/x-to-openapi v0.2.2: XToOpenApi, AdapterRegistry, CurlAdapter, PostmanAdapter, curlToOpenApi, postmanToOpenApi, schema utilities, validation, and every type and diagnostic code."
+description: "API reference for @powerduck/x-to-openapi: conversion, adapters, schema inference, discovery IR, validation, options and diagnostics."
 keywords: ["x-to-openapi API", "XToOpenApi", "curlToOpenApi", "postmanToOpenApi", "ConvertOptions", "ConvertResult", "Diagnostic"]
 ---
 
 # API Reference
 
-Complete reference for `@powerduck/x-to-openapi` **v0.2.2**. Every public export from the package entry point is documented with its exact signature and defaults.
+Reference for the public entry point of `@powerduck/x-to-openapi`. Signatures below summarize the API; use the package TypeScript declarations for complete readonly annotations and imported types.
 
 ---
 
@@ -100,7 +100,7 @@ The single entry point.
 **Behavior:**
 
 1. Resolves options against [`DEFAULT_OPTIONS`](#default_options) and validates them.
-2. Rejects inputs larger than **10 MB** with a `ConversionError`.
+2. Rejects strings, or combined string elements in an array, longer than **10 × 1024 × 1024 JavaScript string code units** with a `ConversionError`. This is not a UTF-8 byte limit; parsed objects are not measured.
 3. Selects the adapter (explicit id, or `"auto"` detection).
 4. Parses the input into `NormalizedRequest[]` (parse failures become diagnostics).
 5. Builds the OpenAPI 3.2 document via [`buildOpenApi32`](#buildopenapi32).
@@ -166,7 +166,7 @@ class AdapterRegistry {
 
 ### `ConversionError`
 
-Thrown in `strict` mode (or on oversized input). Carries the diagnostics that caused the failure.
+Thrown for error-severity diagnostics in `strict` mode, oversized string input, or failed automatic adapter selection. It carries diagnostics when available; the list can be empty. Invalid options and registration errors can instead throw `TypeError` or `Error`.
 
 ```typescript
 class ConversionError extends Error {
@@ -216,7 +216,7 @@ class CurlAdapter implements SourceAdapter<string | readonly string[]> {
 - `canHandle` accepts a string (or first array element) that begins with an optional shell prompt (`$`, `#`, `>`) followed by `curl` or `curl.exe`.
 - `parse` splits multi-command input via [`splitCurlCommands`](#splitcurlcommands), skips non-HTTP(S) URLs, drops HTTP/2 pseudo-headers, parses bodies and cookies, and infers auth.
 
-> The adapter module also exposes `resolveBackend`, `availableExports`, and `resetBackend` for its internal curlconverter integration; these are **not** re-exported from the package entry point.
+> `resolveBackend`, `availableExports`, and `resetBackend` are internal integration helpers, not supported package exports. Import the public adapter rather than internal files.
 
 ---
 
@@ -267,17 +267,16 @@ A namespace holding every Postman collection type used by the adapter:
 ```typescript
 import { PostmanTypes } from "@powerduck/x-to-openapi";
 
-PostmanTypes.PostmanCollection;
-PostmanTypes.PostmanItem;
-PostmanTypes.PostmanFolder;
-PostmanTypes.PostmanRequestItem;
-PostmanTypes.PostmanRequest;
-PostmanTypes.PostmanBody;
-PostmanTypes.PostmanBodyMode;
-PostmanTypes.PostmanAuth;
-PostmanTypes.PostmanEvent;
-PostmanTypes.PostmanScript;
-// ... plus isFolder and isRequestItem type guards
+type Collection = PostmanTypes.PostmanCollection;
+type Item = PostmanTypes.PostmanItem;
+type Request = PostmanTypes.PostmanRequest;
+type Body = PostmanTypes.PostmanBody;
+type Auth = PostmanTypes.PostmanAuth;
+type Script = PostmanTypes.PostmanScript;
+
+// Runtime type guards are functions; the other members are TypeScript types.
+const isFolder = PostmanTypes.isFolder;
+const isRequestItem = PostmanTypes.isRequestItem;
 ```
 
 Key members: `PostmanCollection`, `PostmanInfo`, `PostmanVersion`, `PostmanItem`, `PostmanFolder`, `PostmanRequestItem`, `PostmanRequest`, `PostmanHeader`, `PostmanUrl`, `PostmanQueryParam`, `PostmanBodyMode`, `PostmanBody`, `PostmanUrlEncodedParam`, `PostmanFormDataParam`, `PostmanFileParam`, `PostmanGraphQLBody`, `PostmanAuthType`, `PostmanAuth`, `PostmanAuthParam`, `PostmanEvent`, `PostmanScript`, `PostmanVariable`, `PostmanDescription`, `isFolder`, `isRequestItem`.
@@ -470,7 +469,7 @@ interface ConvertOptions {
 | `includeCookies` | `boolean` | `false` | Emit cookies as parameters. |
 | `includeExamples` | `boolean` | `false` | Populate schema/parameter examples from observed values. |
 | `useServerBasePath` | `boolean` | `false` | Collapse the common path prefix into `servers[0].url` when all requests share one origin. |
-| `validate` | `boolean` | `true` | Validate the output document. Failures are diagnostics, not throws. |
+| `validate` | `boolean` | `true` | Validate the output document. Validation errors become diagnostics; strict mode can turn them into exceptions. |
 | `strict` | `boolean` | `false` | Throw `ConversionError` on any error-severity diagnostic. |
 
 `ResolvedConvertOptions` is `Required<ConvertOptions> & { openapiVersion: "3.2.0" }`.
@@ -539,7 +538,7 @@ interface Diagnostic {
 
 `DiagnosticCode` is a string union of every code the framework can report:
 
-`ADAPTER_PARSE_FAILED`, `CURL_PARSE_FAILED`, `CURL_EMPTY_INPUT`, `CURL_CAPABILITY_MISSING`, `CURL_BACKEND_JSON_FALLBACK`, `CURL_UNSUPPORTED_SCHEME`, `POSTMAN_INVALID_COLLECTION`, `POSTMAN_EMPTY_COLLECTION`, `POSTMAN_UNSUPPORTED_BODY_MODE`, `POSTMAN_VARIABLE_UNRESOLVED`, `BODY_JSON_INVALID`, `PATH_MERGE_CONFLICT`, `OPERATION_ID_COLLISION`, `PSEUDO_HEADER_DROPPED`, `MULTIPLE_SERVERS`, `NO_REQUESTS`, `OAS_VALIDATION_ERROR`, `OAS_VALIDATOR_FAILED`.
+`ADAPTER_PARSE_FAILED`, `CURL_PARSE_FAILED`, `CURL_EMPTY_INPUT`, `CURL_CAPABILITY_MISSING`, `CURL_BACKEND_JSON_FALLBACK`, `CURL_UNSUPPORTED_SCHEME`, `POSTMAN_INVALID_COLLECTION`, `POSTMAN_EMPTY_COLLECTION`, `POSTMAN_UNSUPPORTED_BODY_MODE`, `POSTMAN_VARIABLE_UNRESOLVED`, `BODY_JSON_INVALID`, `PATH_MERGE_CONFLICT`, `OPERATION_ID_COLLISION`, `PSEUDO_HEADER_DROPPED`, `MULTIPLE_SERVERS`, `NO_REQUESTS`, `OAS_VALIDATION_ERROR`, `OAS_VALIDATOR_FAILED`, `DISCOVERY_COMPONENT_NOT_FOUND`, `DISCOVERY_COMPONENT_NAME_COLLISION`, `DISCOVERY_PATH_PARAM_MISMATCH`, `DISCOVERY_MEDIA_WITHOUT_SCHEMA`, `DISCOVERY_RESPONSE_MISSING`, `DISCOVERY_SECURITY_SCHEME_MISSING`, `DISCOVERY_GAP`, `DISCOVERY_PATH_CONFLICT`.
 
 ---
 
@@ -585,6 +584,67 @@ interface SourceAdapter<I = unknown> {
 
 ---
 
+## Discovery IR conversion
+
+### `discoveryToOpenApi`
+
+Converts a supplied `DiscoveredProject` into OpenAPI 3.2. It does not scan source files itself. Unresolved routes produce warnings and are never silently added to `paths`; source locations and confidence remain available in the returned project.
+
+```typescript
+function discoveryToOpenApi(
+  project: DiscoveredProject,
+  options?: DiscoveryOptions,
+): Promise<DiscoveryResult>;
+
+interface DiscoveryOptions {
+  openapiVersion?: "3.2.0";
+  allowGaps?: boolean; // default true
+  validate?: boolean; // default true
+}
+
+interface DiscoveryResult {
+  readonly document: OpenApiDocument;
+  readonly project: DiscoveredProject;
+  readonly diagnostics: Diagnostic[];
+  readonly ok: boolean;
+  readonly documentValid: boolean;
+}
+```
+
+`allowGaps: false` promotes operation/schema gap diagnostics to errors; it is not a strict-mode exception switch. Always check `ok`, `documentValid`, and `diagnostics`. Unresolved-route warnings are reported separately. With validation disabled, `documentValid` is true without a schema-validation pass.
+
+### `buildDiscoveryOpenApi32`
+
+Low-level synchronous builder for the same IR. It reports diagnostics through the supplied callback and does not run document validation. Prefer the asynchronous wrapper when you need validation and a complete result object.
+
+```typescript
+function buildDiscoveryOpenApi32(
+  project: DiscoveredProject,
+  allowGaps: boolean,
+  report: (diagnostic: Diagnostic) => void,
+): OpenApiDocument;
+```
+
+Discovery types exported from the main entry include `Confidence`, `GapCode`, `SourceLocation`, `JsonSchema`, `DiscoveredParameter`, `DiscoveredMediaType`, `DiscoveredRequestBody`, `DiscoveredResponse`, `DiscoveredOperation`, `DiscoveredComponent`, `DiscoveredSecurityScheme`, `DiscoveredServer`, `DiscoveredUnresolved`, `DiscoveredProject`, `DiscoveryOptions`, and `DiscoveryResult`.
+
+```typescript
+import { discoveryToOpenApi } from "@powerduck/x-to-openapi";
+
+const discovered = await discoveryToOpenApi({
+  title: "Health API",
+  operations: [{
+    method: "get",
+    path: "/health",
+    responses: [{ statusCode: "204", description: "Healthy", confidence: "high" }],
+    confidence: "high",
+    origin: { file: "src/routes.ts", line: 1 },
+  }],
+});
+console.log(discovered.ok, discovered.documentValid, discovered.diagnostics);
+```
+
+---
+
 ## Export summary
 
 | Symbol | Kind |
@@ -607,8 +667,11 @@ interface SourceAdapter<I = unknown> {
 | `jsonSchema` | function |
 | `mergeSchemas` | function |
 | `Schema` | type |
+| `discoveryToOpenApi` | function |
+| `buildDiscoveryOpenApi32` | function |
 | `validateOpenApi32` | function |
 | `validateOpenApiDocument` | function (alias) |
 | `OpenApiDocument` | type |
 | `OpenApi32Document` | type |
+| `DiscoveredProject`, `DiscoveryOptions`, `DiscoveryResult` | types |
 | `ConvertOptions`, `ConvertResult`, `NormalizedRequest`, `SourceAdapter`, `AdapterContext`, `Diagnostic`, `DiagnosticCode`, `Severity`, `Header`, `ParameterValue`, `FormField`, `BodyKind`, `RequestBody`, `RequestAuth`, `JsonObject`, `ResolvedConvertOptions` | types |

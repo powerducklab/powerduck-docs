@@ -27,7 +27,7 @@ interface GenerateOptions {
 
 | Option | Type | Required | Description |
 |--------|------|----------|-------------|
-| `language` | `string` | **yes** | Target language identifier (case-sensitive), e.g. `"javascript"` |
+| `language` | `string` | **yes** | Target language identifier (case-insensitive), e.g. `"javascript"` |
 | `client` | `string` | **yes** | Target HTTP client identifier, e.g. `"fetch"` |
 | `request` | `RequestIR` | one of* | A pre-normalized request; skips `normalize` |
 | `document` | `unknown` | one of* | A parsed OpenAPI document object |

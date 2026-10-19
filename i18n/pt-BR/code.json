@@ -44,20 +44,16 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "modo do sistema",
-    "description": "The name for the system color mode"
+    "message": "modo do sistema"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "modo claro",
-    "description": "The name for the light color mode"
+    "message": "modo claro"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "modo escuro",
-    "description": "The name for the dark color mode"
+    "message": "modo escuro"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Mudar entre modo claro e escuro ({mode} está ativo)",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "Alternar entre os modos claro e escuro (atual: {mode})"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Trilha",
@@ -167,20 +163,16 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expandir a categoria '{label}'",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "Expandir a categoria “{label}”"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Recolher a categoria '{label}'",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "Recolher a categoria “{label}”"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "(abre em uma nova aba)"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Navegação principal",
-    "description": "The ARIA label for the main navigation"
+    "message": "Navegação principal"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Línguas",
@@ -239,8 +231,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Painel lateral de documentos",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "Barra lateral da documentação"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Fechar painel de navegação",

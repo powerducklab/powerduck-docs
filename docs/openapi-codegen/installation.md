@@ -1,14 +1,14 @@
 ---
 sidebar_position: 2
 title: Installation
-description: "Install @powerduck/openapi-codegen with npm, yarn, or pnpm, and use it in Node.js or the browser. Requires Node.js >= 18."
+description: "Install @powerduck/openapi-codegen with npm, yarn, or pnpm, and use it in Node.js or the browser. Requires Node.js >= 22.12.0."
 ---
 
 # Installation
 
 ## Requirements
 
-- **Node.js**: `>= 18.0.0` (declared in the package `engines` field) for Node.js
+- **Node.js**: `>= 22.12.0` (declared in the package `engines` field) for Node.js
   usage.
 - A **parsed** OpenAPI document as a JavaScript object (not a raw JSON/YAML
   string).
@@ -59,6 +59,15 @@ from an ESM CDN and call it directly:
 ```html
 <script type="module">
   import { generate, list } from "https://esm.sh/@powerduck/openapi-codegen";
+
+  const document = {
+    openapi: "3.1.0",
+    info: { title: "Example API", version: "1.0.0" },
+    servers: [{ url: "https://api.example.com" }],
+    paths: {
+      "/hello": { get: { responses: { "200": { description: "OK" } } } },
+    },
+  };
 
   const code = generate({
     document,

@@ -1,0 +1,35 @@
+{
+  "link.title.Docs": {
+    "message": "Документация"
+  },
+  "link.title.Libraries": {
+    "message": "Библиотеки"
+  },
+  "link.title.Community": {
+    "message": "Сообщество"
+  },
+  "link.title.Legal": {
+    "message": "Правовая информация"
+  },
+  "link.item.label.Overview": {
+    "message": "Обзор"
+  },
+  "link.item.label.Website": {
+    "message": "Официальный сайт"
+  },
+  "link.item.label.Contact": {
+    "message": "Связаться с нами"
+  },
+  "link.item.label.Privacy Policy": {
+    "message": "Политика конфиденциальности"
+  },
+  "link.item.label.Terms of Service": {
+    "message": "Условия использования"
+  },
+  "link.item.label.Refund Policy": {
+    "message": "Политика возврата средств"
+  },
+  "copyright": {
+    "message": "© 2026 POWERDUCK LIMITED."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "Ứng dụng máy tính"
+  },
+  "item.label.Pricing": {
+    "message": "Bảng giá"
+  },
+  "item.label.Resources": {
+    "message": "Tài nguyên"
+  },
+  "item.label.Sign in": {
+    "message": "Đăng nhập"
+  },
+  "item.label.Download": {
+    "message": "Tải xuống"
+  },
+  "item.label.Spec Editor": {
+    "message": "Trình chỉnh sửa đặc tả"
+  },
+  "item.label.API Debug": {
+    "message": "Gỡ lỗi API"
+  },
+  "item.label.MCP Server": {
+    "message": "Máy chủ MCP"
+  },
+  "item.label.API Docs": {
+    "message": "Tài liệu API"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Tài liệu dịch vụ đám mây"
+  },
+  "item.label.Documentation": {
+    "message": "Tài liệu"
+  },
+  "item.label.Live Demo": {
+    "message": "Bản demo trực tuyến"
+  },
+  "item.label.Open Source": {
+    "message": "Mã nguồn mở"
+  },
+  "item.label.Blog": {
+    "message": "Blog"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

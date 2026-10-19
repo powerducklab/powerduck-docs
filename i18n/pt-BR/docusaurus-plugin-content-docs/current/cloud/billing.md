@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Faturação
-description: "A nuvem é uma subscrição mensal e o desktop uma licença perpétua de compra única. Entenda planos e autorizações, a escolha do fornecedor de pagamento e o ciclo de vida da subscrição."
+description: "Entenda as diferenças entre a licença perpétua de desktop, o plano gratuito do Cloud e as assinaturas pagas, incluindo limites, permissões e formas de pagamento."
 ---
 
 # Faturação
@@ -10,9 +10,9 @@ Powerduck tem dois modelos de compra separados que não se misturam.
 
 | | Cliente de desktop | Powerduck Cloud |
 |---|---|---|
-| Compra | Única | Subscrição mensal |
-| Recebe | Chave de licença perpétua | Membresia hospedada |
-| Caducidade | Nenhuma | Renovação no fim do período |
+| Compra | Única | Plano gratuito ou assinatura paga |
+| Recebe | Chave de licença perpétua | Assinatura hospedada |
+| Validade | Nenhuma | Acesso gratuito ou período de cobrança pago |
 | Mostrado após comprar | Chave uma vez | Sem chave |
 
 ## Licença de desktop
@@ -24,17 +24,17 @@ O cliente de desktop vende-se como licença perpétua de compra única.
 - Estados: `ISSUED`, `ACTIVE`, `SUSPENDED`, `REVOKED`. Perpétuo não significa impossível de revogar.
 - A chave vincula-se a uma organização e a ativação tem limite de taxa.
 
-Isto permanece totalmente separado da subscrição da Cloud: comprar uma subscrição da Cloud não gera uma chave de licença.
+Isto permanece totalmente separado da assinatura da Cloud: comprar uma assinatura da Cloud não gera uma chave de licença.
 
-## Subscrição da Cloud
+## Assinatura da Cloud
 
-A nuvem é um serviço de alojamento com subscrição mensal.
+O Cloud oferece um **plano Free** com hospedagem de documentação e MCP, além de assinaturas pagas. O Pro inclui limites maiores, fontes Git e domínios personalizados; o Team permite vários membros. Não é necessária uma chave de licença.
 
 - **Pro** — 19 $/mês.
 - **Team** — 49 $/mês.
 - **Free** — 0 $, com limites.
 
-A subscrição tem períodos e renova-se no fim do período atual.
+A assinatura tem períodos e renova-se no fim do período atual.
 
 ### Planos e autorizações
 
@@ -42,13 +42,15 @@ As capacidades decidem-se por **autorizações**, não comparando códigos de pl
 
 | Autorização | Free | Pro | Team |
 |---|---|---|---|
-| Alojamento de documentos | Sim | Sim | Sim |
+| Hospedagem de documentos | Sim | Sim | Sim |
+| MCP | Sim | Sim | Sim |
 | Fonte Git | Não | Sim | Sim |
 | Domínio personalizado | Não | Sim | Sim |
-| Máx. documentos | 3 | 20 | 100 |
-| Máx. versões/documento | 3 | 100 | 500 |
+| Máx. documentos | 3 | 100 | 1,000 |
+| Máx. versões/documento | 20 | 200 | 1,000 |
 | Máx. operações expostas | 10 | 1.000 | 10.000 |
-| Máx. tamanho de subida | 1 MB | 10 MB | 50 MB |
+| Máx. tamanho do upload | 1 MiB | 10 MiB | 50 MiB |
+| Máx. membros | 1 | 1 | 10 |
 
 ## Fornecedor de pagamento
 
@@ -65,28 +67,28 @@ Ambos os fornecedores não aparecem ao mesmo tempo ao pagar; Paddle fica como re
 1. Escolher plano e iniciar o pagamento.
 2. Redirecionar ao fornecedor.
 3. Voltar após o pagamento: a página de retorno verifica o estado do pedido.
-4. Um webhook confirma o pagamento e ativa a subscrição.
+4. Um webhook confirma o pagamento e ativa a assinatura.
 
 Os pedidos tratam-se de forma **idempotente**, para que o mesmo pagamento não se aplique duas vezes.
 
-## Ciclo de vida da subscrição
+## Ciclo de vida da assinatura
 
 - **Upgrade** — efeito imediato; a diferença rateada calcula-se segundo o valor restante do período.
 - **Downgrade** — efeito no fim do período atual (assinalado antes).
 - **Cancelar** — caduca no fim do período; o cancelamento passa por confirmações repetidas com alternativas.
-- **Caducidade** — volta aos limites Free após o fim do período.
+- **Validade** — volta aos limites Free após o fim do período.
 
 Cancelar não tira o acesso logo; conserva o serviço até ao fim do período.
 
-## Pedidos e membresia
+## Pedidos e assinatura
 
 A página de faturação separa ambos.
 
-- **Membresia/subscrição** — plano atual, estado, fim do período, renovação.
+- **Assinatura/assinatura** — plano atual, estado, fim do período, renovação.
 - **Pedidos** — compras passadas e histórico de pagamento.
 
 ## Verificação de autorização
 
 Como qualquer recurso hospedado, os pagamentos e subscrições pertencem a uma **Organização** e consultam-se com âmbito de organização, por isso um utilizador com outro ID de organização não pode ler os pedidos doutra equipe.
 
-Veja também: [Introdução à Cloud](./introduction.md)、[Domínios personalizados](./custom-domains.md).
+Veja também: [Introdução à Cloud](./introduction.md), [Domínios personalizados](./custom-domains.md).

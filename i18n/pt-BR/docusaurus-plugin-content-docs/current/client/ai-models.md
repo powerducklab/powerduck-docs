@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: IA e modelos
-description: "Conecte um modelo compatível com OpenAI, mantenha instruções e chaves locais pelo processo principal, use chamada de função nativa com fallback automático e conserve o mesmo fluxo na web."
+description: "Configure modelos compatíveis com OpenAI e entenda os transportes desktop e web, a alternativa para chamadas de ferramentas e os dados enviados ao provedor."
 ---
 
 # IA e modelos
 
-A capacidade do assistente depende do modelo subjacente, por isso Powerduck não o fixa a um fornecedor concreto. Você escolhe e configura o modelo, a app chama-o por uma rota local segura, e cada mudança passa pelos mesmos cartões revisáveis.
+O Powerduck permite escolher e configurar o modelo do assistente. No desktop, as solicitações passam pelo processo principal até o endpoint escolhido; mudanças no documento continuam sendo apresentadas em cartões para revisão.
 
 ## Trazer um modelo
 
@@ -16,7 +16,7 @@ Nos ajustes, configure o assistente para qualquer endpoint de Chat Completions *
 - Aporte nome visível, URL base, chave API e ID de modelo.
 - Configure vários perfis e escolha entre eles.
 
-A app não assume que o modelo venha de um fornecedor concreto. Os endpoints auto-hospedados ou de terceiros compatíveis funcionam igual, importante para equipas com estratégia própria de modelos.
+Nenhum provedor específico é obrigatório. Endpoints compatíveis com OpenAI, próprios ou de terceiros, funcionam da mesma forma, permitindo que equipes sigam sua política de modelos.
 
 ## Funções avançadas e fallback elegante
 
@@ -25,20 +25,20 @@ Cada perfil tem um interruptor de **funções avançadas**, ativado por defeito.
 - Ativado, a app usa a **chamada de função nativa** do modelo: envia o catálogo de ferramentas pela rede e deixa o modelo escolher e chamar diretamente a ferramenta adequada.
 - Se um endpoint rejeita argumentos de ferramentas nativos — modelos pequenos sem suporte — esse endpoint lembra-se e faz-se uma única retentativa por um **protocolo de fallback baseado em conteúdo**.
 
-O objetivo é devolver sempre um resultado: os modelos potentes tomam a rota nativa precisa, os modelos sem ferramentas baixam a um protocolo mais simples em vez de perder o turno. Pode desativar funções avançadas para perfis que devam usar sempre a rota base.
+A alternativa melhora a compatibilidade, mas não garante sucesso: erros de rede, autenticação e modelo ainda podem ocorrer. Desative os recursos avançados se um perfil precisar usar sempre o modo básico.
 
-O trabalho impulsionado por ferramentas também tem limites: o agente executa um número limitado de turnos (3 por defeito) e deduplica chamadas para que uma ferramenta não corra duas vezes em ciclo.
+O uso de ferramentas tem limites: o agente executa um número limitado de rodadas, três por padrão, e elimina chamadas repetidas na mesma execução.
 
 ## Porquê encaminhar pelo processo principal
 
 No desktop, a requisição completa emite-a o **processo principal Node**, não a WebView. Duas vantagens concretas.
 
 - **Sem muro CORS do navegador.** As restrições cross-origin da web não bloqueiam as chamadas ao endpoint do modelo.
-- **Instruções e chaves fora da consola.** URL, cabeçalhos de autenticação, instrução do sistema e lista de ferramentas não aparecem no painel de rede do renderer.
+- **A solicitação HTTP ocorre fora do renderer.** Seu painel de rede não mostra a comunicação HTTP do processo principal. Isso não garante que prompts ou chaves estejam ausentes da memória do renderer, de logs ou de outras ferramentas de desenvolvimento.
 
-O gateway está deliberadamente restrito, não é um proxy aberto.
+O gateway desktop valida a estrutura das solicitações e aplica limites de recursos:
 
-- Valida destinos (loopback e hosts permitidos), saneia cabeçalhos e evita a injeção de quebras de linha por cabeçalhos de resposta.
+- Aceita apenas URLs HTTP(S); verifica nomes e valores de cabeçalhos, tamanho do corpo, tempos limite e solicitações simultâneas. Endpoints locais e privados são permitidos. Isso não é uma lista de hosts autorizados nem uma garantia de privacidade do provedor;
 - As requisições são canceláveis (`ai:cancel`).
 
 ## Desktop e web
@@ -58,7 +58,7 @@ Adicionar uma capacidade significa adicionar uma ferramenta ao catálogo (com de
 
 ## Privacidade
 
-- No desktop, as chaves API e instruções permanecem locais e não se expõem ao renderer.
+- Prompts, contexto selecionado, descrições de ferramentas e credenciais são enviados ao endpoint do modelo configurado. Um provedor hospedado recebe esses dados; use um endpoint local confiável se sua política exigir inferência local;
 - O host determinista, não o modelo, valida e aplica cada mudança.
 - Toda escrita recebe a sua aprovação antes de executar.
 

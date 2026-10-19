@@ -10,7 +10,7 @@ This guide walks you through testing your first OpenAPI document.
 
 ## Prerequisites
 
-- Node.js `>= 18.17`.
+- Node.js `>= 22.12.0`.
 - An OpenAPI 3.2 **JSON** document (YAML is not accepted — convert it to JSON
   first). The document must contain a top-level `paths` object.
 

@@ -21,13 +21,13 @@ Holen Sie das Installationsprogramm für Ihre Plattform von der [Powerduck-Websi
 ## macOS
 
 1. Öffnen Sie das `.dmg` und ziehen Sie Powerduck in **Programme**.
-2. Beim ersten Start fragt macOS möglicherweise nach Bestätigung für eine außerhalb des App Stores geladene App. Erlauben Sie im Dialog, oder rechtsklicken Sie die App und wählen **Öffnen**.
+2. Beim ersten Start kann macOS die Öffnung einer außerhalb des App Store geladenen App bestätigen lassen. Prüfen Sie zuvor, dass sie von der offiziellen Downloadseite stammt; deaktivieren Sie keine Sicherheitsprüfungen des Systems.
 3. Zwei Builds sind veröffentlicht: `arm64` für Apple Silicon (M-Serie) und `x64` für Intel-Macs. Laden Sie den passenden.
 
 ## Windows
 
 1. Starten Sie das NSIS-Installationsprogramm (`.exe`) und folgen der Einrichtung.
-2. Wenn SmartScreen einen nicht erkannten Herausgeber meldet, wählen Sie **Weitere Informationen**, dann **Ausführen**.
+2. Meldet SmartScreen einen unbekannten Herausgeber, prüfen Sie zuerst, ob das Installationsprogramm von der offiziellen Downloadseite stammt. Fahren Sie erst nach Prüfung der Quelle fort; umgehen Sie die Warnung nicht bei einem nicht vertrauenswürdigen Download.
 
 ## Linux
 
@@ -48,11 +48,11 @@ Der Desktop-Client ist eine Electron-App aus zwei Teilen.
 - Der **Hauptprozess** (Node.js), der Dateizugriff, externe HTTP-Requests, den lokalen Mock-Server, Datenbankverbindungen und das integrierte Terminal verwaltet.
 - Der **Renderer** (der React-Arbeitsbereich), der Spec, KI-Chat und Werkzeuge anzeigt.
 
-Diese Trennung zählt für Sicherheit und Zuverlässigkeit. Requests mit Netzwerk- und Dateisystemzugriff behandelt der Hauptprozess, nicht die WebView: Prompts und API-Schlüssel erscheinen nicht in der Browser-Konsole, und direkte Browser-CORS-Einschränkungen zum Anbieter greifen nicht. Siehe [KI und Modelle](../client/ai-models.md).
+Die KI-Anfragen des Desktop-Clients werden über den Hauptprozess gesendet; CORS-Beschränkungen zwischen Browser und Anbieter greifen daher nicht. Prompts, relevanter Kontext und Zugangsdaten werden dennoch an den konfigurierten Modellendpunkt übertragen. Ein gehostetes Modell arbeitet nicht offline. Die Prozessgrenze garantiert auch nicht, dass Geheimnisse niemals in Protokollen oder Entwicklerwerkzeugen erscheinen. Siehe [KI und Modelle](../client/ai-models.md).
 
 ## Systemanforderungen
 
-- Aktuelles macOS, Windows 10 oder neuer oder eine größere Linux-Desktop-Distribution.
+- macOS 11 oder neuer, Windows 10 oder neuer oder eine gängige Linux-Desktop-Distribution, die mit Electron 37 kompatibel ist.
 - Genügend Speicherplatz für die App. Geöffnete Specs bleiben an ihrem Ursprungsort.
 - Netzwerk nur für das Senden von Requests, die Synchronisierung von Git-Quellen oder den Aufruf gehosteter KI-Modelle nötig; der Rest funktioniert offline.
 

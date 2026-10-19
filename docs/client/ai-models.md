@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: AI & Models
-description: "Bring any OpenAI-compatible model, keep prompts and keys local through the main process, use native function calling with automatic fallback, and keep the same workflow on the web."
+description: "Configure an OpenAI-compatible model, understand desktop and web transports, use native tool calling with fallback, and review what data is sent to your provider."
 ---
 
 # AI & Models
 
-The assistant is only as good as the model behind it, so Powerduck does not lock you into one. You choose and configure the model, the application calls it through a secure local path, and every change still goes through the same reviewable cards.
+Powerduck lets you choose and configure the model behind the assistant. On desktop, requests pass through the main process to your chosen endpoint; document changes still use reviewable cards.
 
 ## Bring your own model
 
@@ -25,20 +25,20 @@ Each profile has an **advanced capabilities** option, enabled by default:
 - When enabled, the app uses the model's **native function calling** and sends the tool catalog over the wire, so the model can select and call the right tool directly;
 - If an endpoint rejects native tool parameters — for example, a smaller model that lacks tool support — that endpoint is remembered, and the request is retried once over a **content-based fallback protocol**.
 
-The goal is that a result always comes back: capable models get the precise native path, and models without tool support degrade to a simpler protocol rather than failing the turn. You can turn advanced capabilities off for a profile that should always use the basic path.
+This fallback improves compatibility but does not guarantee success: network, authentication, and model errors can still occur. Turn advanced capabilities off for a profile that should always use the basic path.
 
-Tool-driven work is also bounded: the agent runs a limited number of tool rounds (three by default) and de-duplicates calls, so a tool is never executed twice in a loop.
+Tool-driven work is bounded: the agent uses a limited number of tool rounds (three by default) and deduplicates repeated calls within the run.
 
 ## Why requests go through the main process
 
 On the desktop client, completion requests are sent from the **Node main process**, not from the web view. This has two concrete benefits:
 
 - **No browser CORS wall.** The cross-origin restrictions that apply to a web page do not block calls to a model endpoint;
-- **Prompts and keys stay out of the browser console.** The request URL, authorization header, system prompt, and tool list are not visible in the renderer's network panel.
+- **The HTTP request runs outside the renderer.** Its network panel does not show the main-process HTTP exchange. This is not a guarantee that prompts or keys are absent from renderer memory, logs, or other developer tools.
 
-The gateway is deliberately constrained rather than acting as an open proxy:
+The desktop gateway validates request structure and applies resource limits:
 
-- Targets are validated (loopback and permitted hosts), request headers are sanitized, and response splitting through headers is prevented;
+- Only HTTP(S) URLs are accepted; header names and values, body size, timeouts, and concurrent requests are checked. Local and private endpoints are allowed. This is not a host allowlist or an upstream privacy guarantee;
 - Requests can be cancelled (`ai:cancel`).
 
 ## Desktop versus web
@@ -58,7 +58,7 @@ Adding a capability then means adding a tool to the catalog (and describing it a
 
 ## Privacy posture
 
-- On desktop, your API key and prompts remain local and are not exposed to the renderer;
+- Prompts, selected context, tool descriptions, and credentials are sent to your configured model endpoint. A hosted provider receives that data; use a trusted local endpoint if your policy requires local inference;
 - The deterministic host — not the model — validates and applies every change;
 - You approve each write before it runs.
 

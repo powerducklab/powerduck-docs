@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "Masaüstü uygulaması"
+  },
+  "item.label.Pricing": {
+    "message": "Fiyatlandırma"
+  },
+  "item.label.Resources": {
+    "message": "Kaynaklar"
+  },
+  "item.label.Sign in": {
+    "message": "Giriş yap"
+  },
+  "item.label.Download": {
+    "message": "İndir"
+  },
+  "item.label.Spec Editor": {
+    "message": "Spesifikasyon düzenleyici"
+  },
+  "item.label.API Debug": {
+    "message": "API hata ayıklayıcısı"
+  },
+  "item.label.MCP Server": {
+    "message": "MCP sunucusu"
+  },
+  "item.label.API Docs": {
+    "message": "API belgeleri"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Bulut belgeleri"
+  },
+  "item.label.Documentation": {
+    "message": "Belgeler"
+  },
+  "item.label.Live Demo": {
+    "message": "Çevrimiçi demo"
+  },
+  "item.label.Open Source": {
+    "message": "Açık kaynak"
+  },
+  "item.label.Blog": {
+    "message": "Blog"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

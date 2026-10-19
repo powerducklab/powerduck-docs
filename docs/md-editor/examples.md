@@ -1,17 +1,17 @@
 ---
 sidebar_position: 7
 title: "Examples"
-description: "Complete, runnable examples for @powerduck/md-editor: basic editor, controlled React, custom toolbar, image upload, mentions, standalone rendering, and simple mode."
+description: "Integration examples for @powerduck/md-editor: basic editor, controlled React, custom toolbar, image upload, mentions, standalone rendering, and simple mode."
 keywords: ["examples", "recipes", "vanilla", "react", "toolbar", "image upload", "mention"]
 ---
 
 # Examples
 
-Each example below uses real exports and option names. Import `@powerduck/md-editor/dist/style.css` once before these snippets run.
+Each example below uses real exports and option names. Import `@powerduck/md-editor/dist/style.css` once before these snippets run. Create the referenced container elements in your page and provide your own upload endpoint for the upload examples.
 
-## 1. Basic editor with all options
+## 1. Basic editor with common options
 
-A vanilla JS `MarkdownEditor` in `complex` mode with every configurable option wired up:
+A vanilla JS `MarkdownEditor` in `complex` mode with common options configured:
 
 ```ts
 import { MarkdownEditor, type MarkdownEditorOptions } from '@powerduck/md-editor';
@@ -33,6 +33,7 @@ const options: MarkdownEditorOptions = {
     const formData = new FormData();
     formData.append('file', file);
     const res = await fetch('/api/upload', { method: 'POST', body: formData });
+    if (!res.ok) throw new Error('Upload failed');
     const data = await res.json();
     return data.url as string;
   },
@@ -40,6 +41,7 @@ const options: MarkdownEditorOptions = {
 };
 
 const editor = new MarkdownEditor('#editor', options);
+// Call editor.destroy() when removing this editor from the page.
 
 document.querySelector('#save')?.addEventListener('click', () => {
   console.log(editor.getValue());
@@ -82,7 +84,7 @@ export default NoteEditor;
 import { MarkdownEditor } from '@powerduck/md-editor';
 import '@powerduck/md-editor/dist/style.css';
 
-// Array form: an include-list. Only these actions appear, in this order.
+// Array form: an include-list. Actions retain the built-in toolbar order.
 new MarkdownEditor('#editor-array', {
   mode: 'complex',
   toolbar: ['bold', 'italic', 'link', 'code', 'math'],

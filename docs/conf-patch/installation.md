@@ -11,7 +11,7 @@ Install `@powerduck/conf-patch` from your favorite package manager.
 
 ## Requirements
 
-- **Node.js:** `>= 18.0.0`
+- **Node.js:** `>= 22.12.0`
 - **TypeScript:** optional, but full type definitions ship with the package (no `@types/...` needed).
 
 ## Install
@@ -34,7 +34,7 @@ conf-patch ships three runtime dependencies that are installed automatically:
 
 | Package | Version | Used for |
 |---|---|---|
-| `@powerduck/openapi-parser` | `^0.3.3` | OpenAPI/Swagger spec validation (`validateOpenAPISpec`, `validateOpenAPIFile`) |
+| `@powerduck/openapi-parser` | `^0.3.12` | OpenAPI/Swagger spec validation (`validateOpenAPISpec`, `validateOpenAPIFile`) |
 | `jsonc-parser` | `^3.3.1` | Incremental text edits for JSON and JSONC |
 | `yaml` | `^2.9.0` | AST parsing and mutation for YAML |
 
@@ -55,7 +55,7 @@ Includes the **file layer** (`readConfigFile`, `writeConfigFile`, `patchConfigFi
 Exports **only the browser-safe core layer** (`patchContent`, `setContentValue`, `deleteContentValue`, the assertion helpers, and the core types). It has zero Node.js dependencies and can be bundled into browsers, Edge Functions, and service workers.
 
 :::tip
-When targeting the browser, always import from `@powerduck/conf-patch/core`. This keeps the file layer (and its `node:fs` dependency) out of your bundle. The core entry is around ~9KB gzipped.
+When targeting the browser, always import from `@powerduck/conf-patch/core`. This keeps the file layer (and its `node:fs` dependency) out of your bundle.
 :::
 
 ---

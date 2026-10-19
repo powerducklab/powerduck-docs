@@ -11,14 +11,16 @@ The desktop client's settings cover how the application looks and how it makes r
 ## Appearance
 
 - **Theme** — switch between light and dark (`theme.get`, `theme.set`). The change applies to the whole application and is persisted.
-- **UI language** — choose one of ten languages, or follow the system automatically:
+- **UI language** — choose one of sixteen languages, or follow the system automatically:
 
 | | | |
 |---|---|---|
 | English (US) | 简体中文 | 繁體中文 |
 | 日本語 | 한국어 | Français |
 | Deutsch | Español | Português (Brasil) |
-| العربية | | |
+| العربية | Italiano | Русский |
+| हिन्दी | Bahasa Indonesia | Tiếng Việt |
+| Türkçe | | |
 
 Arabic is rendered right-to-left. Selecting `auto` follows the system language.
 

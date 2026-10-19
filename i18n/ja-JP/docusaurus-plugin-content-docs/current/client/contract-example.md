@@ -5,7 +5,7 @@ description: "契約テストで実装の型エラーを見つける"
 
 # 契約テストで実装の型エラーを見つける
 
-この例は開発者 MCP の既存ランナーを使います。現在のソースには応答 schema 検証が追加されています。Node.js 20.11 以降が必要です。架空データとループバック専用サーバーを使い、依存関係のインストール後はアカウント、モデル、公開 API は不要です。
+この例は開発者 MCP の既存ランナーを使います。現在のソースには応答 schema 検証が追加されています。Node.js 22.12.0 以降が必要です。架空データとループバック専用サーバーを使い、依存関係のインストール後はアカウント、モデル、公開 API は不要です。
 
 ```sh
 git clone https://github.com/powerducklab/dev-mcp-server.git
@@ -27,4 +27,4 @@ node examples/contract-total/verify.mjs --correct
 
 これは実際のバックエンドの検証です。Mock の成功とは区別してください。任意の Agent から `run_contract_tests` に明示的な `baseUrl` を渡すこともできます。修正案は適用前に確認します。
 
-[Download desktop](https://www.powerduck.com/download.html) · [Quickstart](../overview/quickstart.md)
+[デスクトップ版をダウンロード](https://www.powerduck.com/ja/download/) · [クイックスタート](/docs/ja-JP/overview/quickstart/)

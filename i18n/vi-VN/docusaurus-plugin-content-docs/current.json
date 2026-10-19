@@ -1,0 +1,14 @@
+{
+  "sidebar.tutorialSidebar.category.Overview": {
+    "message": "Tổng quan",
+    "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Source": {
+    "message": "Mã nguồn mở",
+    "description": "The label for category 'Open Source' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Client": {
+    "message": "Ứng dụng máy tính",
+    "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
+  }
+}

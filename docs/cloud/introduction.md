@@ -8,7 +8,7 @@ description: "Take an OpenAPI spec online in minutes: publish rendered documenta
 
 Powerduck Cloud is how an OpenAPI file becomes something you can **share**. Add a specification, choose what to expose, and hand people stable links for rendered documentation and a managed MCP server — without hosting or running anything yourself.
 
-It is the same contract-first, AI-assisted workflow as the desktop client, taken online for teams and consumers.
+It is the same contract-first, AI-assisted workflow as the desktop client, taken online for teams and consumers. A Free plan includes hosted documentation and MCP within its limits; paid plans add capacity, Git sources and custom domains. Your business API still runs on your own backend.
 
 ## The journey
 
@@ -57,18 +57,18 @@ Sign in with **Google** or **GitHub**. After the OAuth handshake, Powerduck issu
 - **Hub** — publish and browse public documentation and MCP servers;
 - **Settings** and **Activity** — profile, preferences, and an audit log.
 
-Public readers use a dedicated documentation viewer and need no account unless the document requires a password.
+Public readers use a dedicated documentation viewer and do not need a Powerduck account. If a view password is configured, they must enter that password; a view password and an account sign-in are separate requirements.
 
 ## Cloud versus the desktop client
 
 | | Desktop Client | Cloud |
 |---|---|---|
 | Runs | On your machine | Hosted |
-| Model | One-time perpetual license | Monthly subscription |
-| Output | A license key (shown once) | Membership, no key |
+| Model | One-time perpetual license | Free tier and paid subscriptions |
+| Output | A license key (shown once) | Plan entitlements, no license key |
 | Best for | Local, offline, full workspace | Sharing and publishing online |
 
-The two are complementary and sold separately. See [Billing](./billing.md).
+The two are complementary. Cloud has a Free plan; paid Cloud subscriptions and desktop licenses are purchased separately. See [Billing](./billing.md).
 
 ## Start here
 

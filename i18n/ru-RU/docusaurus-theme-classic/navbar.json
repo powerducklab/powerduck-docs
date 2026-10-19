@@ -1,0 +1,53 @@
+{
+  "item.label.Client": {
+    "message": "Приложение для компьютера"
+  },
+  "item.label.Pricing": {
+    "message": "Тарифы"
+  },
+  "item.label.Resources": {
+    "message": "Ресурсы"
+  },
+  "item.label.Sign in": {
+    "message": "Войти"
+  },
+  "item.label.Download": {
+    "message": "Скачать"
+  },
+  "item.label.Spec Editor": {
+    "message": "Редактор спецификаций"
+  },
+  "item.label.API Debug": {
+    "message": "Отладка API"
+  },
+  "item.label.MCP Server": {
+    "message": "MCP-сервер"
+  },
+  "item.label.API Docs": {
+    "message": "Документация API"
+  },
+  "item.label.Cloud Docs": {
+    "message": "Документация облачных сервисов"
+  },
+  "item.label.Documentation": {
+    "message": "Документация"
+  },
+  "item.label.Live Demo": {
+    "message": "Онлайн-демо"
+  },
+  "item.label.Open Source": {
+    "message": "Открытый исходный код"
+  },
+  "item.label.Blog": {
+    "message": "Блог"
+  },
+  "item.label.Hub": {
+    "message": "Hub"
+  },
+  "title": {
+    "message": "Powerduck"
+  },
+  "logo.alt": {
+    "message": "Powerduck"
+  }
+}

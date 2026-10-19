@@ -10,7 +10,7 @@ description: "Install @powerduck/openapi-parser and verify the ESM/CJS build."
 npm install @powerduck/openapi-parser
 ```
 
-Requires Node.js 18 or later.
+Requires Node.js 22.12.0 or later.
 
 ## Package layout
 
@@ -21,13 +21,13 @@ Requires Node.js 18 or later.
 └── dist/index.d.ts     # TypeScript declarations
 ```
 
-## ESM (Node.js 18+, modern bundlers)
+## ESM (Node.js 22.12.0+, modern bundlers)
 
 ```typescript
 import { upgradeOasTo32 } from "@powerduck/openapi-parser";
 ```
 
-## CommonJS (Electron main, legacy Node)
+## CommonJS (Electron main process)
 
 ```javascript
 const { upgradeOasTo32 } = require("@powerduck/openapi-parser");

@@ -52,7 +52,7 @@ Le modèle, **c'est vous qui le configurez**. Pointez l'application vers n'impor
 
 - **Vos vrais fichiers.** Vous ouvrez, éditez et enregistrez de vrais fichiers sur le disque et suivez les changements locaux.
 - **Aucun mur CORS.** Les requêtes passent par un processus local, pas la WebView, donc les restrictions cross-origin ne bloquent pas les appels.
-- **Invites et clés privées.** Traitées en local, elles n'apparaissent pas dans le panneau réseau du navigateur.
+- **Vous choisissez le point d'accès du modèle.** Les requêtes passent par le processus principal, mais les instructions, le contexte pertinent et les identifiants sont envoyés au fournisseur configuré. Le fonctionnement local n'empêche pas la transmission de données à une IA distante.
 - **Fonctionne hors ligne.** La conception, la simulation et la documentation n'ont pas besoin du réseau ; seules les vraies requêtes, la synchronisation Git et les modèles hébergés en ont besoin.
 - **Environnements exécutés en local.** Simulations, exécuteur de scénarios, accès base et terminal tournent sur votre machine.
 

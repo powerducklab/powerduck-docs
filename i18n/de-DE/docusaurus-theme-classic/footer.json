@@ -1,23 +1,18 @@
 {
   "link.title.Docs": {
-    "message": "Docs",
-    "description": "The title of the footer links column with title=Docs in the footer"
+    "message": "Dokumentation"
   },
   "link.title.Libraries": {
-    "message": "Libraries",
-    "description": "The title of the footer links column with title=Libraries in the footer"
+    "message": "Bibliotheken"
   },
   "link.title.Community": {
-    "message": "Community",
-    "description": "The title of the footer links column with title=Community in the footer"
+    "message": "Community"
   },
   "link.title.Legal": {
-    "message": "Legal",
-    "description": "The title of the footer links column with title=Legal in the footer"
+    "message": "Rechtliches"
   },
   "link.item.label.Overview": {
-    "message": "Overview",
-    "description": "The label of footer link with label=Overview linking to /overview/introduction"
+    "message": "Überblick"
   },
   "link.item.label.MD Editor": {
     "message": "MD Editor",
@@ -52,27 +47,21 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/powerducklab"
   },
   "link.item.label.Website": {
-    "message": "Website",
-    "description": "The label of footer link with label=Website linking to https://www.powerduck.com"
+    "message": "Website"
   },
   "link.item.label.Contact": {
-    "message": "Contact",
-    "description": "The label of footer link with label=Contact linking to mailto:contact@neatico.com"
+    "message": "Kontakt"
   },
   "link.item.label.Privacy Policy": {
-    "message": "Privacy Policy",
-    "description": "The label of footer link with label=Privacy Policy linking to https://www.powerduck.com/privacy.html"
+    "message": "Datenschutzerklärung"
   },
   "link.item.label.Terms of Service": {
-    "message": "Terms of Service",
-    "description": "The label of footer link with label=Terms of Service linking to https://www.powerduck.com/terms.html"
+    "message": "Nutzungsbedingungen"
   },
   "link.item.label.Refund Policy": {
-    "message": "Refund Policy",
-    "description": "The label of footer link with label=Refund Policy linking to https://www.powerduck.com/refunds.html"
+    "message": "Rückerstattungsrichtlinie"
   },
   "copyright": {
-    "message": "Copyright © 2026 POWERDUCK LIMITED. Built with Docusaurus.",
-    "description": "The footer copyright"
+    "message": "© 2026 POWERDUCK LIMITED."
   }
 }

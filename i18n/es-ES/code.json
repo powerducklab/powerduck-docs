@@ -44,20 +44,16 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "modo del sistema",
-    "description": "The name for the system color mode"
+    "message": "modo del sistema"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "modo claro",
-    "description": "The name for the light color mode"
+    "message": "modo claro"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "modo oscuro",
-    "description": "The name for the dark color mode"
+    "message": "modo oscuro"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Cambiar entre modo oscuro y claro (actualmente {mode})",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "Cambiar entre modo claro y oscuro (actual: {mode})"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Rastro de navegación",
@@ -167,24 +163,20 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Ampliar la categoría '{label}' de la barra lateral",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "Expandir la categoría «{label}»"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Colapsar categoría '{label}' de la barra lateral",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "Contraer la categoría «{label}»"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(se abre en una nueva pestaña)",
-    "description": "The ARIA label for the external link icon"
+    "message": "(se abre en una pestaña nueva)"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Idiomas",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Principal",
-    "description": "The ARIA label for the main navigation"
+    "message": "Navegación principal"
   },
   "theme.NotFound.p1": {
     "message": "No pudimos encontrar lo que buscaba.",
@@ -231,8 +223,7 @@
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Barra lateral de Documentos",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "Barra lateral de documentación"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Colapsar barra lateral",

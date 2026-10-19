@@ -52,7 +52,7 @@ O modelo **configura-o você**. Aponte a app a qualquer fornecedor compatível c
 
 - **Os seus arquivos reais.** Abre, edita e salva arquivos reais em disco e segue as mudanças locais.
 - **Sem muro CORS.** As requisições passam por um processo local, não a WebView, por isso as restrições cross-origin não bloqueiam as chamadas.
-- **Instruções e chaves privadas.** Processadas localmente, não aparecem no painel de rede do navegador.
+- **Você escolhe o endpoint do modelo.** O desktop envia as solicitações pelo processo principal, mas prompts, contexto relevante e credenciais seguem para o provedor configurado. Priorizar o trabalho local não impede o envio de dados para uma IA remota.
 - **Funciona sem conexão.** Projeto, simulação e documentação não precisam de rede; só requisições reais, sincronização Git e modelos hospedados.
 - **Ambientes executados localmente.** Simulações, executor de cenários, acesso à base e terminal correm na sua máquina.
 

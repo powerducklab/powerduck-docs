@@ -1,0 +1,14 @@
+{
+  "sidebar.tutorialSidebar.category.Overview": {
+    "message": "Обзор",
+    "description": "The label for category 'Overview' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Open Source": {
+    "message": "Открытый исходный код",
+    "description": "The label for category 'Open Source' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Client": {
+    "message": "Приложение для компьютера",
+    "description": "The label for category 'Desktop Client' in sidebar 'tutorialSidebar'"
+  }
+}

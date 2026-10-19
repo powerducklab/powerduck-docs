@@ -58,12 +58,12 @@ Al exportar, elige el idioma; diez están integrados.
 9. Português — Brasil (Portugués — Brasil)
 10. العربية (Árabe)
 
-Una opción **Otro/Personalizado** permite escribir el idioma directamente.
+La opción **otro/personalizado** acepta otro idioma, pero las etiquetas integradas del informe usan inglés si no existe traducción. Introducir un idioma no traduce el informe automáticamente.
 
-El informe es seguro de compartir.
+Revise el informe exportado antes de compartirlo:
 
-- **Las credenciales se enmascaran automáticamente**, por lo que tokens y claves no aparecen.
-- **Las cargas grandes se pliegan**, para mantener el informe legible en vez de volcarlo todo.
+- **Los campos de credenciales reconocidos se ocultan automáticamente.** Los contenidos arbitrarios, las URL y los campos personalizados aún pueden contener datos sensibles; revíselos y elimínelos antes de compartir;
+- **Los contenidos grandes se contraen** para facilitar la lectura. Contraer una sección no elimina sus datos del HTML exportado.
 
 El HTML es independiente: adjuntar a incidencias o archivar por release.
 

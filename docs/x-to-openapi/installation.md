@@ -11,7 +11,7 @@ Install `@powerduck/x-to-openapi` from your favorite package manager.
 
 ## Requirements
 
-- **Node.js:** `>= 18.0.0`
+- **Node.js:** `>= 22.12.0`
 - **TypeScript:** optional — full type definitions ship with the package.
 
 ## Install
@@ -32,7 +32,7 @@ pnpm add @powerduck/x-to-openapi
 
 | Package | Version | Used for |
 |---|---|---|
-| `@powerduck/openapi-parser` | `^0.3.3` | Canonical OpenAPI types and output validation |
+| `@powerduck/openapi-parser` | `^0.3.12` | Canonical OpenAPI types and output validation |
 | `curlconverter` | `^4.12.0` | Parsing curl commands into structured requests |
 
 Both are installed automatically.

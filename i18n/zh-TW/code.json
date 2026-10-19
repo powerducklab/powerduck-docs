@@ -48,20 +48,16 @@
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
-    "description": "The name for the system color mode"
+    "message": "跟隨系統"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "淺色模式",
-    "description": "The name for the light color mode"
+    "message": "淺色模式"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "深色模式",
-    "description": "The name for the dark color mode"
+    "message": "深色模式"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "切換淺色/深色模式（當前為{mode}）",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "切換深色與淺色模式（目前為{mode}）"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "文件選項卡",
@@ -167,20 +163,16 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "展開側邊欄分類 '{label}'",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "展開「{label}」分類"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "收起側邊欄分類 '{label}'",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "收合「{label}」分類"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "（在新分頁開啟）"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "主導航",
-    "description": "The ARIA label for the main navigation"
+    "message": "主導覽"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "選擇語言",
@@ -231,8 +223,7 @@
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "文件側邊欄",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "文件側欄"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "收起側邊欄",

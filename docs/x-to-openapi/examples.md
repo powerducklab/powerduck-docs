@@ -7,7 +7,7 @@ keywords: ["x-to-openapi examples", "curlToOpenApi", "postmanToOpenApi", "custom
 
 # Examples
 
-Practical, runnable recipes built from the public API. All examples are async — remember to `await`.
+Practical, runnable recipes built from the public API. Conversion functions are asynchronous; use `await`. These conversions parse input locally and do not send the captured HTTP requests.
 
 ---
 
@@ -28,7 +28,10 @@ console.log(result.document.openapi);            // "3.2.0"
 console.log(result.ok, result.documentValid);    // true true
 
 const post = result.document.paths["/users"].post;
-console.log(post.requestBody.content["application/json"].schema);
+const body = post?.requestBody;
+if (!body || !("content" in body)) throw new Error("Expected an inline request body");
+const media = body.content["application/json"];
+console.log(media && "schema" in media ? media.schema : undefined);
 // {
 //   type: "object",
 //   properties: {
@@ -61,6 +64,7 @@ const result = await curlToOpenApi(
   [
     "curl https://api.example.com/users",
     "curl https://api.example.com/users/123",
+    "curl https://api.example.com/users/456",
     `curl -X POST https://api.example.com/users \
        -H 'Content-Type: application/json' \
        --data '{"name":"Ada"}'`,
@@ -68,12 +72,12 @@ const result = await curlToOpenApi(
   {
     title: "User API",
     version: "2.0.0",
-    useServerBasePath: true,
+    useServerBasePath: false,
     inferPathParameters: true,
   },
 );
 
-// GET /users and GET /users/123 are grouped; "123" looks like an id.
+// The two detail requests are grouped; /users remains a separate path.
 console.log(Object.keys(result.document.paths)); // ["/users", "/users/{userId}"]
 ```
 
@@ -160,7 +164,7 @@ const fromText = await postmanToOpenApi(JSON.stringify(collection));
 
 ## 4. Path parameter inference
 
-When `inferPathParameters` is on (the default), a segment is templated when it varies across at least `pathParameterMinSamples` requests and **every** value looks like an identifier (numeric, UUID, ULID, or hex ≥ 8 chars).
+When `inferPathParameters` is on (the default), requests are grouped by method, origin and path shape. A segment is templated only when its group has at least `pathParameterMinSamples` requests, the values vary, and **every** value looks like an identifier (numeric, UUID, ULID, or hex ≥ 8 chars).
 
 ```typescript
 import { curlToOpenApi } from "@powerduck/x-to-openapi";
@@ -169,8 +173,8 @@ const result = await curlToOpenApi(
   [
     "curl https://api.example.com/users/123",
     "curl https://api.example.com/users/456",
-    "curl https://api.example.com/users/456/posts/abc123",
-    "curl https://api.example.com/users/456/posts/def456",
+    "curl https://api.example.com/users/123/posts/abc12345",
+    "curl https://api.example.com/users/456/posts/def45678",
   ],
   { pathParameterMinSamples: 2 },
 );
@@ -179,14 +183,14 @@ console.log(Object.keys(result.document.paths));
 // [ "/users/{userId}", "/users/{userId}/posts/{postId}" ]
 ```
 
-Parameter names come from the preceding static segment, singularized and camel-cased:
+Parameter names come from the nearest preceding static segment, singularized and camel-cased:
 
 | Path pattern | Parameter names |
 |---|---|
 | `/users/{}` | `userId` |
 | `/users/{}/posts/{}` | `userId`, `postId` |
 | `/categories/{}/items/{}` | `categoryId`, `itemId` |
-| `/{}` (no preceding segment) | `param1` |
+| `/{}` | `param1` |
 
 Duplicates within a path get numeric suffixes (`userId`, `userId2`).
 
@@ -273,7 +277,7 @@ console.log(a.document.paths["/health"]?.get?.operationId);
 
 ## 6. Error handling and strict mode
 
-Non-fatal problems are collected in `result.diagnostics`. Use `strict: true` to throw a [`ConversionError`](./api-reference.md#conversionerror) instead.
+Problems are collected in `result.diagnostics`. With `strict: true`, error-severity diagnostics throw a [`ConversionError`](./api-reference.md#conversionerror); warnings alone do not. Invalid options and unknown adapter IDs can also throw.
 
 ```typescript
 import { curlToOpenApi, ConversionError } from "@powerduck/x-to-openapi";
@@ -297,7 +301,7 @@ try {
 }
 ```
 
-Note: inputs larger than 10 MB always throw a `ConversionError`, regardless of `strict`.
+The current size guard throws `ConversionError` when a string, or the combined string elements of an array, exceeds 10 × 1024 × 1024 JavaScript string code units, regardless of `strict`. It is not a UTF-8 byte limit and does not measure parsed objects; enforce your own byte limit before accepting untrusted input.
 
 ---
 

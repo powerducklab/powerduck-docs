@@ -44,20 +44,16 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
-    "description": "The name for the system color mode"
+    "message": "mode système"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "mode clair",
-    "description": "The name for the light color mode"
+    "message": "mode clair"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "mode sombre",
-    "description": "The name for the dark color mode"
+    "message": "mode sombre"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Basculer entre le mode sombre et clair (actuellement {mode})",
-    "description": "The ARIA label for the color mode toggle"
+    "message": "Basculer entre les modes clair et sombre (actuellement : {mode})"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Fil d'Ariane",
@@ -167,20 +163,16 @@
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Développer la catégorie '{label}' de la barre latérale",
-    "description": "The ARIA label to expand the sidebar category"
+    "message": "Développer la catégorie « {label} »"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Réduire la catégorie '{label}' de la barre latérale",
-    "description": "The ARIA label to collapse the sidebar category"
+    "message": "Réduire la catégorie « {label} »"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
-    "description": "The ARIA label for the external link icon"
+    "message": "(s’ouvre dans un nouvel onglet)"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
-    "description": "The ARIA label for the main navigation"
+    "message": "Navigation principale"
   },
   "theme.NotFound.p1": {
     "message": "Nous n'avons pas trouvé ce que vous recherchez.",
@@ -239,8 +231,7 @@
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
-    "description": "The ARIA label for the sidebar navigation"
+    "message": "Barre latérale de la documentation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
     "message": "Fermer la barre de navigation",

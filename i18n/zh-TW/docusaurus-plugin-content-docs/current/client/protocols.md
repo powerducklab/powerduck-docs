@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` 和 `headers` 是可選的。
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName`、`variablesSchema` 和 `variables` 是可選的。
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` 為 `unary`、`server_streaming`、`client_streaming` 或 `bidi_streaming` 之一。
@@ -110,13 +119,16 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `method` 選擇 MCP 操作：`tools/call`、`tools/list`、`resources/read`、`resources/list`、`resources/templates/list`、`prompts/get` 或 `prompts/list`。`name`、`uri`、`argumentsSchema` 和 `arguments` 根據方法適當使用。
 
 ## 結構規則
 
-- `requestBody` 或 `responses` 下的每個媒體類型必須包含 `schema` 或 `$ref`；唯一例外是使用 `itemSchema` 的 `text/event-stream`。
+- 對於助手產生的契約，應在 `requestBody` 或 `responses` 的媒體類型中提供 `schema` 或 `$ref`；`text/event-stream` 使用 OAS 3.2 的 `itemSchema` 描述單一事件。這是 Powerduck 的撰寫慣例，不是所有 OpenAPI 文件都必須遵守的通用要求。
 - 每個參數必須有 `schema`（或 `content`）。
 - 編輯操作時，所選協定及其配置會被**保留**。RPC 和串流操作從不會被悄悄轉換成 REST。
 - 使用上面的確切擴充形態——不要捏造諸如 `externalUrl` 的鍵，也不要把 `ws` 用作協定名。
@@ -128,5 +140,7 @@ paths:
 相關：[用助手進行設計](./design.md)、[資料模型](./data-model.md)。
 
 ## A2A
+
+A2A 1.0 支援 JSON-RPC、REST 與桌面版 gRPC 的除錯、文件，以及無狀態訊息轉接伺服器產生。持久化任務與推播傳遞需要自行實作。
 
 使用 `x-protocol: a2a` 與 `x-a2a` 設計、除錯和記錄智能體訊息與任務。A2A 1.0 支援 JSON-RPC、REST 與桌面版 gRPC；0.3 支援 JSON-RPC。參閱 [A2A 智能體](./a2a.md)，了解協議欄位、卡片驗證、伺服器產生與可執行範例。

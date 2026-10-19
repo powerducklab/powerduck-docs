@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: IA y modelos
-description: "Conecte un modelo compatible con OpenAI, mantenga instrucciones y claves en local mediante el proceso principal, use llamada a función nativa con respaldo automático y conserve el mismo flujo en la web."
+description: "Configure un modelo compatible con OpenAI y conozca los transportes de escritorio y web, la alternativa para llamadas a herramientas y los datos enviados al proveedor."
 ---
 
 # IA y modelos
 
-La capacidad del asistente depende del modelo subyacente, por lo que Powerduck no le fija a un proveedor concreto. Usted elige y configura el modelo, la app lo llama por una ruta local segura, y cada cambio pasa por las mismas tarjetas revisables.
+Powerduck permite elegir y configurar el modelo del asistente. En el escritorio, las solicitudes pasan por el proceso principal hasta el endpoint elegido; los cambios del documento siguen usando tarjetas que puede revisar.
 
 ## Traer un modelo
 
@@ -16,7 +16,7 @@ En los ajustes, configure el asistente hacia cualquier endpoint de Chat Completi
 - Aporte nombre visible, URL base, clave API e ID de modelo.
 - Configure varios perfiles y elija entre ellos.
 
-La app no asume que el modelo venga de un proveedor concreto. Los endpoints auto-hospedados o de terceros compatibles funcionan igual, importante para equipos con estrategia propia de modelos.
+No se presupone un proveedor concreto. Los endpoints compatibles con OpenAI, propios o de terceros, se utilizan del mismo modo, lo que permite a los equipos aplicar su política de modelos.
 
 ## Funciones avanzadas y respaldo elegante
 
@@ -25,20 +25,20 @@ Cada perfil tiene un interruptor de **funciones avanzadas**, activado por defect
 - Activado, la app usa la **llamada a función nativa** del modelo: envía el catálogo de herramientas por la red y deja que el modelo elija y llame directamente la herramienta adecuada.
 - Si un endpoint rechaza argumentos de herramientas nativos — modelos pequeños sin soporte — ese endpoint se recuerda y se hace un único reintento mediante un **protocolo de respaldo basado en contenido**.
 
-El objetivo es devolver siempre un resultado: los modelos potentes toman la ruta nativa precisa, los modelos sin herramientas bajan a un protocolo más simple en vez de perder el turno. Puede desactivar funciones avanzadas para perfiles que deban usar siempre la ruta base.
+El mecanismo alternativo mejora la compatibilidad, pero no garantiza el éxito: aún pueden producirse errores de red, autenticación o modelo. Desactive las funciones avanzadas si un perfil debe usar siempre el modo básico.
 
-El trabajo impulsado por herramientas también tiene límites: el agente ejecuta un número acotado de turnos (3 por defecto) y deduplica llamadas para que una herramienta no corra dos veces en bucle.
+El uso de herramientas tiene límites: el agente ejecuta un número acotado de rondas, tres de forma predeterminada, y elimina llamadas repetidas dentro de una misma ejecución.
 
 ## Por qué enrutar por el proceso principal
 
 En el escritorio, la petición completa la emite el **proceso principal Node**, no la WebView. Dos ventajas concretas.
 
 - **Sin muro CORS del navegador.** Las restricciones cross-origin de la web no bloquean las llamadas al endpoint del modelo.
-- **Instrucciones y claves fuera de la consola.** URL, cabeceras de autenticación, instrucción del sistema y lista de herramientas no aparecen en el panel de red del renderer.
+- **La solicitud HTTP se ejecuta fuera del renderizador.** Su panel de red no muestra el intercambio HTTP del proceso principal. Esto no garantiza que las instrucciones o claves no aparezcan en la memoria del renderizador, registros u otras herramientas de desarrollo.
 
-La pasarela está deliberadamente restringida, no es un proxy abierto.
+La pasarela de escritorio valida la estructura de las solicitudes y aplica límites de recursos:
 
-- Valida destinos (loopback y hosts permitidos), sanea cabeceras y evita la inyección de saltos de línea por cabeceras de respuesta.
+- Solo acepta URL HTTP(S); comprueba nombres y valores de cabeceras, tamaño del cuerpo, tiempos de espera y solicitudes simultáneas. Permite endpoints locales y privados. No es una lista de hosts autorizados ni una garantía de privacidad del proveedor;
 - Las peticiones son cancelables (`ai:cancel`).
 
 ## Escritorio y web
@@ -58,7 +58,7 @@ Añadir una capacidad significa añadir una herramienta al catálogo (con descri
 
 ## Privacidad
 
-- En el escritorio, las claves API e instrucciones permanecen en local y no se exponen al renderer.
+- Las instrucciones, el contexto seleccionado, las descripciones de herramientas y las credenciales se envían al endpoint del modelo configurado. El proveedor alojado recibe esos datos; use un endpoint local de confianza si su política exige inferencia local;
 - El host determinista, no el modelo, valida y aplica cada cambio.
 - Toda escritura recibe su aprobación antes de ejecutarse.
 

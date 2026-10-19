@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: IA et modèles
-description: "Connectez un modèle compatible OpenAI, gardez invites et clés en local via le processus principal, utilisez l'appel de fonction natif avec repli automatique, et conservez le même flux de travail sur le web."
+description: "Configurez un modèle compatible OpenAI, comprenez les transports bureau et web, le repli des appels d'outils et les données envoyées au fournisseur."
 ---
 
 # IA et modèles
 
-La capacité de l'assistant dépend du modèle sous-jacent, donc Powerduck ne vous enferme pas chez un fournisseur précis. Vous choisissez et configurez le modèle, l'application l'appelle via un chemin local sûr, et chaque changement passe par les mêmes cartes révisables.
+Powerduck vous laisse choisir et configurer le modèle de l'assistant. Sur le bureau, les requêtes passent par le processus principal vers le point d'accès choisi ; les modifications du document restent présentées dans des cartes à examiner.
 
 ## Apporter un modèle
 
@@ -16,7 +16,7 @@ Dans les réglages, configurez l'assistant vers n'importe quel point de terminai
 - Fournissez un nom d'affichage, une URL de base, une clé API et un identifiant de modèle.
 - Configurez plusieurs profils et choisissez entre eux.
 
-L'application ne suppose pas que le modèle vient d'un fournisseur précis. Les points de terminaison auto-hébergés ou tiers compatibles OpenAPI fonctionnent pareil, ce qui compte pour les équipes ayant leur propre stratégie de modèles.
+Aucun fournisseur précis n'est imposé. Un point d'accès compatible OpenAI, auto-hébergé ou tiers, s'utilise de la même manière, ce qui permet aux équipes de respecter leur propre politique de modèles.
 
 ## Fonctions avancées et repli élégant
 
@@ -25,20 +25,20 @@ Chaque profil possède une option **fonctions avancées**, activée par défaut.
 - Activée, l'application utilise l'**appel de fonction natif** du modèle : elle envoie le catalogue d'outils sur le réseau et laisse le modèle choisir et appeler directement le bon outil.
 - Si un point de terminaison refuse les arguments d'outils natifs — petits modèles sans support outil — ce point de terminaison est mémorisé et une seule nouvelle tentative suit via un **protocole de repli basé contenu**.
 
-L'objectif est de toujours renvoyer un résultat : les modèles puissants empruntent le chemin natif précis, les modèles sans outil sont rétrogradés vers un protocole plus simple au lieu d'échouer le tour. Vous pouvez désactiver les fonctions avancées pour les profils devant toujours utiliser le chemin de base.
+Le repli améliore la compatibilité sans garantir le succès : des erreurs réseau, d'authentification ou de modèle restent possibles. Désactivez les fonctions avancées pour un profil qui doit toujours utiliser le mode de base.
 
-Le travail piloté par outils a aussi des limites : l'agent exécute un nombre borné de tours d'outils (3 par défaut) et déduplique les appels pour qu'un outil ne tourne pas deux fois en boucle.
+L'utilisation des outils est bornée : l'agent effectue un nombre limité de cycles, trois par défaut, et déduplique les appels répétés pendant une même exécution.
 
 ## Pourquoi acheminer les requêtes via le processus principal
 
 Sur le client de bureau, la requête complète est émise depuis le **processus principal Node**, pas la WebView. Deux avantages concrets.
 
 - **Aucun mur CORS navigateur.** Les restrictions cross-origin du web ne bloquent pas les appels au point de terminaison du modèle.
-- **Invites et clés hors de la console navigateur.** L'URL de requête, les en-têtes d'authentification, l'invite système et la liste d'outils n'apparaissent pas dans le panneau réseau du renderer.
+- **La requête HTTP s'exécute hors du renderer.** Son panneau réseau n'affiche pas l'échange HTTP du processus principal. Cela ne garantit pas l'absence d'instructions ou de clés dans la mémoire du renderer, les journaux ou d'autres outils de développement.
 
-La passerelle est délibérément restreinte, pas un proxy ouvert.
+La passerelle de bureau valide la structure des requêtes et limite les ressources :
 
-- Elle valide les destinations (bouclage et hôtes autorisés), assainit les en-têtes et empêche l'injection de sauts de ligne via les en-têtes de réponse.
+- Seules les URL HTTP(S) sont acceptées ; les noms et valeurs d'en-têtes, la taille du corps, les délais et les requêtes simultanées sont contrôlés. Les points d'accès locaux et privés sont autorisés. Il ne s'agit ni d'une liste d'hôtes autorisés ni d'une garantie de confidentialité du fournisseur ;
 - Les requêtes sont annulables (`ai:cancel`).
 
 ## Bureau et web
@@ -58,7 +58,7 @@ Ajouter une capacité signifie donc ajouter un outil au catalogue (avec une desc
 
 ## Confidentialité
 
-- Sur le bureau, les clés API et les invites restent en local et ne sont pas exposées au renderer.
+- Les instructions, le contexte sélectionné, les descriptions d'outils et les identifiants sont envoyés au point d'accès du modèle configuré. Un fournisseur hébergé reçoit ces données ; utilisez un point d'accès local de confiance si votre politique exige une inférence locale ;
 - C'est l'hôte déterministe, pas le modèle, qui valide et applique chaque changement.
 - Toutes les écritures reçoivent votre approbation avant exécution.
 

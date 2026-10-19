@@ -97,9 +97,7 @@ Im React-Repository enthält `examples/a2a-demo` einen Summenrechner ohne KI-Sch
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# In einem weiteren Terminal im selben Verzeichnis:
 npm test
 ```
 

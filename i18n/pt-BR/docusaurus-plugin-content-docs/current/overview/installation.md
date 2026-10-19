@@ -21,13 +21,13 @@ Obtenha o instalador para a sua plataforma no [site do Powerduck](https://www.po
 ## macOS
 
 1. Abra o `.dmg` e arraste Powerduck para **Aplicações**.
-2. No primeiro arranque, o macOS pode pedir confirmação para abrir uma app descarregada fora da App Store. Autorize no diálogo, ou clique com o botão direito na app e escolha **Abrir**.
+2. Na primeira execução, o macOS pode pedir confirmação para abrir um aplicativo baixado fora da App Store. Antes de abrir, verifique se ele veio da página oficial; não desative as verificações de segurança do sistema.
 3. Publicam-se dois builds: `arm64` para Apple Silicon (série M) e `x64` para Mac Intel. Descarregue o correspondente.
 
 ## Windows
 
 1. Execute o instalador NSIS (`.exe`) e siga a configuração.
-2. Se o SmartScreen informar de um editor não reconhecido, escolha **Mais informações**, depois **Executar**.
+2. Se o SmartScreen informar um editor desconhecido, confira primeiro se o instalador veio da página oficial. Continue apenas depois de verificar a origem; não ignore o aviso para um download não confiável.
 
 ## Linux
 
@@ -48,11 +48,11 @@ O cliente de desktop é uma app Electron em duas partes.
 - O **processo principal** (Node.js), que gere o acesso a arquivos, as requisições HTTP externas, o servidor de simulação local, as conexões a bases de dados e o terminal integrado.
 - O **renderer** (o espaço de trabalho React), que mostra a especificação, o chat de IA e as ferramentas.
 
-Esta separação conta para segurança e fiabilidade. As requisições que exigem rede e acesso ao sistema de arquivos são tratadas pelo processo principal, não a WebView: as instruções e chaves API não aparecem na consola do navegador, e as restrições CORS diretas do navegador ao fornecedor não se aplicam. Veja [IA e modelos](../client/ai-models.md).
+O cliente desktop envia as solicitações ao modelo pelo processo principal, evitando as restrições CORS entre navegador e provedor. Ainda assim, prompts, contexto relevante e credenciais são enviados ao endpoint do modelo configurado; usar um modelo hospedado não é uma operação offline. A separação dos processos também não garante que segredos nunca apareçam em logs ou ferramentas de desenvolvimento. Veja [IA e modelos](../client/ai-models.md).
 
 ## Requisitos
 
-- macOS atualizado, Windows 10 ou posterior, ou uma distribuição de desktop Linux importante.
+- macOS 11 ou posterior, Windows 10 ou posterior ou uma distribuição Linux desktop comum compatível com Electron 37.
 - Espaço em disco para a app. As especificações abertas permanecem na sua localização original.
 - A rede só é necessária para enviar requisições, sincronizar fontes Git ou chamar um modelo de IA hospedado; o resto funciona sem conexão.
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "What @powerduck/md-editor is, its version, core capabilities, architecture, browser support, and MIT license."
+description: "Overview of @powerduck/md-editor: editing and preview features, JavaScript and React APIs, rendering architecture, and browser requirements."
 keywords: ["markdown editor", "introduction", "powerduck", "overview", "features"]
 ---
 
@@ -26,9 +26,9 @@ The feature set below is derived directly from the implemented source modules:
 - **Rich toolbar** with 22 actions, popup dialogs for image/video/YouTube/table insertion, template pickers for math and mindmaps, and a help dialog listing all shortcuts.
 - **Keyboard shortcuts** with a `Mod` key that maps to Ctrl on Windows/Linux and Cmd on macOS.
 - **Configurable toolbar** via an include-list array or a per-item override record (`show`, `label`, `icon`).
-- **Image upload hook** (`onImageUpload`) triggered on paste, drop, or file selection.
+- **Image upload hook** (`onImageUpload`) triggered when an image is pasted or dropped into the editor.
 - **@mention dropdown** configured through `mention` options; selected mentions render as styled badges in the preview.
-- **Document-link inserter** configured through `docLink` options; inserts plain links or `:::doc-link` preview cards with auto-fetched metadata.
+- **Document-link inserter** configured through `docLink` options; inserts plain links or `:::doc-link` preview cards with metadata fetched by the built-in loader or a custom hook; cross-origin requests are subject to browser CORS rules.
 - **Video rendering**: image syntax whose URL ends in `.mp4`, `.webm`, `.ogg`, and other known extensions renders as a `<video controls>` element.
 - **Standalone renderer** (`renderMarkdown(source, options)`) that produces HTML with the same plugins and styling as the editor preview, without mounting an editor.
 - **Block-level incremental rendering**: the source is split into blocks at ATX headings, and only changed blocks are re-rendered. Unchanged blocks reuse their existing DOM nodes (including already-hydrated mindmap SVGs), and render results are cached by content hash.
@@ -44,11 +44,11 @@ The library is distributed in two flavors:
 
 2. **React subpath export** — `MarkdownEditorReact` is a `forwardRef` component exported from the `./react` subpath. It wraps the vanilla `MarkdownEditor` instance, supports controlled and uncontrolled `value` usage, and exposes an imperative `MarkdownEditorHandle` via ref. The React subpath exists separately so that non-React consumers are not forced to install `react` and `react-dom`.
 
-Rendering is split into a synchronous markdown-it pass (which produces placeholder HTML for mindmaps) and an asynchronous hydration step (`Renderer.hydrate`) that turns mindmap placeholders into live SVG diagrams. The incremental renderer operates on the preview container directly.
+Rendering is split into a synchronous markdown-it pass (which produces placeholder HTML for mindmaps) and an asynchronous hydration step (`Renderer.hydrate`) that turns mindmap placeholders into live SVG diagrams. `renderMarkdown` returns the synchronous HTML; to turn mindmap placeholders into SVGs, use `Renderer.render` and then `Renderer.hydrate` after inserting that HTML into the DOM. The incremental renderer operates on the preview container directly.
 
 ## Browser support
 
-The library runs in modern evergreen browsers that ship CodeMirror 6, KaTeX, markmap-view (which requires `ResizeObserver`), and the Clipboard API. A `document.execCommand('copy')` fallback is used for code-block copying when `navigator.clipboard` is unavailable (for example, non-HTTPS contexts). The mindmap module installs a no-op `ResizeObserver` shim only when the global is undefined, so it never throws during import in restricted DOM environments.
+The library targets modern browsers with a DOM. CodeMirror 6, KaTeX, and markmap-view are package dependencies, not browser features; interactive mindmaps use `ResizeObserver`. The Clipboard API is used when available. A `document.execCommand('copy')` fallback is used for code-block copying when `navigator.clipboard` is unavailable (for example, non-HTTPS contexts). The mindmap module installs a no-op `ResizeObserver` shim only when the global is undefined, which prevents a missing-observer error during import; the shim does not provide real resize notifications.
 
 ## License
 

@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` and `headers` are optional.
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName`, `variablesSchema`, and `variables` are optional.
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` is one of `unary`, `server_streaming`, `client_streaming`, or `bidi_streaming`.
@@ -110,20 +119,23 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 The `method` selects the MCP operation: `tools/call`, `tools/list`, `resources/read`, `resources/list`, `resources/templates/list`, `prompts/get`, or `prompts/list`. `name`, `uri`, `argumentsSchema`, and `arguments` are used as appropriate for the method.
 
 ## Structural rules
 
-- Every media type under `requestBody` or `responses` must contain either `schema` or `$ref`; the single exception is `text/event-stream`, which uses `itemSchema`.
+- For the assistant’s generated contracts, provide `schema` or `$ref` for media types under `requestBody` or `responses`; `text/event-stream` uses OAS 3.2 `itemSchema` for individual events. This is a Powerduck authoring convention, not a universal requirement for every OpenAPI document.
 - Every parameter must have a `schema` (or `content`).
 - The selected protocol and its configuration are **preserved when editing** an operation. RPC and streaming operations are never silently converted into REST.
 - Use the exact extension shapes above — do not invent keys such as `externalUrl`, and do not use `ws` as a protocol name.
 
 ## Why this matters
 
-Modeling these protocols in one document keeps design, debugging and documentation connected to the same source of truth. Execution, mocking and generated MCP support depend on each transport; A2A currently covers JSON-RPC debugging and documentation, not agent server generation. When you ask the assistant to add a streaming or RPC endpoint, it keeps the protocol configuration intact rather than flattening it into a REST-only shape.
+Modeling these protocols in one document keeps design, debugging and documentation connected to the same source of truth. Execution, mocking and generated MCP support depend on each transport; A2A 1.0 supports JSON-RPC, REST and desktop gRPC debugging and documentation, plus generation of a stateless message-adapter server. Persistent tasks and push delivery require your own implementation. When you ask the assistant to add a streaming or RPC endpoint, it keeps the protocol configuration intact rather than flattening it into a REST-only shape.
 
 Related: [Designing with the assistant](./design.md), [Data model](./data-model.md).
 

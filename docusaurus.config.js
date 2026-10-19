@@ -3,6 +3,9 @@
 // Clean, compact documentation experience
 
 import { themes as prismThemes } from "prism-react-renderer";
+import {readFileSync} from "node:fs";
+import relativeDocLinks from "./src/plugins/relative-doc-links.mjs";
+const languages = JSON.parse(readFileSync(new URL("./src/data/locales.json", import.meta.url), "utf8"));
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -24,40 +27,20 @@ const config = {
   projectName: "powerduck-docs",
 
   // Link handling
-  onBrokenLinks: "warn",
+  onBrokenLinks: "throw",
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: "warn",
+      onBrokenMarkdownLinks: "throw",
     },
   },
 
   // Internationalization
   i18n: {
     defaultLocale: "en",
-    locales: [
-      "en",
-      "zh-CN",
-      "zh-TW",
-      "ja-JP",
-      "ko-KR",
-      "fr-FR",
-      "de-DE",
-      "es-ES",
-      "pt-BR",
-      "ar-SA",
-    ],
-    localeConfigs: {
-      en: { label: "English", direction: "ltr" },
-      "zh-CN": { label: "简体中文", direction: "ltr" },
-      "zh-TW": { label: "繁體中文", direction: "ltr" },
-      "ja-JP": { label: "日本語", direction: "ltr" },
-      "ko-KR": { label: "한국어", direction: "ltr" },
-      "fr-FR": { label: "Français", direction: "ltr" },
-      "de-DE": { label: "Deutsch", direction: "ltr" },
-      "es-ES": { label: "Español", direction: "ltr" },
-      "pt-BR": { label: "Português (Brasil)", direction: "ltr" },
-      "ar-SA": { label: "العربية", direction: "rtl" },
-    },
+    locales: languages.map(language => language.docs),
+    localeConfigs: Object.fromEntries(languages.map(language => [language.docs, {
+      label: language.label, direction: language.rtl ? 'rtl' : 'ltr', htmlLang: language.code,
+    }])),
   },
 
   // Custom fields for SEO and branding
@@ -89,21 +72,7 @@ const config = {
         content: "POWERDUCK LIMITED",
       },
     },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-    },
-    {
-      tagName: "link",
-      attributes: {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: "anonymous",
-      },
-    },
+
   ],
 
   presets: [
@@ -113,6 +82,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+          beforeDefaultRemarkPlugins: [relativeDocLinks],
           editUrl: "https://github.com/powerducklab/powerduck-docs/tree/main/",
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
@@ -140,7 +110,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/social-card.png",
 
       // Color mode - default light
       colorMode: {
@@ -202,7 +172,7 @@ const config = {
           },
           {
             label: "Pricing",
-            href: "https://www.powerduck.com/#licensing",
+            href: "https://www.powerduck.com/pricing",
             position: "left",
           },
           {
@@ -246,7 +216,7 @@ const config = {
           },
           {
             label: "Download",
-            href: "https://github.com/powerducklab",
+            href: "https://www.powerduck.com/download.html",
             position: "right",
             className: "header-download-link",
           },
@@ -374,7 +344,7 @@ const config = {
   // Plugins
   // Local plugin that emits the root redirect only during production builds,
   // avoiding the dev-time static/index.html asset conflict.
-  plugins: ["./src/plugins/root-redirect.mjs"],
+  plugins: ["./src/plugins/root-redirect.mjs", "./src/plugins/content-quality.mjs"],
 };
 
 export default config;

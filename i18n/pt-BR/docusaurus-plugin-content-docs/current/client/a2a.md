@@ -97,9 +97,7 @@ O repositório React inclui `examples/a2a-demo`, uma calculadora de somas sem ch
 cd powerduck-react/examples/a2a-demo
 npm ci
 npm start
-```
-
-```bash
+# Em outro terminal, no mesmo diretório:
 npm test
 ```
 

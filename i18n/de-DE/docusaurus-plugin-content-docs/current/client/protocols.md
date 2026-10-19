@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` und `headers` sind optional.
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName`, `variablesSchema` und `variables` sind optional.
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` ist `unary`, `server_streaming`, `client_streaming` oder `bidi_streaming`.
@@ -110,13 +119,16 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `method` wählt die MCP-Operation: `tools/call`, `tools/list`, `resources/read`, `resources/list`, `resources/templates/list`, `prompts/get`, `prompts/list`. `name`, `uri`, `argumentsSchema` und `arguments` kommen je nach Methode zum Einsatz.
 
 ## Strukturregeln
 
-- Jeder Medientyp unter `requestBody` oder `responses` braucht `schema` oder `$ref`, einzige Ausnahme `text/event-stream` mit `itemSchema`.
+- Für vom Assistenten erzeugte Verträge geben Sie bei Medientypen unter `requestBody` oder `responses` ein `schema` oder `$ref` an. `text/event-stream` beschreibt einzelne Ereignisse mit `itemSchema` aus OAS 3.2. Dies ist eine Schreibkonvention von Powerduck, keine allgemeine Pflicht für jedes OpenAPI-Dokument.
 - Jeder Parameter braucht `schema` (oder `content`).
 - Beim Bearbeiten einer Operation bleiben gewähltes Protokoll und Konfiguration **erhalten**: RPC- oder Streaming-Operationen werden nicht still zu REST.
 - Nutzen Sie die genauen Erweiterungsformen oben; erfinden Sie keine Schlüssel wie `externalUrl` und nutzen `ws` nicht als Protokollnamen.
@@ -128,5 +140,7 @@ Wenn sieben Protokolle in einem Dokument modelliert sind, werden Entwurf, Debugg
 Siehe auch: [Mit dem Assistenten entwerfen](./design.md)、[Datenmodell](./data-model.md).
 
 ## A2A
+
+A2A 1.0 unterstützt Debugging und Dokumentation über JSON-RPC, REST und Desktop-gRPC sowie die Erzeugung eines zustandslosen Nachrichtenadapter-Servers. Persistente Aufgaben und Push-Zustellung erfordern eine eigene Implementierung.
 
 Mit `x-protocol: a2a` und `x-a2a` entwerfen, debuggen und dokumentieren Sie Agentennachrichten und Aufgaben. A2A 1.0 unterstützt JSON-RPC, REST und Desktop-gRPC, 0.3 nur JSON-RPC. [A2A-Agenten](./a2a.md) beschreibt Erweiterungen, Signaturprüfung, Servergenerierung und die ausführbare Demo.

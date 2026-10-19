@@ -13,9 +13,9 @@ This page documents each built-in feature as it is actually implemented in the s
 
 The preview uses block-level incremental rendering to stay responsive on large documents:
 
-- **Block splitting** (`splitIntoBlocks`): the source is split into blocks at ATX heading lines (`#` through `######`). Content inside code fences (```` ` or `~~~`) is never treated as a split point, and headings inside `:::` custom containers are also preserved. Documents with no headings degrade to a single block.
+- **Block splitting** (`splitIntoBlocks`): the source is split into blocks at ATX heading lines (`#` through `######`). Content inside backtick or tilde code fences is never treated as a split point, and headings inside `:::` custom containers are also preserved. Documents with no headings degrade to a single block.
 - **Per-block rendering**: only blocks whose content hash changed are re-run through markdown-it / KaTeX. Unchanged blocks reuse their existing DOM nodes directly, including already-hydrated mindmap SVGs.
-- **Content-hash cache**: render results are cached by content hash (a fast djb2-style hash plus length), so undo/redo and copy-paste of identical paragraphs also hit the cache. The cache is capped at 800 entries and evicts hashes no longer present in the document.
+- **Content-hash cache**: render results are cached by content hash (a fast djb2-style hash plus length), so undo/redo and copy-paste of identical paragraphs also hit the cache. When the cache exceeds 800 entries, hashes no longer present in the document are evicted. Entries for current blocks are retained, so a document with more than 800 distinct blocks can exceed that threshold.
 - **Reordering**: reordered blocks are moved natively by appending existing nodes to a `DocumentFragment`.
 - **Adaptive debounce** (`adaptiveDebounceMs(docLength, base = 120, max = 600)`): the pause before a render is `base + floor(docLength / 20000) * 60`, capped at `max`. Override with `renderDebounce`, or set `renderDebounce: false` to render synchronously.
 - **`content-visibility: auto`**: each block is wrapped in a `.md-editor-block` element so off-screen blocks skip layout and paint.
@@ -58,11 +58,11 @@ Fenced code blocks are highlighted with highlight.js. The build registers a fixe
 
 Each highlighted block is wrapped in a macOS-style container with traffic-light dots, a language label, and a **Copy** button. The copy button uses event delegation on the preview pane and falls back to `document.execCommand('copy')` when the Clipboard API is unavailable. Disable with `codeHighlight: false`.
 
-## Toolbar actions
+## Toolbar actions {#toolbar-actions}
 
 In `complex` mode, the toolbar is built from the 22 actions below, in this default order:
 
-| # | Action name | Default label |
+| # | Action name | Purpose |
 |---|-------------|---------------|
 | 1 | `heading` | Heading |
 | 2 | `bold` | Bold (Ctrl+B) |
@@ -87,7 +87,7 @@ In `complex` mode, the toolbar is built from the 22 actions below, in this defau
 | 21 | `help` | Keyboard shortcuts |
 | 22 | `theme` | Toggle theme |
 
-Several actions open popup dialogs or template pickers: image, video, YouTube, table, math (templates), mindmap (templates), callout (type grid), and help. Configure the toolbar with the `toolbar` option as described in [Configuration](./configuration.md#toolbarconfig).
+The built-in labels are English. Use per-item `label` overrides to localize tooltips and accessible names. Several actions open popup dialogs or template pickers: image, video, YouTube, table, math (templates), mindmap (templates), callout (type grid), and help. Configure the toolbar with the `toolbar` option as described in [Configuration](./configuration.md#toolbarconfig).
 
 ## Keyboard shortcuts
 
@@ -112,7 +112,7 @@ The toolbar **Help** button opens a dialog that lists these shortcuts with style
 
 ## Image upload
 
-Provide `onImageUpload: (file: File) => Promise<string>`. The hook is called when an image file is pasted, dropped onto the editor, or selected through the image popup. Resolve to the public image URL; the editor inserts `![alt](url)` at the cursor (using the file name, minus extension, as the alt text). Upload failures are swallowed silently so the user can retry.
+Provide `onImageUpload: (file: File) => Promise<string>`. The hook is called when an image file is pasted or dropped onto the editor. The image popup accepts a URL and does not offer file selection. Resolve to the public image URL; the editor inserts `![alt](url)` at the cursor (using the file name, minus extension, as the alt text). Upload failures are swallowed silently so the user can retry.
 
 ## @mention
 
@@ -122,14 +122,14 @@ Pass a `mention` option to enable a searchable dropdown when the user types `@`:
 - `onMentionSelect(item)` returns the inserted text. The default is `[@label](mention:id)`, which the renderer turns into a styled badge.
 - `minChars` (default `0`) and `maxItems` (default `8`) tune the dropdown.
 
-The dropdown supports ArrowUp/ArrowDown, Enter/Tab, and Escape navigation, and closes on editor blur. Typing `@` in prose (such as `@media`) never triggers the dropdown because real mentions use the `mention:` link scheme.
+The dropdown supports ArrowUp/ArrowDown, Enter/Tab, and Escape navigation, and closes on editor blur. In the preview, plain `@` text such as `@media` is not rendered as a badge; only links using the `mention:` scheme become badges. In the editor, a configured search hook can still be triggered by such text.
 
 ## Document links
 
 Pass a `docLink` option to enable a document search dropdown after the trigger character (default `/`):
 
 - `onDocSearch(query)` returns matching `DocItem`s.
-- `onFetchDocMeta(url)` fetches title, thumbnail, and description. The built-in implementation uses `fetch` + `DOMParser` to read Open Graph tags, but will fail on cross-origin URLs due to CORS — override it with a backend proxy in production.
+- `onFetchDocMeta(url)` fetches title, thumbnail, and description. The built-in implementation uses `fetch` + `DOMParser` to read Open Graph tags, and can fail when a cross-origin server does not allow CORS. Use a custom backend proxy when needed.
 - `insertStyle` controls insertion: `'auto'` (card when metadata is available), `'card'`, or `'link'`.
 
 A selected document is inserted as either a plain link or a `:::doc-link` card that renders title, thumbnail, description, and hostname as a clickable preview card.

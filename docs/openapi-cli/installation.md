@@ -1,14 +1,14 @@
 ---
 sidebar_position: 2
 title: Installation
-description: "Install @powerduck/openapi-cli globally, as a dev dependency, or with npx. Requires Node.js >= 18.17."
+description: "Install @powerduck/openapi-cli globally, as a dev dependency, or with npx. Requires Node.js >= 22.12.0."
 ---
 
 # Installation
 
 ## Requirements
 
-- **Node.js**: `>= 18.17` (declared in the package `engines` field).
+- **Node.js**: `>= 22.12.0` (declared in the package `engines` field).
 - A package manager: npm, yarn, or pnpm.
 
 The package ships dual ESM (`dist/index.js`) and CommonJS (`dist/index.cjs`)
@@ -80,9 +80,10 @@ const { runTests, resolveConfig } = require("@powerduck/openapi-cli");
 
 The published package depends on:
 
-- `@powerduck/openapi-parser` (`^0.3.3`) — internal `$ref` dereferencing.
-- `@powerduck/openapi-request` (`^0.2.2`) — protocol request execution.
-- `commander` (`^15.0.0`) — CLI argument parsing.
+- `@powerduck/openapi-parser` (`^0.3.12`) — internal `$ref` dereferencing.
+- `@powerduck/openapi-request` (`0.2.22`) — protocol request execution.
+- `commander` (`^12.1.0`) — CLI argument parsing.
+- `https-proxy-agent` (`^5.0.1`) — proxy support for HTTP transport.
 
 ## Next steps
 

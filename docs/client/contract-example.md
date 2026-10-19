@@ -5,7 +5,7 @@ description: "Find an implementation error with contract tests"
 
 # Find an implementation error with contract tests
 
-This example uses the developer MCP runner, with response schema validation available since version 0.7.6. Node.js 20.11 or newer is required. It uses fictional data and a loopback-only backend; no account, model or public API is needed after dependency installation.
+This example uses the developer MCP runner, with response schema validation available since version 0.7.6. Node.js 22.12.0 or newer is required. It uses fictional data and a loopback-only backend; no account, model or public API is needed after dependency installation.
 
 ```sh
 git clone https://github.com/powerducklab/dev-mcp-server.git

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: "Introduction"
-description: "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server v1.3.3: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI."
+description: "Production-oriented OpenAPI to MCP server from @powerduck/openapi-mcp-server: automatic Tools, Prompts and Resources generation, a built-in Web admin console, stdio and web transports, and the openapi-mcp CLI."
 keywords: ["openapi-mcp-server", "mcp", "model context protocol", "openapi", "tools", "prompts", "resources", "admin ui", "introduction"]
 ---
 
@@ -12,7 +12,7 @@ keywords: ["openapi-mcp-server", "mcp", "model context protocol", "openapi", "to
 - **Package name:** `@powerduck/openapi-mcp-server`
 - **Version:** <img src="https://img.shields.io/npm/v/@powerduck/openapi-mcp-server"/>
 - **License:** MIT
-- **Node engine:** `>=20.11`
+- **Node engine:** `>=22.12.0`
 - **CLI binary:** `openapi-mcp`
 - **Module format:** dual ESM and CommonJS builds with bundled type declarations.
 
@@ -27,7 +27,7 @@ It is built on `@powerduck/openapi-parser` for validation and dereferencing and 
 ## Transports
 
 - **stdio** — `startStdioServer()` serves one document to a local MCP client (Claude Desktop, editor integrations).
-- **web (HTTP)** — `attachSseRoutes()` mounts the Streamable HTTP transport at `/mcp` and the legacy SSE transport at `/sse` on your own Express app. For session limits, idle reaping, CORS and DNS-rebinding protection, use `startAdminServer()` which wraps the internal transport with all of those options.
+- **web (HTTP)** — `attachMcpRoutes(app, options)` mounts Streamable HTTP at `/mcp` and optional legacy SSE at `/sse` on your Express app. Its options control session limits, idle timeouts, CORS and DNS-rebinding protection. `startAdminServer()` adds the admin UI and uses the transport with its default session limits. `attachSseRoutes()` remains a deprecated positional wrapper.
 
 ## Admin runtime
 
@@ -51,11 +51,11 @@ openapi-mcp serve --transport web --port 3000 --api-key your-admin-key
 
 ## Next steps
 
-- [Installation](./installation.md) — npm/yarn/pnpm, global install, the `./server` subpath and dependencies.
-- [Quickstart](./quickstart.md) — CLI and programmatic usage.
-- [Configuration](./configuration.md) — the complete `ServerConfig`.
-- [API Reference](./api-reference.md) — every export and CLI command.
-- [Examples](./examples.md) — recipes.
+- [Installation](../installation/) — npm/yarn/pnpm, global install, the `./server` subpath and dependencies.
+- [Quickstart](../quickstart/) — CLI and programmatic usage.
+- [Configuration](../configuration/) — the complete `ServerConfig`.
+- [API Reference](../api-reference/) — every export and CLI command.
+- [Examples](../examples/) — recipes.
 
 ## License
 

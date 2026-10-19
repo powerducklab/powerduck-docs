@@ -58,12 +58,12 @@ Ao exportar, escolhe o idioma; dez estão integrados.
 9. Português — Brasil (Português — Brasil)
 10. العربية (Árabe)
 
-Uma opção **Outro/Personalizado** permite escrever o idioma diretamente.
+A opção **outro/personalizado** aceita outro idioma, mas os rótulos internos do relatório usam inglês quando não há tradução. Informar um idioma não traduz o relatório automaticamente.
 
-O relatório é seguro de compartilhar.
+Revise o relatório exportado antes de compartilhá-lo:
 
-- **As credenciais mascaram-se automaticamente**, por isso tokens e chaves não aparecem.
-- **As cargas grandes dobram-se**, para manter o relatório legível em vez de descarregar tudo.
+- **Campos de credenciais reconhecidos são ocultados automaticamente.** Conteúdos arbitrários, URLs e campos personalizados ainda podem conter dados sensíveis; revise e remova esses dados antes de compartilhar;
+- **Conteúdos grandes ficam recolhidos** para facilitar a leitura. Recolher uma seção não remove seus dados do HTML exportado.
 
 O HTML é independente: anexar a tickets ou arquivar por release.
 

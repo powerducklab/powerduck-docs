@@ -52,6 +52,8 @@ let already = 0;
 let noHead = 0;
 for (const file of walk(root)) {
   const html = readFileSync(file, "utf8");
+  // Redirect shells should navigate immediately, without a second page-view request.
+  if (/http-equiv=["']refresh["']/i.test(html)) continue;
   if (html.includes(GA_ID)) {
     already += 1;
     continue;

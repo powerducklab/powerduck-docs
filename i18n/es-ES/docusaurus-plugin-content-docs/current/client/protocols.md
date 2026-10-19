@@ -50,6 +50,9 @@ paths:
         url: wss://example.com/ws
         subprotocols: []
         headers: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `subprotocols` y `headers` son opcionales.
@@ -70,6 +73,9 @@ paths:
         variablesSchema:
           type: object
         variables: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `operationName`, `variablesSchema` y `variables` son opcionales.
@@ -89,6 +95,9 @@ paths:
         method: GetProduct
         kind: unary
         reflection: true
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `kind` es `unary`, `server_streaming`, `client_streaming` o `bidi_streaming`.
@@ -110,13 +119,16 @@ paths:
         argumentsSchema:
           type: object
         arguments: {}
+      responses:
+        "200":
+          description: Operation response
 ```
 
 `method` elige la operación MCP: `tools/call`, `tools/list`, `resources/read`, `resources/list`, `resources/templates/list`, `prompts/get`, `prompts/list`. `name`, `uri`, `argumentsSchema` y `arguments` se usan según el método.
 
 ## Reglas estructurales
 
-- Cada tipo de medio en `requestBody` o `responses` necesita `schema` o `$ref`, con la única excepción de `text/event-stream` con `itemSchema`.
+- En los contratos generados por el asistente, incluya `schema` o `$ref` en los tipos de medio de `requestBody` o `responses`. `text/event-stream` utiliza `itemSchema` de OAS 3.2 para cada evento. Es una convención de redacción de Powerduck, no un requisito universal de todos los documentos OpenAPI.
 - Cada parámetro necesita `schema` (o `content`).
 - Al editar una operación, el protocolo y configuración elegidos se **conservan**: las operaciones RPC o de streaming no se vuelven REST en silencio.
 - Use las formas exactas de extensión anteriores; no invente claves como `externalUrl` ni use `ws` como nombre de protocolo.
@@ -128,5 +140,7 @@ Cuando siete protocolos se modelan en un documento, diseño, depuración, simula
 Vea también: [Diseñar con el asistente](./design.md)、[Modelo de datos](./data-model.md).
 
 ## A2A
+
+A2A 1.0 permite depurar y documentar JSON-RPC, REST y gRPC de escritorio, además de generar un servidor adaptador de mensajes sin estado. Las tareas persistentes y la entrega push requieren una implementación propia.
 
 Usa `x-protocol: a2a` y `x-a2a` para diseñar, depurar y documentar mensajes y tareas. A2A 1.0 admite JSON-RPC, REST y gRPC de escritorio; 0.3 usa JSON-RPC. Consulta [Agentes A2A](./a2a.md) para las extensiones, la verificación de firmas, la generación del servidor y la demo ejecutable.

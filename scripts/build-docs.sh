@@ -24,9 +24,12 @@ echo "==> [1/4] Clearing previous build"
 npx docusaurus clear
 
 echo "==> [2/4] Building all locales"
-npx docusaurus build
+npm run build
 
-echo "==> [3/4] Ensuring gtag is present on every page (redirect shells included)"
+node "$ROOT_DIR/scripts/audit-localization.mjs" "$ROOT_DIR/build/localization-audit.json"
+node "$ROOT_DIR/scripts/audit-built-pages.mjs" "$ROOT_DIR/build"
+
+echo "==> [3/4] Ensuring gtag is present on content pages (excluding redirects)"
 node "$ROOT_DIR/scripts/inject-ga.mjs" "$ROOT_DIR/build"
 
 echo "==> [4/4] Syncing build -> $DOCS_TARGET"
