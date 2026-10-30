@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: Instalación
-description: "Instale el cliente de escritorio Powerduck en macOS, Windows y Linux. La aplicación es local-first y arranca sin cuenta."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Instalación
 
-El cliente de escritorio Powerduck es una app local-first. Se instala como cualquier otro programa de escritorio, abre archivos reales en disco y arranca sin cuenta.
+Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
 ## Descarga
 
@@ -48,16 +48,16 @@ El cliente de escritorio es una app Electron en dos partes.
 - El **proceso principal** (Node.js), que gestiona el acceso a archivos, las peticiones HTTP externas, el servidor de simulación local, las conexiones a bases de datos y el terminal integrado.
 - El **renderer** (el espacio de trabajo React), que muestra la especificación, el chat de IA y las herramientas.
 
-El cliente de escritorio envía las solicitudes al modelo mediante el proceso principal, por lo que no se aplican las restricciones CORS entre navegador y proveedor. Aun así, las instrucciones, el contexto pertinente y las credenciales se envían al endpoint del modelo configurado; usar un modelo alojado no es trabajar sin conexión. La separación de procesos tampoco garantiza que los secretos nunca aparezcan en registros o herramientas de desarrollo. Véase [IA y modelos](../client/ai-models.md).
+Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
 ## Requisitos
 
 - macOS 11 o posterior, Windows 10 o posterior o una distribución de escritorio Linux habitual compatible con Electron 37.
 - Espacio en disco para la app. Las especificaciones abiertas permanecen en su ubicación original.
-- La red solo es necesaria para enviar peticiones, sincronizar fuentes Git o llamar a un modelo de IA hospedado; el resto funciona sin conexión.
+- Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
-## Licencia
+## Powerduck · Free / Pro / Max
 
-El cliente de escritorio puede evaluarse libremente. Se vende como licencia **perpetua** tras una compra única, sin suscripción. La clave de licencia se genera en la compra y se muestra una sola vez. El alojamiento en la nube es un servicio de suscripción aparte. Vea [Facturación de Cloud](../cloud/billing.md) para la distinción.
+Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
 
 Después, pase al [Inicio rápido](./quickstart.md).

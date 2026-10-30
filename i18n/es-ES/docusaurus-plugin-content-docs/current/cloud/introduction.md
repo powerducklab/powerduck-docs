@@ -61,14 +61,9 @@ Los lectores públicos usan un visor específico y no necesitan crear una cuenta
 
 ## Cloud versus cliente de escritorio
 
-| | Cliente de escritorio | Cloud |
-|---|---|---|
-| Ejecución | Su máquina | Hospedado |
-| Modelo | Licencia perpetua, compra única | Plan gratuito y suscripciones de pago |
-| Resultado | Clave de licencia (mostrada una vez) | Funciones del plan, sin clave de licencia |
-| Cuándo | Local, sin conexión, ámbito completo | Compartir y publicar en línea |
+Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
 
-Los dos productos se complementan. Cloud ofrece un plan Free; las suscripciones de pago de Cloud y las licencias de escritorio se compran por separado. Consulte [Facturación](./billing.md).
+Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
 
 ## Empiece aquí
 

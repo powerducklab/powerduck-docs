@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: Installation
-description: "Installez le client de bureau Powerduck sur macOS, Windows et Linux. L'application est local-first et démarre sans compte."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Installation
 
-Le client de bureau Powerduck est une application local-first. Il s'installe comme n'importe quel autre programme de bureau, ouvre de vrais fichiers sur le disque et démarre sans compte.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Téléchargement
 
@@ -48,16 +48,16 @@ Le client de bureau est une application Electron en deux parties.
 - Le **processus principal** (Node.js), qui gère l'accès aux fichiers, les requêtes HTTP externes, le serveur de simulation local, les connexions aux bases de données et le terminal intégré.
 - Le **renderer** (l'espace de travail React), qui affiche la spécification, le chat IA et les outils.
 
-Le client de bureau envoie les requêtes au modèle par le processus principal, ce qui évite les restrictions CORS entre le navigateur et le fournisseur. Les instructions, le contexte pertinent et les identifiants sont néanmoins envoyés au point d'accès du modèle configuré ; un modèle hébergé ne fonctionne pas hors ligne. Cette séparation ne garantit pas non plus qu'aucun secret n'apparaisse dans les journaux ou les outils de développement. Voir [IA et modèles](../client/ai-models.md).
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Configuration requise
 
 - macOS 11 ou version ultérieure, Windows 10 ou version ultérieure, ou une distribution Linux de bureau courante compatible avec Electron 37.
 - De l'espace disque pour l'application. Les spécifications ouvertes restent à leur emplacement d'origine.
-- Le réseau n'est nécessaire que pour envoyer des requêtes, synchroniser des sources Git ou appeler un modèle IA hébergé ; le reste fonctionne hors ligne.
+- Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
-## Licence
+## Powerduck · Free / Pro / Max
 
-Le client de bureau peut être évalué librement. Il est vendu sous licence **perpétuelle** après un achat unique, sans abonnement. La clé de licence est générée à l'achat et affichée une seule fois. L'hébergement cloud est un service par abonnement distinct. Voir [Facturation Cloud](../cloud/billing.md) pour la distinction.
+Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
 
 Ensuite, passez au [Démarrage rapide](./quickstart.md).

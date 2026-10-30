@@ -6,7 +6,7 @@ description: "Masaüstü istemcisi, yapay zekâ merkezli iş akışını kendi b
 
 # Masaüstü istemcisi
 
-Masaüstü istemcisi, yapay zekâ merkezli iş akışını kendi bilgisayarınıza taşır. Depodan bir `openapi.yaml` açar, ne istediğinizi anlatır ve sonucu incelersiniz. Belirtim düzenleyicisi, HTTP istemcisi, mock aracı, belge üreticisi ve test çalıştırıcısı arasında geçiş yapmanız veya başlamak için bulut hesabı açmanız gerekmez.
+Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
 Kontrol sizdedir: asistan önerir, siz onaylarsınız.
 
@@ -46,19 +46,15 @@ Amacınızı doğal dille anlatırsınız; asistan uygun yeteneği seçer, deter
 - İşlemleri listeleme, şema alma veya sorgu yürütme gibi salt okunur eylemler, asistanın yanıtını dayandırdığı gerçekleri döndürür;
 - Yazma eylemleri çalışmadan önce onay ister.
 
-Modeli **siz yapılandırırsınız**: uygulamayı OpenAI uyumlu bir sağlayıcıya yönlendirin ve ayarlardan seçin. Bkz. [Yapay zekâ ve modeller](./ai-models.md).
+Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
 ## Yerel çalışmanın avantajları
 
-- **Gerçek dosyalarınız.** Uygulama diskteki gerçek dosyaları açar, düzenler, kaydeder ve yerel değişiklikleri izler.
-- **CORS engeli yok.** İstekler web görünümü yerine yerel süreçten geçtiğinden kökenler arası kısıtlamalar çağrıları engellemez.
-- **Model uç noktasını siz seçersiniz.** Masaüstü istekleri ana süreçten gönderir; ancak istemler, ilgili bağlam ve kimlik bilgileri yapılandırdığınız sağlayıcıya iletilir. Yerel öncelikli çalışma, uzak yapay zekâ isteklerinin veri aktarmadığı anlamına gelmez.
-- **Çevrimdışı çalışır.** Tasarım, mock ve dokümantasyon ağ gerektirmez; canlı istekler, Git eşitlemesi veya barındırılan model için ağ gerekir.
-- **Yerel yürütme.** Mock, senaryo çalıştırıcısı, veritabanı erişimi ve terminal bilgisayarınızda çalışır.
+Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
-## Masaüstü lisansı
+## Powerduck · Free / Pro / Max
 
-Masaüstü istemcisi **tek ödemeli, süresiz lisansla** satılır: bir kez satın alır, hesap açmadan çevrimdışı çalışırsınız. Lisans anahtarı satın alırken oluşturulur ve bir kez gösterilir. Bu lisans, aylık abonelikle sunulan Powerduck Cloud barındırmasından ayrıdır. Bkz. [Bulut faturalandırması](../cloud/billing.md).
+Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
 
 ## Buradan başlayın
 

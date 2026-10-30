@@ -6,7 +6,7 @@ description: "The Powerduck desktop client is a local-first, AI-driven workspace
 
 # Desktop Client
 
-The desktop client is where the AI-native workflow happens on your own machine. You open an `openapi.yaml` from a repository, say what you want to happen, and review the result — no switching between a spec editor, an HTTP client, a mock tool, a docs generator, and a test runner, and no cloud account to begin.
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 You stay in control: the assistant proposes, you approve.
 
@@ -46,19 +46,15 @@ You describe intent in natural language; the assistant chooses the right capabil
 - Read-only actions — listing operations, getting a schema, running a query — return the facts the assistant grounds its answer in;
 - Write actions ask for confirmation before they run.
 
-The model is **yours to configure**: point the app at any OpenAI-compatible provider and select it in settings. See [AI and models](./ai-models.md).
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ## Why local-first matters to you
 
-- **Your real files.** The app opens, edits, and saves the actual files on disk and tracks local changes.
-- **No CORS wall.** Requests go through the local process, not the web view, so cross-origin restrictions do not block your calls.
-- **You choose the model endpoint.** The desktop sends model requests through its main process, but prompts, relevant context, and credentials still go to your configured provider. Local-first does not mean remote AI requests transfer no data.
-- **Works offline.** Design, mock, and documentation need no network; it is only required for live requests, Git sync, or a hosted model.
-- **Local runtimes.** The mock, scenario runner, database access, and terminal all run on your machine.
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
-## The desktop license
+## Powerduck · Free / Pro / Max
 
-The desktop client is sold as a **one-time, perpetual license**: buy once, own it, work fully offline, with no account. A license key is generated at purchase and shown once. It is separate from Powerduck Cloud, which is a monthly hosting subscription. See [Cloud billing](../cloud/billing.md).
+Free includes 300,000 credits, reset daily at 00:00 UTC. Pro is $39/month with 18,000,000 credits per 7 days; Max is $99/month with 60,000,000 credits per 7 days. Paid resets are anchored to the original subscription start, separately from monthly billing. Unused credits do not roll over. Desktop and AI Chat share the personal account plan; software licenses and activation keys are no longer sold.
 
 ## Start here
 

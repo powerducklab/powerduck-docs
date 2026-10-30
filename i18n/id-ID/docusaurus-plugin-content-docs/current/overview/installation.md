@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: "Instalasi"
-description: "Klien desktop Powerduck mengutamakan pekerjaan lokal. Aplikasi ini dipasang seperti program desktop biasa, membuka berkas asli di disk, dan tidak memerlukan akun untuk mulai digunakan."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Instalasi
 
-Klien desktop Powerduck mengutamakan pekerjaan lokal. Aplikasi ini dipasang seperti program desktop biasa, membuka berkas asli di disk, dan tidak memerlukan akun untuk mulai digunakan.
+Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
 ## Unduh
 
@@ -48,16 +48,16 @@ Klien desktop adalah aplikasi Electron dengan dua bagian:
 - **Proses utama** (Node.js) yang menangani akses berkas, permintaan HTTP keluar, server mock lokal, koneksi basis data, dan terminal terintegrasi;
 - **Renderer** (ruang kerja React) yang menampilkan spesifikasi, percakapan AI, dan semua alat.
 
-Transport AI desktop mengirim permintaan penyelesaian melalui proses utama sehingga pembatasan CORS antara browser dan penyedia tidak berlaku. Prompt, konteks terkait, dan kredensial tetap dikirim ke endpoint model yang Anda konfigurasi; penggunaan model terhosting bukan operasi luring. Pemisahan proses ini tidak menjamin bahwa rahasia tidak akan pernah muncul di log atau alat pengembang. Lihat [AI dan model](../client/ai-models.md).
+Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
 ## Persyaratan sistem
 
 - macOS 11 atau lebih baru, Windows 10 atau lebih baru, atau distribusi desktop Linux umum yang kompatibel dengan Electron 37;
 - Ruang disk yang cukup untuk aplikasi; spesifikasi yang Anda buka tetap berada di lokasi aslinya;
-- Akses jaringan saat mengirim permintaan, menyinkronkan sumber Git, atau memanggil model AI terhosting; selain itu aplikasi dapat digunakan secara luring.
+- Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
-## Lisensi
+## Powerduck · Free / Pro / Max
 
-Anda dapat mengevaluasi klien desktop tanpa batas waktu. Aplikasi dijual dengan lisensi **permanen** sekali bayar: cukup beli sekali, tanpa langganan. Kunci lisensi diterbitkan saat pembelian dan hanya ditampilkan sekali. Hosting cloud merupakan layanan berlangganan yang terpisah. Lihat [Penagihan cloud](../cloud/billing.md) untuk perbedaannya.
+Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
 
 Berikutnya: ikuti [Panduan mulai cepat](./quickstart.md).

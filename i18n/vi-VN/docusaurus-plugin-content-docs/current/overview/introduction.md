@@ -15,7 +15,7 @@ Các công cụ của giai đoạn trước — ứng dụng khách API, trình 
 
 ## Nền tảng: một tệp OpenAPI cục bộ
 
-Mọi thứ bắt đầu từ tệp `openapi.yaml` thông thường trong kho mã của bạn: định dạng mở, được quản lý phiên bản, con người và AI đều có thể đọc. Không phải cơ sở dữ liệu độc quyền hay tài khoản đám mây.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ```text
                 one local openapi.yaml
@@ -37,17 +37,17 @@ Powerduck dùng OpenAPI 3.2 và đọc các tài liệu 3.0, 3.1 hiện có, cù
 - Mô tả kết quả mong muốn bằng ngôn ngữ tự nhiên, chẳng hạn “tạo các endpoint đơn hàng”, “chuẩn bị dữ liệu kiểm thử” hoặc “chạy quy trình thanh toán và gửi báo cáo”. Trợ lý sẽ chọn công cụ phù hợp và đề xuất thay đổi;
 - Mỗi thay đổi được trình bày dưới dạng **thẻ để bạn xem xét**; chỉ được áp dụng sau khi bạn phê duyệt;
 - Khi bạn tinh chỉnh một API, trợ lý tập trung vào API đó và chỉ sửa phần được yêu cầu, không tự ý chuyển sang phần khác của tài liệu;
-- Tệp cục bộ vẫn nằm trên ổ đĩa. AI từ xa gửi ngữ cảnh liên quan đến dịch vụ mô hình mà bạn đã cấu hình, sử dụng thông tin xác thực của dịch vụ đó. Xuất bản lên Cloud sẽ tải lên nội dung đã chọn. Thống kê sử dụng là tùy chọn, mặc định tắt và được quản lý riêng; làm việc cục bộ không cần tài khoản.
+- Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Ưu tiên làm việc cục bộ
 
-Powerduck chạy trên máy của bạn, mở và lưu tệp thực, hoạt động ngoại tuyến, đồng thời giữ khóa API và lời nhắc ở ngoài trình duyệt. Đám mây là phần mở rộng tùy chọn để chia sẻ và xuất bản, không phải điều kiện để bắt đầu.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Ba cách sử dụng Powerduck
 
 | Sản phẩm | Mô tả | Phù hợp với |
 |---|---|---|
-| [**Ứng dụng máy tính**](/docs/vi-VN/client/introduction/) | Ứng dụng Electron ưu tiên hoạt động cục bộ, có trợ lý AI và không gian làm việc API đầy đủ | Lập trình viên muốn làm mọi việc trên máy của mình, làm việc ngoại tuyến và giữ khóa cùng lời nhắc ở cục bộ |
+| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
 | [**Powerduck Cloud**](/docs/vi-VN/cloud/introduction/) | Dịch vụ lưu trữ OAS, tài liệu trực tuyến và MCP được quản lý | Chia sẻ API, xuất bản liên kết ổn định và cung cấp MCP mà không phải vận hành máy chủ |
 | [**Thư viện mã nguồn mở**](/docs/vi-VN/opensource/) | Các gói npm `@powerduck/*` có thể kết hợp với nhau | Xây dựng công cụ riêng, quy trình CI hoặc thành phần nhúng |
 
@@ -55,7 +55,7 @@ Cả ba sản phẩm dùng chung các bộ xử lý nền tảng. Ứng dụng m
 
 ### Ứng dụng máy tính
 
-[Ứng dụng máy tính](/docs/vi-VN/client/introduction/) chạy hoàn toàn trên máy của bạn. Nó mở và sửa tệp thực trên ổ đĩa, gửi yêu cầu qua tiến trình cục bộ, chạy mock cục bộ, đồng thời giữ lời nhắc AI và khóa API ngoài bảng điều khiển của trình duyệt. Bạn toàn quyền cấu hình mô hình. Mọi thay đổi được đề xuất đều xuất hiện trong thẻ để xem xét trước khi áp dụng.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ### Powerduck Cloud
 
@@ -71,7 +71,7 @@ Các [thư viện](/docs/vi-VN/opensource/) là thành phần xử lý bên dư�
 - **API sẵn sàng cho tác nhân AI.** Hợp đồng tạo tài liệu cũng tạo công cụ MCP, để tác nhân AI có thể gọi API đúng cách ngay từ đầu.
 - **Mọi thứ luôn nhất quán.** Thiết kế, gỡ lỗi, kiểm thử, mock và tài liệu đều đọc một tệp.
 - **Mọi giao thức trong cùng một nơi.** HTTP, SSE, WebSocket, GraphQL, gRPC và MCP nằm trong một đặc tả, thay vì sáu công cụ riêng.
-- **Không bị ràng buộc với nhà cung cấp.** Chọn mô hình của riêng bạn, giữ khóa cục bộ trên máy tính và nắm quyền sở hữu tệp YAML trong kho mã.
+- Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Bước tiếp theo
 

@@ -61,14 +61,9 @@ Herkese açık belgeleri okuyanlar özel belge görüntüleyicisini kullanır ve
 
 ## Cloud ve masaüstü istemcisi
 
-| | Masaüstü istemcisi | Cloud |
-|---|---|---|
-| Çalıştığı yer | Bilgisayarınızda | Barındırılan hizmet |
-| Ödeme modeli | Tek seferlik ödemeyle süresiz lisans | Ücretsiz plan ve ücretli abonelikler |
-| Sağlanan hak | Bir kez gösterilen lisans anahtarı | Lisans anahtarı olmadan plan kapsamındaki haklar |
-| En uygun kullanım | Tam kapsamlı yerel ve çevrimdışı çalışma alanı | Çevrimiçi paylaşım ve yayımlama |
+Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
 
-İki ürün birbirini tamamlar. Cloud'un Free planı vardır; ücretli Cloud abonelikleri ve masaüstü lisansları ayrı satın alınır. Bkz. [Faturalandırma](./billing.md).
+Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
 
 ## Buradan başlayın
 

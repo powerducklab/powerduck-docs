@@ -15,7 +15,7 @@ Les outils de l'ère précédente — clients API, visualiseurs de spécificatio
 
 ## Le cœur : un seul fichier OpenAPI local
 
-Tout commence par un simple `openapi.yaml` dans votre dépôt : un fichier ouvert, versionné, lisible par les humains comme par l'IA. Pas de base de données propriétaire, pas de compte cloud requis.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ```text
                 one local openapi.yaml
@@ -37,17 +37,17 @@ Powerduck prend en charge OpenAPI 3.2 et met à niveau à la volée les document
 - Décrivez le résultat en langage naturel — « crée le point de terminaison de commande », « prépare des données de test », « exécute le flux de paiement et fais un rapport » — et il choisit les bons outils et propose des modifications.
 - Chaque modification arrive sous forme de **carte révisable**. Rien n'est appliqué avant votre approbation.
 - Quand vous affinez une API, l'assistant reste sur cette API et ne modifie que ce que vous demandez, sans perturber le reste du document.
-- Les fichiers sont lus et enregistrés localement. L’IA distante envoie le contexte pertinent au service de modèle configuré avec ses identifiants. La publication Cloud téléverse le contenu sélectionné. Les statistiques facultatives sont désactivées par défaut et réglables séparément. Aucun compte n’est requis pour les fonctions locales.
+- Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Local-first par défaut
 
-Powerduck s'exécute sur votre machine, ouvre et enregistre de vrais fichiers, fonctionne hors ligne et garde vos clés API et vos invites hors du navigateur. Le cloud est une extension optionnelle pour le partage et la publication, pas un prérequis pour commencer.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Trois façons d'utiliser Powerduck
 
 | Forme | Ce que c'est | Quand l'utiliser |
 |---|---|---|
-| [**Client de bureau**](../client/introduction.md) | Application Electron local-first avec assistant IA et espace de travail API complet | Les ingénieurs qui veulent tout garder sur leur machine, travailler hors ligne et conserver clés et invites en local |
+| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
 | [**Powerduck Cloud**](../cloud/introduction.md) | Service hébergé pour l'hébergement OAS, la documentation en ligne et le MCP géré | Pour partager des API, publier des liens stables et fournir du MCP sans rien exécuter |
 | [**Bibliothèques open source**](/opensource/index.md) | Packages npm `@powerduck/*` combinables | Pour construire vos propres outils, pipelines CI ou composants intégrés |
 
@@ -55,7 +55,7 @@ Les trois formes partagent le même moteur. Le client de bureau et le cloud sont
 
 ### Client de bureau
 
-Le [client de bureau](../client/introduction.md) s'exécute entièrement sur votre machine. Il ouvre et édite de vrais fichiers sur le disque, envoie les requêtes via un processus local, exécute des simulations locales et garde les invites IA et les clés API hors de la console du navigateur. Les modèles sont librement configurables et les modifications proposées arrivent sous forme de cartes révisables avant application.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ### Powerduck Cloud
 
@@ -71,7 +71,7 @@ Les [bibliothèques](/opensource/index.md) sont le moteur sous-jacent : analyseu
 - **Vos API sont prêtes pour les agents dès le départ.** Le même contrat qui génère la documentation génère aussi les outils MCP, afin que les agents IA appellent correctement votre API dès le premier jour.
 - **Aucune dérive.** La conception, le débogage, les tests, la simulation et la documentation lisent un seul fichier.
 - **Tous les protocoles au même endroit.** HTTP, SSE, WebSocket, GraphQL, gRPC et MCP dans une seule spécification, pas six outils.
-- **Aucun verrouillage.** Apportez vos modèles, gardez vos clés en local sur le bureau et possédez le YAML en clair dans votre dépôt.
+- Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Où aller ensuite
 

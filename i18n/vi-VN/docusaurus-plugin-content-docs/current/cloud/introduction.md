@@ -61,14 +61,9 @@ Người đọc tài liệu công khai sử dụng trình xem riêng và không 
 
 ## So sánh Cloud với ứng dụng máy tính
 
-| | Ứng dụng máy tính | Cloud |
-|---|---|---|
-| Nơi chạy | Trên máy của bạn | Dịch vụ được lưu trữ |
-| Mô hình thanh toán | Giấy phép vĩnh viễn, thanh toán một lần | Gói miễn phí và các gói đăng ký trả phí |
-| Quyền nhận được | Khóa giấy phép, chỉ hiển thị một lần | Quyền sử dụng theo gói, không có khóa giấy phép |
-| Phù hợp nhất với | Không gian làm việc đầy đủ, cục bộ và ngoại tuyến | Chia sẻ và xuất bản trực tuyến |
+Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
 
-Hai sản phẩm bổ trợ cho nhau. Cloud có gói Free; các gói Cloud trả phí và giấy phép ứng dụng máy tính được mua riêng. Xem [Thanh toán](./billing.md).
+Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
 
 ## Bắt đầu tại đây
 

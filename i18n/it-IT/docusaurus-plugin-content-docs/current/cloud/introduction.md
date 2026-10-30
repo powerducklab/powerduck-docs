@@ -61,14 +61,9 @@ I lettori pubblici utilizzano un visualizzatore dedicato e non hanno bisogno di 
 
 ## Cloud e client desktop a confronto
 
-| | Client desktop | Cloud |
-|---|---|---|
-| Esecuzione | Sul tuo computer | Servizio ospitato |
-| Modello | Licenza perpetua con pagamento una tantum | Piano gratuito e abbonamenti a pagamento |
-| Cosa ricevi | Una chiave di licenza, mostrata una sola volta | Funzionalità del piano, senza chiave di licenza |
-| Ideale per | Lavoro locale e offline in un ambiente completo | Condivisione e pubblicazione online |
+Free: 300.000 credits al giorno, ripristinati alle 00:00 UTC. Pro: 39 $/mese e 18.000.000 credits ogni 7 giorni. Max: 99 $/mese e 60.000.000 credits ogni 7 giorni. Il ciclo parte dall’inizio originale dell’abbonamento, separato dalla fatturazione mensile. Nessun riporto. Desktop e AI Chat condividono il piano personale; licenze perpetue e chiavi di attivazione non sono più vendute.
 
-I due prodotti sono complementari. Cloud offre un piano Free; gli abbonamenti Cloud a pagamento e le licenze desktop si acquistano separatamente. Consulta [Fatturazione](./billing.md).
+Free: 300.000 credits al giorno, ripristinati alle 00:00 UTC. Pro: 39 $/mese e 18.000.000 credits ogni 7 giorni. Max: 99 $/mese e 60.000.000 credits ogni 7 giorni. Il ciclo parte dall’inizio originale dell’abbonamento, separato dalla fatturazione mensile. Nessun riporto. Desktop e AI Chat condividono il piano personale; licenze perpetue e chiavi di attivazione non sono più vendute.
 
 ## Da dove iniziare
 

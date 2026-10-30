@@ -1,31 +1,17 @@
 ---
 sidebar_position: 3
-title: "不需帳號或 AI 模型，送出第一個本機請求"
-description: "不需帳號或 AI 模型，送出第一個本機請求"
+title: "Powerduck · Quickstart"
+description: "Google OAuth / GitHub · AI Chat · OpenAPI"
 ---
 
-# 不需帳號或 AI 模型，送出第一個本機請求
+# Powerduck · Quickstart
 
-## 試用本機範例
+Powerduck 桌面端與瀏覽器工作區均須先使用 Google OAuth 或 GitHub 登入。本機檔案仍保存在磁碟。AI 分析會將選定內容傳送給平台管理的模型供應商；不再支援自訂模型網址或 API Key。
 
-在桌面應用程式的空白工作區中選擇 **試用範例**，再開始執行。Powerduck 會建立獨立範例、啟動本機 Mock 伺服器，向分配的連接埠送出 `GET /orders/summary`，並顯示實際回應。只有收到 HTTP 200，才會顯示範例已完成。請求結束或關閉範例後，Mock 伺服器就會停止。你可以隨時重新執行範例。請先安裝應用程式；這個本機流程不需要網路、登入或 AI 模型金鑰。
+Free 每日提供 300,000 credits，UTC 00:00 重設。Pro 為 $39/月，每 7 日 18,000,000 credits；Max 為 $99/月，每 7 日 60,000,000 credits。額度從首次訂閱時間起每 7 日重設，與每月計費分開；未用額度不累計。桌面端與 AI Chat 共用個人帳戶方案，不再出售軟體授權或啟用碼。
 
-## 開啟自己的規格
-
-使用 **開啟** 匯入 YAML 或 JSON 格式的 OpenAPI 文件。範例不會覆寫既有檔案。免費版有規格數量限制；若已達上限，請先儲存，再關閉或移除不需要的文件。不要為了執行範例而捨棄尚未儲存的工作。已有程式碼專案時，也可以掃描程式碼來產生 OpenAPI；使用結果前，請先檢查不確定的欄位。
-
-## 驗證實際後端
-
-Mock 請求成功，不代表實際後端符合規格。請參考 [契約錯誤範例](/docs/zh-TW/client/contract-example/)，需要時再 [連接程式設計代理程式](/docs/zh-TW/client/coding-agent/)。手動驗證不需要 AI 模型。
-
-## 選用模型與常見問題
-
-- **尚未設定模型：** 本機請求、Mock 與手動契約檢查仍可使用。只有需要 AI 功能時，才須在設定中配置模型。
-- **模型服務連線失敗：** 檢查設定中的模型端點、金鑰與代理伺服器。回報問題時，不要公開金鑰或請求標頭。
-- **無法連線至目標 API：** 確認伺服器正在執行，並在偵錯工具中檢查 URL、連接埠與請求設定。
-- **HTTP 401/403：** 檢查目標 API 的驗證設定與權限。這不是要求你登入 Powerduck。
-- **契約檢查失敗：** 查看斷言指出的欄位路徑與預期型別；修正後端或錯誤的規格，再重新執行檢查。
-
-本機檔案會在你的電腦上讀寫。遠端模型會收到必要的上下文；發佈至雲端時，才會上傳選取的內容。選用的使用統計在設定中預設關閉，與授權驗證分開處理。
-
-[下載](https://www.powerduck.com/download.html) · [桌面版授權](https://www.powerduck.com/pricing?product=client)
+1. [Installation](./installation.md) → Google / GitHub.
+2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
+3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
+4. [Contract example](../client/contract-example.md) → Mock / Validation.
+5. [Plans](../cloud/billing.md) → Free / Pro / Max.

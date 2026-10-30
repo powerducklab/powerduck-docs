@@ -61,14 +61,9 @@ Leitores públicos usam um visualizador dedicado e não precisam criar uma conta
 
 ## Cloud versus cliente de desktop
 
-| | Cliente de desktop | Cloud |
-|---|---|---|
-| Execução | A sua máquina | Hospedado |
-| Modelo | Licença perpétua, compra única | Plano gratuito e assinaturas pagas |
-| Resultado | Chave de licença (mostrada uma vez) | Recursos do plano, sem chave de licença |
-| Quando | Local, sem conexão, âmbito completo | Compartilhar e publicar online |
+Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
 
-Os dois produtos se complementam. O Cloud oferece um plano Free; as assinaturas pagas do Cloud e as licenças de desktop são adquiridas separadamente. Veja [Faturamento](./billing.md).
+Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
 
 ## Comece aqui
 

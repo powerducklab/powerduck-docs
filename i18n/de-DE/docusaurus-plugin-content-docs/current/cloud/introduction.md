@@ -61,14 +61,9 @@ Melden Sie sich mit **Google** oder **GitHub** an. Nach dem OAuth-Handshake gibt
 
 ## Cloud versus Desktop-Client
 
-| | Desktop-Client | Cloud |
-|---|---|---|
-| Ausführung | Ihre Maschine | Gehostet |
-| Modell | Dauerlizenz Einmalkauf | Kostenloser Plan und kostenpflichtige Abonnements |
-| Ergebnis | Lizenzschlüssel (einmal gezeigt) | Planabhängige Nutzungsrechte, kein Lizenzschlüssel |
-| Wann | Lokal, offline, voller Bereich | Online teilen und veröffentlichen |
+Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
 
-Beide Produkte ergänzen sich. Cloud bietet einen Free-Plan; kostenpflichtige Cloud-Abonnements und Desktop-Lizenzen werden separat erworben. Siehe [Abrechnung](./billing.md).
+Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
 
 ## Hier starten
 

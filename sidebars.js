@@ -24,6 +24,7 @@ const sidebars = {
         'client/coding-agent',
         'client/contract-example',
         'client/code-to-openapi',
+        'client/code-quality',
         'client/design',
         'client/debug',
         'client/scenario-testing',

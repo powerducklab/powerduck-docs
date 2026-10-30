@@ -6,7 +6,7 @@ description: "Ứng dụng desktop mang quy trình làm việc lấy AI làm tr�
 
 # Ứng dụng desktop
 
-Ứng dụng desktop mang quy trình làm việc lấy AI làm trọng tâm lên chính máy tính của bạn. Mở `openapi.yaml` từ kho mã, mô tả điều muốn thực hiện rồi kiểm tra kết quả—không cần chuyển qua lại giữa trình sửa đặc tả, ứng dụng HTTP, công cụ mock, trình tạo tài liệu và bộ chạy kiểm thử, cũng không cần tài khoản đám mây để bắt đầu.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 Bạn vẫn nắm quyền kiểm soát: trợ lý đề xuất, bạn phê duyệt.
 
@@ -46,19 +46,15 @@ Bạn mô tả ý định bằng ngôn ngữ tự nhiên; trợ lý chọn khả
 - Thao tác chỉ đọc, như liệt kê thao tác, lấy lược đồ hoặc chạy truy vấn, trả về thông tin thực tế làm cơ sở cho câu trả lời của trợ lý;
 - Thao tác ghi yêu cầu xác nhận trước khi chạy.
 
-Bạn **tự cấu hình mô hình**: trỏ ứng dụng đến nhà cung cấp tương thích OpenAI rồi chọn trong cài đặt. Xem [AI và mô hình](./ai-models.md).
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Lợi ích của việc ưu tiên làm việc cục bộ
 
-- **Tệp thật của bạn.** Ứng dụng mở, sửa và lưu các tệp thực trên ổ đĩa, đồng thời theo dõi thay đổi cục bộ.
-- **Không vướng CORS.** Yêu cầu đi qua tiến trình cục bộ thay vì khung web nên giới hạn khác nguồn không chặn lời gọi.
-- **Bạn chọn endpoint mô hình.** Desktop gửi yêu cầu qua tiến trình chính, nhưng lời nhắc, ngữ cảnh liên quan và thông tin xác thực vẫn được gửi đến nhà cung cấp đã cấu hình. Ưu tiên cục bộ không có nghĩa là yêu cầu AI từ xa không truyền dữ liệu.
-- **Hoạt động ngoại tuyến.** Thiết kế, mock và tài liệu không cần mạng; mạng cần cho yêu cầu thực, đồng bộ Git hoặc mô hình từ xa.
-- **Thực thi cục bộ.** Mock, bộ chạy kịch bản, truy cập cơ sở dữ liệu và terminal đều chạy trên máy của bạn.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
-## Giấy phép desktop
+## Powerduck · Free / Pro / Max
 
-Ứng dụng desktop được bán với **giấy phép vĩnh viễn, thanh toán một lần**: mua một lần, làm việc ngoại tuyến mà không cần tài khoản. Khóa được tạo khi mua và chỉ hiển thị một lần. Giấy phép tách biệt với Powerduck Cloud, dịch vụ lưu trữ thuê bao hằng tháng. Xem [Thanh toán đám mây](../cloud/billing.md).
+Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
 
 ## Bắt đầu tại đây
 

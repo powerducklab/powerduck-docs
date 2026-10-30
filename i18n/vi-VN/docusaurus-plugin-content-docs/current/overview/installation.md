@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: "Cài đặt"
-description: "Ứng dụng desktop Powerduck ưu tiên làm việc cục bộ. Bạn cài đặt như một chương trình desktop thông thường, mở các tệp thật trên ổ đĩa và không cần tài khoản để bắt đầu."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Cài đặt
 
-Ứng dụng desktop Powerduck ưu tiên làm việc cục bộ. Bạn cài đặt như một chương trình desktop thông thường, mở các tệp thật trên ổ đĩa và không cần tài khoản để bắt đầu.
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Tải xuống
 
@@ -48,16 +48,16 @@ AppImage chạy mà không cần cài đặt toàn hệ thống. Trên một s�
 - **Tiến trình chính** (Node.js) quản lý truy cập tệp, yêu cầu HTTP đi ra, máy chủ mock cục bộ, kết nối cơ sở dữ liệu và terminal tích hợp;
 - **Tiến trình kết xuất** (không gian làm việc React) hiển thị đặc tả, cuộc trò chuyện AI và mọi công cụ.
 
-Cơ chế truyền tải AI trên desktop gửi yêu cầu sinh nội dung qua tiến trình chính, nên không chịu giới hạn CORS giữa trình duyệt và nhà cung cấp. Lời nhắc, ngữ cảnh liên quan và thông tin xác thực vẫn được gửi đến endpoint mô hình bạn cấu hình; sử dụng mô hình được lưu trữ từ xa không phải là thao tác ngoại tuyến. Ranh giới tiến trình không bảo đảm bí mật sẽ không bao giờ xuất hiện trong nhật ký hoặc công cụ dành cho nhà phát triển. Xem [AI và mô hình](../client/ai-models.md).
+Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
 ## Yêu cầu hệ thống
 
 - macOS 11 trở lên, Windows 10 trở lên hoặc bản phân phối Linux desktop phổ biến tương thích với Electron 37;
 - Đủ dung lượng ổ đĩa cho ứng dụng; các đặc tả bạn mở vẫn ở vị trí ban đầu;
-- Kết nối mạng khi gửi yêu cầu, đồng bộ nguồn Git hoặc gọi mô hình AI từ xa; các chức năng còn lại có thể hoạt động ngoại tuyến.
+- Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
 
-## Giấy phép
+## Powerduck · Free / Pro / Max
 
-Bạn có thể dùng thử ứng dụng desktop không giới hạn thời gian. Ứng dụng được bán với giấy phép **vĩnh viễn**, thanh toán một lần, không cần thuê bao. Khóa giấy phép được cấp khi mua và chỉ hiển thị một lần. Dịch vụ lưu trữ đám mây dùng thuê bao riêng. Xem [Thanh toán đám mây](../cloud/billing.md) để phân biệt hai sản phẩm.
+Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
 
 Tiếp theo: làm theo [Hướng dẫn bắt đầu nhanh](./quickstart.md).

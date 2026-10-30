@@ -6,7 +6,7 @@ description: "Klien desktop menghadirkan alur kerja berbasis AI di komputer Anda
 
 # Klien Desktop
 
-Klien desktop menghadirkan alur kerja berbasis AI di komputer Anda sendiri. Buka `openapi.yaml` dari repositori, jelaskan hasil yang diinginkan, lalu tinjau hasilnya—tanpa berpindah antara editor spesifikasi, klien HTTP, alat mock, pembuat dokumentasi, dan pelaksana pengujian, serta tanpa akun cloud untuk memulai.
+Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
 Kendali tetap di tangan Anda: asisten mengusulkan, Anda menyetujui.
 
@@ -46,19 +46,15 @@ Anda menjelaskan tujuan dengan bahasa alami; asisten memilih kemampuan yang tepa
 - Tindakan hanya-baca, seperti mencantumkan operasi, mengambil skema, atau menjalankan kueri, mengembalikan fakta yang menjadi dasar jawaban asisten;
 - Tindakan tulis meminta konfirmasi sebelum dijalankan.
 
-Model **Anda konfigurasi sendiri**: arahkan aplikasi ke penyedia yang kompatibel dengan OpenAI lalu pilih di pengaturan. Lihat [AI dan model](./ai-models.md).
+Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
 ## Manfaat mengutamakan kerja lokal
 
-- **Berkas asli Anda.** Aplikasi membuka, mengedit, dan menyimpan berkas asli di disk serta melacak perubahan lokal.
-- **Tanpa hambatan CORS.** Permintaan melewati proses lokal, bukan tampilan web, sehingga pembatasan lintas asal tidak memblokir panggilan.
-- **Anda memilih endpoint model.** Desktop mengirim permintaan model melalui proses utama, tetapi prompt, konteks terkait, dan kredensial tetap dikirim ke penyedia yang dikonfigurasi. Mengutamakan kerja lokal bukan berarti permintaan AI jarak jauh tidak mengirim data.
-- **Dapat digunakan secara luring.** Desain, mock, dan dokumentasi tidak memerlukan jaringan; jaringan diperlukan untuk permintaan langsung, sinkronisasi Git, atau model terhosting.
-- **Eksekusi lokal.** Mock, pelaksana skenario, akses basis data, dan terminal berjalan di komputer Anda.
+Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
 
-## Lisensi desktop
+## Powerduck · Free / Pro / Max
 
-Klien desktop dijual dengan **lisensi permanen sekali bayar**: cukup satu pembelian untuk bekerja secara luring tanpa akun. Kunci lisensi dibuat saat pembelian dan hanya ditampilkan sekali. Lisensi ini terpisah dari Powerduck Cloud, layanan hosting berlangganan bulanan. Lihat [Penagihan cloud](../cloud/billing.md).
+Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
 
 ## Mulai di sini
 

@@ -6,7 +6,7 @@ description: "O cliente de desktop Powerduck é um espaço de trabalho local-fir
 
 # Cliente de desktop
 
-O cliente de desktop é onde o fluxo nativo para IA ocorre na sua própria máquina. Abre o `openapi.yaml` do seu repositório, descreve o resultado desejado e depois revê. Sem alternar entre editor de especificação, cliente HTTP, ferramenta de simulação, gerador de documentação e executor de testes, e arranca sem conta na nuvem.
+O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
 Mantém sempre o controlo: o assistente propõe, você aprova.
 
@@ -46,19 +46,15 @@ Descreve a intenção em linguagem natural, o assistente escolhe a capacidade ad
 - As tarefas de só leitura — listar operações, obter um esquema, executar uma consulta — devolvem os factos em que o assistente baseia a sua resposta.
 - As ações de escrita pedem confirmação antes de executar.
 
-O modelo **configura-o você**. Aponte a app a qualquer fornecedor compatível com OpenAI e escolha-o nos ajustes. Veja [IA e modelos](./ai-models.md).
+O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
 ## O que significa local-first para você
 
-- **Os seus arquivos reais.** Abre, edita e salva arquivos reais em disco e segue as mudanças locais.
-- **Sem muro CORS.** As requisições passam por um processo local, não a WebView, por isso as restrições cross-origin não bloqueiam as chamadas.
-- **Você escolhe o endpoint do modelo.** O desktop envia as solicitações pelo processo principal, mas prompts, contexto relevante e credenciais seguem para o provedor configurado. Priorizar o trabalho local não impede o envio de dados para uma IA remota.
-- **Funciona sem conexão.** Projeto, simulação e documentação não precisam de rede; só requisições reais, sincronização Git e modelos hospedados.
-- **Ambientes executados localmente.** Simulações, executor de cenários, acesso à base e terminal correm na sua máquina.
+O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
-## Licença de desktop
+## Powerduck · Free / Pro / Max
 
-O cliente de desktop vende-se como **licença perpétua após compra única**. Compra-se uma vez, possui-se para sempre, funciona por completo sem conexão e não precisa de conta. A chave é gerada na compra e mostrada uma só vez. Distingue-se de Powerduck Cloud, o serviço de alojamento com subscrição mensal. Veja [Faturação da Cloud](../cloud/billing.md).
+Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
 
 ## Comece aqui
 

@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: "Kurulum"
-description: "Powerduck masaüstü istemcisi yerel çalışmayı önceliklendiren bir uygulamadır. Diğer masaüstü programları gibi kurulur, diskteki gerçek dosyaları açar ve başlamak için hesap gerektirmez."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Kurulum
 
-Powerduck masaüstü istemcisi yerel çalışmayı önceliklendiren bir uygulamadır. Diğer masaüstü programları gibi kurulur, diskteki gerçek dosyaları açar ve başlamak için hesap gerektirmez.
+Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
 ## İndirme
 
@@ -48,16 +48,16 @@ Masaüstü istemcisi iki parçadan oluşan bir Electron uygulamasıdır:
 - Dosya erişimini, giden HTTP isteklerini, yerel mock sunucusunu, veritabanı bağlantılarını ve tümleşik terminali yöneten **ana süreç** (Node.js);
 - Belirtimi, yapay zekâ sohbetini ve tüm araçları gösteren **görüntüleme süreci** (React çalışma alanı).
 
-Masaüstü yapay zekâ aktarımı, tamamlama isteklerini ana süreç üzerinden gönderir; bu nedenle tarayıcı ile sağlayıcı arasındaki CORS kısıtlamaları uygulanmaz. İstemler, ilgili bağlam ve kimlik bilgileri yine de yapılandırdığınız model uç noktasına gönderilir; barındırılan bir modeli kullanmak çevrimdışı bir işlem değildir. Süreç ayrımı, sırların günlüklerde veya geliştirici araçlarında asla görünmeyeceğini garanti etmez. Bkz. [Yapay zekâ ve modeller](../client/ai-models.md).
+Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
 ## Sistem gereksinimleri
 
 - macOS 11 veya üstü, Windows 10 veya üstü ya da Electron 37 ile uyumlu, yaygın bir Linux masaüstü dağıtımı;
 - Uygulama için yeterli disk alanı; açtığınız belirtimler özgün konumlarında kalır;
-- İstek gönderirken, Git kaynağını eşitlerken veya barındırılan bir yapay zekâ modelini çağırırken ağ erişimi; diğer işlemler çevrimdışı çalışabilir.
+- Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
 
-## Lisanslama
+## Powerduck · Free / Pro / Max
 
-Masaüstü istemcisini süre sınırı olmadan değerlendirebilirsiniz. Tek ödemeli, **süresiz** lisansla satılır: bir kez satın alınır, abonelik gerekmez. Lisans anahtarı satın alma sırasında üretilir ve yalnızca bir kez gösterilir. Bulut barındırma, abonelik tabanlı ayrı bir hizmettir. Ayrım için [Bulut faturalandırması](../cloud/billing.md) sayfasına bakın.
+Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
 
 Sonraki adım: [Hızlı başlangıç](./quickstart.md).

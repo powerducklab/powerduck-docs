@@ -6,7 +6,7 @@ description: "El cliente de escritorio Powerduck es un espacio de trabajo local-
 
 # Cliente de escritorio
 
-El cliente de escritorio es donde el flujo nativo para IA ocurre en su propia máquina. Abre el `openapi.yaml` de su repositorio, describe el resultado deseado y luego revisa. Sin cambiar entre editor de especificación, cliente HTTP, herramienta de simulación, generador de documentación y ejecutor de pruebas, y arranca sin cuenta en la nube.
+Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
 Usted mantiene siempre el control: el asistente propone, usted aprueba.
 
@@ -46,19 +46,15 @@ Describe la intención en lenguaje natural, el asistente elige la capacidad adec
 - Las tareas de solo lectura — listar operaciones, obtener un esquema, ejecutar una consulta — devuelven los hechos en que el asistente basa su respuesta.
 - Las acciones de escritura piden confirmación antes de ejecutarse.
 
-El modelo **lo configura usted**. Apunte la app a cualquier proveedor compatible con OpenAI y elíjalo en los ajustes. Vea [IA y modelos](./ai-models.md).
+Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
 ## Qué significa local-first para usted
 
-- **Sus archivos reales.** Abre, edita y guarda archivos reales en disco y sigue los cambios locales.
-- **Sin muro CORS.** Las peticiones pasan por un proceso local, no la WebView, por lo que las restricciones de origen cruzado no bloquean las llamadas.
-- **Usted elige el endpoint del modelo.** El escritorio envía las solicitudes por el proceso principal, pero las instrucciones, el contexto pertinente y las credenciales se transmiten al proveedor configurado. Priorizar el trabajo local no evita el envío de datos a una IA remota.
-- **Funciona sin conexión.** Diseño, simulación y documentación no necesitan red; solo peticiones reales, sincronización Git y modelos hospedados.
-- **Entornos ejecutados en local.** Simulaciones, ejecutor de escenarios, acceso a base y terminal corren en su máquina.
+Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
 
-## Licencia de escritorio
+## Powerduck · Free / Pro / Max
 
-El cliente de escritorio se vende como **licencia perpetua tras compra única**. Se compra una vez, se posee para siempre, funciona por completo sin conexión y no necesita cuenta. La clave se genera en la compra y se muestra una sola vez. Se distingue de Powerduck Cloud, el servicio de alojamiento con suscripción mensual. Vea [Facturación de Cloud](../cloud/billing.md).
+Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
 
 ## Empiece aquí
 

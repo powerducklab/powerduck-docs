@@ -61,14 +61,9 @@ Public readers use a dedicated documentation viewer and do not need a Powerduck 
 
 ## Cloud versus the desktop client
 
-| | Desktop Client | Cloud |
-|---|---|---|
-| Runs | On your machine | Hosted |
-| Model | One-time perpetual license | Free tier and paid subscriptions |
-| Output | A license key (shown once) | Plan entitlements, no license key |
-| Best for | Local, offline, full workspace | Sharing and publishing online |
+Free includes 300,000 credits, reset daily at 00:00 UTC. Pro is $39/month with 18,000,000 credits per 7 days; Max is $99/month with 60,000,000 credits per 7 days. Paid resets are anchored to the original subscription start, separately from monthly billing. Unused credits do not roll over. Desktop and AI Chat share the personal account plan; software licenses and activation keys are no longer sold.
 
-The two are complementary. Cloud has a Free plan; paid Cloud subscriptions and desktop licenses are purchased separately. See [Billing](./billing.md).
+Free includes 300,000 credits, reset daily at 00:00 UTC. Pro is $39/month with 18,000,000 credits per 7 days; Max is $99/month with 60,000,000 credits per 7 days. Paid resets are anchored to the original subscription start, separately from monthly billing. Unused credits do not roll over. Desktop and AI Chat share the personal account plan; software licenses and activation keys are no longer sold.
 
 ## Start here
 

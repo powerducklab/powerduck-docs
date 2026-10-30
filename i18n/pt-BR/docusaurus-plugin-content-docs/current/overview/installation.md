@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: Instalação
-description: "Instale o cliente de desktop Powerduck no macOS, Windows e Linux. A aplicação é local-first e arranca sem conta."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Instalação
 
-O cliente de desktop Powerduck é uma aplicação local-first. Instala-se como qualquer outro programa de desktop, abre arquivos reais em disco e arranca sem conta.
+O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
 ## Descarga
 
@@ -48,16 +48,16 @@ O cliente de desktop é uma app Electron em duas partes.
 - O **processo principal** (Node.js), que gere o acesso a arquivos, as requisições HTTP externas, o servidor de simulação local, as conexões a bases de dados e o terminal integrado.
 - O **renderer** (o espaço de trabalho React), que mostra a especificação, o chat de IA e as ferramentas.
 
-O cliente desktop envia as solicitações ao modelo pelo processo principal, evitando as restrições CORS entre navegador e provedor. Ainda assim, prompts, contexto relevante e credenciais são enviados ao endpoint do modelo configurado; usar um modelo hospedado não é uma operação offline. A separação dos processos também não garante que segredos nunca apareçam em logs ou ferramentas de desenvolvimento. Veja [IA e modelos](../client/ai-models.md).
+O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
 ## Requisitos
 
 - macOS 11 ou posterior, Windows 10 ou posterior ou uma distribuição Linux desktop comum compatível com Electron 37.
 - Espaço em disco para a app. As especificações abertas permanecem na sua localização original.
-- A rede só é necessária para enviar requisições, sincronizar fontes Git ou chamar um modelo de IA hospedado; o resto funciona sem conexão.
+- O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
 
-## Licença
+## Powerduck · Free / Pro / Max
 
-O cliente de desktop pode ser avaliado livremente. Vende-se como licença **perpétua** após uma compra única, sem subscrição. A chave de licença é gerada na compra e mostrada uma só vez. O alojamento na nuvem é um serviço de subscrição à parte. Veja [Faturação da Cloud](../cloud/billing.md) para a distinção.
+Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
 
 Depois, passe ao [Início rápido](./quickstart.md).

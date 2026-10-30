@@ -61,14 +61,9 @@ Pembaca publik menggunakan penampil dokumentasi khusus dan tidak memerlukan akun
 
 ## Cloud dan klien desktop
 
-| | Klien desktop | Cloud |
-|---|---|---|
-| Tempat berjalan | Di komputer Anda | Di layanan hosting |
-| Model pembayaran | Lisensi permanen dengan pembayaran sekali | Paket gratis dan langganan berbayar |
-| Yang diperoleh | Kunci lisensi, ditampilkan sekali | Hak penggunaan paket, tanpa kunci lisensi |
-| Paling sesuai untuk | Ruang kerja lengkap secara lokal dan luring | Berbagi dan menerbitkan secara daring |
+Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
 
-Keduanya saling melengkapi. Cloud menyediakan paket Free; langganan Cloud berbayar dan lisensi desktop dibeli secara terpisah. Lihat [Penagihan](./billing.md).
+Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
 
 ## Mulai di sini
 

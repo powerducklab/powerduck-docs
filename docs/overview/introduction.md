@@ -15,7 +15,7 @@ The tools that defined the previous era — the API client, the spec viewer, the
 
 ## The nucleus: one local OpenAPI file
 
-Everything begins with a plain `openapi.yaml` in your repository — open, version-controlled, readable by people and by AI. Not a proprietary database, and not a cloud account.
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ```text
                 one local openapi.yaml
@@ -37,17 +37,17 @@ Powerduck works with OpenAPI 3.2 and reads existing 3.0 and 3.1 documents (and S
 - State an outcome in plain language — "create the order endpoints", "set up test data", "run the checkout flow and give me a report" — and the assistant selects the right tool and proposes the change;
 - Every change arrives as a **reviewable card**; nothing is applied until you approve;
 - When you refine one API, the assistant stays on that API and changes only what you asked, instead of drifting across the document;
-- Local files stay on disk. Remote AI sends relevant context to your configured model service, using its credentials. Publishing to Cloud uploads selected content. Optional usage statistics are off by default and controlled separately; local work needs no account.
+- Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ## Local-first by default
 
-Powerduck runs on your machine, opens and saves real files, works offline, and keeps API keys and prompts out of the browser. The cloud is an optional extension for sharing and publishing — never a requirement to get started.
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ## Three ways to use Powerduck
 
 | Surface | What it is | Best for |
 |---|---|---|
-| [**Desktop Client**](../client/introduction.md) | A local-first Electron application with an AI assistant and a full API workspace | Engineers who want everything on their machine, work offline, and keep keys and prompts local |
+| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
 | [**Powerduck Cloud**](../cloud/introduction.md) | A hosted service for OAS hosting, online documentation, and managed MCP | Sharing APIs with others, publishing stable links, and serving MCP without running anything |
 | [**Open Source libraries**](../opensource/index.md) | Composable `@powerduck/*` npm packages | Building your own tooling, CI pipelines, or embedded components |
 
@@ -55,7 +55,7 @@ The three surfaces share the same engines: the desktop client and the cloud are 
 
 ### Desktop Client
 
-The [desktop client](../client/introduction.md) runs entirely on your machine. It opens and edits real files on disk, sends requests through a local process, runs a local mock, and keeps your AI prompts and API keys out of the browser console. The model is fully yours to configure, and every proposed change arrives as a reviewable card before it is applied.
+Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ### Powerduck Cloud
 
@@ -71,7 +71,7 @@ The [libraries](../opensource/index.md) are the engines underneath: an OpenAPI p
 - **Your APIs are agent-ready.** The same contract that produces docs also produces MCP tools, so AI agents can call your API correctly from day one.
 - **Nothing drifts.** Design, debug, tests, mocks, and docs all read one file.
 - **Every protocol in one place.** HTTP, SSE, WebSocket, GraphQL, gRPC, and MCP live in a single specification rather than six tools.
-- **No lock-in.** Bring your own model, keep keys local on desktop, and own the plain YAML in your repository.
+- Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
 
 ## Where to go next
 

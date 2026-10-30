@@ -1,12 +1,12 @@
 ---
 sidebar_position: 2
 title: Installation
-description: "Installieren Sie den Powerduck-Desktop-Client auf macOS, Windows und Linux. Die App ist Local-First und startet ohne Konto."
+description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
 ---
 
 # Installation
 
-Der Powerduck-Desktop-Client ist eine Local-First-App. Er wird wie jedes andere Desktop-Programm installiert, öffnet echte Dateien auf der Festplatte und startet ohne Konto.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Download
 
@@ -48,16 +48,16 @@ Der Desktop-Client ist eine Electron-App aus zwei Teilen.
 - Der **Hauptprozess** (Node.js), der Dateizugriff, externe HTTP-Requests, den lokalen Mock-Server, Datenbankverbindungen und das integrierte Terminal verwaltet.
 - Der **Renderer** (der React-Arbeitsbereich), der Spec, KI-Chat und Werkzeuge anzeigt.
 
-Die KI-Anfragen des Desktop-Clients werden über den Hauptprozess gesendet; CORS-Beschränkungen zwischen Browser und Anbieter greifen daher nicht. Prompts, relevanter Kontext und Zugangsdaten werden dennoch an den konfigurierten Modellendpunkt übertragen. Ein gehostetes Modell arbeitet nicht offline. Die Prozessgrenze garantiert auch nicht, dass Geheimnisse niemals in Protokollen oder Entwicklerwerkzeugen erscheinen. Siehe [KI und Modelle](../client/ai-models.md).
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Systemanforderungen
 
 - macOS 11 oder neuer, Windows 10 oder neuer oder eine gängige Linux-Desktop-Distribution, die mit Electron 37 kompatibel ist.
 - Genügend Speicherplatz für die App. Geöffnete Specs bleiben an ihrem Ursprungsort.
-- Netzwerk nur für das Senden von Requests, die Synchronisierung von Git-Quellen oder den Aufruf gehosteter KI-Modelle nötig; der Rest funktioniert offline.
+- Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
-## Lizenz
+## Powerduck · Free / Pro / Max
 
-Der Desktop-Client kann frei evaluiert werden. Er wird als **dauerhafte** Lizenz nach Einmalkauf verkauft, ohne Abonnement. Der Lizenzschlüssel wird beim Kauf erzeugt und einmal angezeigt. Cloud-Hosting ist ein separater Abonnement-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing.md) für den Unterschied.
+Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
 
 Weiter geht es mit dem [Schnellstart](./quickstart.md).

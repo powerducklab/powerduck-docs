@@ -1,31 +1,17 @@
 ---
 sidebar_position: 3
-title: "계정이나 AI 모델 없이 첫 로컬 요청 보내기"
-description: "계정이나 AI 모델 없이 첫 로컬 요청 보내기"
+title: "Powerduck · Quickstart"
+description: "Google OAuth / GitHub · AI Chat · OpenAPI"
 ---
 
-# 계정이나 AI 모델 없이 첫 로컬 요청 보내기
+# Powerduck · Quickstart
 
-## 로컬 예제 실행하기
+데스크톱을 포함한 Powerduck은 Google OAuth 또는 GitHub 로그인이 필요합니다. 파일은 로컬에 저장됩니다. AI 분석은 선택한 컨텍스트를 플랫폼이 관리하는 공급자에게 전송합니다. 사용자 지정 모델 주소와 API 키는 지원하지 않습니다.
 
-데스크톱 앱의 빈 작업 공간에서 **예제 실행**을 선택한 다음 실행을 시작합니다. Powerduck은 별도의 예제를 만들고 로컬 Mock 서버를 시작한 뒤, 할당된 포트로 `GET /orders/summary`를 보내 실제 응답을 표시합니다. HTTP 200 응답을 받아야 예제가 완료된 것으로 표시됩니다. 요청이 끝나거나 예제를 닫으면 Mock 서버가 중지됩니다. 예제는 언제든 다시 실행할 수 있습니다. 먼저 앱을 설치하세요. 이 로컬 예제에는 인터넷 연결, 계정, AI 모델 API 키가 필요하지 않습니다.
+Free는 매일 300,000 credits를 제공하며 UTC 00:00에 초기화됩니다. Pro는 월 $39에 7일마다 18,000,000 credits, Max는 월 $99에 7일마다 60,000,000 credits를 제공합니다. 최초 구독 시작을 기준으로 초기화하며 월 결제와 별개입니다. 이월되지 않습니다. 데스크톱과 AI Chat은 개인 계정 요금제를 공유하며 영구 라이선스와 활성화 키는 판매하지 않습니다.
 
-## 내 명세 열기
-
-**열기**를 사용해 YAML 또는 JSON 형식의 OpenAPI 문서를 가져옵니다. 예제는 기존 파일을 덮어쓰지 않습니다. 무료 버전에는 명세 수 제한이 있습니다. 한도에 도달했다면 필요 없는 문서를 저장한 다음 닫거나 제거하세요. 예제를 실행하려고 저장하지 않은 작업을 버리지 마세요. 기존 프로젝트의 코드를 분석해 OpenAPI를 생성할 수도 있습니다. 결과를 사용하기 전에 불확실한 필드를 검토하세요.
-
-## 실제 백엔드 검증하기
-
-Mock 요청에 성공했다고 해서 실제 백엔드가 명세를 준수하는 것은 아닙니다. [계약 검증 오류 예제](/docs/ko-KR/client/contract-example/)를 따라 해 보고, 필요하면 [코딩 에이전트를 연결](/docs/ko-KR/client/coding-agent/)하세요. 수동 검증에는 AI 모델이 필요하지 않습니다.
-
-## 선택 사항인 AI 모델과 자주 발생하는 오류
-
-- **모델이 설정되지 않음:** 로컬 요청, Mock 서버, 수동 계약 검증은 그대로 사용할 수 있습니다. AI를 사용할 때만 설정에서 모델을 구성하세요.
-- **모델 서비스 연결 실패:** 설정에서 엔드포인트, 키, 프록시를 확인하세요. 버그 신고에 키나 요청 헤더를 공개하지 마세요.
-- **대상 API에 연결할 수 없음:** 서버가 실행 중인지 확인하고 디버거에서 URL, 포트, 요청 설정을 점검하세요.
-- **HTTP 401/403:** 대상 API의 인증 설정과 권한을 확인하세요. Powerduck에 로그인하라는 뜻이 아닙니다.
-- **계약 검증 실패:** 어설션에 표시된 필드 경로와 예상 타입을 확인하세요. 백엔드를 수정하거나 잘못된 명세를 바로잡은 다음 다시 검증하세요.
-
-로컬 파일은 사용자의 컴퓨터에서 읽고 저장합니다. 원격 모델에는 필요한 컨텍스트가 전송되며, 클라우드에 게시할 때는 선택한 콘텐츠가 업로드됩니다. 선택적 사용 통계는 설정에서 기본적으로 꺼져 있으며 라이선스 검증과는 별개입니다.
-
-[다운로드](https://www.powerduck.com/download.html) · [데스크톱 라이선스](https://www.powerduck.com/pricing?product=client)
+1. [Installation](./installation.md) → Google / GitHub.
+2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
+3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
+4. [Contract example](../client/contract-example.md) → Mock / Validation.
+5. [Plans](../cloud/billing.md) → Free / Pro / Max.

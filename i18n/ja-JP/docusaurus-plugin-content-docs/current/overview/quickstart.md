@@ -1,30 +1,17 @@
 ---
 sidebar_position: 3
-title: "アカウントやモデルなしで最初のローカルリクエスト"
-description: "アカウントやモデルなしで最初のローカルリクエスト"
+title: "Powerduck · Quickstart"
+description: "Google OAuth / GitHub · AI Chat · OpenAPI"
 ---
 
-# アカウントやモデルなしで最初のローカルリクエスト
+# Powerduck · Quickstart
 
-## サンプルを試す
+デスクトップ版を含む Powerduck の利用には Google OAuth または GitHub でのログインが必要です。ファイルはローカルに保存されます。AI 分析では選択したコンテキストを Powerduck が管理するプロバイダーへ送信します。独自のモデル URL や API キーの設定には対応しません。
 
-空のデスクトップ画面で「サンプルを試す」を選び、実行します。独立したサンプルを作り、既存のローカル Mock を起動して、自動割り当てされたポートに `GET /orders/summary` を送信します。HTTP 200 を受信してから完了を表示します。終了または閉じる操作で Mock を停止します。何度でも実行でき、強制ツアーではありません。アプリのインストール後はネット接続、ログイン、モデルキーは不要です。
+Free は毎日 300,000 credits（UTC 00:00 にリセット）。Pro は月額 $39、7 日ごとに 18,000,000 credits。Max は月額 $99、7 日ごとに 60,000,000 credits。最初の購読開始時刻を基準にリセットし、月額請求とは別周期です。繰越はありません。デスクトップと AI Chat は同じ個人アカウントのプランを使い、買い切りライセンスや有効化キーは販売しません。
 
-## 自分の仕様を開く
-
-「開く」から YAML/JSON OpenAPI を読み込みます。既存ファイルは上書きしません。無料利用の仕様枠が満杯なら、不要な文書を保存してから閉じるか削除します。サンプルのために未保存の作業を破棄しないでください。コードからのスキャンも可能ですが、不明な項目はレビューが必要です。
-
-## 実際のバックエンドを検証する
-
-Mock の成功は実装の契約適合を証明しません。[契約エラーの例](../client/contract-example.md)を実行し、必要なら[Agent を接続](../client/coding-agent.md)します。手動検証にモデルは不要です。
-
-## モデルは任意・よくある問題
-
-- モデル未設定：ローカルリクエスト、Mock、手動検証は使えます。AI を使う場合だけ設定します。
-- モデル接続失敗：設定でモデル URL、キー、プロキシを確認します。問題報告にキーや認証ヘッダーを含めないでください。
-- API に接続できない：サーバー起動状態と Debug & Test の URL、ポート、リクエスト設定を確認します。
-- HTTP 401/403：対象 API の認証と権限を確認します。Powerduck へのログイン要求とは異なります。
-- 契約チェック失敗：フィールドのパスと期待される型を確認し、実装または誤った仕様を修正して再実行します。
-
-ファイルはローカルに保存します。リモートモデルには関連情報を送信し、Cloud 公開では選択内容をアップロードします。任意の利用統計は設定で初期状態がオフで、ライセンス確認とは別です。
-[ダウンロード](https://www.powerduck.com/download.html) · [デスクトップライセンス](https://www.powerduck.com/pricing?product=client)
+1. [Installation](./installation.md) → Google / GitHub.
+2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
+3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
+4. [Contract example](../client/contract-example.md) → Mock / Validation.
+5. [Plans](../cloud/billing.md) → Free / Pro / Max.

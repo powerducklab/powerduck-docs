@@ -1,30 +1,17 @@
 ---
 sidebar_position: 3
-title: "无需账号和模型的首次本地请求"
-description: "无需账号和模型的首次本地请求"
+title: "Powerduck · Quickstart"
+description: "Google OAuth / GitHub · AI Chat · OpenAPI"
 ---
 
-# 无需账号和模型的首次本地请求
+# Powerduck · Quickstart
 
-## 体验本地示例
+Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
 
-在空白桌面工作台选择“体验示例”，然后启动运行。Powerduck 创建独立副本，使用现有本地 Mock，通过运行时分配的端口发送 `GET /orders/summary`，展示真实响应。只有收到 HTTP 200 才显示“体验完成”。请求结束或关闭示例后停止 Mock，可再次运行，不会强制重复引导。安装好客户端后，此流程无需联网、登录或模型 Key。
+Free 每日赠送 300,000 credits，UTC 00:00 重置。Pro 为 $39/月，每 7 日 18,000,000 credits；Max 为 $99/月，每 7 日 60,000,000 credits。付费额度以首次订阅时间为起点每 7 日重置，与按月计费独立；剩余额度不结转。桌面端与 AI Chat 共用个人账户套餐，不再出售软件授权或激活码。
 
-## 打开自己的规范
-
-使用“打开”导入 YAML/JSON OpenAPI。示例不会覆盖已有文件。免费使用受规范名额限制；名额已满时，应先保存，再关闭或移除不需要的文档，不要为了示例丢弃未保存工作。也可选择“从代码生成 OpenAPI”，但要先审查未知字段。
-
-## 验证真实后端
-
-Mock 成功不证明真实实现符合契约。继续完成[契约错误示例](../client/contract-example.md)，也可[连接编程 Agent](../client/coding-agent.md)。手动验证不需要模型。
-
-## 模型可选与故障处理
-
-- 尚未配置模型：不影响本地请求、Mock 和手动契约检查。只有使用 AI 时才需要在设置中配置模型。
-- 模型服务连接失败：检查设置中的模型地址、Key 与代理；反馈问题时不要公开密钥或请求头。
-- 目标 API 不可达：确认后端已启动，检查 Debug & Test 中的地址、端口和请求设置。
-- HTTP 401/403：检查目标接口的鉴权和权限，这不是要求登录 Powerduck。
-- 契约检查失败：查看断言的字段路径和预期类型，修复后端或审查错误规范，再次验证。
-
-本地文件在电脑上读写。远程模型会接收相关上下文，发布到 Cloud 会上传所选内容。设置中的可选使用统计默认关闭，与授权校验独立。
-[下载桌面版](https://www.powerduck.com/download.html) · [桌面授权](https://www.powerduck.com/pricing?product=client)
+1. [Installation](./installation.md) → Google / GitHub.
+2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
+3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
+4. [Contract example](../client/contract-example.md) → Mock / Validation.
+5. [Plans](../cloud/billing.md) → Free / Pro / Max.

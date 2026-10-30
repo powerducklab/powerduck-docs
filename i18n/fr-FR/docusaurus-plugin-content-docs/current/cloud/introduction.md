@@ -61,14 +61,9 @@ Les lecteurs publics utilisent un visualiseur dédié et n'ont pas besoin de cr�
 
 ## Cloud versus client de bureau
 
-| | Client de bureau | Cloud |
-|---|---|---|
-| Exécution | Votre machine | Hébergé |
-| Modèle | Licence perpétuelle achat unique | Offre gratuite et abonnements payants |
-| Résultat | Clé de licence (affichée une fois) | Droits liés à l’offre, sans clé de licence |
-| Quand | Local, hors ligne, espace complet | Partage et publication en ligne |
+Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
 
-Les deux produits sont complémentaires. Cloud propose une offre Free ; les abonnements Cloud payants et les licences de bureau s’achètent séparément. Voir [Facturation](./billing.md).
+Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
 
 ## Commencez ici
 

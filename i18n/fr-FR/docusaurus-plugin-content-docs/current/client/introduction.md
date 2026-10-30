@@ -6,7 +6,7 @@ description: "Le client de bureau Powerduck est un espace de travail local-first
 
 # Client de bureau
 
-Le client de bureau est l'endroit où le flux de travail natif IA se déroule sur votre propre machine. Vous ouvrez le `openapi.yaml` de votre dépôt, décrivez le résultat souhaité, puis vérifiez. Plus besoin de basculer entre éditeur de spécification, client HTTP, outil de simulation, générateur de documentation et exécuteur de tests, et vous démarrez sans compte cloud.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 Vous gardez toujours le contrôle : l'assistant propose, vous approuvez.
 
@@ -46,19 +46,15 @@ Vous décrivez l'intention en langage naturel, l'assistant choisit la capacité 
 - Les tâches en lecture seule — lister les opérations, récupérer un schéma, exécuter une requête — renvoient les faits sur lesquels l'assistant fonde sa réponse.
 - Les actions d'écriture demandent confirmation avant exécution.
 
-Le modèle, **c'est vous qui le configurez**. Pointez l'application vers n'importe quel fournisseur compatible OpenAI et choisissez-le dans les réglages. Voir [IA et modèles](./ai-models.md).
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
 ## Ce que local-first signifie pour vous
 
-- **Vos vrais fichiers.** Vous ouvrez, éditez et enregistrez de vrais fichiers sur le disque et suivez les changements locaux.
-- **Aucun mur CORS.** Les requêtes passent par un processus local, pas la WebView, donc les restrictions cross-origin ne bloquent pas les appels.
-- **Vous choisissez le point d'accès du modèle.** Les requêtes passent par le processus principal, mais les instructions, le contexte pertinent et les identifiants sont envoyés au fournisseur configuré. Le fonctionnement local n'empêche pas la transmission de données à une IA distante.
-- **Fonctionne hors ligne.** La conception, la simulation et la documentation n'ont pas besoin du réseau ; seules les vraies requêtes, la synchronisation Git et les modèles hébergés en ont besoin.
-- **Environnements exécutés en local.** Simulations, exécuteur de scénarios, accès base et terminal tournent sur votre machine.
+Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
 
-## Licence de bureau
+## Powerduck · Free / Pro / Max
 
-Le client de bureau est vendu sous licence **perpétuelle après un achat unique**. Vous l'achetez une fois, le possédez pour toujours, il fonctionne entièrement hors ligne et ne nécessite aucun compte. La clé est générée à l'achat et affichée une seule fois. Il est distinct de Powerduck Cloud, le service d'hébergement par abonnement mensuel. Voir [Facturation Cloud](../cloud/billing.md).
+Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
 
 ## Commencez ici
 

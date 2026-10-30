@@ -15,7 +15,7 @@ Die Werkzeuge der vorherigen Ära — API-Clients, Spec-Viewer, Request-Sammlung
 
 ## Der Kern: eine einzige lokale OpenAPI-Datei
 
-Alles beginnt mit einer einfachen `openapi.yaml` in Ihrem Repository: eine offene, versionierte Datei, lesbar für Menschen und KI. Keine proprietäre Datenbank, kein Cloud-Konto nötig.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ```text
                 one local openapi.yaml
@@ -37,17 +37,17 @@ Powerduck unterstützt OpenAPI 3.2 und hebt bestehende 3.0-/3.1-Dokumente (und S
 - Beschreiben Sie das Ergebnis in natürlicher Sprache — „erstelle den Bestell-Endpunkt", „bereite Testdaten vor", „führe den Zahlungsablauf aus und erstelle einen Bericht" — und er wählt die passenden Werkzeuge und schlägt Änderungen vor.
 - Jede Änderung kommt als **prüfbare Karte**. Nichts wird vor Ihrer Zustimmung angewendet.
 - Wenn Sie eine API verfeinern, bleibt der Assistent bei dieser API und ändert nur das Geforderte, ohne den Rest des Dokuments zu stören.
-- Dateien werden lokal gelesen und gespeichert. Remote-KI sendet relevanten Kontext mit den Zugangsdaten an den konfigurierten Modelldienst. Cloud-Veröffentlichung lädt ausgewählte Inhalte hoch. Optionale Nutzungsstatistiken sind standardmäßig deaktiviert und separat steuerbar. Lokale Funktionen benötigen kein Konto.
+- Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Standardmäßig Local-First
 
-Powerduck läuft auf Ihrer Maschine, öffnet und speichert echte Dateien, funktioniert offline und hält Ihre API-Schlüssel und Prompts aus dem Browser heraus. Die Cloud ist eine optionale Erweiterung für Teilen und Veröffentlichen, keine Voraussetzung zum Start.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Drei Wege, Powerduck zu nutzen
 
 | Form | Was es ist | Wann nutzen |
 |---|---|---|
-| [**Desktop-Client**](../client/introduction.md) | Local-First-Electron-App mit KI-Assistent und vollständigem API-Arbeitsbereich | Ingenieure, die alles auf der eigenen Maschine behalten, offline arbeiten und Schlüssel/Prompts lokal halten wollen |
+| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
 | [**Powerduck Cloud**](../cloud/introduction.md) | Gehosteter Dienst für OAS-Hosting, Online-Doku und verwaltetes MCP | Zum Teilen von APIs, Veröffentlichen stabiler Links und Bereitstellen von MCP ohne etwas auszuführen |
 | [**Open-Source-Bibliotheken**](/opensource/index.md) | Kombinierbare `@powerduck/*`-npm-Pakete | Zum Bauen eigener Werkzeuge, CI-Pipelines oder eingebetteter Komponenten |
 
@@ -55,7 +55,7 @@ Alle drei Formen teilen denselben Motor. Desktop-Client und Cloud sind beide aus
 
 ### Desktop-Client
 
-Der [Desktop-Client](../client/introduction.md) läuft vollständig auf Ihrer Maschine. Er öffnet und bearbeitet echte Dateien auf der Festplatte, sendet Requests über einen lokalen Prozess, führt lokale Mocks aus und hält KI-Prompts und API-Schlüssel aus der Browser-Konsole heraus. Modelle sind frei konfigurierbar, und vorgeschlagene Änderungen kommen vor der Anwendung als prüfbare Karten.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ### Powerduck Cloud
 
@@ -71,7 +71,7 @@ Die [Bibliotheken](/opensource/index.md) sind der Motor darunter: OpenAPI-Parser
 - **Ihre APIs sind von Anfang an agentenfähig.** Derselbe Vertrag, der Doku erzeugt, erzeugt auch MCP-Tools, damit KI-Agenten Ihre API ab Tag eins korrekt aufrufen.
 - **Keine Drift.** Entwurf, Debugging, Tests, Mocking und Doku lesen eine Datei.
 - **Alle Protokolle an einem Ort.** HTTP, SSE, WebSocket, GraphQL, gRPC und MCP in einer Spec, nicht sechs Werkzeuge.
-- **Kein Lock-in.** Bringen Sie Ihre Modelle mit, halten Sie Schlüssel auf dem Desktop lokal und besitzen Sie das Klartext-YAML im Repository.
+- Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Wohin als Nächstes
 

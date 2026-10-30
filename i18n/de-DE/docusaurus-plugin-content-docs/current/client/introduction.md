@@ -6,7 +6,7 @@ description: "Der Powerduck-Desktop-Client ist ein Local-First, KI-gesteuerter A
 
 # Desktop-Client
 
-Der Desktop-Client ist der Ort, an dem der KI-native Workflow auf Ihrer eigenen Maschine stattfindet. Sie öffnen die `openapi.yaml` aus dem Repository, beschreiben das gewünschte Ergebnis und prüfen. Kein Wechsel zwischen Spec-Editor, HTTP-Client, Mock-Werkzeug, Doku-Generator und Test-Runner, und Sie starten ohne Cloud-Konto.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 Sie behalten immer die Kontrolle: Der Assistent schlägt vor, Sie stimmen zu.
 
@@ -46,19 +46,15 @@ Sie beschreiben die Absicht in natürlicher Sprache, der Assistent wählt die pa
 - Nur-Lese-Aufgaben — Operationen auflisten, Schema holen, Abfrage ausführen — liefern die Fakten, auf die der Assistent seine Antwort gründet.
 - Schreib-Aktionen verlangen vor Ausführung eine Bestätigung.
 
-Das Modell **konfigurieren Sie**. Richten Sie die App auf einen beliebigen OpenAI-kompatiblen Anbieter und wählen ihn in den Einstellungen. Siehe [KI und Modelle](./ai-models.md).
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
 ## Was Local-First für Sie bedeutet
 
-- **Ihre echten Dateien.** Sie öffnen, bearbeiten und speichern echte Dateien auf der Festplatte und verfolgen lokale Änderungen.
-- **Keine CORS-Mauer.** Requests laufen über einen lokalen Prozess, nicht die WebView, daher blockieren Cross-Origin-Einschränkungen Aufrufe nicht.
-- **Sie wählen den Modellendpunkt.** Der Desktop-Client sendet Modellanfragen über den Hauptprozess; Prompts, relevanter Kontext und Zugangsdaten gehen trotzdem an den konfigurierten Anbieter. Lokale Arbeitsweise bedeutet nicht, dass entfernte KI-Anfragen keine Daten übertragen.
-- **Funktioniert offline.** Entwurf, Mocking und Doku brauchen kein Netzwerk; nur echte Requests, Git-Sync und gehostete Modelle.
-- **Lokal ausgeführte Umgebungen.** Mocks, Szenario-Runner, Datenbankzugriff und Terminal laufen auf Ihrer Maschine.
+Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
 
-## Desktop-Lizenz
+## Powerduck · Free / Pro / Max
 
-Der Desktop-Client wird als **dauerhafte Lizenz nach Einmalkauf** verkauft. Einmal gekauft, für immer behalten, vollständig offline und ohne Konto. Der Schlüssel wird beim Kauf erzeugt und einmal angezeigt. Er unterscheidet sich von Powerduck Cloud, dem monatlich abonnierten Hosting-Dienst. Siehe [Cloud-Abrechnung](../cloud/billing.md).
+Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
 
 ## Hier starten
 
