@@ -5,7 +5,8 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import {readFileSync} from "node:fs";
 import relativeDocLinks from "./src/plugins/relative-doc-links.mjs";
-const languages = JSON.parse(readFileSync(new URL("./src/data/locales.json", import.meta.url), "utf8"));
+const languages = JSON.parse(readFileSync(new URL("./src/data/locales.json", import.meta.url), "utf8"))
+  .sort((a, b) => a.label.localeCompare(b.label, "en", {numeric: true, sensitivity: "base"}));
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
