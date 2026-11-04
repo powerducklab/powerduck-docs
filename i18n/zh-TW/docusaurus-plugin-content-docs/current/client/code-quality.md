@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "程式碼審閱"
+description: "AI 產生程式碼越來越快，Powerduck 協助你看清變更、結合上下文審閱，並決定哪些問題需要處理。桌面版提供 API 工作台與程式碼審閱，可從首頁分別進入。"
 ---
 
-# Code quality
+# 程式碼審閱
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+選擇程式碼資料夾後先查看專案結構，點選檔案閱讀完整原始碼。提供僅原始碼、完整比較與僅變更三種檢視；增刪行、行內字元標示、變更導覽與搜尋保留必要上下文。
 
-## Evidence and priority
+## 比較範圍與輪次歷史
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+本輪比較已儲存的起點與磁碟檔案。首次開啟建立起點，不將既有內容自動算成新增；全部未提交變更則與 Git HEAD 比較。主動開始新一輪，從歷史選項檢視舊輪次。歷史僅保存在本機，不是 Git 備份；修改需先儲存至磁碟。
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## 專案結構與關聯程式碼
 
-## Tests that belong to the project
+本機 Git 差異及解析器識別變更區塊與可解析的定義、呼叫端和匯入。將滑鼠移到支援的符號可預覽定義，並在變更旁展開關聯程式碼。結構篩選標示高引用、暫存命名、相同內容及未找到入向引用的檔案。動態載入、框架入口與外部使用者可能遺漏；無引用不代表可刪除，相同文字不證明行為可互換。
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## AI 行內審閱
 
-## Iteration history
+只有主動發起才執行 AI 審閱，以目前差異與有限關聯上下文分批分析，並非逐檔傳送完整內容。結果位於對應程式碼，包含優先級、證據與建議；匹配的快取可重用。可確認問題、標記誤報或選入 Agent 任務。AI 可能漏報或誤報，不證明程式正確或測試已執行。
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent 任務包
 
-## AI Chat tools
+選取疑點後預覽、複製或下載含上下文與版本錨點的 Markdown 任務包。接收的 Agent 應獨立評估，是否允許修改會明確註明；貼回 JSON 報告仍需人工複核。修復聲明不等於測試通過；匯出不會自動啟動或聯絡其他 Agent。
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## 執行檢查
 
-## Scope and privacy
+主動執行檢查，查看專案命令、退出碼與原始輸出。缺少腳本是未驗證，不是通過。腳本會在本機執行程式，請僅用於可信專案。讀檔、靜態分析與 AI 審閱不構成執行證據，已讀只記錄閱讀進度。
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## 內建 AI 與使用範圍
+
+以 Google 或 GitHub 登入，僅使用內建模型，不提供模型選擇、自備金鑰或自訂端點。要求 AI 工作時才傳送選取的上下文至託管服務。掃描排除常見依賴、建置與憑證路徑，但不能保證原始碼不含機密。
+
+- [API 工作台](introduction.md)
+- [程式碼審閱](code-quality.md)
+- [內建 AI 與使用範圍](ai-models.md)
+- [方案與任務次數](../cloud/billing.md)
+- [安裝與開始使用](../overview/installation.md)
+- [看清每一次變更](../overview/quickstart.md)

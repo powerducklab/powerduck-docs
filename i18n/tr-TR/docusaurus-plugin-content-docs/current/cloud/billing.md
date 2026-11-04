@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: "Faturalandırma ve lisanslama"
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Planlar ve görevler"
+description: "Yeni planlar konuşma/inceleme sayar: Free 10/2; Starter $19/ay 300/20; Pro $39/ay 700/60; Max $99/ay 2.000/180. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır."
 ---
 
-# Free · Pro · Max
+# Planlar ve görevler
 
-Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
+Yeni planlar konuşma/inceleme sayar: Free 10/2; Starter $19/ay 300/20; Pro $39/ay 700/60; Max $99/ay 2.000/180. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır.
 
-Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
+## Yerleşik AI ve kullanım
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Bir konuşma turu veya inceleme bir görevdir; iç çağrılar ayrı düşülmez. Çalışırken ayrılır: teslim edilen sonuç sonradan iptal edilse de bir görev tüketir; başarılı sonuç yoksa rezerv serbest kalır. Büyük incelemeleri bölün. Yerel okuma, Git/AST ve kayıtlı sonuçlar tüketmez. Eski abonelikler credits koruyabilir; hesap bilgisi geçerlidir.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [API çalışma alanı](../client/introduction.md)
+- [Kod incelemesi](../client/code-quality.md)
+- [Yerleşik AI ve kullanım](../client/ai-models.md)
+- [Planlar ve görevler](billing.md)
+- [Kurulum ve başlangıç](../overview/installation.md)
+- [Her değişikliği anlayın](../overview/quickstart.md)

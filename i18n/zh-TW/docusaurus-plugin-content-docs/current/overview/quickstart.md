@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "快速開始"
+description: "AI 產生程式碼越來越快，Powerduck 協助你看清變更、結合上下文審閱，並決定哪些問題需要處理。桌面版提供 API 工作台與程式碼審閱，可從首頁分別進入。"
 ---
 
-# Powerduck · Quickstart
+# 快速開始
 
-Powerduck 桌面端與瀏覽器工作區均須先使用 Google OAuth 或 GitHub 登入。本機檔案仍保存在磁碟。AI 分析會將選定內容傳送給平台管理的模型供應商；不再支援自訂模型網址或 API Key。
+從官網下載對應系統的 macOS Apple Silicon／Intel、Windows 或 Linux AppImage。確認來源與發布者，不關閉安全保護。到官網登入後返回應用，匯入介面定義或選擇程式碼專案。瀏覽器 App 可體驗 API 工作流；檔案系統分析與本機命令需桌面版。
 
-Free 每日提供 300,000 credits，UTC 00:00 重設。Pro 為 $39/月，每 7 日 18,000,000 credits；Max 為 $99/月，每 7 日 60,000,000 credits。額度從首次訂閱時間起每 7 日重設，與每月計費分開；未用額度不累計。桌面端與 AI Chat 共用個人帳戶方案，不再出售軟體授權或啟用碼。
+## API 工作台
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+匯入 OpenAPI YAML 或 JSON，設計介面、傳送請求、檢視回應、執行情境、啟動本機 Mock、探索資料模型並呈現文件。MCP 與發布是獨立流程；匯入定義不會部署業務後端。
+
+## 程式碼審閱
+
+選擇程式碼資料夾後先查看專案結構，點選檔案閱讀完整原始碼。提供僅原始碼、完整比較與僅變更三種檢視；增刪行、行內字元標示、變更導覽與搜尋保留必要上下文。
+
+## 比較範圍與輪次歷史
+
+本輪比較已儲存的起點與磁碟檔案。首次開啟建立起點，不將既有內容自動算成新增；全部未提交變更則與 Git HEAD 比較。主動開始新一輪，從歷史選項檢視舊輪次。歷史僅保存在本機，不是 Git 備份；修改需先儲存至磁碟。
+
+## 執行檢查
+
+主動執行檢查，查看專案命令、退出碼與原始輸出。缺少腳本是未驗證，不是通過。腳本會在本機執行程式，請僅用於可信專案。讀檔、靜態分析與 AI 審閱不構成執行證據，已讀只記錄閱讀進度。
+
+- [API 工作台](../client/introduction.md)
+- [程式碼審閱](../client/code-quality.md)
+- [內建 AI 與使用範圍](../client/ai-models.md)
+- [方案與任務次數](../cloud/billing.md)
+- [安裝與開始使用](installation.md)
+- [看清每一次變更](quickstart.md)

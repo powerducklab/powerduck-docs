@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: Abrechnung
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Tarife und Aufgaben"
+description: "Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout."
 ---
 
-# Free · Pro · Max
+# Tarife und Aufgaben
 
-Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
+Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
 
-Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
+## Integrierte KI und Nutzung
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Ein Gesprächszug oder Review zählt als Aufgabe; interne Aufrufe kosten nicht jeweils extra. Während der Ausführung wird reserviert. Ein geliefertes Ergebnis zählt einmal, auch bei anschließendem Abbruch; ohne erfolgreiches Ergebnis wird freigegeben. Große Reviews aufteilen. Lokales Lesen, Git/AST und gespeicherte Ergebnisse verbrauchen keine Aufgaben. Alt-Abos können Credits behalten; maßgeblich ist die Kontoanzeige.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [API-Arbeitsbereich](../client/introduction.md)
+- [Code-Review](../client/code-quality.md)
+- [Integrierte KI und Nutzung](../client/ai-models.md)
+- [Tarife und Aufgaben](billing.md)
+- [Installieren und starten](../overview/installation.md)
+- [Jede Änderung verstehen](../overview/quickstart.md)

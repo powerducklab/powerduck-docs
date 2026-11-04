@@ -1,68 +1,32 @@
 ---
 sidebar_position: 1
-title: Desktop-Client
-description: "Der Powerduck-Desktop-Client ist ein Local-First, KI-gesteuerter Arbeitsbereich. Aus einer einzigen OpenAPI-Datei auf Ihrer Maschine entwerfen Sie APIs, debuggen Requests, führen Tests aus, mocken APIs, veröffentlichen Dokumentation und stellen MCP-Tools bereit."
+title: "API-Arbeitsbereich · Code-Review"
+description: "Powerduck hilft, KI-generierte Änderungen mit ihrem Kontext zu prüfen und den nächsten Schritt zu entscheiden. Die Desktop-App bietet einen API-Arbeitsbereich und Code-Reviews, jeweils direkt über die Startseite."
 ---
 
-# Desktop-Client
+# API-Arbeitsbereich · Code-Review
 
-Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
+Powerduck hilft, KI-generierte Änderungen mit ihrem Kontext zu prüfen und den nächsten Schritt zu entscheiden. Die Desktop-App bietet einen API-Arbeitsbereich und Code-Reviews, jeweils direkt über die Startseite.
 
-Sie behalten immer die Kontrolle: Der Assistent schlägt vor, Sie stimmen zu.
+## API-Arbeitsbereich
 
-## Ein Tag im Arbeitsbereich
+OpenAPI als YAML oder JSON importieren, Operationen entwerfen, Anfragen senden, Antworten prüfen sowie Szenarien, lokale Mocks, Datenmodelle und Dokumentation nutzen. MCP und Veröffentlichung sind eigene Abläufe. Ein Import stellt kein Geschäfts-Backend bereit.
 
-Das sind die Momente, die der Client ins Zentrum stellt.
+## Code-Review
 
-- **Spec öffnen und das Ganze erfassen.** Der Assistent liest das aktuelle Dokument und schlägt sofort vor, was er tun kann: zu füllende Lücken, zu ergänzende Doku, zu testende Abläufe.
-- **Die API bauen.** Beschreiben Sie eine Ressource, und der Assistent schlägt die Operationen vor. Verfeinern Sie dieselbe Operation weiter — Parameter hinzufügen, Antwort verschärfen, Statuscode anpassen — und er bleibt bei dieser API, ohne den Rest des Dokuments zu stören.
-- **Testdaten vorbereiten.** Erzeugen Sie realistische Beispieldaten aus den Schemas, um Requests und Szenarien konkrete Werte zu geben.
-- **Einzelnen Request oder ganzes Szenario ausführen.** Debuggen Sie einen isolierten Aufruf oder verketten mehrere Operationen zu einem End-to-End-Ablauf, und erhalten Sie einen teilbaren Bericht über Erfolg und Fehler.
-- **Weiterkommen, bevor das Backend bereit ist.** Starten Sie einen lokalen Mock, der während der Entwicklung des echten Dienstes nach Vertrag antwortet.
-- **Die API an einen Coding-Agenten geben.** Wandeln Sie die Spec in einen MCP-Server, damit KI-Werkzeuge die richtigen Operationen mit den richtigen Parametern entdecken und aufrufen.
-- **Die Datenbank hinter der API sehen.** Leiten Sie Tabellen, Beziehungen und SQL aus der Spec ab, vergleichen mit einer echten Datenbank und verstehen die anstehenden Änderungen.
-- **Einstellungen ändern, ohne das Gespräch zu verlassen.** Theme oder Sprache wechseln, Proxy einrichten, Umgebungsvariablen verwalten — einfach per Anfrage.
+Nach der Ordnerwahl erscheint die Projektstruktur. Dateien lassen sich vollständig lesen: nur Quelltext, vollständiger Vergleich oder nur Änderungen. Zeilen- und Zeichenmarkierungen, Änderungsnavigation und Suche zeigen den tatsächlichen Eingriff im Kontext.
 
-## Jeder Modus und sein Zweck
+## Projektstruktur und verknüpfter Code
 
-Ein einziges Dokument treibt alle Modi an, erreichbar über einen kompakten Umschalter.
+Git und Parser liefern Änderungsblöcke sowie auflösbare Definitionen, Aufrufer und Importe. Unterstützte Symbole zeigen beim Darüberfahren Definitionen; verknüpfter Code öffnet sich an der Änderung. Die Struktur markiert häufig referenzierte Dateien, temporäre Namen, identische Inhalte und fehlende eingehende Referenzen. Dynamisches Laden und externe Nutzer können fehlen; fehlende Referenzen erlauben keine sichere Löschung.
 
-| Modus | Was er tut |
-|---|---|
-| [**Spec**](./design.md) | Hauptmodus: KI-Chat, Dokument, Live-Vorschau |
-| [**Request-Arbeitsbereich**](./debug.md) | Sendet und prüft echte HTTP-Requests; Tabs und Umgebungen |
-| [**Szenario-Tests**](./scenario-testing.md) | Verknüpft Operationen zu Abläufen, führt sie aus und erstellt einen Bericht |
-| [**Dokumentation**](./protocols.md) | Liest die Spec als gerenderte API-Doku |
-| [**MCP**](./protocols.md) | Prüft und nutzt den aus der Spec abgeleiteten MCP-Server |
-| [**Mock-Server**](./mock-server.md) | Führt während der API-Entwicklung einen lokalen Mock aus |
-| [**Datenmodell**](./data-model.md) | Leitet Tabellen und Beziehungen ab, vergleicht mit der DB und erzeugt SQL |
-| [**Einstellungen**](./settings.md) | Theme, Sprache, Proxy, Zertifikate, Arbeitsbereichs-Voreinstellungen |
+## Integrierte KI und Nutzung
 
-## Wie Sie mit dem Assistenten zusammenarbeiten
+Mit Google oder GitHub anmelden. Nur das integrierte Modell ist verfügbar, ohne Modellwahl, eigene Schlüssel oder Endpunkte. Angeforderte KI-Arbeit sendet ausgewählten Kontext an verwaltete Anbieter. Übliche Abhängigkeits-, Build- und Zugangsdatenpfade werden ausgeschlossen; Geheimnisse im Quelltext sind trotzdem möglich.
 
-Sie beschreiben die Absicht in natürlicher Sprache, der Assistent wählt die passende Fähigkeit, die deterministische Engine validiert, und Sie stimmen über eine Karte zu. Das Modell bearbeitet nie selbst das Dokument.
-
-- Spec-Änderungen kommen als **Patch-Karten** mit feinen Operationen. Beim Bearbeiten einer bestehenden Operation ändern sich nur die geforderten Felder.
-- Nur-Lese-Aufgaben — Operationen auflisten, Schema holen, Abfrage ausführen — liefern die Fakten, auf die der Assistent seine Antwort gründet.
-- Schreib-Aktionen verlangen vor Ausführung eine Bestätigung.
-
-Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
-
-## Was Local-First für Sie bedeutet
-
-Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
-
-## Powerduck · Free / Pro / Max
-
-Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
-
-## Hier starten
-
-- [Mit dem Assistenten entwerfen](./design.md)
-- [Request-Arbeitsbereich und Umgebungen](./debug.md)
-- [Szenario-Tests und Berichte](./scenario-testing.md)
-- [Protokolle](./protocols.md)
-- [Datenmodell und ER-Diagramm](./data-model.md)
-- [Mock-Server](./mock-server.md)
-- [KI und Modelle](./ai-models.md)
-- [Einstellungen](./settings.md)
+- [API-Arbeitsbereich](introduction.md)
+- [Code-Review](code-quality.md)
+- [Integrierte KI und Nutzung](ai-models.md)
+- [Tarife und Aufgaben](../cloud/billing.md)
+- [Installieren und starten](../overview/installation.md)
+- [Jede Änderung verstehen](../overview/quickstart.md)

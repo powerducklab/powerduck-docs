@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: "Penagihan dan lisensi"
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Paket dan jumlah tugas"
+description: "Paket baru menghitung percakapan/tinjauan: Free 10/2; Starter $19/bulan 300/20; Pro $39/bulan 700/60; Max $99/bulan 2.000/180. Free direset awal bulan UTC, paket berbayar mengikuti periode tagihan. Tidak diakumulasi. Harga akhir dan pajak di checkout."
 ---
 
-# Free · Pro · Max
+# Paket dan jumlah tugas
 
-Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
+Paket baru menghitung percakapan/tinjauan: Free 10/2; Starter $19/bulan 300/20; Pro $39/bulan 700/60; Max $99/bulan 2.000/180. Free direset awal bulan UTC, paket berbayar mengikuti periode tagihan. Tidak diakumulasi. Harga akhir dan pajak di checkout.
 
-Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
+## AI bawaan dan penggunaan
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Satu giliran percakapan atau operasi tinjauan adalah satu tugas, bukan tiap panggilan internal. Kuota dicadangkan saat berjalan: hasil terkirim memakai satu meski kemudian dibatalkan; tanpa hasil berhasil cadangan dilepas. Pecah tinjauan besar. Membaca lokal, Git/AST, dan hasil tersimpan tidak memakai tugas. Langganan lama bisa mempertahankan credits; lihat akun.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [Ruang kerja API](../client/introduction.md)
+- [Tinjauan kode](../client/code-quality.md)
+- [AI bawaan dan penggunaan](../client/ai-models.md)
+- [Paket dan jumlah tugas](billing.md)
+- [Pasang dan mulai](../overview/installation.md)
+- [Pahami setiap perubahan](../overview/quickstart.md)

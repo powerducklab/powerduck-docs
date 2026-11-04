@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "빠른 시작"
+description: "Powerduck은 AI가 만든 변경과 주변 코드를 읽고 처리할 문제를 판단하도록 돕습니다. 데스크톱 홈에서 API 작업 공간과 코드 검토를 각각 열 수 있습니다."
 ---
 
-# Powerduck · Quickstart
+# 빠른 시작
 
-데스크톱을 포함한 Powerduck은 Google OAuth 또는 GitHub 로그인이 필요합니다. 파일은 로컬에 저장됩니다. AI 분석은 선택한 컨텍스트를 플랫폼이 관리하는 공급자에게 전송합니다. 사용자 지정 모델 주소와 API 키는 지원하지 않습니다.
+공식 사이트에서 macOS Apple Silicon/Intel, Windows 또는 Linux AppImage를 받으세요. 출처와 게시자를 확인하고 보안을 끄지 마세요. 사이트 로그인 후 앱으로 돌아와 API나 코드 프로젝트를 선택합니다. 브라우저는 API 체험용이며 파일 분석과 로컬 명령은 데스크톱이 필요합니다.
 
-Free는 매일 300,000 credits를 제공하며 UTC 00:00에 초기화됩니다. Pro는 월 $39에 7일마다 18,000,000 credits, Max는 월 $99에 7일마다 60,000,000 credits를 제공합니다. 최초 구독 시작을 기준으로 초기화하며 월 결제와 별개입니다. 이월되지 않습니다. 데스크톱과 AI Chat은 개인 계정 요금제를 공유하며 영구 라이선스와 활성화 키는 판매하지 않습니다.
+## API 작업 공간
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+OpenAPI YAML 또는 JSON을 가져와 작업 설계, 요청 전송, 응답 확인, 시나리오, 로컬 Mock, 데이터 모델과 문서를 사용합니다. MCP 및 게시는 별도 작업이며 가져오기만으로 업무 백엔드가 배포되지는 않습니다.
+
+## 코드 검토
+
+폴더 선택 시 구조가 먼저 열립니다. 파일 전체를 읽으며 소스만, 전체 비교, 변경만 보기로 전환합니다. 추가·삭제 행, 문자 강조, 변경 탐색과 검색으로 문맥 속 수정 부분을 찾습니다.
+
+## 비교 범위와 라운드 기록
+
+현재 라운드는 저장된 시작점과 디스크 파일을 비교합니다. 첫 열기는 시작점을 만들며 기존 내용을 새 변경으로 처리하지 않습니다. 전체 미커밋 변경은 Git HEAD와 비교합니다. 새 라운드를 명시적으로 시작하고 로컬 기록에서 이전 차이를 확인합니다. 기록은 Git 백업이 아니며 수정 파일을 먼저 저장해야 합니다.
+
+## 검사 실행
+
+신뢰하는 프로젝트의 명령을 명시적으로 실행하고 명령, 종료 코드, 원시 출력을 확인합니다. 스크립트 없음은 미검증입니다. 읽기, 정적 분석과 AI는 실행 증거가 아니며 읽음 표시는 독서 진행만 기록합니다.
+
+- [API 작업 공간](../client/introduction.md)
+- [코드 검토](../client/code-quality.md)
+- [내장 AI와 사용 범위](../client/ai-models.md)
+- [요금제와 작업 횟수](../cloud/billing.md)
+- [설치 및 시작](installation.md)
+- [모든 변경 이해하기](quickstart.md)

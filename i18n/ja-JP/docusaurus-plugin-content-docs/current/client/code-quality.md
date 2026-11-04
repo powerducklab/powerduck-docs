@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "コードレビュー"
+description: "Powerduck は、AI が大量のコードを生成する中で、変更内容と周辺コードを確認し、対応すべき問題を判断するためのデスクトップアプリです。ホームから API ワークスペースとコードレビューを個別に開けます。"
 ---
 
-# Code quality
+# コードレビュー
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+コードフォルダーを選ぶと構造ビューが開きます。ファイルを選択して全体を読み、ソースのみ、全体比較、変更のみを切り替えます。追加・削除行、文字単位の強調、変更ナビゲーション、検索で編集箇所を確認できます。
 
-## Evidence and priority
+## 比較範囲とラウンド履歴
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+現在のラウンドは保存済みの開始点とディスク上のファイルを比較します。初回は開始点を作成し、既存内容を新規変更として扱いません。未コミット変更全体は Git HEAD と比較します。新ラウンドを明示的に開始し、履歴から過去の差分を確認できます。履歴はローカル保存で Git のバックアップではありません。編集はディスクに保存してください。
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## プロジェクト構造と関連コード
 
-## Tests that belong to the project
+Git 差分とパーサーが変更ブロック、解決可能な定義・呼び出し元・インポートを検出します。対応するシンボルのホバーで定義を表示し、変更の近くで関連コードを開けます。参照の多いファイル、一時名、同一内容、参照元が未検出の候補を表示します。動的ロードや外部利用は見逃す場合があり、参照なしは削除可能という意味ではありません。
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## AI インラインレビュー
 
-## Iteration history
+AI は明示的なレビュー要求で動作し、差分と制限された関連情報を分割処理します。全ファイルを個別送信する方式ではありません。一致するキャッシュを再利用でき、疑点は優先度・根拠・提案と共に該当コードに表示されます。要対応・誤検出・Agent タスクを選べます。AI は誤ることがあり、正しさやテスト実行を証明しません。
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent タスクパッケージ
 
-## AI Chat tools
+疑点を選び、コードとリビジョン情報を含む Markdown タスクをプレビュー・コピー・ダウンロードします。受信 Agent は独立評価し、変更可否は明記されます。JSON 報告を戻しても人の確認が必要です。修正の主張はテスト成功ではなく、エクスポートは他の Agent を自動起動しません。
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## チェックの実行
 
-## Scope and privacy
+チェックを明示的に実行し、コマンド・終了コード・生出力を確認します。スクリプト欠如は未検証です。信頼できるプロジェクトのみで実行してください。静的解析や AI レビューは実行証拠ではなく、既読は閲覧進捗だけを表します。
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## 内蔵 AI と利用範囲
+
+Google／GitHub でログインし、内蔵モデルを利用します。モデル選択、独自キーやエンドポイントはありません。AI 要求時に選択した文脈を管理されたプロバイダーへ送信します。一般的な依存・ビルド・認証情報パスを除外しても、ソース内の秘密情報を完全には検出できません。
+
+- [API ワークスペース](introduction.md)
+- [コードレビュー](code-quality.md)
+- [内蔵 AI と利用範囲](ai-models.md)
+- [プランとタスク回数](../cloud/billing.md)
+- [インストールと開始](../overview/installation.md)
+- [変更を理解する](../overview/quickstart.md)

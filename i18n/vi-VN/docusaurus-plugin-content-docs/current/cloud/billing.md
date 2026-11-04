@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: "Thanh toán và giấy phép"
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Gói và số tác vụ"
+description: "Gói mới tính hội thoại/rà soát: Free 10/2; Starter $19/tháng 300/20; Pro $39/tháng 700/60; Max $99/tháng 2.000/180. Free đặt lại đầu tháng UTC, gói trả phí theo kỳ thuê bao. Không cộng dồn. Giá cuối và thuế tại thanh toán."
 ---
 
-# Free · Pro · Max
+# Gói và số tác vụ
 
-Powerduck, kể cả ứng dụng máy tính, yêu cầu đăng nhập bằng Google OAuth hoặc GitHub. Tệp vẫn nằm trên ổ đĩa. Phân tích AI gửi ngữ cảnh được chọn đến các nhà cung cấp do Powerduck quản lý. Không còn hỗ trợ địa chỉ mô hình hay khóa API tùy chỉnh.
+Gói mới tính hội thoại/rà soát: Free 10/2; Starter $19/tháng 300/20; Pro $39/tháng 700/60; Max $99/tháng 2.000/180. Free đặt lại đầu tháng UTC, gói trả phí theo kỳ thuê bao. Không cộng dồn. Giá cuối và thuế tại thanh toán.
 
-Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
+## AI tích hợp và sử dụng
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Một lượt hội thoại hoặc rà soát là một tác vụ, không tính riêng mỗi lệnh gọi nội bộ. Khi chạy sẽ giữ chỗ: kết quả đã giao tính một dù hủy sau đó; không có kết quả thành công sẽ giải phóng. Chia nhỏ rà soát lớn. Đọc cục bộ, Git/AST và kết quả lưu không tốn tác vụ. Thuê bao cũ có thể giữ credits; xem tài khoản.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [Không gian API](../client/introduction.md)
+- [Rà soát mã](../client/code-quality.md)
+- [AI tích hợp và sử dụng](../client/ai-models.md)
+- [Gói và số tác vụ](billing.md)
+- [Cài đặt và bắt đầu](../overview/installation.md)
+- [Hiểu từng thay đổi](../overview/quickstart.md)

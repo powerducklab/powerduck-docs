@@ -1,19 +1,24 @@
 ---
-sidebar_position: 8
-title: KI und Modelle
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 15
+title: "Integrierte KI und Nutzung"
+description: "Powerduck hilft, KI-generierte Änderungen mit ihrem Kontext zu prüfen und den nächsten Schritt zu entscheiden. Die Desktop-App bietet einen API-Arbeitsbereich und Code-Reviews, jeweils direkt über die Startseite."
 ---
 
-# AI · Models
+# Integrierte KI und Nutzung
 
-Powerduck erfordert auch auf dem Desktop eine Anmeldung mit Google OAuth oder GitHub. Dateien bleiben lokal. Für KI-Analysen wird der ausgewählte Kontext an die von Powerduck verwalteten Anbieter gesendet. Eigene Modell-URLs und API-Schlüssel werden nicht mehr unterstützt.
+Mit Google oder GitHub anmelden. Nur das integrierte Modell ist verfügbar, ohne Modellwahl, eigene Schlüssel oder Endpunkte. Angeforderte KI-Arbeit sendet ausgewählten Kontext an verwaltete Anbieter. Übliche Abhängigkeits-, Build- und Zugangsdatenpfade werden ausgeschlossen; Geheimnisse im Quelltext sind trotzdem möglich.
 
-Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
+## KI-Review im Code
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+KI-Reviews starten auf Anforderung und verarbeiten begrenzte Differenzen mit zugehörigem Kontext in Paketen statt jeder vollständigen Datei. Passende Cache-Ergebnisse sind wiederverwendbar. Hinweise erscheinen mit Priorität, Beleg und Empfehlung am Code. Als Problem bestätigen, Fehlalarm markieren oder an einen Agent übergeben. KI beweist weder Korrektheit noch ausgeführte Tests.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+## Tarife und Aufgaben
+
+Ein Gesprächszug oder Review zählt als Aufgabe; interne Aufrufe kosten nicht jeweils extra. Während der Ausführung wird reserviert. Ein geliefertes Ergebnis zählt einmal, auch bei anschließendem Abbruch; ohne erfolgreiches Ergebnis wird freigegeben. Große Reviews aufteilen. Lokales Lesen, Git/AST und gespeicherte Ergebnisse verbrauchen keine Aufgaben. Alt-Abos können Credits behalten; maßgeblich ist die Kontoanzeige.
+
+- [API-Arbeitsbereich](introduction.md)
+- [Code-Review](code-quality.md)
+- [Integrierte KI und Nutzung](ai-models.md)
+- [Tarife und Aufgaben](../cloud/billing.md)
+- [Installieren und starten](../overview/installation.md)
+- [Jede Änderung verstehen](../overview/quickstart.md)

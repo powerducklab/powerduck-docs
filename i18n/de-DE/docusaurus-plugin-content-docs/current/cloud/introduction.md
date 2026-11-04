@@ -61,9 +61,7 @@ Melden Sie sich mit **Google** oder **GitHub** an. Nach dem OAuth-Handshake gibt
 
 ## Cloud versus Desktop-Client
 
-Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
-
-Free: täglich 300.000 credits, Rücksetzung um 00:00 UTC. Pro: 39 $/Monat und 18.000.000 credits je 7 Tage. Max: 99 $/Monat und 60.000.000 credits je 7 Tage. Der Zyklus beginnt mit dem ursprünglichen Abonnementstart und ist von der monatlichen Abrechnung unabhängig. Kein Übertrag. Desktop und AI Chat nutzen denselben persönlichen Tarif; Dauerlizenzen und Aktivierungsschlüssel werden nicht mehr verkauft.
+Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
 
 ## Hier starten
 

@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: 請求とライセンス
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "プランとタスク回数"
+description: "新プランは対話／レビューを別々に計数します。Free 10／2 回、Starter $19／月 300／20 回、Pro $39／月 700／60 回、Max $99／月 2,000／180 回。Free は UTC 月初、 有料は購読期間でリセットし繰り越しません。税金を含む最終額は決済画面で確認します。"
 ---
 
-# Free · Pro · Max
+# プランとタスク回数
 
-デスクトップ版を含む Powerduck の利用には Google OAuth または GitHub でのログインが必要です。ファイルはローカルに保存されます。AI 分析では選択したコンテキストを Powerduck が管理するプロバイダーへ送信します。独自のモデル URL や API キーの設定には対応しません。
+新プランは対話／レビューを別々に計数します。Free 10／2 回、Starter $19／月 300／20 回、Pro $39／月 700／60 回、Max $99／月 2,000／180 回。Free は UTC 月初、 有料は購読期間でリセットし繰り越しません。税金を含む最終額は決済画面で確認します。
 
-Free は毎日 300,000 credits（UTC 00:00 にリセット）。Pro は月額 $39、7 日ごとに 18,000,000 credits。Max は月額 $99、7 日ごとに 60,000,000 credits。最初の購読開始時刻を基準にリセットし、月額請求とは別周期です。繰越はありません。デスクトップと AI Chat は同じ個人アカウントのプランを使い、買い切りライセンスや有効化キーは販売しません。
+## 内蔵 AI と利用範囲
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+対話の一往復またはレビュー操作が一タスクです。内部呼び出しは別課金しません。実行中は予約し、結果を配信すると一回を精算します。配信後の中止でも計数し、成功結果がなければ予約を解除します。大きなレビューは分割してください。ローカル閲覧・Git／AST・保存結果は消費しません。旧購読は従来 credits を維持する場合があり、アカウント表示が適用されます。
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [API ワークスペース](../client/introduction.md)
+- [コードレビュー](../client/code-quality.md)
+- [内蔵 AI と利用範囲](../client/ai-models.md)
+- [プランとタスク回数](billing.md)
+- [インストールと開始](../overview/installation.md)
+- [変更を理解する](../overview/quickstart.md)

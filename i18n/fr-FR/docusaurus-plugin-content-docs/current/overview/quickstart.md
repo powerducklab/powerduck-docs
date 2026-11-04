@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "Démarrage rapide"
+description: "Powerduck aide à comprendre les modifications produites par IA, à lire leur contexte et à décider des suites. Depuis l’accueil, ouvrez séparément l’espace API ou la revue de code dans l’application de bureau."
 ---
 
-# Powerduck · Quickstart
+# Démarrage rapide
 
-Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
+Téléchargez depuis le site officiel macOS Apple Silicon/Intel, Windows ou Linux AppImage. Vérifiez source et éditeur sans désactiver les protections. Connectez-vous sur le site puis revenez à l’application ; importez une définition API ou choisissez un projet. Le navigateur présente les flux API ; analyse locale et commandes nécessitent le bureau.
 
-Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
+## Espace API
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+Importez un fichier OpenAPI YAML ou JSON pour concevoir les opérations, envoyer des requêtes, examiner les réponses, utiliser scénarios, mocks locaux, modèles de données et documentation. MCP et publication sont des actions distinctes ; importer ne déploie pas votre backend métier.
+
+## Revue de code
+
+Le choix du dossier ouvre sa structure. Sélectionnez un fichier pour lire son code complet : source seule, comparaison complète ou modifications seules. Les ajouts, suppressions, différences de caractères, la navigation et la recherche rendent les changements repérables.
+
+## Comparaison et historique des cycles
+
+Le cycle courant compare son point de départ enregistré aux fichiers sur disque. La première ouverture crée ce repère sans déclarer tous les fichiers nouveaux. Les changements non validés se comparent à Git HEAD. Démarrez volontairement un nouveau cycle et consultez les anciens dans l’historique local, qui ne remplace pas Git. Enregistrez vos modifications sur disque.
+
+## Exécuter les vérifications
+
+Lancez explicitement les commandes du projet et examinez commande, code de sortie et sortie brute. Un script absent reste non vérifié. N’exécutez que des projets fiables. Lecture, analyse statique et IA ne sont pas des preuves d’exécution ; lu indique seulement la progression de lecture.
+
+- [Espace API](../client/introduction.md)
+- [Revue de code](../client/code-quality.md)
+- [IA intégrée et utilisation](../client/ai-models.md)
+- [Offres et tâches](../cloud/billing.md)
+- [Installer et démarrer](installation.md)
+- [Comprendre chaque modification](quickstart.md)

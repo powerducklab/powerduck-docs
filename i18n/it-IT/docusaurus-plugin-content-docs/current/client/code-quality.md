@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Revisione del codice"
+description: "Powerduck aiuta a capire le modifiche generate dall’IA, leggerne il contesto e decidere cosa affrontare. Dalla Home dell’app desktop si aprono separatamente spazio API e revisione del codice."
 ---
 
-# Code quality
+# Revisione del codice
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+La cartella scelta apre la struttura. Leggi file completi nelle viste solo sorgente, confronto completo o sole modifiche. Righe aggiunte/rimosse, differenze di caratteri, navigazione e ricerca individuano l’intervento.
 
-## Evidence and priority
+## Confronto e cronologia dei cicli
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Il ciclo attuale confronta il punto iniziale salvato con il disco. La prima apertura crea tale punto senza considerare tutto nuovo. Le modifiche non registrate si confrontano con Git HEAD. Avvia esplicitamente nuovi cicli e consulta i precedenti nella cronologia locale, che non sostituisce Git. Salva prima i file.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Struttura e codice collegato
 
-## Tests that belong to the project
+Git e parser identificano blocchi, definizioni, chiamanti e import risolvibili. Passa sui simboli supportati per vedere definizioni e apri il codice collegato vicino alla modifica. La struttura segnala molti riferimenti, nomi temporanei, contenuti identici e riferimenti entranti non trovati. Caricamenti dinamici e usi esterni possono sfuggire; assenza di riferimenti non significa eliminazione sicura.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## Revisione IA nel codice
 
-## Iteration history
+La revisione IA parte su richiesta ed elabora differenze con contesto limitato in lotti, non tutti i file completi. Riutilizza risultati in cache corrispondenti. Priorità, prova e consiglio appaiono nel codice. Conferma, indica un falso positivo o prepara un’attività Agent. L’IA può sbagliare e non dimostra correttezza o test eseguiti.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Pacchetti di attività Agent
 
-## AI Chat tools
+Seleziona dubbi e visualizza, copia o scarica Markdown con contesto e revisione. L’Agent valuta indipendentemente e il permesso di modifica è esplicito. Il rapporto JSON richiede verifica umana. Una riparazione dichiarata non è un test superato; esportare non avvia né contatta automaticamente altri Agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Eseguire controlli
 
-## Scope and privacy
+Esegui esplicitamente comandi solo su progetti affidabili e controlla comando, codice di uscita e output. Script assente significa non verificato. Lettura, analisi statica e IA non sono prove di esecuzione; letto indica soltanto avanzamento di lettura.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## IA integrata e utilizzo
+
+Accedi con Google o GitHub. Solo modello integrato, senza selettore, chiavi proprie o endpoint personalizzati. Il lavoro IA richiesto invia il contesto scelto a fornitori gestiti. Le comuni cartelle di dipendenze, build e credenziali sono escluse, ma il sorgente può ancora contenere segreti.
+
+- [Spazio API](introduction.md)
+- [Revisione del codice](code-quality.md)
+- [IA integrata e utilizzo](ai-models.md)
+- [Piani e attività](../cloud/billing.md)
+- [Installare e iniziare](../overview/installation.md)
+- [Capire ogni modifica](../overview/quickstart.md)

@@ -1,19 +1,24 @@
 ---
-sidebar_position: 8
-title: AI 與模型
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 15
+title: "內建 AI 與使用範圍"
+description: "AI 產生程式碼越來越快，Powerduck 協助你看清變更、結合上下文審閱，並決定哪些問題需要處理。桌面版提供 API 工作台與程式碼審閱，可從首頁分別進入。"
 ---
 
-# AI · Models
+# 內建 AI 與使用範圍
 
-Powerduck 桌面端與瀏覽器工作區均須先使用 Google OAuth 或 GitHub 登入。本機檔案仍保存在磁碟。AI 分析會將選定內容傳送給平台管理的模型供應商；不再支援自訂模型網址或 API Key。
+以 Google 或 GitHub 登入，僅使用內建模型，不提供模型選擇、自備金鑰或自訂端點。要求 AI 工作時才傳送選取的上下文至託管服務。掃描排除常見依賴、建置與憑證路徑，但不能保證原始碼不含機密。
 
-Free 每日提供 300,000 credits，UTC 00:00 重設。Pro 為 $39/月，每 7 日 18,000,000 credits；Max 為 $99/月，每 7 日 60,000,000 credits。額度從首次訂閱時間起每 7 日重設，與每月計費分開；未用額度不累計。桌面端與 AI Chat 共用個人帳戶方案，不再出售軟體授權或啟用碼。
+## AI 行內審閱
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+只有主動發起才執行 AI 審閱，以目前差異與有限關聯上下文分批分析，並非逐檔傳送完整內容。結果位於對應程式碼，包含優先級、證據與建議；匹配的快取可重用。可確認問題、標記誤報或選入 Agent 任務。AI 可能漏報或誤報，不證明程式正確或測試已執行。
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+## 方案與任務次數
+
+一次對話輪次或審閱操作算一個任務，內部工具或模型批次不各自扣次。執行時預留，服務端結算；已交付結果後取消仍計一次，沒有成功結果則釋放預留。大型審閱需拆分。本機瀏覽、Git／AST 與已存結果不扣次。舊訂閱可能保留 credits 權益，以帳戶及結帳顯示為準。
+
+- [API 工作台](introduction.md)
+- [程式碼審閱](code-quality.md)
+- [內建 AI 與使用範圍](ai-models.md)
+- [方案與任務次數](../cloud/billing.md)
+- [安裝與開始使用](../overview/installation.md)
+- [看清每一次變更](../overview/quickstart.md)

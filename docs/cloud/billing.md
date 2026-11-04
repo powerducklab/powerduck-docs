@@ -1,21 +1,20 @@
 ---
 sidebar_position: 6
-title: Plans & credits
-description: "Powerduck subscription plans, daily and weekly credit resets, and account billing."
+title: "Plans and task allowances"
+description: "New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax."
 ---
 
-# Plans & credits
+# Plans and task allowances
 
-Powerduck uses account subscriptions shared by the desktop app and AI Chat. Software activation keys and one-time model packs are no longer sold.
+New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
 
-| Plan | Monthly list price | Included credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | $0 | 300,000 | Daily at 00:00 UTC |
-| Pro | $39 | 18,000,000 | Every 7 days |
-| Max | $99 | 60,000,000 | Every 7 days |
+## Built-in AI and usage
 
-The paid allowance starts from the original subscription start timestamp. Monthly billing and seven-day allowance resets are separate schedules. Unused credits do not carry into the next allowance period. Checkout shows the final charge and applicable taxes.
+One conversation turn or one review operation is a task; its internal tool/model calls do not each consume another task. Usage is reserved while running and settled by the server. A delivered result consumes one task even if you subsequently cancel; a task with no successful result releases its reservation. Scope and safety limits still apply: split large reviews. Local browsing, Git/AST analysis and viewing saved results do not consume AI tasks. Existing legacy subscriptions may retain credit billing; the account and checkout show the applicable entitlement.
 
-Sign in with Google or GitHub, then open **Manage plan** from the account menu. Subscription controls support upgrades, scheduled downgrades, cancellation at the end of the paid period and resuming before cancellation takes effect.
-
-AI Chat, code quality reviews and test proposals draw from the same balance. Requests reserve credits before contacting a provider and settle after completion. Failed or canceled requests release their reservation. File browsing and viewing previously generated review results do not invoke a model.
+- [API workspace](../client/introduction.md)
+- [Code review](../client/code-quality.md)
+- [Built-in AI and usage](../client/ai-models.md)
+- [Plans and task allowances](billing.md)
+- [Install and start](../overview/installation.md)
+- [Understand every change](../overview/quickstart.md)

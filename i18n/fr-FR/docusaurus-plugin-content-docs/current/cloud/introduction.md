@@ -61,9 +61,7 @@ Les lecteurs publics utilisent un visualiseur dédié et n'ont pas besoin de cr�
 
 ## Cloud versus client de bureau
 
-Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
-
-Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
+Les nouvelles offres comptent séparément conversations/revues : Free 10/2 ; Starter $19/mois 300/20 ; Pro $39/mois 700/60 ; Max $99/mois 2 000/180. Free se renouvelle au début du mois UTC, les offres payantes selon la période de facturation. Aucun report. Prix final et taxes au paiement.
 
 ## Commencez ici
 

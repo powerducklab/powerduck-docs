@@ -1,63 +1,39 @@
 ---
 sidebar_position: 2
-title: インストール
-description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
+title: "インストールと開始"
+description: "Powerduck は、AI が大量のコードを生成する中で、変更内容と周辺コードを確認し、対応すべき問題を判断するためのデスクトップアプリです。ホームから API ワークスペースとコードレビューを個別に開けます。"
 ---
 
-# インストール
+# インストールと開始
 
-デスクトップ版を含む Powerduck の利用には Google OAuth または GitHub でのログインが必要です。ファイルはローカルに保存されます。AI 分析では選択したコンテキストを Powerduck が管理するプロバイダーへ送信します。独自のモデル URL や API キーの設定には対応しません。
+公式サイトから macOS Apple Silicon／Intel、Windows、Linux AppImage を取得し、配布元を確認してください。安全機能を無効化せず、サイトでログインしてアプリへ戻ります。ホームから API 定義またはコードを選びます。ブラウザー App は API 操作の体験用で、ローカル解析とコマンドにはデスクトップが必要です。
 
-## ダウンロード
+[Powerduck](https://www.powerduck.com/download.html)
 
-[Powerduck のウェブサイト](https://www.powerduck.com/#download)からお使いのプラットフォーム向けインストーラーを入手してください。以下のビルドが `electron-builder` で生成されています。
+## 内蔵 AI と利用範囲
 
-| プラットフォーム | インストーラー | アーキテクチャ |
-|---|---|---|
-| macOS | `.dmg`（自動更新用の `.zip` も） | Apple Silicon（`arm64`）と Intel（`x64`） |
-| Windows | NSIS セットアップ（`.exe`） | `x64` |
-| Linux | AppImage（`.AppImage`） | `x64` |
+Google／GitHub でログインし、内蔵モデルを利用します。モデル選択、独自キーやエンドポイントはありません。AI 要求時に選択した文脈を管理されたプロバイダーへ送信します。一般的な依存・ビルド・認証情報パスを除外しても、ソース内の秘密情報を完全には検出できません。
 
-## macOS
+## プランとタスク回数
 
-1. `.dmg` を開き、Powerduck を**アプリケーション**にドラッグします。
-2. 初回起動時、macOS が App Store 以外からダウンロードしたアプリの確認を求める場合があります。開く前に公式ダウンロードページから入手したことを確認し、システムのセキュリティチェックは無効にしないでください。
-3. Apple Silicon（M シリーズ）向けの `arm64` ビルドと、Intel Mac 向けの `x64` ビルドの 2 つが公開されています。お使いのマシンに合うものをダウンロードしてください。
+新プランは対話／レビューを別々に計数します。Free 10／2 回、Starter $19／月 300／20 回、Pro $39／月 700／60 回、Max $99／月 2,000／180 回。Free は UTC 月初、 有料は購読期間でリセットし繰り越しません。税金を含む最終額は決済画面で確認します。
 
-## Windows
+- [API ワークスペース](../client/introduction.md)
+- [コードレビュー](../client/code-quality.md)
+- [内蔵 AI と利用範囲](../client/ai-models.md)
+- [プランとタスク回数](../cloud/billing.md)
+- [インストールと開始](installation.md)
+- [変更を理解する](quickstart.md)
 
-1. NSIS インストーラー（`.exe`）を実行し、セットアップ手順に従います。
-2. SmartScreen に不明な発行元の警告が出た場合は、まず公式ダウンロードページから入手したことを確認してください。入手元を確認してから続行し、信頼できないダウンロードの警告は回避しないでください。
+## macOS · Windows · Linux
 
-## Linux
+macOS 11+ · Windows 10+ · Linux · Electron 37
 
-1. `.AppImage` をダウンロードします。
-2. 実行権限を付与して実行します。
+- macOS: `.dmg` · `arm64` / `x64`
+- Windows: NSIS `.exe` · SmartScreen
+- Linux: `.AppImage` · `x64`
 
 ```bash
 chmod +x Powerduck-*.AppImage
 ./Powerduck-*.AppImage
 ```
-
-AppImage はシステム全体へのインストールなしで動作します。一部のディストリビューションでは、マウントに FUSE のインストールが必要な場合があります。
-
-## マシン上で動作するもの
-
-デスクトップクライアントは 2 つの部分からなる Electron アプリです。
-
-- ファイルアクセス、外部への HTTP リクエスト、ローカルモックサーバー、データベース接続、統合ターミナルを担う**メインプロセス**（Node.js）。
-- 仕様、AI チャット、各ツールを描画する**レンダラー**（React ワークスペース）。
-
-デスクトップ版を含む Powerduck の利用には Google OAuth または GitHub でのログインが必要です。ファイルはローカルに保存されます。AI 分析では選択したコンテキストを Powerduck が管理するプロバイダーへ送信します。独自のモデル URL や API キーの設定には対応しません。
-
-## システム要件
-
-- macOS 11 以降、Windows 10 以降、または Electron 37 に対応する主要な Linux デスクトップディストリビューション。
-- アプリを置く十分なディスク容量。開く仕様は元の場所に残ります。
-- デスクトップ版を含む Powerduck の利用には Google OAuth または GitHub でのログインが必要です。ファイルはローカルに保存されます。AI 分析では選択したコンテキストを Powerduck が管理するプロバイダーへ送信します。独自のモデル URL や API キーの設定には対応しません。
-
-## Powerduck · Free / Pro / Max
-
-Free は毎日 300,000 credits（UTC 00:00 にリセット）。Pro は月額 $39、7 日ごとに 18,000,000 credits。Max は月額 $99、7 日ごとに 60,000,000 credits。最初の購読開始時刻を基準にリセットし、月額請求とは別周期です。繰越はありません。デスクトップと AI Chat は同じ個人アカウントのプランを使い、買い切りライセンスや有効化キーは販売しません。
-
-次は[クイックスタート](./quickstart.md)へ進んでください。

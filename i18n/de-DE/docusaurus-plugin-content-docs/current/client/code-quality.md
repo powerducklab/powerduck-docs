@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Code-Review"
+description: "Powerduck hilft, KI-generierte Änderungen mit ihrem Kontext zu prüfen und den nächsten Schritt zu entscheiden. Die Desktop-App bietet einen API-Arbeitsbereich und Code-Reviews, jeweils direkt über die Startseite."
 ---
 
-# Code quality
+# Code-Review
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Nach der Ordnerwahl erscheint die Projektstruktur. Dateien lassen sich vollständig lesen: nur Quelltext, vollständiger Vergleich oder nur Änderungen. Zeilen- und Zeichenmarkierungen, Änderungsnavigation und Suche zeigen den tatsächlichen Eingriff im Kontext.
 
-## Evidence and priority
+## Vergleich und Rundenverlauf
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Die aktuelle Runde vergleicht ihren gespeicherten Ausgangspunkt mit Dateien auf der Festplatte. Beim ersten Öffnen wird ein Ausgangspunkt angelegt; vorhandener Inhalt ist nicht automatisch neu. Alle nicht eingecheckten Änderungen werden mit Git HEAD verglichen. Neue Runden bewusst starten und alte im Verlauf auswählen. Der lokale Verlauf ersetzt kein Git-Backup. Änderungen zuerst speichern.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Projektstruktur und verknüpfter Code
 
-## Tests that belong to the project
+Git und Parser liefern Änderungsblöcke sowie auflösbare Definitionen, Aufrufer und Importe. Unterstützte Symbole zeigen beim Darüberfahren Definitionen; verknüpfter Code öffnet sich an der Änderung. Die Struktur markiert häufig referenzierte Dateien, temporäre Namen, identische Inhalte und fehlende eingehende Referenzen. Dynamisches Laden und externe Nutzer können fehlen; fehlende Referenzen erlauben keine sichere Löschung.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## KI-Review im Code
 
-## Iteration history
+KI-Reviews starten auf Anforderung und verarbeiten begrenzte Differenzen mit zugehörigem Kontext in Paketen statt jeder vollständigen Datei. Passende Cache-Ergebnisse sind wiederverwendbar. Hinweise erscheinen mit Priorität, Beleg und Empfehlung am Code. Als Problem bestätigen, Fehlalarm markieren oder an einen Agent übergeben. KI beweist weder Korrektheit noch ausgeführte Tests.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent-Aufgabenpakete
 
-## AI Chat tools
+Mehrere Hinweise als Markdown mit Code und Revisionsankern ansehen, kopieren oder herunterladen. Der empfangende Agent soll unabhängig urteilen; eine Änderungserlaubnis wird ausdrücklich angegeben. JSON-Berichte bleiben manuell zu prüfen. Eine Reparaturbehauptung ist kein bestandener Test. Der Export kontaktiert oder startet keinen Agent automatisch.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Prüfungen ausführen
 
-## Scope and privacy
+Projektbefehle ausdrücklich ausführen und Befehl, Exit-Code und Rohdaten prüfen. Fehlende Skripte gelten als ungeprüft. Nur vertrauenswürdige Projekte ausführen. Dateilesen, statische Analyse und KI sind keine Ausführungsbelege; gelesen bedeutet nur Lesefortschritt.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## Integrierte KI und Nutzung
+
+Mit Google oder GitHub anmelden. Nur das integrierte Modell ist verfügbar, ohne Modellwahl, eigene Schlüssel oder Endpunkte. Angeforderte KI-Arbeit sendet ausgewählten Kontext an verwaltete Anbieter. Übliche Abhängigkeits-, Build- und Zugangsdatenpfade werden ausgeschlossen; Geheimnisse im Quelltext sind trotzdem möglich.
+
+- [API-Arbeitsbereich](introduction.md)
+- [Code-Review](code-quality.md)
+- [Integrierte KI und Nutzung](ai-models.md)
+- [Tarife und Aufgaben](../cloud/billing.md)
+- [Installieren und starten](../overview/installation.md)
+- [Jede Änderung verstehen](../overview/quickstart.md)

@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Kod incelemesi"
+description: "Powerduck, AI tarafından üretilen değişiklikleri bağlamıyla anlamanıza ve hangi soruna müdahale edeceğinize karar vermenize yardımcı olur. Masaüstü Ana Sayfasından API alanını veya kod incelemesini ayrı açın."
 ---
 
-# Code quality
+# Kod incelemesi
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Klasör seçimi proje yapısını açar. Tam dosyayı yalnız kaynak, tam karşılaştırma veya yalnız değişiklik görünümünde okuyun. Eklenen/silinen satırlar, karakter vurguları, değişiklik gezintisi ve arama düzenlemeyi buldurur.
 
-## Evidence and priority
+## Karşılaştırma ve tur geçmişi
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Geçerli tur, kaydedilen başlangıcı diskteki dosyalarla karşılaştırır. İlk açılış başlangıç oluşturur, mevcut her şeyi yeni saymaz. Tüm commit edilmemiş değişiklikler Git HEAD ile karşılaştırılır. Yeni turu bilinçli başlatın, öncekileri yerel geçmişte seçin. Bu Git yedeği değildir; önce dosyaları kaydedin.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Proje yapısı ve ilişkili kod
 
-## Tests that belong to the project
+Git ve ayrıştırıcılar blokları, çözümlenen tanımları, çağıranları ve içe aktarımları bulur. Desteklenen sembollerin üzerine gelerek tanımı görün, ilişkili kodu değişikliğin yanında açın. Yapı sık başvurulan, geçici adlı, aynı içerikli ve gelen başvuru bulunamayan dosyaları işaretler. Dinamik yükleme ve dış kullanım eksik olabilir; başvuru yokluğu güvenle silinebilir demek değildir.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## Kod içinde AI incelemesi
 
-## Iteration history
+AI incelemesi istekle başlar, sınırlı fark ve bağlamı gruplar hâlinde işler; her tam dosyayı göndermez. Eşleşen önbellek kullanılabilir. Öncelik, kanıt ve öneri kod yanında görünür. Sorunu onaylayın, yanlış pozitif işaretleyin veya Agent için seçin. AI doğruluğu ya da test çalıştığını kanıtlamaz.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent görev paketleri
 
-## AI Chat tools
+Şüpheleri seçip kod ve sürüm işaretleri içeren Markdown paketini önizleyin, kopyalayın veya indirin. Agent bağımsız değerlendirmeli; değişiklik izni açıkça belirtilir. JSON raporu insan kontrolü gerektirir. Onarım iddiası başarılı test değildir. Dışa aktarma başka Agent başlatmaz veya iletişim kurmaz.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Kontrolleri çalıştırın
 
-## Scope and privacy
+Yalnız güvenilir projelerin komutlarını açıkça çalıştırın; komut, çıkış kodu ve ham çıktıyı inceleyin. Eksik betik doğrulanmamıştır. Okuma, statik analiz ve AI çalıştırma kanıtı değildir; okundu yalnız okuma ilerlemesidir.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## Yerleşik AI ve kullanım
+
+Google veya GitHub ile giriş yapın. Yalnız yerleşik model; model seçimi, kişisel anahtar ve özel uç nokta yoktur. İstenen AI işi seçilen bağlamı yönetilen sağlayıcılara yollar. Yaygın bağımlılık, derleme ve kimlik yolları dışlansa da kaynakta sır bulunmadığı garanti edilmez.
+
+- [API çalışma alanı](introduction.md)
+- [Kod incelemesi](code-quality.md)
+- [Yerleşik AI ve kullanım](ai-models.md)
+- [Planlar ve görevler](../cloud/billing.md)
+- [Kurulum ve başlangıç](../overview/installation.md)
+- [Her değişikliği anlayın](../overview/quickstart.md)

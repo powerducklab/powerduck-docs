@@ -1,0 +1,201 @@
+{
+  "publicPagesVerified": 39,
+  "appAssetsVerified": 2,
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "sha256": "889ba8470df838f468bb2d6e60dfabd63f8510a8536b75c750e88414ce0e384f"
+    },
+    {
+      "path": "/zh-CN/",
+      "status": 200,
+      "sha256": "6aed9417f52f01a8fe8c51f75844773bf8788334b016a99d98e2d9f044234d18"
+    },
+    {
+      "path": "/download.html",
+      "status": 200,
+      "sha256": "bfbf5cfe1ca174768cd7793011f4f47132b91ef6be03b9c45bd3a3b582d6f2b1"
+    },
+    {
+      "path": "/pricing",
+      "status": 200,
+      "sha256": "03b06174a47238412ee997916ea30792f2d0dcabce59e5ad286899c1fd14408e"
+    },
+    {
+      "path": "/app/",
+      "status": 200,
+      "sha256": "1c61f627e70d8f92f1cf90747b21d31fd961a21c4a87acfec90cbaddaf89ba80"
+    },
+    {
+      "path": "/docs/sitemap.xml",
+      "status": 200,
+      "sha256": "a3a47acfc4b0909f4a54e8244308b266bf18dc27e70c6dac05c36e2f8ba2dc49"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "sha256": "d3f86de3c869101d45b2028336a45a270cae1d7b5c1a8a27a98da6d70816a76e"
+    },
+    {
+      "path": "/docs/client/code-quality/",
+      "status": 200,
+      "sha256": "11de70e577f230254895edf57a18de1d04ce696ae105e2c2dd32e1b209dbbf1e"
+    },
+    {
+      "path": "/docs/cloud/billing/",
+      "status": 200,
+      "sha256": "6f53d7cd2c78a0efa42bfc7b87ced72d6b787ec80f8de947b3fa337e69d758b6"
+    },
+    {
+      "path": "/docs/es-ES/client/code-quality/",
+      "status": 200,
+      "sha256": "144035ff553cad1fa2d473ca5d54f9342512ae3f6298de09b51fe652c27dd47c"
+    },
+    {
+      "path": "/docs/es-ES/cloud/billing/",
+      "status": 200,
+      "sha256": "5c94945e1faa8bf17640fae6a08215fddbb339486f2fc07e03f0c5f042563b80"
+    },
+    {
+      "path": "/docs/fr-FR/client/code-quality/",
+      "status": 200,
+      "sha256": "151207c568ca1775cb333b3ffd661a067e856f3288248690e0eff7588b20d566"
+    },
+    {
+      "path": "/docs/fr-FR/cloud/billing/",
+      "status": 200,
+      "sha256": "403e6cd077c9932f885413686ff1b0f9b63e32c7a7483baccf5c510ff6f76ada"
+    },
+    {
+      "path": "/docs/de-DE/client/code-quality/",
+      "status": 200,
+      "sha256": "df6fb5b2014e4696e079810c71e70147751f0300c394d59cb8f2648f73b45f19"
+    },
+    {
+      "path": "/docs/de-DE/cloud/billing/",
+      "status": 200,
+      "sha256": "cf34f268ed848ab6e5636380cdcbf071f44ba23770cf76507d9d157ff0a85869"
+    },
+    {
+      "path": "/docs/pt-BR/client/code-quality/",
+      "status": 200,
+      "sha256": "53cc68f1b8baf18818e3acbce14376937a503f32abbd46c8adf8f447757e8272"
+    },
+    {
+      "path": "/docs/pt-BR/cloud/billing/",
+      "status": 200,
+      "sha256": "43895f3acb01897786f3937f11010c733b0db1ae17087a38f9d645c98ff7daa0"
+    },
+    {
+      "path": "/docs/ja-JP/client/code-quality/",
+      "status": 200,
+      "sha256": "bba85b8fc30b21913fdce00a79023323b1e76e0a835767eab7bc6c4966bbc8d4"
+    },
+    {
+      "path": "/docs/ja-JP/cloud/billing/",
+      "status": 200,
+      "sha256": "746b366a7533a5e2318aa8f6e728884d144694e772af0f449527ebc2cb449d67"
+    },
+    {
+      "path": "/docs/ko-KR/client/code-quality/",
+      "status": 200,
+      "sha256": "72edd22c396b5273f9ab9a6688c07fd42e52dc963e4d7fea0039a5cfc4d92db0"
+    },
+    {
+      "path": "/docs/ko-KR/cloud/billing/",
+      "status": 200,
+      "sha256": "6f7ebcbc7f6eb0166e3bdeafb3f95673ebe812274b1ea9b1189cba87006d6094"
+    },
+    {
+      "path": "/docs/zh-CN/client/code-quality/",
+      "status": 200,
+      "sha256": "a1aad2cc6ca9735ca7dbc5681781387448256ce3ebe054a23fdc6433a53140d2"
+    },
+    {
+      "path": "/docs/zh-CN/cloud/billing/",
+      "status": 200,
+      "sha256": "21fbc15ba1f45f44937bc880179be06159d27515dea41f31ac86d1de9cf75602"
+    },
+    {
+      "path": "/docs/zh-TW/client/code-quality/",
+      "status": 200,
+      "sha256": "ce008dcc2f1f5c3af839ae2fae0e3463872a843eb46b24ac630faad3f3f6fd83"
+    },
+    {
+      "path": "/docs/zh-TW/cloud/billing/",
+      "status": 200,
+      "sha256": "2abb59db770aa8ac5b83a50d2fa91334f785d6b02fc9fc128bb32f5d61bf7001"
+    },
+    {
+      "path": "/docs/it-IT/client/code-quality/",
+      "status": 200,
+      "sha256": "c91e204dc84dfcc3710b9478f1cc33f5b131ce4730f60b5e7878aaad11335f2f"
+    },
+    {
+      "path": "/docs/it-IT/cloud/billing/",
+      "status": 200,
+      "sha256": "1c6b979f6cf7613a16cb4b8b7dbb24ece1a5756ee7c32f9da6e81b1a814f877f"
+    },
+    {
+      "path": "/docs/ru-RU/client/code-quality/",
+      "status": 200,
+      "sha256": "7e7fcaa8fcf43671074b0edc3839e48f07b1d866d2a7d2c251b81d86c143ef9f"
+    },
+    {
+      "path": "/docs/ru-RU/cloud/billing/",
+      "status": 200,
+      "sha256": "6acba2e9d455b092b6630263f7e05ff159fc2e75fa70225e8bac79496ed7db63"
+    },
+    {
+      "path": "/docs/ar-SA/client/code-quality/",
+      "status": 200,
+      "sha256": "51145cd38776ff445cb473ee61eee8a69309eb5856e656b00a447da71f49b216"
+    },
+    {
+      "path": "/docs/ar-SA/cloud/billing/",
+      "status": 200,
+      "sha256": "e7b0698d0187a457d3a8fdda2c915534a57e707115fe9db2694a362656fb80d2"
+    },
+    {
+      "path": "/docs/hi-IN/client/code-quality/",
+      "status": 200,
+      "sha256": "4c776a7ba163da6d22b9e2dd8713843f79589a23f1992248811c9b7ddbbb7c11"
+    },
+    {
+      "path": "/docs/hi-IN/cloud/billing/",
+      "status": 200,
+      "sha256": "da81cc35b24b1540adbc130c26fe416876e599df8f1c068b9643270578b3b2e7"
+    },
+    {
+      "path": "/docs/id-ID/client/code-quality/",
+      "status": 200,
+      "sha256": "4ed2a354e52c63f035db062b00ed0d709263732ac30c8f3da62054f5755d5708"
+    },
+    {
+      "path": "/docs/id-ID/cloud/billing/",
+      "status": 200,
+      "sha256": "38d204b3f83bbb3b6fbee8e59bdfb0d90ae3b998278fd54d058472ddc6f48c0b"
+    },
+    {
+      "path": "/docs/vi-VN/client/code-quality/",
+      "status": 200,
+      "sha256": "54a51052b3a16983464f476cfe465591632935a776e2e6e0fea9fc852e583054"
+    },
+    {
+      "path": "/docs/vi-VN/cloud/billing/",
+      "status": 200,
+      "sha256": "b14ac50aae2fbaaddb4a7228d0ca5f4bd7d3dca9ef5258a00495be0090a6fd2d"
+    },
+    {
+      "path": "/docs/tr-TR/client/code-quality/",
+      "status": 200,
+      "sha256": "5a83a0dcce12d2645c1e4bd1cd614891d73b22c669c5b952595fc12eb2f10b90"
+    },
+    {
+      "path": "/docs/tr-TR/cloud/billing/",
+      "status": 200,
+      "sha256": "2d7af7342a417403776f89f0b728cb750d60fd6d53f06274c75da9ad1f83a84b"
+    }
+  ]
+}

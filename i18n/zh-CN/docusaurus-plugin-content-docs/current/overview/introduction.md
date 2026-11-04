@@ -1,81 +1,28 @@
 ---
 sidebar_position: 1
-title: 简介
-description: "Powerduck 是一个 AI 原生、本地优先的 API 平台，围绕一份 OpenAPI YAML 构建。你和 AI 基于同一份文件完成设计、调试、测试、Mock、文档以及 MCP 工具的暴露——可在桌面、云端或使用开源库完成。"
+title: "看清每一次改动"
+description: "AI 生成代码越来越快，Powerduck 帮助你看清改了什么、结合上下文审查代码，并决定哪些问题需要处理。桌面端提供 API 工作台与代码审阅，两条工作流都能从首页独立进入。"
 ---
 
-# 简介
+# 看清每一次改动
 
-API 的构建方式正在发生转变。二十年来，**操作者**是在图形界面中点击的人，而 API 契约的**消费者**是阅读文档的人。如今这两端都在变化：
+AI 生成代码越来越快，Powerduck 帮助你看清改了什么、结合上下文审查代码，并决定哪些问题需要处理。桌面端提供 API 工作台与代码审阅，两条工作流都能从首页独立进入。
 
-- 操作者越来越多地是把意图转化为行动的 **AI 助手**；
-- 消费者越来越多地是通过 MCP 把 API 当作工具调用的 **AI 智能体**。
+## API 工作台
 
-定义了上一个时代的工具——API 客户端、规范查看器、请求集合——都是为坐在键盘前的人打造的。Powerduck 则为这个时代而生。它不是一个更好用的 API 客户端，也不是一个更漂亮的规范查看器，而是一个**从一份 OpenAPI 文件出发的 AI 原生平台**。
+导入 OpenAPI YAML 或 JSON 文件，即可设计接口、发送请求、查看响应、运行场景、启动本地 Mock、查看数据模型和渲染文档。MCP 与发布是独立工作流；导入接口定义不等于部署业务后端。
 
-## 核心：一份本地 OpenAPI 文件
+## 代码审阅
 
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
+选择代码目录后先查看项目结构，点击文件阅读完整源码。支持仅源码、完整对比、仅改动三种视图；通过增删行、行内字符高亮、改动导航和搜索定位实际修改，同时保留上下文。
 
-```text
-                one local openapi.yaml
-                         |
-      you + AI -> design debug test mock docs data-model
-                         |
-                      MCP tools
-                         |
-               any AI coding agent
-```
+## 内置 AI 与使用范围
 
-那一份文件就是契约。每个工作流都从它读取，同一份文件还可以通过 MCP 交给任何 AI 编程智能体——因此你、内置助手以及每个外部智能体都共享同一个事实来源。当设计、调试、测试、Mock 和文档都读取同一份文件时，"让各工具保持同步"就不再是一项任务。这是设计带来的结果，而非目标本身。
+使用 Google 或 GitHub 登录。产品仅提供内置模型，不提供模型选择、自带密钥或自定义端点。只有请求 AI 工作时才向托管模型服务发送所选代码上下文。本地扫描排除常见依赖、构建和凭据路径，但不能保证源码中没有秘密信息，请核对分享范围。
 
-Powerduck 支持 OpenAPI 3.2，并通过就地升级来读取已有的 3.0、3.1 文档（以及 Swagger 2.0）。非 HTTP API——SSE、WebSocket、GraphQL、gRPC 和 MCP——通过 `x-protocol` 扩展建模在普通的路径项上，而不是被强行塞进仅支持 REST 的形态。
-
-## 你如何与 AI 协作
-
-- 打开一个 YAML，助手会立即建议你可以用它做什么；
-- 用平实的语言陈述结果——"创建订单相关接口""准备测试数据""运行结账流程并给我一份报告"——助手会选择合适的工具并提出改动；
-- 每一项改动都以**可审阅的卡片**呈现；在你批准之前不会应用任何内容；
-- 当你细化某个 API 时，助手会停留在该 API 上，只改动你要求的部分，而不会在整个文档中漂移；
-- Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-## 默认本地优先
-
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-## 使用 Powerduck 的三种方式
-
-| 形态 | 它是什么 | 最适合 |
-|---|---|---|
-| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
-| [**Powerduck Cloud**](../cloud/introduction.md) | 用于 OAS 托管、在线文档和托管 MCP 的云服务 | 与他人共享 API、发布稳定链接，以及无需运行任何程序即可提供 MCP |
-| [**开源库**](/opensource/index.md) | 可组合的 `@powerduck/*` npm 包 | 构建你自己的工具、CI 流水线或嵌入式组件 |
-
-三种形态共享相同的引擎：桌面客户端和云端都由开源库组装而成，因此无论你在本地运行、通过网络调用还是直接引入包，同一个能力的表现都一致。
-
-### 桌面客户端
-
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-### Powerduck Cloud
-
-[Powerduck Cloud](../cloud/introduction.md) 把同样的工作流搬到线上。添加文件、Git 仓库或 URL；选择要暴露哪些操作；然后获得渲染文档的稳定链接和托管的 MCP 端点。访问可以用查看密码或 MCP 访问密钥保护，付费计划增加了 Git 同步、自定义域名和更高的额度。
-
-### 开源库
-
-[这些库](/opensource/index.md)是底层引擎：OpenAPI 解析器与升级器、多协议 CLI、代码生成器、MCP 服务器、请求运行器、cURL 与 Postman 转换器，以及可嵌入的编辑器。每个包都在 npm 上独立发布，带有自己的安装指南和 API 参考——底层技术细节都在这里。
-
-## 对你意味着什么
-
-- **你指挥结果，而不是点击。** 描述目标，助手通过可审阅的步骤完成工作。
-- **你的 API 天然面向智能体就绪。** 生成文档的同一份契约也生成 MCP 工具，因此 AI 智能体从第一天起就能正确调用你的 API。
-- **没有漂移。** 设计、调试、测试、Mock 和文档都读取同一份文件。
-- **所有协议集中一处。** HTTP、SSE、WebSocket、GraphQL、gRPC 和 MCP 存在于单一规范中，而不是六个工具里。
-- Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-## 接下来去哪里
-
-- 新来乍到？从[安装](./installation.md)和[快速开始](./quickstart.md)开始。
-- 想要完整的本地工作区？阅读[桌面客户端指南](../client/introduction.md)。
-- 想在线发布 API？阅读 [Cloud 指南](../cloud/introduction.md)。
-- 在构建自己的集成？浏览[开源库](/opensource/index.md)。
+- [API 工作台](/docs/zh-CN/client/introduction/)
+- [代码审阅](/docs/zh-CN/client/code-quality/)
+- [内置 AI 与使用范围](/docs/zh-CN/client/ai-models/)
+- [套餐与任务次数](/docs/zh-CN/cloud/billing/)
+- [安装与开始使用](/docs/zh-CN/overview/installation/)
+- [看清每一次改动](/docs/zh-CN/overview/quickstart/)

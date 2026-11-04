@@ -1,63 +1,39 @@
 ---
 sidebar_position: 2
-title: "Kurulum"
-description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
+title: "Kurulum ve başlangıç"
+description: "Powerduck, AI tarafından üretilen değişiklikleri bağlamıyla anlamanıza ve hangi soruna müdahale edeceğinize karar vermenize yardımcı olur. Masaüstü Ana Sayfasından API alanını veya kod incelemesini ayrı açın."
 ---
 
-# Kurulum
+# Kurulum ve başlangıç
 
-Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
+Resmî siteden macOS Apple Silicon/Intel, Windows veya Linux AppImage indirin. Kaynak ve yayıncıyı doğrulayın, güvenliği kapatmayın. Webde giriş yapıp uygulamaya dönün; API veya kod projesi seçin. Tarayıcı API deneyimi içindir; yerel dosya analizi ve komutlar masaüstü gerektirir.
 
-## İndirme
+[Powerduck](https://www.powerduck.com/download.html)
 
-Platformunuza uygun yükleyiciyi [Powerduck web sitesinden](https://www.powerduck.com/#download) indirin. Aşağıdaki derlemeler `electron-builder` ile üretilir:
+## Yerleşik AI ve kullanım
 
-| Platform | Yükleyici | Mimari |
-|---|---|---|
-| macOS | `.dmg` ve otomatik güncelleme için `.zip` | Apple Silicon (`arm64`) ve Intel (`x64`) |
-| Windows | NSIS yükleyicisi (`.exe`) | `x64` |
-| Linux | AppImage (`.AppImage`) | `x64` |
+Google veya GitHub ile giriş yapın. Yalnız yerleşik model; model seçimi, kişisel anahtar ve özel uç nokta yoktur. İstenen AI işi seçilen bağlamı yönetilen sağlayıcılara yollar. Yaygın bağımlılık, derleme ve kimlik yolları dışlansa da kaynakta sır bulunmadığı garanti edilmez.
 
-## macOS
+## Planlar ve görevler
 
-1. `.dmg` dosyasını açın ve Powerduck'ı **Uygulamalar** klasörüne sürükleyin.
-2. İlk açılışta macOS, App Store dışından indirilen uygulama için onay isteyebilir. Açmadan önce resmî indirme sayfasından geldiğini doğrulayın; sistem güvenlik denetimlerini kapatmayın.
-3. İki derleme yayımlanır: Apple Silicon (M serisi) için `arm64`, Intel Mac'ler için `x64`. Bilgisayarınıza uygun olanı indirin.
+Yeni planlar konuşma/inceleme sayar: Free 10/2; Starter $19/ay 300/20; Pro $39/ay 700/60; Max $99/ay 2.000/180. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır.
 
-## Windows
+- [API çalışma alanı](../client/introduction.md)
+- [Kod incelemesi](../client/code-quality.md)
+- [Yerleşik AI ve kullanım](../client/ai-models.md)
+- [Planlar ve görevler](../cloud/billing.md)
+- [Kurulum ve başlangıç](installation.md)
+- [Her değişikliği anlayın](quickstart.md)
 
-1. NSIS yükleyicisini (`.exe`) çalıştırın ve kurulum adımlarını izleyin.
-2. SmartScreen tanınmayan yayıncı uyarısı gösterirse önce yükleyicinin resmî indirme sayfasından geldiğini kontrol edin. Yalnızca kaynağı doğruladıktan sonra devam edin; güvenilmeyen bir indirme için uyarıyı atlamayın.
+## macOS · Windows · Linux
 
-## Linux
+macOS 11+ · Windows 10+ · Linux · Electron 37
 
-1. `.AppImage` dosyasını indirin.
-2. Çalıştırma izni verin ve başlatın:
+- macOS: `.dmg` · `arm64` / `x64`
+- Windows: NSIS `.exe` · SmartScreen
+- Linux: `.AppImage` · `x64`
 
 ```bash
 chmod +x Powerduck-*.AppImage
 ./Powerduck-*.AppImage
 ```
-
-AppImage, sistem genelinde kurulum gerektirmeden çalışır. Bazı dağıtımlarda dosyayı bağlamak için FUSE kurmanız gerekebilir.
-
-## Bilgisayarınızda çalışan bileşenler
-
-Masaüstü istemcisi iki parçadan oluşan bir Electron uygulamasıdır:
-
-- Dosya erişimini, giden HTTP isteklerini, yerel mock sunucusunu, veritabanı bağlantılarını ve tümleşik terminali yöneten **ana süreç** (Node.js);
-- Belirtimi, yapay zekâ sohbetini ve tüm araçları gösteren **görüntüleme süreci** (React çalışma alanı).
-
-Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
-
-## Sistem gereksinimleri
-
-- macOS 11 veya üstü, Windows 10 veya üstü ya da Electron 37 ile uyumlu, yaygın bir Linux masaüstü dağıtımı;
-- Uygulama için yeterli disk alanı; açtığınız belirtimler özgün konumlarında kalır;
-- Masaüstü dahil Powerduck kullanımı Google OAuth veya GitHub ile giriş gerektirir. Dosyalar diskte kalır. Yapay zekâ analizi seçilen bağlamı Powerduck tarafından yönetilen sağlayıcılara gönderir. Özel model adresleri ve API anahtarları artık desteklenmez.
-
-## Powerduck · Free / Pro / Max
-
-Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
-
-Sonraki adım: [Hızlı başlangıç](./quickstart.md).

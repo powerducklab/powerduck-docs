@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: 청구
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "요금제와 작업 횟수"
+description: "새 요금제의 대화/검토 횟수: Free 10/2, Starter 월 $19 300/20, Pro 월 $39 700/60, Max 월 $99 2,000/180. Free는 UTC 월초, 유료는 구독 청구 기간에 초기화하며 이월하지 않습니다. 최종 금액과 세금은 결제 화면을 확인하세요."
 ---
 
-# Free · Pro · Max
+# 요금제와 작업 횟수
 
-데스크톱을 포함한 Powerduck은 Google OAuth 또는 GitHub 로그인이 필요합니다. 파일은 로컬에 저장됩니다. AI 분석은 선택한 컨텍스트를 플랫폼이 관리하는 공급자에게 전송합니다. 사용자 지정 모델 주소와 API 키는 지원하지 않습니다.
+새 요금제의 대화/검토 횟수: Free 10/2, Starter 월 $19 300/20, Pro 월 $39 700/60, Max 월 $99 2,000/180. Free는 UTC 월초, 유료는 구독 청구 기간에 초기화하며 이월하지 않습니다. 최종 금액과 세금은 결제 화면을 확인하세요.
 
-Free는 매일 300,000 credits를 제공하며 UTC 00:00에 초기화됩니다. Pro는 월 $39에 7일마다 18,000,000 credits, Max는 월 $99에 7일마다 60,000,000 credits를 제공합니다. 최초 구독 시작을 기준으로 초기화하며 월 결제와 별개입니다. 이월되지 않습니다. 데스크톱과 AI Chat은 개인 계정 요금제를 공유하며 영구 라이선스와 활성화 키는 판매하지 않습니다.
+## 내장 AI와 사용 범위
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+한 대화 턴 또는 검토 작업이 한 작업이며 내부 호출별로 차감하지 않습니다. 실행 중 예약 후 서버가 정산합니다. 전달된 결과는 이후 취소해도 한 번 차감하고 성공 결과가 없으면 예약을 해제합니다. 큰 검토는 나누세요. 로컬 읽기, Git/AST, 저장 결과는 차감하지 않습니다. 이전 구독은 credits를 유지할 수 있으며 계정 표시를 따릅니다.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [API 작업 공간](../client/introduction.md)
+- [코드 검토](../client/code-quality.md)
+- [내장 AI와 사용 범위](../client/ai-models.md)
+- [요금제와 작업 횟수](billing.md)
+- [설치 및 시작](../overview/installation.md)
+- [모든 변경 이해하기](../overview/quickstart.md)

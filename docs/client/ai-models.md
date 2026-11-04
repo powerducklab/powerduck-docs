@@ -1,33 +1,24 @@
 ---
-sidebar_position: 8
-title: AI & Models
-description: "Sign in to Powerduck, use platform-managed models and understand credits, code review and approval controls."
+sidebar_position: 15
+title: "Built-in AI and usage"
+description: "Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home."
 ---
 
-# AI & Models
+# Built-in AI and usage
 
-Powerduck requires **Google OAuth or GitHub** sign-in in both the desktop app and browser workspace. The assistant uses platform-managed models; custom endpoints, user API keys and model profiles are no longer supported.
+Sign in with Google or GitHub. Powerduck provides the built-in model; model selectors, custom provider keys and custom endpoints are not offered. Selected source context is sent to managed AI providers only for requested AI work. Local scans exclude common dependency, build and credential paths, but cannot guarantee that your source contains no secrets. Review what you share.
 
-## Account and credits
+## AI inline review
 
-The account menu at the bottom of the sidebar shows your plan, remaining credits and next reset. Free credits reset daily at 00:00 UTC. Paid allowances reset every seven days from the original subscription start time; billing remains monthly. Unused credits do not roll over.
+AI review starts only when you request it. It reviews the current differences with bounded related context, rather than sending every complete file individually. Results appear at the affected code location with priority, evidence and a recommendation. Cached matching results can be reused. Confirm a problem, mark a false positive or select it for an Agent task. AI can miss defects or raise incorrect suspicions; it does not prove correctness or that tests ran.
 
-AI requests reserve an upper bound before calling the provider, then settle actual token usage. Failed or canceled requests release the reservation. Multiple concurrent requests cannot spend the same allowance.
+## Plans and task allowances
 
-## Built-in models
+One conversation turn or one review operation is a task; its internal tool/model calls do not each consume another task. Usage is reserved while running and settled by the server. A delivered result consumes one task even if you subsequently cancel; a task with no successful result releases its reservation. Scope and safety limits still apply: split large reviews. Local browsing, Git/AST analysis and viewing saved results do not consume AI tasks. Existing legacy subscriptions may retain credit billing; the account and checkout show the applicable entitlement.
 
-Powerduck manages provider credentials and model routing on the server. The provider pool supports OpenAI-compatible services, including Kimi and ByteDance endpoints when configured, with concurrency limits and failover for temporary provider failures. Model availability depends on the deployed provider configuration.
-
-The desktop renderer never receives provider credentials. Its main process sends the signed-in session only to the Powerduck relay. Browser requests use the same-origin authenticated relay and CSRF protection.
-
-## Code quality in Chat
-
-The assistant can select a code project, request a robustness/performance/security review, inspect P0–P3 findings, propose test files, create approved test drafts and inspect iteration changes. The dedicated code-quality workspace and Chat share these results.
-
-Code review does not edit business source. Each finding includes its file, line, evidence and repair instructions for another code agent. Test generation follows the inspected project's conventions; proposed code must be reviewed before creating new test files. Existing files are not overwritten and generated tests are not automatically executed.
-
-## Data and limits
-
-Selected source context is sent to Powerduck's configured AI providers to perform the requested analysis. Dependency folders, hidden files, common credential files and symbolic links are excluded by the project reader; this is not a guarantee that source code contains no secrets. Review the selected project before scanning.
-
-A scan reports excluded oversized files and its completed-file count. Model findings are review suggestions, not proof of test coverage or a security certification. Iteration history is stored locally, retaining the latest 20 recorded changes per project.
+- [API workspace](introduction.md)
+- [Code review](code-quality.md)
+- [Built-in AI and usage](ai-models.md)
+- [Plans and task allowances](../cloud/billing.md)
+- [Install and start](../overview/installation.md)
+- [Understand every change](../overview/quickstart.md)

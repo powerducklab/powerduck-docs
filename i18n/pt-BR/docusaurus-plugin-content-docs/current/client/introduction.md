@@ -1,68 +1,32 @@
 ---
 sidebar_position: 1
-title: Cliente de desktop
-description: "O cliente de desktop Powerduck é um espaço de trabalho local-first impulsionado por IA. A partir de um único arquivo OpenAPI na sua máquina, projete APIs, depure requisições, execute testes, simule APIs, publique documentação e expõe ferramentas MCP."
+title: "Espaço de API · Revisão de código"
+description: "Powerduck ajuda a entender mudanças geradas por IA, ler seu contexto e decidir o que precisa de atenção. Abra o espaço de API ou a revisão de código separadamente pela página inicial do aplicativo desktop."
 ---
 
-# Cliente de desktop
+# Espaço de API · Revisão de código
 
-O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
+Powerduck ajuda a entender mudanças geradas por IA, ler seu contexto e decidir o que precisa de atenção. Abra o espaço de API ou a revisão de código separadamente pela página inicial do aplicativo desktop.
 
-Mantém sempre o controlo: o assistente propõe, você aprova.
+## Espaço de API
 
-## Um dia no espaço de trabalho
+Importe OpenAPI YAML ou JSON para projetar operações, enviar requisições, inspecionar respostas e usar cenários, mocks locais, modelos de dados e documentação. MCP e publicação são fluxos separados. Importar não implanta seu backend.
 
-Estes são os momentos que o cliente coloca no centro.
+## Revisão de código
 
-- **Abrir a especificação e entender o conjunto.** O assistente lê o documento atual e propõe imediatamente o que pode fazer: lacunas a preencher, documentação a completar, fluxos a testar.
-- **Construir a API.** Descreva um recurso e o assistente propõe as operações. Continue afinando a mesma operação — adicionar um parâmetro, ajustar uma resposta, corrigir um código de estado — e fica nessa API sem alterar o resto do documento.
-- **Preparar dados de teste.** Gere dados de exemplo realistas a partir dos esquemas para dar valores concretos a requisições e cenários.
-- **Executar uma requisição única ou um cenário completo.** Depure uma chamada isolada ou encadeie várias operações num fluxo de ponta a ponta, e receba um relatório compartível sobre o que passa e falha.
-- **Avançar antes de o backend estar pronto.** Arranque uma simulação local que responde segundo o contrato enquanto o serviço real se desenvolve.
-- **Passar a API a um agente de programação.** Converta a especificação num servidor MCP para que as ferramentas de IA descubram e chamem as operações corretas com os parâmetros corretos.
-- **Ver a base de dados atrás da API.** Derive tabelas, relações e SQL da especificação, compare com uma base real e entenda as próximas mudanças.
-- **Mudar ajustes sem sair da conversa.** Mudar tema ou idioma, configurar um proxy, gerir variáveis de ambiente apenas pedindo.
+A escolha da pasta abre a estrutura. Leia arquivos completos nos modos somente fonte, comparação completa ou somente alterações. Linhas adicionadas/removidas, destaques de caracteres, navegação e busca localizam a edição.
 
-## Cada modo e o seu uso
+## Estrutura e código relacionado
 
-Um único documento impulsiona todos os modos, acessíveis por um seletor compacto.
+Git e parsers identificam blocos e definições, chamadores e imports resolvidos. Passe o mouse em símbolos compatíveis para ver definições; abra código relacionado junto à mudança. A estrutura destaca muitas referências, nomes temporários, conteúdo idêntico e ausência de referências de entrada resolvidas. Carga dinâmica e usos externos podem faltar; sem referências não significa seguro para excluir.
 
-| Modo | O que faz |
-|---|---|
-| [**Spec**](./design.md) | Modo principal: chat de IA, documento, pré-visualização ao vivo |
-| [**Espaço de requisição**](./debug.md) | Envia e inspeciona requisições HTTP reais; separadores e ambientes |
-| [**Testes de cenário**](./scenario-testing.md) | Vincula operações em fluxos, executa-os e produz um relatório |
-| [**Documentação**](./protocols.md) | Lê a especificação como documentação API renderizada |
-| [**MCP**](./protocols.md) | Revê e usa o servidor MCP derivado da especificação |
-| [**Servidor de simulação**](./mock-server.md) | Executa uma simulação local durante o desenvolvimento da API |
-| [**Modelo de dados**](./data-model.md) | Derive tabelas e relações, compare com a base e gere SQL |
-| [**Ajustes**](./settings.md) | Tema, idioma, proxy, certificados, preferências do espaço |
+## IA integrada e uso
 
-## Como colabora com o assistente
+Entre com Google ou GitHub. O modelo é integrado, sem seletor, chaves próprias ou endpoints personalizados. Trabalho IA solicitado envia contexto escolhido aos provedores gerenciados. Caminhos comuns de dependências, build e credenciais são excluídos, mas ainda pode haver segredos no código.
 
-Descreve a intenção em linguagem natural, o assistente escolhe a capacidade adequada, o motor determinista valida, e você aprova por um cartão. O modelo nunca edita por si só o documento.
-
-- As mudanças de especificação chegam como **cartões de patch** com operações finas. Ao editar uma operação existente só mudam os campos pedidos.
-- As tarefas de só leitura — listar operações, obter um esquema, executar uma consulta — devolvem os factos em que o assistente baseia a sua resposta.
-- As ações de escrita pedem confirmação antes de executar.
-
-O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
-
-## O que significa local-first para você
-
-O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
-
-## Powerduck · Free / Pro / Max
-
-Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
-
-## Comece aqui
-
-- [Desenhar com o assistente](./design.md)
-- [Espaço de requisição e ambientes](./debug.md)
-- [Testes de cenário e relatórios](./scenario-testing.md)
-- [Protocolos](./protocols.md)
-- [Modelo de dados e diagrama ER](./data-model.md)
-- [Servidor de simulação](./mock-server.md)
-- [IA e modelos](./ai-models.md)
-- [Ajustes](./settings.md)
+- [Espaço de API](introduction.md)
+- [Revisão de código](code-quality.md)
+- [IA integrada e uso](ai-models.md)
+- [Planos e tarefas](../cloud/billing.md)
+- [Instalar e começar](../overview/installation.md)
+- [Entenda cada alteração](../overview/quickstart.md)

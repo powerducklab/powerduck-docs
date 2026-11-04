@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: "Fatturazione e licenze"
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Piani e attività"
+description: "Nuovi piani, conversazioni/revisioni: Free 10/2; Starter $19/mese 300/20; Pro $39/mese 700/60; Max $99/mese 2.000/180. Free si rinnova a inizio mese UTC, i piani a pagamento nel periodo dell’abbonamento. Nessun riporto. Totale e imposte al pagamento."
 ---
 
-# Free · Pro · Max
+# Piani e attività
 
-Powerduck, incluso il desktop, richiede l’accesso con Google OAuth o GitHub. I file restano sul disco. L’analisi IA invia il contesto selezionato ai fornitori gestiti da Powerduck. URL di modelli e chiavi API personalizzate non sono più supportati.
+Nuovi piani, conversazioni/revisioni: Free 10/2; Starter $19/mese 300/20; Pro $39/mese 700/60; Max $99/mese 2.000/180. Free si rinnova a inizio mese UTC, i piani a pagamento nel periodo dell’abbonamento. Nessun riporto. Totale e imposte al pagamento.
 
-Free: 300.000 credits al giorno, ripristinati alle 00:00 UTC. Pro: 39 $/mese e 18.000.000 credits ogni 7 giorni. Max: 99 $/mese e 60.000.000 credits ogni 7 giorni. Il ciclo parte dall’inizio originale dell’abbonamento, separato dalla fatturazione mensile. Nessun riporto. Desktop e AI Chat condividono il piano personale; licenze perpetue e chiavi di attivazione non sono più vendute.
+## IA integrata e utilizzo
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Un turno di conversazione o revisione vale un’attività, senza addebitare singole chiamate interne. Durante l’esecuzione si prenota: un risultato consegnato consuma una, anche dopo annullamento; senza risultato riuscito si libera. Dividi revisioni grandi. Lettura locale, Git/AST e risultati salvati non consumano attività. Vecchi abbonamenti possono mantenere crediti; verifica l’account.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [Spazio API](../client/introduction.md)
+- [Revisione del codice](../client/code-quality.md)
+- [IA integrata e utilizzo](../client/ai-models.md)
+- [Piani e attività](billing.md)
+- [Installare e iniziare](../overview/installation.md)
+- [Capire ogni modifica](../overview/quickstart.md)

@@ -61,9 +61,7 @@ Người đọc tài liệu công khai sử dụng trình xem riêng và không 
 
 ## So sánh Cloud với ứng dụng máy tính
 
-Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
-
-Free: 300.000 credits mỗi ngày, đặt lại lúc 00:00 UTC. Pro: $39/tháng và 18.000.000 credits mỗi 7 ngày. Max: $99/tháng và 60.000.000 credits mỗi 7 ngày. Chu kỳ tính từ lần bắt đầu đăng ký đầu tiên, độc lập với thanh toán hằng tháng. Credits không cộng dồn. Máy tính và AI Chat dùng chung gói cá nhân; không còn bán giấy phép vĩnh viễn hoặc mã kích hoạt.
+Gói mới tính hội thoại/rà soát: Free 10/2; Starter $19/tháng 300/20; Pro $39/tháng 700/60; Max $99/tháng 2.000/180. Free đặt lại đầu tháng UTC, gói trả phí theo kỳ thuê bao. Không cộng dồn. Giá cuối và thuế tại thanh toán.
 
 ## Bắt đầu tại đây
 

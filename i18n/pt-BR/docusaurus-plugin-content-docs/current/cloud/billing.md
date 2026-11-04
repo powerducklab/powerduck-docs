@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: Faturação
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Planos e tarefas"
+description: "Novos planos contam conversas/revisões: Free 10/2; Starter $19/mês 300/20; Pro $39/mês 700/60; Max $99/mês 2.000/180. Free reinicia no começo do mês UTC; pagos seguem o período da assinatura. Sem acúmulo. Preço final e impostos no checkout."
 ---
 
-# Free · Pro · Max
+# Planos e tarefas
 
-O Powerduck, incluindo o aplicativo desktop, exige login com Google OAuth ou GitHub. Os arquivos permanecem no disco. A análise de IA envia o contexto selecionado aos provedores gerenciados pelo Powerduck. URLs de modelos e chaves API próprias não são mais aceitas.
+Novos planos contam conversas/revisões: Free 10/2; Starter $19/mês 300/20; Pro $39/mês 700/60; Max $99/mês 2.000/180. Free reinicia no começo do mês UTC; pagos seguem o período da assinatura. Sem acúmulo. Preço final e impostos no checkout.
 
-Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
+## IA integrada e uso
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Um turno de conversa ou revisão é uma tarefa, sem cobrança individual das chamadas internas. Há reserva durante a execução: resultado entregue consome uma, mesmo com cancelamento posterior; sem resultado bem-sucedido, a reserva é liberada. Divida revisões grandes. Leitura local, Git/AST e resultados salvos não consomem tarefas. Assinaturas antigas podem manter créditos; consulte sua conta.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [Espaço de API](../client/introduction.md)
+- [Revisão de código](../client/code-quality.md)
+- [IA integrada e uso](../client/ai-models.md)
+- [Planos e tarefas](billing.md)
+- [Instalar e começar](../overview/installation.md)
+- [Entenda cada alteração](../overview/quickstart.md)

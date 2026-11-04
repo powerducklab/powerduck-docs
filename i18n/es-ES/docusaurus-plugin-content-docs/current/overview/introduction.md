@@ -1,81 +1,28 @@
 ---
 sidebar_position: 1
-title: Introducción
-description: "Powerduck es una plataforma nativa para IA y local-first construida en torno a un único YAML OpenAPI. Usted y la IA diseñan, depuran, prueban, simulan, documentan y exponen herramientas MCP desde el mismo archivo. Disponible como cliente de escritorio, nube y bibliotecas de código abierto."
+title: "Entender cada cambio"
+description: "Powerduck ayuda a entender cambios generados por IA, leer su contexto y decidir qué atender. La aplicación de escritorio permite abrir por separado el espacio API y la revisión de código desde Inicio."
 ---
 
-# Introducción
+# Entender cada cambio
 
-La forma de construir APIs está cambiando. Durante veinte años, el **operador** era un humano que hacía clic en una interfaz, y el **consumidor** de un contrato de API era un humano que leía documentación. Hoy ambos extremos cambian.
+Powerduck ayuda a entender cambios generados por IA, leer su contexto y decidir qué atender. La aplicación de escritorio permite abrir por separado el espacio API y la revisión de código desde Inicio.
 
-- El operador se vuelve un **asistente de IA** que convierte la intención en acciones.
-- El consumidor se vuelve un **agente de IA** que llama a la API como una herramienta vía MCP.
+## Espacio API
 
-Las herramientas de la era anterior — clientes API, visores de especificaciones, colecciones de peticiones — se diseñaron para un humano al teclado. Powerduck está diseñado para esta era. No es un mejor cliente API ni un visor de especificaciones más bonito. Es una **plataforma nativa para IA que parte de un único archivo OpenAPI**.
+Importa OpenAPI YAML o JSON para diseñar operaciones, enviar solicitudes, inspeccionar respuestas y usar escenarios, mocks locales, modelos de datos y documentación. MCP y publicación son procesos separados. Importar no despliega tu backend.
 
-## El núcleo: un único archivo OpenAPI local
+## Revisión de código
 
-Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
+Al elegir una carpeta se abre la estructura. Lee archivos completos y cambia entre solo fuente, comparación completa y solo cambios. Las líneas añadidas/eliminadas, diferencias de caracteres, navegación y búsqueda ayudan a localizar la edición.
 
-```text
-                one local openapi.yaml
-                         |
-      you + AI -> design debug test mock docs data-model
-                         |
-                      MCP tools
-                         |
-               any AI coding agent
-```
+## IA integrada y uso
 
-Ese único archivo es el contrato. Cada flujo lee de él, y el mismo archivo puede pasarse vía MCP a cualquier agente de programación de IA. Así usted, el asistente integrado y cualquier agente externo comparten una única fuente de verdad. Cuando diseño, depuración, pruebas, simulación y documentación leen todos el mismo archivo, «mantener las herramientas sincronizadas» deja de ser una tarea: no es un objetivo, es una consecuencia del diseño.
+Inicia sesión con Google o GitHub. Solo hay modelo integrado, sin selector, claves propias ni endpoints personalizados. El trabajo IA solicitado envía el contexto elegido a proveedores gestionados. Se excluyen rutas comunes de dependencias, compilación y credenciales, pero el código todavía puede contener secretos.
 
-Powerduck soporta OpenAPI 3.2 y actualiza al vuelo documentos 3.0 / 3.1 existentes (y Swagger 2.0). Las APIs que no son HTTP — SSE, WebSocket, GraphQL, gRPC, MCP — se modelan como entradas de ruta ordinarias mediante una extensión `x-protocol`, sin conversión forzada a formas REST.
-
-## Trabajar con la IA
-
-- En cuanto abre el YAML, el asistente propone qué puede hacer con él.
-- Describa el resultado en lenguaje natural — «crea el endpoint de pedidos», «prepara datos de prueba», «ejecuta el flujo de pago y haz un informe» — y elige las herramientas adecuadas y propone cambios.
-- Cada cambio llega como una **tarjeta revisable**. Nada se aplica antes de su aprobación.
-- Al refinar una API, el asistente se queda en esa API y solo cambia lo pedido, sin alterar el resto del documento.
-- Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
-
-## Local-first por defecto
-
-Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
-
-## Tres formas de usar Powerduck
-
-| Forma | Qué es | Cuándo usarla |
-|---|---|---|
-| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
-| [**Powerduck Cloud**](../cloud/introduction.md) | Servicio hospedado para alojamiento OAS, documentación en línea y MCP gestionado | Para compartir APIs, publicar enlaces estables y ofrecer MCP sin ejecutar nada |
-| [**Bibliotecas de código abierto**](/opensource/index.md) | Paquetes npm `@powerduck/*` combinables | Para construir sus propias herramientas, pipelines CI o componentes embebidos |
-
-Las tres formas comparten el mismo motor. El cliente de escritorio y la nube se ensamblan ambos desde las bibliotecas de código abierto, por lo que las capacidades se comportan igual, ya se ejecuten en local, se llamen por la red o se importen los paquetes directamente.
-
-### Cliente de escritorio
-
-Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
-
-### Powerduck Cloud
-
-[Powerduck Cloud](../cloud/introduction.md) lleva el mismo flujo en línea. Añada un archivo, un repositorio Git o una URL, elija las operaciones a exponer y obtendrá enlaces estables a la documentación renderizada y un endpoint MCP gestionado. El acceso puede protegerse con una contraseña de visualización o una clave de acceso MCP; los planes de pago añaden sincronización Git, dominios personalizados y límites más altos.
-
-### Bibliotecas de código abierto
-
-Las [bibliotecas](/opensource/index.md) son el motor subyacente: analizador y actualizador OpenAPI, CLI multiprotocolo, generador de código, servidor MCP, ejecutor de peticiones, conversores cURL / Postman y editores embebidos. Cada uno se publica de forma independiente en npm con guías de instalación dedicadas y referencias API. Los detalles técnicos de bajo nivel viven aquí.
-
-## Qué cambia para usted
-
-- **Describe el resultado, no los clics.** Diga el objetivo y el asistente avanza en pasos revisables.
-- **Sus APIs son aptas para agentes desde el inicio.** El mismo contrato que genera documentación genera también herramientas MCP, para que los agentes de IA llamen correctamente a su API desde el primer día.
-- **Sin desviaciones.** Diseño, depuración, pruebas, simulación y documentación leen un solo archivo.
-- **Todos los protocolos en un solo lugar.** HTTP, SSE, WebSocket, GraphQL, gRPC y MCP en una especificación, no seis herramientas.
-- Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
-
-## A dónde ir después
-
-- ¿Nuevo aquí? Empiece por [Instalación](./installation.md) y [Inicio rápido](./quickstart.md).
-- ¿Necesita el espacio local completo? Lea la [guía del cliente de escritorio](../client/introduction.md).
-- ¿Quiere publicar su API en línea? Lea la [guía de Cloud](../cloud/introduction.md).
-- ¿Construye su propia integración? Vea las [bibliotecas de código abierto](/opensource/index.md).
+- [Espacio API](/docs/es-ES/client/introduction/)
+- [Revisión de código](/docs/es-ES/client/code-quality/)
+- [IA integrada y uso](/docs/es-ES/client/ai-models/)
+- [Planes y tareas](/docs/es-ES/cloud/billing/)
+- [Instalar y empezar](/docs/es-ES/overview/installation/)
+- [Entender cada cambio](/docs/es-ES/overview/quickstart/)

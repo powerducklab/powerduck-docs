@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "Quickstart"
+description: "Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home."
 ---
 
-# Powerduck · Quickstart
+# Quickstart
 
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
+Download the installer matching your system from the official download page: macOS Apple Silicon or Intel, Windows, or Linux AppImage. Verify its source and publisher; do not disable operating-system security. Sign in on the website and return to the app. From Home, import an API definition or choose a code project. The browser app previews API workflows; filesystem analysis and local commands require the desktop app.
 
-Free includes 300,000 credits, reset daily at 00:00 UTC. Pro is $39/month with 18,000,000 credits per 7 days; Max is $99/month with 60,000,000 credits per 7 days. Paid resets are anchored to the original subscription start, separately from monthly billing. Unused credits do not roll over. Desktop and AI Chat share the personal account plan; software licenses and activation keys are no longer sold.
+## API workspace
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+Import an OpenAPI YAML or JSON file to design operations, send requests, inspect responses, run scenarios, serve local mocks, explore data models and render documentation. MCP and publishing are separate workflows. Importing an API definition does not deploy your business backend.
+
+## Code review
+
+Choose a code folder. The project structure opens first; select a file to read its full source. Switch between source only, full comparison and changes only. Added and removed lines, inline character highlights, change navigation and search help locate the actual edit without losing context.
+
+## Comparison and round history
+
+The current round compares the saved round baseline with files on disk. Opening a folder establishes a starting point; existing content is not automatically new work. Use all uncommitted changes for a Git HEAD comparison. Start a new round deliberately and select previous rounds to inspect their captured differences. History is local, not a Git backup; save edits to disk before expecting them to appear.
+
+## Run checks
+
+Run checks explicitly to execute detected project commands. Inspect each command, exit code and raw output; missing scripts are unverified, not passed. Project scripts execute code on your computer, so use trusted projects. Reading files, static analysis and AI review do not themselves establish execution evidence. Marking a block read records reading progress only.
+
+- [API workspace](../client/introduction.md)
+- [Code review](../client/code-quality.md)
+- [Built-in AI and usage](../client/ai-models.md)
+- [Plans and task allowances](../cloud/billing.md)
+- [Install and start](installation.md)
+- [Understand every change](quickstart.md)

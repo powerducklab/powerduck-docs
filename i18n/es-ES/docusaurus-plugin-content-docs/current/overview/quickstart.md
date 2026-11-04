@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "Inicio rápido"
+description: "Powerduck ayuda a entender cambios generados por IA, leer su contexto y decidir qué atender. La aplicación de escritorio permite abrir por separado el espacio API y la revisión de código desde Inicio."
 ---
 
-# Powerduck · Quickstart
+# Inicio rápido
 
-Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
+Descarga del sitio oficial macOS Apple Silicon/Intel, Windows o Linux AppImage. Verifica origen y editor sin desactivar la seguridad. Inicia sesión en la web y vuelve a la aplicación; importa una API o elige código. La app web permite explorar API; análisis de archivos y comandos locales requieren escritorio.
 
-Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
+## Espacio API
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+Importa OpenAPI YAML o JSON para diseñar operaciones, enviar solicitudes, inspeccionar respuestas y usar escenarios, mocks locales, modelos de datos y documentación. MCP y publicación son procesos separados. Importar no despliega tu backend.
+
+## Revisión de código
+
+Al elegir una carpeta se abre la estructura. Lee archivos completos y cambia entre solo fuente, comparación completa y solo cambios. Las líneas añadidas/eliminadas, diferencias de caracteres, navegación y búsqueda ayudan a localizar la edición.
+
+## Comparación e historial de rondas
+
+La ronda actual compara su punto inicial guardado con el disco. La primera apertura establece el inicio sin considerar todo nuevo. Los cambios sin confirmar se comparan con Git HEAD. Inicia nuevas rondas de forma explícita y consulta las anteriores en el historial local, que no sustituye Git. Guarda primero los archivos.
+
+## Ejecutar comprobaciones
+
+Ejecuta explícitamente comandos de proyectos fiables y revisa comando, salida y código de retorno. Sin script significa sin verificar. Leer, analizar o revisar con IA no es evidencia de ejecución; marcar leído solo registra progreso.
+
+- [Espacio API](../client/introduction.md)
+- [Revisión de código](../client/code-quality.md)
+- [IA integrada y uso](../client/ai-models.md)
+- [Planes y tareas](../cloud/billing.md)
+- [Instalar y empezar](installation.md)
+- [Entender cada cambio](quickstart.md)

@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: Facturation
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "Offres et tâches"
+description: "Les nouvelles offres comptent séparément conversations/revues : Free 10/2 ; Starter $19/mois 300/20 ; Pro $39/mois 700/60 ; Max $99/mois 2 000/180. Free se renouvelle au début du mois UTC, les offres payantes selon la période de facturation. Aucun report. Prix final et taxes au paiement."
 ---
 
-# Free · Pro · Max
+# Offres et tâches
 
-Powerduck, y compris le client de bureau, exige une connexion Google OAuth ou GitHub. Les fichiers restent sur le disque. L’analyse IA transmet le contexte sélectionné aux fournisseurs gérés par Powerduck ; les URL de modèles et clés API personnalisées ne sont plus prises en charge.
+Les nouvelles offres comptent séparément conversations/revues : Free 10/2 ; Starter $19/mois 300/20 ; Pro $39/mois 700/60 ; Max $99/mois 2 000/180. Free se renouvelle au début du mois UTC, les offres payantes selon la période de facturation. Aucun report. Prix final et taxes au paiement.
 
-Free : 300 000 credits par jour, réinitialisés à 00:00 UTC. Pro : 39 $/mois, 18 000 000 credits tous les 7 jours. Max : 99 $/mois, 60 000 000 credits tous les 7 jours. Le cycle part du début initial de l’abonnement, indépendamment de la facturation mensuelle. Aucun report. Le bureau et AI Chat partagent le forfait personnel ; les licences perpétuelles et clés d’activation ne sont plus vendues.
+## IA intégrée et utilisation
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+Un tour de conversation ou une opération de revue vaut une tâche, sans décompte séparé des appels internes. Réservation pendant l’exécution, puis règlement serveur : un résultat livré coûte une tâche même après annulation ; sans résultat réussi, la réservation est libérée. Fractionnez les grandes revues. Lecture locale, Git/AST et résultats sauvegardés sont gratuits. Les anciens abonnements peuvent conserver leurs crédits ; consultez votre compte.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [Espace API](../client/introduction.md)
+- [Revue de code](../client/code-quality.md)
+- [IA intégrée et utilisation](../client/ai-models.md)
+- [Offres et tâches](billing.md)
+- [Installer et démarrer](../overview/installation.md)
+- [Comprendre chaque modification](../overview/quickstart.md)

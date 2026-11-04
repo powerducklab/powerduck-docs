@@ -1,63 +1,39 @@
 ---
 sidebar_position: 2
-title: Installation
-description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
+title: "Install and start"
+description: "Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home."
 ---
 
-# Installation
+# Install and start
 
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
+Download the installer matching your system from the official download page: macOS Apple Silicon or Intel, Windows, or Linux AppImage. Verify its source and publisher; do not disable operating-system security. Sign in on the website and return to the app. From Home, import an API definition or choose a code project. The browser app previews API workflows; filesystem analysis and local commands require the desktop app.
 
-## Download
+[Powerduck](https://www.powerduck.com/download.html)
 
-Get the installer for your platform from the [Powerduck website](https://www.powerduck.com/#download). The following builds are produced with `electron-builder`:
+## Built-in AI and usage
 
-| Platform | Installer | Architecture |
-|---|---|---|
-| macOS | `.dmg` (and a `.zip` for auto-update) | Apple Silicon (`arm64`) and Intel (`x64`) |
-| Windows | NSIS setup (`.exe`) | `x64` |
-| Linux | AppImage (`.AppImage`) | `x64` |
+Sign in with Google or GitHub. Powerduck provides the built-in model; model selectors, custom provider keys and custom endpoints are not offered. Selected source context is sent to managed AI providers only for requested AI work. Local scans exclude common dependency, build and credential paths, but cannot guarantee that your source contains no secrets. Review what you share.
 
-## macOS
+## Plans and task allowances
 
-1. Open the `.dmg` and drag Powerduck into **Applications**.
-2. On first launch, macOS may ask you to confirm an app downloaded outside the App Store. Verify that it came from the official download page before opening it; do not disable system security checks.
-3. Two builds are published: an `arm64` build for Apple Silicon (M-series) and an `x64` build for Intel Macs. Download the one that matches your machine.
+New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
 
-## Windows
+- [API workspace](../client/introduction.md)
+- [Code review](../client/code-quality.md)
+- [Built-in AI and usage](../client/ai-models.md)
+- [Plans and task allowances](../cloud/billing.md)
+- [Install and start](installation.md)
+- [Understand every change](quickstart.md)
 
-1. Run the NSIS installer (`.exe`) and follow the setup steps.
-2. If SmartScreen shows an unrecognized-publisher prompt, first check that the installer came from the official download page. Continue only after verifying the source; do not bypass the warning for an untrusted download.
+## macOS · Windows · Linux
 
-## Linux
+macOS 11+ · Windows 10+ · Linux · Electron 37
 
-1. Download the `.AppImage`.
-2. Make it executable and run it:
+- macOS: `.dmg` · `arm64` / `x64`
+- Windows: NSIS `.exe` · SmartScreen
+- Linux: `.AppImage` · `x64`
 
 ```bash
 chmod +x Powerduck-*.AppImage
 ./Powerduck-*.AppImage
 ```
-
-AppImage runs without a system-wide installation. On some distributions you may need FUSE installed to mount it.
-
-## What runs on your machine
-
-The desktop client is an Electron application with two parts:
-
-- A **main process** (Node.js) that owns file access, outbound HTTP requests, the local mock server, database connections, and the integrated terminal;
-- A **renderer** (the React workspace) that renders the specification, the AI chat, and every tool.
-
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-## System requirements
-
-- macOS 11 or later, Windows 10 or later, or a mainstream Linux desktop distribution compatible with Electron 37;
-- Enough disk for the application; the specifications you open remain in their original locations;
-- Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-## Powerduck · Free / Pro / Max
-
-Free includes 300,000 credits, reset daily at 00:00 UTC. Pro is $39/month with 18,000,000 credits per 7 days; Max is $99/month with 60,000,000 credits per 7 days. Paid resets are anchored to the original subscription start, separately from monthly billing. Unused credits do not roll over. Desktop and AI Chat share the personal account plan; software licenses and activation keys are no longer sold.
-
-Next: take the [Quickstart](./quickstart.md).

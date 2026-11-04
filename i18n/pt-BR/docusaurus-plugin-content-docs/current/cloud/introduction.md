@@ -61,9 +61,7 @@ Leitores públicos usam um visualizador dedicado e não precisam criar uma conta
 
 ## Cloud versus cliente de desktop
 
-Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
-
-Free: 300.000 credits por dia, renovados às 00:00 UTC. Pro: US$ 39/mês e 18.000.000 credits a cada 7 dias. Max: US$ 99/mês e 60.000.000 credits a cada 7 dias. O ciclo começa na assinatura original, separado da cobrança mensal. Sem acúmulo. Desktop e AI Chat compartilham o plano pessoal; licenças perpétuas e chaves de ativação não são mais vendidas.
+Novos planos contam conversas/revisões: Free 10/2; Starter $19/mês 300/20; Pro $39/mês 700/60; Max $99/mês 2.000/180. Free reinicia no começo do mês UTC; pagos seguem o período da assinatura. Sem acúmulo. Preço final e impostos no checkout.
 
 ## Comece aqui
 

@@ -61,9 +61,7 @@ Los lectores públicos usan un visor específico y no necesitan crear una cuenta
 
 ## Cloud versus cliente de escritorio
 
-Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
-
-Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
+Nuevos planes, conversaciones/revisiones: Free 10/2; Starter $19/mes 300/20; Pro $39/mes 700/60; Max $99/mes 2.000/180. Free se reinicia al comenzar el mes UTC y los de pago según el periodo de suscripción. No se acumulan. Precio final e impuestos en el pago.
 
 ## Empiece aquí
 

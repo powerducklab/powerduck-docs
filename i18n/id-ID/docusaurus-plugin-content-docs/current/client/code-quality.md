@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Tinjauan kode"
+description: "Powerduck membantu memahami perubahan buatan AI beserta konteksnya dan menentukan masalah yang perlu ditangani. Ruang API dan tinjauan kode dapat dibuka terpisah dari Beranda desktop."
 ---
 
-# Code quality
+# Tinjauan kode
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Pemilihan folder membuka struktur proyek. Baca file lengkap dalam mode sumber saja, perbandingan lengkap, atau perubahan saja. Sorotan baris dan karakter, navigasi perubahan, serta pencarian membantu menemukan edit.
 
-## Evidence and priority
+## Perbandingan dan riwayat putaran
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Putaran aktif membandingkan titik awal tersimpan dengan disk. Pembukaan pertama membuat titik awal tanpa menganggap semua isi baru. Seluruh perubahan belum di-commit dibandingkan dengan Git HEAD. Mulai putaran baru secara sengaja dan lihat sebelumnya di riwayat lokal, bukan cadangan Git. Simpan edit ke disk dahulu.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Struktur dan kode terkait
 
-## Tests that belong to the project
+Git dan parser menemukan blok, definisi, pemanggil, serta impor yang dapat diurai. Arahkan kursor ke simbol yang didukung untuk definisinya; buka kode terkait di dekat perubahan. Struktur menandai banyak referensi, nama sementara, isi identik, dan referensi masuk yang tidak ditemukan. Pemuatan dinamis dan pemakai eksternal bisa terlewat; tanpa referensi bukan berarti aman dihapus.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## Tinjauan AI di kode
 
-## Iteration history
+Tinjauan AI dimulai atas permintaan, memakai batch perbedaan dan konteks terbatas, bukan semua file lengkap. Hasil cache yang cocok dapat dipakai ulang. Prioritas, bukti, dan saran muncul di kode. Konfirmasi masalah, tandai positif palsu, atau pilih untuk Agent. AI tidak membuktikan kebenaran atau pelaksanaan pengujian.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Paket tugas Agent
 
-## AI Chat tools
+Pilih dugaan lalu pratinjau, salin, atau unduh Markdown dengan kode dan penanda revisi. Agent harus menilai mandiri; izin perubahan dinyatakan jelas. Laporan JSON tetap perlu diperiksa manusia. Klaim perbaikan bukan pengujian lulus. Ekspor tidak otomatis menjalankan atau menghubungi Agent lain.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Jalankan pemeriksaan
 
-## Scope and privacy
+Jalankan perintah secara eksplisit hanya pada proyek tepercaya dan periksa perintah, kode keluar, serta keluaran mentah. Skrip tidak ada berarti belum diverifikasi. Membaca, analisis statis, dan AI bukan bukti eksekusi; sudah dibaca hanya mencatat progres.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## AI bawaan dan penggunaan
+
+Masuk melalui Google atau GitHub. Hanya model bawaan, tanpa pemilih, kunci sendiri, atau endpoint khusus. Pekerjaan AI yang diminta mengirim konteks pilihan ke penyedia terkelola. Pengecualian folder dependensi, build, dan kredensial umum tidak menjamin sumber bebas rahasia.
+
+- [Ruang kerja API](introduction.md)
+- [Tinjauan kode](code-quality.md)
+- [AI bawaan dan penggunaan](ai-models.md)
+- [Paket dan jumlah tugas](../cloud/billing.md)
+- [Pasang dan mulai](../overview/installation.md)
+- [Pahami setiap perubahan](../overview/quickstart.md)

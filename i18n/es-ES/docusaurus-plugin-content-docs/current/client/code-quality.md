@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Revisión de código"
+description: "Powerduck ayuda a entender cambios generados por IA, leer su contexto y decidir qué atender. La aplicación de escritorio permite abrir por separado el espacio API y la revisión de código desde Inicio."
 ---
 
-# Code quality
+# Revisión de código
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Al elegir una carpeta se abre la estructura. Lee archivos completos y cambia entre solo fuente, comparación completa y solo cambios. Las líneas añadidas/eliminadas, diferencias de caracteres, navegación y búsqueda ayudan a localizar la edición.
 
-## Evidence and priority
+## Comparación e historial de rondas
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+La ronda actual compara su punto inicial guardado con el disco. La primera apertura establece el inicio sin considerar todo nuevo. Los cambios sin confirmar se comparan con Git HEAD. Inicia nuevas rondas de forma explícita y consulta las anteriores en el historial local, que no sustituye Git. Guarda primero los archivos.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Estructura y código relacionado
 
-## Tests that belong to the project
+Git y los analizadores identifican bloques y definiciones, llamadas e importaciones resolubles. Pasa el cursor por símbolos compatibles para ver definiciones; abre código relacionado junto al cambio. La estructura señala muchas referencias, nombres temporales, contenido idéntico o referencias entrantes no resueltas. Cargas dinámicas y usos externos pueden faltar; no tener referencias no implica poder borrar.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## Revisión IA en línea
 
-## Iteration history
+La revisión IA empieza al solicitarla y procesa diferencias con contexto limitado por lotes, no todos los archivos completos. Puede reutilizar caché coincidente. Muestra prioridad, evidencia y recomendación junto al código. Confirma, marca falso positivo o selecciona para Agent. La IA puede equivocarse y no demuestra corrección ni pruebas ejecutadas.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Paquetes de tareas Agent
 
-## AI Chat tools
+Selecciona dudas y previsualiza, copia o descarga Markdown con código y anclas de revisión. El Agent debe evaluar de forma independiente; el permiso para modificar es explícito. Su informe JSON requiere revisión humana. Afirmar una reparación no demuestra pruebas aprobadas. Exportar no inicia ni contacta automáticamente con otro Agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Ejecutar comprobaciones
 
-## Scope and privacy
+Ejecuta explícitamente comandos de proyectos fiables y revisa comando, salida y código de retorno. Sin script significa sin verificar. Leer, analizar o revisar con IA no es evidencia de ejecución; marcar leído solo registra progreso.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## IA integrada y uso
+
+Inicia sesión con Google o GitHub. Solo hay modelo integrado, sin selector, claves propias ni endpoints personalizados. El trabajo IA solicitado envía el contexto elegido a proveedores gestionados. Se excluyen rutas comunes de dependencias, compilación y credenciales, pero el código todavía puede contener secretos.
+
+- [Espacio API](introduction.md)
+- [Revisión de código](code-quality.md)
+- [IA integrada y uso](ai-models.md)
+- [Planes y tareas](../cloud/billing.md)
+- [Instalar y empezar](../overview/installation.md)
+- [Entender cada cambio](../overview/quickstart.md)

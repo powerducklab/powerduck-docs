@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Ревью кода"
+description: "Powerduck помогает понять изменения, созданные ИИ, прочитать окружающий код и решить, что требует внимания. С главной страницы настольного приложения отдельно открываются пространство API и ревью кода."
 ---
 
-# Code quality
+# Ревью кода
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+После выбора папки открывается структура. Полный файл доступен в режимах исходного кода, полного сравнения и только изменений. Добавленные и удалённые строки, выделение символов, навигация и поиск показывают правку в контексте.
 
-## Evidence and priority
+## Сравнение и история раундов
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Текущий раунд сравнивает сохранённую начальную точку с диском. Первое открытие создаёт её, не считая всё новым. Все незакоммиченные изменения сравниваются с Git HEAD. Начинайте раунды явно и выбирайте прошлые в локальной истории, которая не заменяет Git. Сначала сохраните файлы.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Структура и связанный код
 
-## Tests that belong to the project
+Git и парсеры находят блоки, разрешимые определения, вызывающий код и импорты. Наведение на поддерживаемый символ показывает определение; связанный код открывается у изменения. Структура отмечает частые ссылки, временные имена, одинаковое содержимое и отсутствие найденных входящих ссылок. Динамическая загрузка и внешние потребители могут быть пропущены; отсутствие ссылок не означает безопасное удаление.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## ИИ-ревью рядом с кодом
 
-## Iteration history
+ИИ-ревью запускается по запросу и обрабатывает порции различий с ограниченным контекстом, а не каждый файл целиком. Совпадающий кэш используется повторно. Приоритет, обоснование и совет появляются у кода. Подтвердите проблему, отметьте ложное срабатывание или выберите задачу Agent. ИИ не доказывает корректность и запуск тестов.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Пакеты задач Agent
 
-## AI Chat tools
+Выберите подозрения и просмотрите, скопируйте или скачайте Markdown с кодом и привязкой к ревизии. Agent должен оценить их независимо; разрешение на изменение указано явно. JSON-отчёт требует проверки человеком. Заявление об исправлении — не успешный тест. Экспорт сам не запускает и не связывается с Agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Запуск проверок
 
-## Scope and privacy
+Явно запускайте команды только доверенных проектов и проверяйте команду, код выхода и вывод. Отсутствующий скрипт означает «не проверено». Чтение, статический анализ и ИИ не являются доказательством выполнения; отметка прочтения фиксирует лишь прогресс.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## Встроенный ИИ и использование
+
+Вход через Google или GitHub, только встроенная модель без выбора, собственных ключей и адресов. Запрошенная работа ИИ передаёт выбранный контекст управляемым поставщикам. Исключение обычных зависимостей, сборок и учётных файлов не гарантирует отсутствия секретов в исходниках.
+
+- [Рабочее пространство API](introduction.md)
+- [Ревью кода](code-quality.md)
+- [Встроенный ИИ и использование](ai-models.md)
+- [Тарифы и задачи](../cloud/billing.md)
+- [Установка и начало работы](../overview/installation.md)
+- [Понимать каждое изменение](../overview/quickstart.md)

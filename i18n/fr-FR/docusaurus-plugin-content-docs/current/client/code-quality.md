@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Revue de code"
+description: "Powerduck aide à comprendre les modifications produites par IA, à lire leur contexte et à décider des suites. Depuis l’accueil, ouvrez séparément l’espace API ou la revue de code dans l’application de bureau."
 ---
 
-# Code quality
+# Revue de code
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Le choix du dossier ouvre sa structure. Sélectionnez un fichier pour lire son code complet : source seule, comparaison complète ou modifications seules. Les ajouts, suppressions, différences de caractères, la navigation et la recherche rendent les changements repérables.
 
-## Evidence and priority
+## Comparaison et historique des cycles
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+Le cycle courant compare son point de départ enregistré aux fichiers sur disque. La première ouverture crée ce repère sans déclarer tous les fichiers nouveaux. Les changements non validés se comparent à Git HEAD. Démarrez volontairement un nouveau cycle et consultez les anciens dans l’historique local, qui ne remplace pas Git. Enregistrez vos modifications sur disque.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Structure et code associé
 
-## Tests that belong to the project
+Git et les analyseurs identifient les blocs et les définitions, appels et imports résolus. Survolez les symboles pris en charge pour leur définition et ouvrez le code associé près du changement. La structure signale fortes références, noms temporaires, contenus identiques et absence de références entrantes résolues. Chargement dynamique et usages externes peuvent manquer : aucune référence ne signifie pas suppression sûre.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## Revue IA dans le code
 
-## Iteration history
+La revue IA démarre sur demande et analyse des lots de différences avec un contexte limité, sans envoyer chaque fichier complet. Les résultats correspondants en cache sont réutilisables. Chaque doute apparaît au niveau du code avec priorité, preuve et recommandation. Confirmez, marquez un faux positif ou préparez une tâche Agent. L’IA ne prouve ni correction ni exécution de tests.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Dossiers de tâches Agent
 
-## AI Chat tools
+Sélectionnez plusieurs doutes et prévisualisez, copiez ou téléchargez le dossier Markdown avec contexte et révision. L’Agent doit évaluer indépendamment ; l’autorisation de modifier est explicite. Collez son rapport JSON pour vérification humaine. Une réparation annoncée n’est pas un test réussi. L’export ne lance ni ne contacte automatiquement un Agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Exécuter les vérifications
 
-## Scope and privacy
+Lancez explicitement les commandes du projet et examinez commande, code de sortie et sortie brute. Un script absent reste non vérifié. N’exécutez que des projets fiables. Lecture, analyse statique et IA ne sont pas des preuves d’exécution ; lu indique seulement la progression de lecture.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## IA intégrée et utilisation
+
+Connexion Google ou GitHub et modèle intégré uniquement : aucun sélecteur, clé personnelle ou endpoint personnalisé. Seul le travail IA demandé envoie le contexte choisi aux fournisseurs gérés. Les chemins courants de dépendances, compilation et identifiants sont exclus, sans garantie d’absence de secrets dans le code.
+
+- [Espace API](introduction.md)
+- [Revue de code](code-quality.md)
+- [IA intégrée et utilisation](ai-models.md)
+- [Offres et tâches](../cloud/billing.md)
+- [Installer et démarrer](../overview/installation.md)
+- [Comprendre chaque modification](../overview/quickstart.md)

@@ -1,81 +1,28 @@
 ---
 sidebar_position: 1
-title: Pengantar
-description: "Powerduck adalah platform API dengan AI terintegrasi yang mengutamakan penggunaan lokal dan berpusat pada satu berkas YAML OpenAPI. Rancang, debug, uji, buat mock, dokumentasikan, dan sediakan alat MCP dari berkas yang sama melalui desktop, cloud, atau pustaka sumber terbuka."
+title: "Pahami setiap perubahan"
+description: "Powerduck membantu memahami perubahan buatan AI beserta konteksnya dan menentukan masalah yang perlu ditangani. Ruang API dan tinjauan kode dapat dibuka terpisah dari Beranda desktop."
 ---
 
-# Pengantar
+# Pahami setiap perubahan
 
-Cara membangun API sedang berubah. Selama dua dekade, **operatornya** adalah orang yang mengklik antarmuka grafis, sedangkan **pengguna kontrak API** adalah orang yang membaca dokumentasi. Kini kedua peran itu berubah:
+Powerduck membantu memahami perubahan buatan AI beserta konteksnya dan menentukan masalah yang perlu ditangani. Ruang API dan tinjauan kode dapat dibuka terpisah dari Beranda desktop.
 
-- Operator semakin sering berupa **asisten AI** yang mengubah maksud menjadi tindakan;
-- Pengguna kontrak semakin sering berupa **agen AI** yang memanggil API sebagai alat melalui MCP.
+## Ruang kerja API
 
-Alat-alat pada era sebelumnya — klien API, penampil spesifikasi, dan koleksi permintaan — dirancang untuk manusia yang bekerja di depan keyboard. Powerduck dirancang untuk kebutuhan saat ini. Powerduck bukan sekadar klien API yang lebih baik atau penampil spesifikasi yang lebih menarik, melainkan **platform dengan AI terintegrasi yang berawal dari satu berkas OpenAPI**.
+Impor OpenAPI YAML atau JSON untuk merancang operasi, mengirim permintaan, memeriksa respons, skenario, mock lokal, model data, dan dokumentasi. MCP serta publikasi adalah alur terpisah; impor tidak menerapkan backend bisnis.
 
-## Intinya: satu berkas OpenAPI lokal
+## Tinjauan kode
 
-Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
+Pemilihan folder membuka struktur proyek. Baca file lengkap dalam mode sumber saja, perbandingan lengkap, atau perubahan saja. Sorotan baris dan karakter, navigasi perubahan, serta pencarian membantu menemukan edit.
 
-```text
-                one local openapi.yaml
-                         |
-      you + AI -> design debug test mock docs data-model
-                         |
-                      MCP tools
-                         |
-               any AI coding agent
-```
+## AI bawaan dan penggunaan
 
-Berkas itulah kontraknya. Setiap alur kerja membacanya, dan berkas yang sama dapat diberikan kepada agen pemrograman AI apa pun melalui MCP. Dengan begitu, Anda, asisten bawaan, dan setiap agen eksternal berbagi satu sumber acuan. Saat desain, debugging, pengujian, mock, dan dokumentasi membaca berkas yang sama, menjaga sinkronisasi antaralat tidak lagi menjadi pekerjaan tersendiri. Ini adalah hasil dari desainnya, bukan tugas tambahan.
+Masuk melalui Google atau GitHub. Hanya model bawaan, tanpa pemilih, kunci sendiri, atau endpoint khusus. Pekerjaan AI yang diminta mengirim konteks pilihan ke penyedia terkelola. Pengecualian folder dependensi, build, dan kredensial umum tidak menjamin sumber bebas rahasia.
 
-Powerduck menggunakan OpenAPI 3.2 dan membaca dokumen 3.0 serta 3.1 yang sudah ada, termasuk Swagger 2.0, dengan meningkatkannya langsung. API non-HTTP — SSE, WebSocket, GraphQL, gRPC, dan MCP — dimodelkan sebagai item path biasa melalui ekstensi `x-protocol`, tanpa dipaksakan ke struktur yang hanya cocok untuk REST.
-
-## Bekerja dengan AI
-
-- Buka berkas YAML, lalu asisten segera menyarankan hal yang dapat Anda lakukan;
-- Nyatakan hasil yang diinginkan dengan bahasa sehari-hari, misalnya “buat endpoint pesanan”, “siapkan data pengujian”, atau “jalankan alur checkout dan berikan laporannya”. Asisten memilih alat yang tepat dan mengusulkan perubahan;
-- Setiap perubahan ditampilkan sebagai **kartu yang dapat ditinjau**; tidak ada perubahan yang diterapkan sebelum Anda menyetujuinya;
-- Saat Anda menyempurnakan satu API, asisten tetap berfokus pada API tersebut dan hanya mengubah bagian yang diminta, bukan bagian lain dalam dokumen;
-- Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
-
-## Mengutamakan penggunaan lokal
-
-Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
-
-## Tiga cara menggunakan Powerduck
-
-| Produk | Penjelasan | Cocok untuk |
-|---|---|---|
-| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
-| [**Powerduck Cloud**](/docs/id-ID/cloud/introduction/) | Layanan hosting OAS, dokumentasi online, dan MCP terkelola | Berbagi API, menerbitkan tautan stabil, dan menyediakan MCP tanpa menjalankan server sendiri |
-| [**Pustaka sumber terbuka**](/docs/id-ID/opensource/) | Paket npm `@powerduck/*` yang dapat digunakan bersama | Membuat alat sendiri, pipeline CI, atau komponen yang disematkan |
-
-Ketiganya menggunakan mesin yang sama. Klien desktop dan cloud sama-sama dibangun dari pustaka sumber terbuka, sehingga perilaku suatu kemampuan tetap sama saat dijalankan secara lokal, dipanggil melalui jaringan, atau diimpor langsung sebagai paket.
-
-### Klien Desktop
-
-Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
-
-### Powerduck Cloud
-
-[Powerduck Cloud](/docs/id-ID/cloud/introduction/) membawa alur kerja yang sama ke internet. Tambahkan berkas, repositori Git, atau URL; pilih operasi yang ingin disediakan; lalu dapatkan tautan stabil untuk dokumentasi dan endpoint MCP terkelola. Akses dapat dilindungi dengan kata sandi untuk melihat dokumentasi atau kunci akses MCP. Paket berbayar menambahkan sinkronisasi Git, domain kustom, dan batas penggunaan yang lebih tinggi.
-
-### Pustaka sumber terbuka
-
-[Pustaka](/docs/id-ID/opensource/) adalah mesin di balik produk: parser dan alat peningkatan versi OpenAPI, CLI multiprotokol, generator kode, server MCP, pelaksana permintaan, konverter cURL dan Postman, serta editor yang dapat disematkan. Setiap pustaka diterbitkan secara terpisah di npm dengan panduan instalasi dan referensi API sendiri. Di sinilah Anda menemukan rincian teknis tingkat rendah.
-
-## Dampaknya bagi pekerjaan Anda
-
-- **Anda menentukan hasil, bukan urutan klik.** Jelaskan tujuan, lalu asisten menyelesaikannya melalui langkah-langkah yang dapat Anda tinjau.
-- **API Anda siap digunakan agen.** Kontrak yang menghasilkan dokumentasi juga menghasilkan alat MCP, sehingga agen AI dapat memanggil API dengan benar sejak awal.
-- **Semuanya tetap selaras.** Desain, debugging, pengujian, mock, dan dokumentasi membaca satu berkas.
-- **Semua protokol di satu tempat.** HTTP, SSE, WebSocket, GraphQL, gRPC, dan MCP berada dalam satu spesifikasi, bukan enam alat terpisah.
-- Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
-
-## Langkah berikutnya
-
-- Baru mulai? Baca [Instalasi](/docs/id-ID/overview/installation/) dan [Panduan cepat](/docs/id-ID/overview/quickstart/).
-- Ingin ruang kerja lokal yang lengkap? Baca [panduan Klien Desktop](/docs/id-ID/client/introduction/).
-- Ingin memublikasikan API secara online? Baca [panduan Cloud](/docs/id-ID/cloud/introduction/).
-- Sedang membangun integrasi sendiri? Jelajahi [pustaka sumber terbuka](/docs/id-ID/opensource/).
+- [Ruang kerja API](/docs/id-ID/client/introduction/)
+- [Tinjauan kode](/docs/id-ID/client/code-quality/)
+- [AI bawaan dan penggunaan](/docs/id-ID/client/ai-models/)
+- [Paket dan jumlah tugas](/docs/id-ID/cloud/billing/)
+- [Pasang dan mulai](/docs/id-ID/overview/installation/)
+- [Pahami setiap perubahan](/docs/id-ID/overview/quickstart/)

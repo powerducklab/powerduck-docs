@@ -1,19 +1,24 @@
 ---
-sidebar_position: 8
-title: IA y modelos
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 15
+title: "IA integrada y uso"
+description: "Powerduck ayuda a entender cambios generados por IA, leer su contexto y decidir qué atender. La aplicación de escritorio permite abrir por separado el espacio API y la revisión de código desde Inicio."
 ---
 
-# AI · Models
+# IA integrada y uso
 
-Powerduck, incluido el cliente de escritorio, requiere iniciar sesión con Google OAuth o GitHub. Los archivos permanecen en el disco. El análisis de IA envía el contexto seleccionado a los proveedores gestionados por Powerduck. Ya no se admiten URL de modelos ni claves API propias.
+Inicia sesión con Google o GitHub. Solo hay modelo integrado, sin selector, claves propias ni endpoints personalizados. El trabajo IA solicitado envía el contexto elegido a proveedores gestionados. Se excluyen rutas comunes de dependencias, compilación y credenciales, pero el código todavía puede contener secretos.
 
-Free: 300.000 credits diarios, reiniciados a las 00:00 UTC. Pro: 39 $/mes y 18.000.000 credits cada 7 días. Max: 99 $/mes y 60.000.000 credits cada 7 días. El ciclo empieza con la suscripción inicial, separado de la facturación mensual. No se acumulan. Escritorio y AI Chat comparten el plan personal; ya no se venden licencias perpetuas ni claves de activación.
+## Revisión IA en línea
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+La revisión IA empieza al solicitarla y procesa diferencias con contexto limitado por lotes, no todos los archivos completos. Puede reutilizar caché coincidente. Muestra prioridad, evidencia y recomendación junto al código. Confirma, marca falso positivo o selecciona para Agent. La IA puede equivocarse y no demuestra corrección ni pruebas ejecutadas.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+## Planes y tareas
+
+Un turno de conversación o revisión cuenta como tarea, sin cobrar cada llamada interna. Se reserva durante la ejecución: un resultado entregado consume una incluso si cancelas después; sin resultado válido se libera. Divide revisiones grandes. Lectura local, Git/AST y resultados guardados no consumen tareas. Suscripciones antiguas pueden mantener créditos; consulta tu cuenta.
+
+- [Espacio API](introduction.md)
+- [Revisión de código](code-quality.md)
+- [IA integrada y uso](ai-models.md)
+- [Planes y tareas](../cloud/billing.md)
+- [Instalar y empezar](../overview/installation.md)
+- [Entender cada cambio](../overview/quickstart.md)

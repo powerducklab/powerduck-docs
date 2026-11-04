@@ -61,9 +61,7 @@ Pembaca publik menggunakan penampil dokumentasi khusus dan tidak memerlukan akun
 
 ## Cloud dan klien desktop
 
-Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
-
-Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
+Paket baru menghitung percakapan/tinjauan: Free 10/2; Starter $19/bulan 300/20; Pro $39/bulan 700/60; Max $99/bulan 2.000/180. Free direset awal bulan UTC, paket berbayar mengikuti periode tagihan. Tidak diakumulasi. Harga akhir dan pajak di checkout.
 
 ## Mulai di sini
 

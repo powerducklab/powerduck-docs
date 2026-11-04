@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "快速开始"
+description: "AI 生成代码越来越快，Powerduck 帮助你看清改了什么、结合上下文审查代码，并决定哪些问题需要处理。桌面端提供 API 工作台与代码审阅，两条工作流都能从首页独立进入。"
 ---
 
-# Powerduck · Quickstart
+# 快速开始
 
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
+从官网下载适合系统的安装包：macOS Apple Silicon 或 Intel、Windows，或 Linux AppImage。核对来源与发布者，不要关闭系统安全保护。前往官网登录后返回应用，从首页导入接口文件或选择代码项目。浏览器 App 用于体验 API 工作流，文件系统分析与本地命令需要桌面端。
 
-Free 每日赠送 300,000 credits，UTC 00:00 重置。Pro 为 $39/月，每 7 日 18,000,000 credits；Max 为 $99/月，每 7 日 60,000,000 credits。付费额度以首次订阅时间为起点每 7 日重置，与按月计费独立；剩余额度不结转。桌面端与 AI Chat 共用个人账户套餐，不再出售软件授权或激活码。
+## API 工作台
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+导入 OpenAPI YAML 或 JSON 文件，即可设计接口、发送请求、查看响应、运行场景、启动本地 Mock、查看数据模型和渲染文档。MCP 与发布是独立工作流；导入接口定义不等于部署业务后端。
+
+## 代码审阅
+
+选择代码目录后先查看项目结构，点击文件阅读完整源码。支持仅源码、完整对比、仅改动三种视图；通过增删行、行内字符高亮、改动导航和搜索定位实际修改，同时保留上下文。
+
+## 对比范围与轮次历史
+
+本轮改动比较已保存的轮次起点与磁盘文件。首次打开目录会建立起点，不会把已有内容自动当成新增工作；全部未提交改动则与 Git HEAD 对比。主动开始新一轮，并通过历史选项查看已捕获的旧轮次差异。历史保存在本地，不是 Git 备份；编辑器中的修改需保存到磁盘后才能被发现。
+
+## 运行检查
+
+主动运行检查，执行识别到的项目命令，并查看命令、退出码与原始输出；缺少脚本表示尚未验证，不能算通过。项目脚本会在你的计算机执行代码，请仅对可信项目使用。文件读取、静态分析和 AI 审阅本身不构成执行证据；标记已读只记录阅读进度。
+
+- [API 工作台](../client/introduction.md)
+- [代码审阅](../client/code-quality.md)
+- [内置 AI 与使用范围](../client/ai-models.md)
+- [套餐与任务次数](../cloud/billing.md)
+- [安装与开始使用](installation.md)
+- [看清每一次改动](quickstart.md)

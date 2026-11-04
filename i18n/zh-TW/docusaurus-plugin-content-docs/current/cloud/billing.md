@@ -1,19 +1,20 @@
 ---
-sidebar_position: 7
-title: 帳單與授權
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 6
+title: "方案與任務次數"
+description: "新方案分別統計 AI 對話與程式碼審閱，不按上游 token 扣費。Free：10／2 次；Starter 每月 $19：300／20 次；Pro 每月 $39：700／60 次；Max 每月 $99：2,000／180 次。Free 在 UTC 每月月初重置，付費次數依訂閱帳期，未用次數不結轉。最終價格及稅費以結帳為準。"
 ---
 
-# Free · Pro · Max
+# 方案與任務次數
 
-Powerduck 桌面端與瀏覽器工作區均須先使用 Google OAuth 或 GitHub 登入。本機檔案仍保存在磁碟。AI 分析會將選定內容傳送給平台管理的模型供應商；不再支援自訂模型網址或 API Key。
+新方案分別統計 AI 對話與程式碼審閱，不按上游 token 扣費。Free：10／2 次；Starter 每月 $19：300／20 次；Pro 每月 $39：700／60 次；Max 每月 $99：2,000／180 次。Free 在 UTC 每月月初重置，付費次數依訂閱帳期，未用次數不結轉。最終價格及稅費以結帳為準。
 
-Free 每日提供 300,000 credits，UTC 00:00 重設。Pro 為 $39/月，每 7 日 18,000,000 credits；Max 為 $99/月，每 7 日 60,000,000 credits。額度從首次訂閱時間起每 7 日重設，與每月計費分開；未用額度不累計。桌面端與 AI Chat 共用個人帳戶方案，不再出售軟體授權或啟用碼。
+## 內建 AI 與使用範圍
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+一次對話輪次或審閱操作算一個任務，內部工具或模型批次不各自扣次。執行時預留，服務端結算；已交付結果後取消仍計一次，沒有成功結果則釋放預留。大型審閱需拆分。本機瀏覽、Git／AST 與已存結果不扣次。舊訂閱可能保留 credits 權益，以帳戶及結帳顯示為準。
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+- [API 工作台](../client/introduction.md)
+- [程式碼審閱](../client/code-quality.md)
+- [內建 AI 與使用範圍](../client/ai-models.md)
+- [方案與任務次數](billing.md)
+- [安裝與開始使用](../overview/installation.md)
+- [看清每一次變更](../overview/quickstart.md)

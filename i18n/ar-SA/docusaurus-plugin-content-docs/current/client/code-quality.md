@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "مراجعة الكود"
+description: "يساعد Powerduck على فهم تغييرات الكود التي ينتجها الذكاء الاصطناعي وقراءة سياقها وتحديد ما يحتاج إلى معالجة. افتح مساحة API أو مراجعة الكود بشكل مستقل من الصفحة الرئيسية لتطبيق سطح المكتب."
 ---
 
-# Code quality
+# مراجعة الكود
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+يفتح اختيار المجلد بنية المشروع. اقرأ الملف كاملاً في أوضاع المصدر فقط أو المقارنة الكاملة أو التغييرات فقط. تساعد علامات الأسطر والأحرف والتنقل والبحث على تحديد التعديل ضمن سياقه.
 
-## Evidence and priority
+## المقارنة وسجل الجولات
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+تقارن الجولة الحالية نقطة البدء المحفوظة بملفات القرص. الفتح الأول ينشئ نقطة بدء ولا يعتبر كل المحتوى جديداً. تقارن التغييرات غير المثبتة مع Git HEAD. ابدأ جولة جديدة صراحة واختر الجولات السابقة من السجل المحلي؛ ليس بديلاً عن نسخ Git الاحتياطية. احفظ تعديلاتك على القرص أولاً.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## بنية المشروع والكود المرتبط
 
-## Tests that belong to the project
+يحدد Git والمحللات الكتل والتعريفات والاستدعاءات والاستيرادات الممكن حلها. مرر المؤشر على الرموز المدعومة لمعاينة التعريف وافتح الكود المرتبط قرب التغيير. تعرض البنية كثرة المراجع والأسماء المؤقتة والمحتوى المتطابق وغياب المراجع الواردة المكتشفة. قد يفوت التحميل الديناميكي والمستخدمون الخارجيون؛ غياب المراجع لا يعني أن الحذف آمن.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## مراجعة AI داخل الكود
 
-## Iteration history
+تبدأ مراجعة AI بطلبك وتستخدم دفعات من الفروق والسياق المحدود، لا كل ملف كاملاً. يمكن إعادة استخدام نتائج مخبأة مطابقة. تظهر الأولوية والدليل والتوصية بجوار الكود. أكد المشكلة أو علّم الإنذار الخاطئ أو اختر مهمة Agent. الذكاء قد يخطئ ولا يثبت صحة الكود أو تشغيل الاختبارات.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## حزم مهام Agent
 
-## AI Chat tools
+حدد الشكوك ثم عاين أو انسخ أو نزّل Markdown مع الكود ومراسي الإصدار. على Agent التقييم باستقلال؛ إذن التعديل موضح صراحة. تقرير JSON يحتاج مراجعة بشرية. ادعاء الإصلاح ليس اختباراً ناجحاً، والتصدير لا يشغّل أو يتصل تلقائياً بأي Agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## تشغيل الفحوص
 
-## Scope and privacy
+شغّل أوامر المشاريع الموثوقة صراحة وافحص الأمر ورمز الخروج والمخرجات الخام. غياب النص البرمجي يعني عدم التحقق. القراءة والتحليل الثابت وAI ليست أدلة تنفيذ؛ علامة المقروء تسجل تقدم القراءة فقط.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## الذكاء المدمج والاستخدام
+
+سجّل عبر Google أو GitHub واستخدم النموذج المدمج فقط دون اختيار نموذج أو مفاتيح شخصية أو نقاط نهاية مخصصة. يرسل عمل AI المطلوب السياق المحدد إلى مزودين مُدارين. استبعاد مسارات التبعيات والبناء وبيانات الاعتماد الشائعة لا يضمن خلو المصدر من الأسرار.
+
+- [مساحة عمل API](introduction.md)
+- [مراجعة الكود](code-quality.md)
+- [الذكاء المدمج والاستخدام](ai-models.md)
+- [الخطط وعدد المهام](../cloud/billing.md)
+- [التثبيت والبدء](../overview/installation.md)
+- [افهم كل تغيير](../overview/quickstart.md)

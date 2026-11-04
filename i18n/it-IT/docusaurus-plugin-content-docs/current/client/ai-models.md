@@ -1,19 +1,24 @@
 ---
-sidebar_position: 8
-title: "AI e modelli"
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 15
+title: "IA integrata e utilizzo"
+description: "Powerduck aiuta a capire le modifiche generate dall’IA, leggerne il contesto e decidere cosa affrontare. Dalla Home dell’app desktop si aprono separatamente spazio API e revisione del codice."
 ---
 
-# AI · Models
+# IA integrata e utilizzo
 
-Powerduck, incluso il desktop, richiede l’accesso con Google OAuth o GitHub. I file restano sul disco. L’analisi IA invia il contesto selezionato ai fornitori gestiti da Powerduck. URL di modelli e chiavi API personalizzate non sono più supportati.
+Accedi con Google o GitHub. Solo modello integrato, senza selettore, chiavi proprie o endpoint personalizzati. Il lavoro IA richiesto invia il contesto scelto a fornitori gestiti. Le comuni cartelle di dipendenze, build e credenziali sono escluse, ma il sorgente può ancora contenere segreti.
 
-Free: 300.000 credits al giorno, ripristinati alle 00:00 UTC. Pro: 39 $/mese e 18.000.000 credits ogni 7 giorni. Max: 99 $/mese e 60.000.000 credits ogni 7 giorni. Il ciclo parte dall’inizio originale dell’abbonamento, separato dalla fatturazione mensile. Nessun riporto. Desktop e AI Chat condividono il piano personale; licenze perpetue e chiavi di attivazione non sono più vendute.
+## Revisione IA nel codice
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+La revisione IA parte su richiesta ed elabora differenze con contesto limitato in lotti, non tutti i file completi. Riutilizza risultati in cache corrispondenti. Priorità, prova e consiglio appaiono nel codice. Conferma, indica un falso positivo o prepara un’attività Agent. L’IA può sbagliare e non dimostra correttezza o test eseguiti.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+## Piani e attività
+
+Un turno di conversazione o revisione vale un’attività, senza addebitare singole chiamate interne. Durante l’esecuzione si prenota: un risultato consegnato consuma una, anche dopo annullamento; senza risultato riuscito si libera. Dividi revisioni grandi. Lettura locale, Git/AST e risultati salvati non consumano attività. Vecchi abbonamenti possono mantenere crediti; verifica l’account.
+
+- [Spazio API](introduction.md)
+- [Revisione del codice](code-quality.md)
+- [IA integrata e utilizzo](ai-models.md)
+- [Piani e attività](../cloud/billing.md)
+- [Installare e iniziare](../overview/installation.md)
+- [Capire ogni modifica](../overview/quickstart.md)

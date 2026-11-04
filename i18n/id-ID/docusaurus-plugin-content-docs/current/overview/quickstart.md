@@ -1,17 +1,32 @@
 ---
 sidebar_position: 3
-title: "Powerduck · Quickstart"
-description: "Google OAuth / GitHub · AI Chat · OpenAPI"
+title: "Mulai cepat"
+description: "Powerduck membantu memahami perubahan buatan AI beserta konteksnya dan menentukan masalah yang perlu ditangani. Ruang API dan tinjauan kode dapat dibuka terpisah dari Beranda desktop."
 ---
 
-# Powerduck · Quickstart
+# Mulai cepat
 
-Powerduck, termasuk aplikasi desktop, mewajibkan login Google OAuth atau GitHub. Berkas tetap di disk. Analisis AI mengirim konteks terpilih ke penyedia yang dikelola Powerduck. Alamat model dan kunci API khusus tidak lagi didukung.
+Unduh macOS Apple Silicon/Intel, Windows, atau Linux AppImage dari situs resmi. Periksa sumber dan penerbit tanpa mematikan keamanan. Masuk di situs lalu kembali ke app; impor API atau pilih proyek. Browser untuk mencoba API; analisis file dan perintah lokal memerlukan desktop.
 
-Free: 300.000 credits per hari, direset pukul 00:00 UTC. Pro: $39/bulan dan 18.000.000 credits setiap 7 hari. Max: $99/bulan dan 60.000.000 credits setiap 7 hari. Siklus dimulai dari awal langganan pertama, terpisah dari tagihan bulanan. Sisa credits tidak diakumulasi. Desktop dan AI Chat memakai paket akun pribadi yang sama; lisensi permanen dan kunci aktivasi tidak lagi dijual.
+## Ruang kerja API
 
-1. [Installation](./installation.md) → Google / GitHub.
-2. [OpenAPI workspace](../client/introduction.md) → Open / Import.
-3. [AI Chat](../client/ai-models.md) → Code quality / Tests / Changes.
-4. [Contract example](../client/contract-example.md) → Mock / Validation.
-5. [Plans](../cloud/billing.md) → Free / Pro / Max.
+Impor OpenAPI YAML atau JSON untuk merancang operasi, mengirim permintaan, memeriksa respons, skenario, mock lokal, model data, dan dokumentasi. MCP serta publikasi adalah alur terpisah; impor tidak menerapkan backend bisnis.
+
+## Tinjauan kode
+
+Pemilihan folder membuka struktur proyek. Baca file lengkap dalam mode sumber saja, perbandingan lengkap, atau perubahan saja. Sorotan baris dan karakter, navigasi perubahan, serta pencarian membantu menemukan edit.
+
+## Perbandingan dan riwayat putaran
+
+Putaran aktif membandingkan titik awal tersimpan dengan disk. Pembukaan pertama membuat titik awal tanpa menganggap semua isi baru. Seluruh perubahan belum di-commit dibandingkan dengan Git HEAD. Mulai putaran baru secara sengaja dan lihat sebelumnya di riwayat lokal, bukan cadangan Git. Simpan edit ke disk dahulu.
+
+## Jalankan pemeriksaan
+
+Jalankan perintah secara eksplisit hanya pada proyek tepercaya dan periksa perintah, kode keluar, serta keluaran mentah. Skrip tidak ada berarti belum diverifikasi. Membaca, analisis statis, dan AI bukan bukti eksekusi; sudah dibaca hanya mencatat progres.
+
+- [Ruang kerja API](../client/introduction.md)
+- [Tinjauan kode](../client/code-quality.md)
+- [AI bawaan dan penggunaan](../client/ai-models.md)
+- [Paket dan jumlah tugas](../cloud/billing.md)
+- [Pasang dan mulai](installation.md)
+- [Pahami setiap perubahan](quickstart.md)

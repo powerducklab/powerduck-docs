@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "코드 검토"
+description: "Powerduck은 AI가 만든 변경과 주변 코드를 읽고 처리할 문제를 판단하도록 돕습니다. 데스크톱 홈에서 API 작업 공간과 코드 검토를 각각 열 수 있습니다."
 ---
 
-# Code quality
+# 코드 검토
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+폴더 선택 시 구조가 먼저 열립니다. 파일 전체를 읽으며 소스만, 전체 비교, 변경만 보기로 전환합니다. 추가·삭제 행, 문자 강조, 변경 탐색과 검색으로 문맥 속 수정 부분을 찾습니다.
 
-## Evidence and priority
+## 비교 범위와 라운드 기록
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+현재 라운드는 저장된 시작점과 디스크 파일을 비교합니다. 첫 열기는 시작점을 만들며 기존 내용을 새 변경으로 처리하지 않습니다. 전체 미커밋 변경은 Git HEAD와 비교합니다. 새 라운드를 명시적으로 시작하고 로컬 기록에서 이전 차이를 확인합니다. 기록은 Git 백업이 아니며 수정 파일을 먼저 저장해야 합니다.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## 프로젝트 구조와 관련 코드
 
-## Tests that belong to the project
+Git과 파서는 변경 블록 및 해석 가능한 정의, 호출자, 가져오기를 찾습니다. 지원되는 기호에 마우스를 올려 정의를 보고 변경 옆에서 관련 코드를 엽니다. 참조가 많은 파일, 임시 이름, 동일 내용, 확인된 유입 참조가 없는 파일을 표시합니다. 동적 로딩과 외부 사용은 빠질 수 있으므로 참조 없음이 안전한 삭제를 뜻하지 않습니다.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## AI 인라인 검토
 
-## Iteration history
+AI 검토는 요청할 때 시작하며 제한된 차이와 관련 문맥을 배치로 분석합니다. 전체 파일을 하나씩 보내지 않으며 일치하는 캐시를 재사용할 수 있습니다. 우선순위, 근거와 권고가 해당 코드에 표시됩니다. 문제 확인, 오탐 표시, Agent 선택이 가능합니다. AI는 정확성이나 테스트 실행을 증명하지 않습니다.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent 작업 패키지
 
-## AI Chat tools
+의심 항목을 선택해 코드와 버전 기준을 포함한 Markdown을 미리 보고 복사하거나 다운로드합니다. Agent는 독립 평가하며 수정 허용 여부는 명시됩니다. JSON 보고서도 사람이 검토해야 합니다. 수정 주장은 테스트 통과가 아니며 내보내기는 Agent를 자동 실행하거나 연락하지 않습니다.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## 검사 실행
 
-## Scope and privacy
+신뢰하는 프로젝트의 명령을 명시적으로 실행하고 명령, 종료 코드, 원시 출력을 확인합니다. 스크립트 없음은 미검증입니다. 읽기, 정적 분석과 AI는 실행 증거가 아니며 읽음 표시는 독서 진행만 기록합니다.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## 내장 AI와 사용 범위
+
+Google 또는 GitHub로 로그인하며 내장 모델만 제공합니다. 모델 선택, 개인 키와 사용자 지정 엔드포인트는 없습니다. 요청한 AI 작업에 선택된 문맥이 관리 제공자로 전송됩니다. 일반 의존성, 빌드, 자격 증명 경로를 제외해도 소스의 비밀 정보를 보장해 제거하지는 못합니다.
+
+- [API 작업 공간](introduction.md)
+- [코드 검토](code-quality.md)
+- [내장 AI와 사용 범위](ai-models.md)
+- [요금제와 작업 횟수](../cloud/billing.md)
+- [설치 및 시작](../overview/installation.md)
+- [모든 변경 이해하기](../overview/quickstart.md)

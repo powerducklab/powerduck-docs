@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "Code review"
+description: "Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home."
 ---
 
-# Code quality
+# Code review
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+Choose a code folder. The project structure opens first; select a file to read its full source. Switch between source only, full comparison and changes only. Added and removed lines, inline character highlights, change navigation and search help locate the actual edit without losing context.
 
-## Evidence and priority
+## Comparison and round history
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+The current round compares the saved round baseline with files on disk. Opening a folder establishes a starting point; existing content is not automatically new work. Use all uncommitted changes for a Git HEAD comparison. Start a new round deliberately and select previous rounds to inspect their captured differences. History is local, not a Git backup; save edits to disk before expecting them to appear.
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## Project structure and related code
 
-## Tests that belong to the project
+Local Git differences and parsers identify changed blocks and resolvable definitions, callers and imports. Hover supported symbols for definitions; expand related code beside a change. Structure filters flag heavily referenced files, temporary-name candidates, identical content and files with no resolved incoming references. These are static signals: dynamic loading, framework entry points and external consumers can be missed. No reference does not mean safe to delete, and identical text does not prove interchangeable behavior.
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## AI inline review
 
-## Iteration history
+AI review starts only when you request it. It reviews the current differences with bounded related context, rather than sending every complete file individually. Results appear at the affected code location with priority, evidence and a recommendation. Cached matching results can be reused. Confirm a problem, mark a false positive or select it for an Agent task. AI can miss defects or raise incorrect suspicions; it does not prove correctness or that tests ran.
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent task packages
 
-## AI Chat tools
+Select several suspicions and open the Agent task package. Preview, copy or download the Markdown handoff, including code context and revision anchors. The receiving agent should independently assess each suspicion. Modification is optional and explicitly indicated in the package. Paste its JSON report back for review; a repair claim is not a passed test. Exporting a package does not automatically start or contact another agent.
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## Run checks
 
-## Scope and privacy
+Run checks explicitly to execute detected project commands. Inspect each command, exit code and raw output; missing scripts are unverified, not passed. Project scripts execute code on your computer, so use trusted projects. Reading files, static analysis and AI review do not themselves establish execution evidence. Marking a block read records reading progress only.
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## Built-in AI and usage
+
+Sign in with Google or GitHub. Powerduck provides the built-in model; model selectors, custom provider keys and custom endpoints are not offered. Selected source context is sent to managed AI providers only for requested AI work. Local scans exclude common dependency, build and credential paths, but cannot guarantee that your source contains no secrets. Review what you share.
+
+- [API workspace](introduction.md)
+- [Code review](code-quality.md)
+- [Built-in AI and usage](ai-models.md)
+- [Plans and task allowances](../cloud/billing.md)
+- [Install and start](../overview/installation.md)
+- [Understand every change](../overview/quickstart.md)

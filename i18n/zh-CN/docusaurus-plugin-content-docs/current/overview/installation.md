@@ -1,63 +1,39 @@
 ---
 sidebar_position: 2
-title: 安装
-description: "Powerduck · Google OAuth / GitHub · Free / Pro / Max"
+title: "安装与开始使用"
+description: "AI 生成代码越来越快，Powerduck 帮助你看清改了什么、结合上下文审查代码，并决定哪些问题需要处理。桌面端提供 API 工作台与代码审阅，两条工作流都能从首页独立进入。"
 ---
 
-# 安装
+# 安装与开始使用
 
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
+从官网下载适合系统的安装包：macOS Apple Silicon 或 Intel、Windows，或 Linux AppImage。核对来源与发布者，不要关闭系统安全保护。前往官网登录后返回应用，从首页导入接口文件或选择代码项目。浏览器 App 用于体验 API 工作流，文件系统分析与本地命令需要桌面端。
 
-## 下载
+[Powerduck](https://www.powerduck.com/download.html)
 
-从 [Powerduck 官网](https://www.powerduck.com/#download)获取对应平台的安装包。以下构建均由 `electron-builder` 产出：
+## 内置 AI 与使用范围
 
-| 平台 | 安装包 | 架构 |
-|---|---|---|
-| macOS | `.dmg`（以及用于自动更新的 `.zip`） | Apple Silicon（`arm64`）和 Intel（`x64`） |
-| Windows | NSIS 安装程序（`.exe`） | `x64` |
-| Linux | AppImage（`.AppImage`） | `x64` |
+使用 Google 或 GitHub 登录。产品仅提供内置模型，不提供模型选择、自带密钥或自定义端点。只有请求 AI 工作时才向托管模型服务发送所选代码上下文。本地扫描排除常见依赖、构建和凭据路径，但不能保证源码中没有秘密信息，请核对分享范围。
 
-## macOS
+## 套餐与任务次数
 
-1. 打开 `.dmg`，把 Powerduck 拖入**应用程序**。
-2. 首次启动时，macOS 可能会要求确认打开 App Store 之外下载的应用。打开前请确认安装包来自官方下载页面；不要关闭系统安全检查。
-3. 发布有两个构建：面向 Apple Silicon（M 系列）的 `arm64` 构建和面向 Intel Mac 的 `x64` 构建。下载与你机器匹配的那个。
+新任务套餐分别统计 AI 对话和代码审阅，不按上游 token 扣费。Free：10 次对话、2 次审阅；Starter 每月 $19：300 次、20 次；Pro 每月 $39：700 次、60 次；Max 每月 $99：2,000 次、180 次。Free 在 UTC 每月月初重置，付费次数跟随订阅账期；剩余次数不结转。最终价格与税费以结账页面为准。
 
-## Windows
+- [API 工作台](../client/introduction.md)
+- [代码审阅](../client/code-quality.md)
+- [内置 AI 与使用范围](../client/ai-models.md)
+- [套餐与任务次数](../cloud/billing.md)
+- [安装与开始使用](installation.md)
+- [看清每一次改动](quickstart.md)
 
-1. 运行 NSIS 安装程序（`.exe`）并按步骤完成安装。
-2. 如果 SmartScreen 提示无法识别的发布者，请先确认安装包来自官方下载页面。核实来源后再继续；不要为不可信的下载绕过警告。
+## macOS · Windows · Linux
 
-## Linux
+macOS 11+ · Windows 10+ · Linux · Electron 37
 
-1. 下载 `.AppImage`。
-2. 赋予可执行权限并运行：
+- macOS: `.dmg` · `arm64` / `x64`
+- Windows: NSIS `.exe` · SmartScreen
+- Linux: `.AppImage` · `x64`
 
 ```bash
 chmod +x Powerduck-*.AppImage
 ./Powerduck-*.AppImage
 ```
-
-AppImage 无需系统级安装即可运行。在某些发行版上，你可能需要安装 FUSE 才能挂载它。
-
-## 你的机器上运行了什么
-
-桌面客户端是一个 Electron 应用，分为两部分：
-
-- 一个**主进程**（Node.js），负责文件访问、对外 HTTP 请求、本地 Mock 服务器、数据库连接和集成终端；
-- 一个**渲染进程**（React 工作区），负责渲染规范、AI 对话和每个工具。
-
-Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-## 系统要求
-
-- macOS 11 或更高版本、Windows 10 或更高版本，或兼容 Electron 37 的主流 Linux 桌面发行版；
-- 有足够磁盘容纳应用；你打开的规范仍保留在其原始位置；
-- Powerduck 桌面端与浏览器工作台均须先使用 Google OAuth 或 GitHub 登录。本地文件仍保存在磁盘。AI 分析会将选定上下文发送给平台管理的模型供应商；不再支持自定义模型地址或 API Key。
-
-## Powerduck · Free / Pro / Max
-
-Free 每日赠送 300,000 credits，UTC 00:00 重置。Pro 为 $39/月，每 7 日 18,000,000 credits；Max 为 $99/月，每 7 日 60,000,000 credits。付费额度以首次订阅时间为起点每 7 日重置，与按月计费独立；剩余额度不结转。桌面端与 AI Chat 共用个人账户套餐，不再出售软件授权或激活码。
-
-下一步：进行[快速开始](./quickstart.md)。

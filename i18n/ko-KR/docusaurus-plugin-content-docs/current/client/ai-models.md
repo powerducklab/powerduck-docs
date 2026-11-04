@@ -1,19 +1,24 @@
 ---
-sidebar_position: 8
-title: AI와 모델
-description: "Google OAuth / GitHub · Free / Pro / Max"
+sidebar_position: 15
+title: "내장 AI와 사용 범위"
+description: "Powerduck은 AI가 만든 변경과 주변 코드를 읽고 처리할 문제를 판단하도록 돕습니다. 데스크톱 홈에서 API 작업 공간과 코드 검토를 각각 열 수 있습니다."
 ---
 
-# AI · Models
+# 내장 AI와 사용 범위
 
-데스크톱을 포함한 Powerduck은 Google OAuth 또는 GitHub 로그인이 필요합니다. 파일은 로컬에 저장됩니다. AI 분석은 선택한 컨텍스트를 플랫폼이 관리하는 공급자에게 전송합니다. 사용자 지정 모델 주소와 API 키는 지원하지 않습니다.
+Google 또는 GitHub로 로그인하며 내장 모델만 제공합니다. 모델 선택, 개인 키와 사용자 지정 엔드포인트는 없습니다. 요청한 AI 작업에 선택된 문맥이 관리 제공자로 전송됩니다. 일반 의존성, 빌드, 자격 증명 경로를 제외해도 소스의 비밀 정보를 보장해 제거하지는 못합니다.
 
-Free는 매일 300,000 credits를 제공하며 UTC 00:00에 초기화됩니다. Pro는 월 $39에 7일마다 18,000,000 credits, Max는 월 $99에 7일마다 60,000,000 credits를 제공합니다. 최초 구독 시작을 기준으로 초기화하며 월 결제와 별개입니다. 이월되지 않습니다. 데스크톱과 AI Chat은 개인 계정 요금제를 공유하며 영구 라이선스와 활성화 키는 판매하지 않습니다.
+## AI 인라인 검토
 
-| Plan | USD / month | Credits | Reset |
-| --- | ---: | ---: | --- |
-| Free | 0 | 300,000 | 1 day · UTC |
-| Pro | 39 | 18,000,000 | 7 days |
-| Max | 99 | 60,000,000 | 7 days |
+AI 검토는 요청할 때 시작하며 제한된 차이와 관련 문맥을 배치로 분석합니다. 전체 파일을 하나씩 보내지 않으며 일치하는 캐시를 재사용할 수 있습니다. 우선순위, 근거와 권고가 해당 코드에 표시됩니다. 문제 확인, 오탐 표시, Agent 선택이 가능합니다. AI는 정확성이나 테스트 실행을 증명하지 않습니다.
 
-[Code Quality](../client/code-quality.md) · [AI Chat](../client/ai-models.md)
+## 요금제와 작업 횟수
+
+한 대화 턴 또는 검토 작업이 한 작업이며 내부 호출별로 차감하지 않습니다. 실행 중 예약 후 서버가 정산합니다. 전달된 결과는 이후 취소해도 한 번 차감하고 성공 결과가 없으면 예약을 해제합니다. 큰 검토는 나누세요. 로컬 읽기, Git/AST, 저장 결과는 차감하지 않습니다. 이전 구독은 credits를 유지할 수 있으며 계정 표시를 따릅니다.
+
+- [API 작업 공간](introduction.md)
+- [코드 검토](code-quality.md)
+- [내장 AI와 사용 범위](ai-models.md)
+- [요금제와 작업 횟수](../cloud/billing.md)
+- [설치 및 시작](../overview/installation.md)
+- [모든 변경 이해하기](../overview/quickstart.md)

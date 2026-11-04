@@ -61,9 +61,7 @@ Herkese açık belgeleri okuyanlar özel belge görüntüleyicisini kullanır ve
 
 ## Cloud ve masaüstü istemcisi
 
-Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
-
-Free: günlük 300.000 credits, UTC 00:00’da yenilenir. Pro: aylık $39 ve her 7 günde 18.000.000 credits. Max: aylık $99 ve her 7 günde 60.000.000 credits. Döngü ilk abonelik başlangıcına dayanır ve aylık faturadan ayrıdır. Kullanılmayan credits devretmez. Masaüstü ve AI Chat kişisel planı paylaşır; kalıcı lisans ve etkinleştirme anahtarı satılmaz.
+Yeni planlar konuşma/inceleme sayar: Free 10/2; Starter $19/ay 300/20; Pro $39/ay 700/60; Max $99/ay 2.000/180. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır.
 
 ## Buradan başlayın
 

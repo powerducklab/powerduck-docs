@@ -1,81 +1,28 @@
 ---
 sidebar_position: 1
-title: Introduction
-description: "Powerduck is an AI-native, local-first API platform built around one OpenAPI YAML. You and AI design, debug, test, mock, document, and expose MCP tools from that same file — on the desktop, in the cloud, or with open-source libraries."
+title: "Understand every change"
+description: "Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home."
 ---
 
-# Introduction
+# Understand every change
 
-A shift is happening in how APIs get built. For two decades the **operator** was a person clicking through a GUI, and the **consumer** of an API contract was a person reading documentation. That is changing on both ends:
+Powerduck helps you understand what changed, inspect the surrounding code, and decide what needs attention as AI produces more code. The desktop app combines an API workspace with code review; either workflow can be opened independently from Home.
 
-- The operator is increasingly an **AI assistant** that turns intent into action;
-- The consumer is increasingly an **AI agent** that calls the API as a tool, through MCP.
+## API workspace
 
-The tools that defined the previous era — the API client, the spec viewer, the request collection — were built for a human at the keyboard. Powerduck is built for this era. It is not a better API client or a prettier spec viewer. It is an **AI-native platform that starts from one OpenAPI file**.
+Import an OpenAPI YAML or JSON file to design operations, send requests, inspect responses, run scenarios, serve local mocks, explore data models and render documentation. MCP and publishing are separate workflows. Importing an API definition does not deploy your business backend.
 
-## The nucleus: one local OpenAPI file
+## Code review
 
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
+Choose a code folder. The project structure opens first; select a file to read its full source. Switch between source only, full comparison and changes only. Added and removed lines, inline character highlights, change navigation and search help locate the actual edit without losing context.
 
-```text
-                one local openapi.yaml
-                         |
-      you + AI -> design debug test mock docs data-model
-                         |
-                      MCP tools
-                         |
-               any AI coding agent
-```
+## Built-in AI and usage
 
-That one file is the contract. Every workflow reads from it, and the same file can be handed to any AI coding agent over MCP — so you, the built-in assistant, and every external agent share a single source of truth. When design, debug, tests, mocks, and docs all read the same file, "keeping the tools in sync" simply stops being a task. That is a consequence of the design, not the goal.
+Sign in with Google or GitHub. Powerduck provides the built-in model; model selectors, custom provider keys and custom endpoints are not offered. Selected source context is sent to managed AI providers only for requested AI work. Local scans exclude common dependency, build and credential paths, but cannot guarantee that your source contains no secrets. Review what you share.
 
-Powerduck works with OpenAPI 3.2 and reads existing 3.0 and 3.1 documents (and Swagger 2.0) by upgrading them in place. Non-HTTP APIs — SSE, WebSocket, GraphQL, gRPC, and MCP — are modeled on ordinary path items through the `x-protocol` extension instead of being forced into a REST-only shape.
-
-## How you work with AI
-
-- Open a YAML and the assistant immediately suggests what you can do with it;
-- State an outcome in plain language — "create the order endpoints", "set up test data", "run the checkout flow and give me a report" — and the assistant selects the right tool and proposes the change;
-- Every change arrives as a **reviewable card**; nothing is applied until you approve;
-- When you refine one API, the assistant stays on that API and changes only what you asked, instead of drifting across the document;
-- Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-## Local-first by default
-
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-## Three ways to use Powerduck
-
-| Surface | What it is | Best for |
-|---|---|---|
-| [Desktop](../client/introduction.md) | Google OAuth / GitHub | AI Chat · Code Quality · OpenAPI |
-| [**Powerduck Cloud**](../cloud/introduction.md) | A hosted service for OAS hosting, online documentation, and managed MCP | Sharing APIs with others, publishing stable links, and serving MCP without running anything |
-| [**Open Source libraries**](../opensource/index.md) | Composable `@powerduck/*` npm packages | Building your own tooling, CI pipelines, or embedded components |
-
-The three surfaces share the same engines: the desktop client and the cloud are both assembled from the open-source libraries, so a capability behaves the same whether you run it locally, call it over the network, or import a package directly.
-
-### Desktop Client
-
-Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-### Powerduck Cloud
-
-[Powerduck Cloud](../cloud/introduction.md) takes the same workflow online. Add a file, a Git repository, or a URL; choose which operations to expose; and get stable links for rendered documentation and a managed MCP endpoint. Access can be protected with a view password or an MCP access key, and paid plans add Git sync, custom domains, and higher limits.
-
-### Open Source libraries
-
-The [libraries](../opensource/index.md) are the engines underneath: an OpenAPI parser and upgrader, a multi-protocol CLI, a code generator, an MCP server, a request runner, converters for cURL and Postman, and embeddable editors. Each is published independently on npm with its own installation guide and API reference — this is where the low-level technical detail lives.
-
-## What changes for you
-
-- **You direct the outcome, not the clicks.** Describe the goal and the assistant carries the work through reviewable steps.
-- **Your APIs are agent-ready.** The same contract that produces docs also produces MCP tools, so AI agents can call your API correctly from day one.
-- **Nothing drifts.** Design, debug, tests, mocks, and docs all read one file.
-- **Every protocol in one place.** HTTP, SSE, WebSocket, GraphQL, gRPC, and MCP live in a single specification rather than six tools.
-- Sign in with Google OAuth or GitHub before using Powerduck, including the desktop client. Local files remain on disk. AI analysis sends the selected context to Powerduck’s managed providers; custom model endpoints and API keys are no longer supported.
-
-## Where to go next
-
-- New here? Start with [Installation](./installation.md) and the [Quickstart](./quickstart.md).
-- Want the full local workspace? Read the [Desktop Client guide](../client/introduction.md).
-- Want to publish an API online? Read the [Cloud guide](../cloud/introduction.md).
-- Building your own integration? Browse the [Open Source libraries](../opensource/index.md).
+- [API workspace](../client/introduction.md)
+- [Code review](../client/code-quality.md)
+- [Built-in AI and usage](../client/ai-models.md)
+- [Plans and task allowances](../cloud/billing.md)
+- [Install and start](installation.md)
+- [Understand every change](quickstart.md)

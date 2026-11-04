@@ -626,9 +626,9 @@ test('AI model translations retain cancellation and review links without claimin
   }
   for (const locale of locales.filter(locale => locale.docs !== 'en')) {
     const text = read(`i18n/${locale.docs}/docusaurus-plugin-content-docs/current/client/ai-models.md`);
-    assert.match(text, /HTTP\(S\)/, locale.docs);
-    assert.match(text, /OpenAI/, locale.docs);
-    assert.match(text, /`ai:cancel`/, locale.docs);
+    const guide = JSON.parse(read('src/data/product-guide.json'))[locale.docs];
+    assert.ok(text.includes(guide[19]), `${locale.docs}: missing built-in model and data-sharing boundary`);
+    assert.ok(text.includes(guide[22]), `${locale.docs}: missing task settlement and legacy entitlement rules`);
   }
 });
 

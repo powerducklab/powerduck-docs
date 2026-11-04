@@ -1,31 +1,40 @@
 ---
 sidebar_position: 10
-title: Code quality
-description: "AI source review, project-integrated test proposals and recorded code changes."
+title: "कोड समीक्षा"
+description: "Powerduck AI द्वारा बने बदलावों को उनके संदर्भ में समझने और आवश्यक कार्रवाई तय करने में मदद करता है। डेस्कटॉप होम से API कार्यक्षेत्र और कोड समीक्षा अलग-अलग खोलें।"
 ---
 
-# Code quality
+# कोड समीक्षा
 
-Sign in, open **Code quality · AI Review** from the desktop sidebar and select a project directory. Choose an entry file to prioritize its local imports, then select **Start AI review**. All included files are reviewed; dependency hints currently resolve relative JavaScript/TypeScript imports. Other supported source languages use file contents, test files and manifest context rather than a complete dependency graph.
+फ़ोल्डर चुनने पर प्रोजेक्ट संरचना खुलती है। पूरा स्रोत, पूर्ण तुलना या केवल बदलाव देखें। जोड़ी/हटाई पंक्तियाँ, अक्षर हाइलाइट, बदलाव नेविगेशन और खोज वास्तविक संपादन दिखाते हैं।
 
-## Evidence and priority
+## तुलना और दौर का इतिहास
 
-Findings include the exact relative path, original line number, category, confidence, evidence and a repair task. Select a location to highlight the source line. Filter by P0–P3: immediate catastrophic impact, high impact, normal defects and minor improvements respectively. Reviews examine input-to-sink security, authorization boundaries, error propagation, cancellation, cleanup, concurrency, unbounded work and test assertions. Assumptions about missing context must remain explicit.
+वर्तमान दौर सहेजे प्रारंभ बिंदु की डिस्क फ़ाइलों से तुलना करता है। पहली बार खोलने पर बिंदु बनता है, सब पुराना कोड नया नहीं गिना जाता। सभी uncommitted बदलाव Git HEAD से तुलना करते हैं। नया दौर स्पष्ट रूप से शुरू करें और स्थानीय इतिहास में पुराने चुनें; यह Git बैकअप नहीं है। बदलाव पहले डिस्क पर सहेजें।
 
-Copy a repair task to another code agent, or select **Discuss in AI Chat** to use the shared review context. The quality reviewer does not modify business source. Generated advice still requires engineering review; it is not a security certification.
+## प्रोजेक्ट संरचना और संबंधित कोड
 
-## Tests that belong to the project
+Git और पार्सर बदलाव खंड, हल हो सकने वाली परिभाषाएँ, कॉलर और आयात पहचानते हैं। समर्थित प्रतीक पर माउस रखकर परिभाषा देखें और बदलाव के पास संबंधित कोड खोलें। संरचना अधिक संदर्भ, अस्थायी नाम, समान सामग्री और न मिले incoming संदर्भ दिखाती है। डायनेमिक लोडिंग व बाहरी उपयोग छूट सकते हैं; संदर्भ न होना सुरक्षित हटाने का प्रमाण नहीं है।
 
-The test view reports assessments and missing cases using detected manifests, existing fixtures, imports and test conventions. Generate proposed tests, inspect their complete source, and confirm the list of new files in the desktop dialog. Canceling leaves the drafts available. Existing files cannot be overwritten, paths cannot escape the project, and tests are never run automatically. Run the project's own test command yourself or explicitly ask an appropriate code agent to validate the proposal.
+## कोड के पास AI समीक्षा
 
-## Iteration history
+AI समीक्षा केवल माँगने पर शुरू होती है और सीमित अंतर व संबंधित संदर्भ को बैच में देखती है, हर पूरी फ़ाइल नहीं भेजती। मेल खाता कैश फिर उपयोग हो सकता है। प्राथमिकता, प्रमाण व सुझाव कोड के पास दिखते हैं। समस्या स्वीकारें, गलत चेतावनी चिह्नित करें या Agent कार्य चुनें। AI शुद्धता या टेस्ट चलने का प्रमाण नहीं है।
 
-**Update changes** compares the current project with its last captured snapshot. Added, modified and deleted files retain before/after source and can be opened in the read-only diff view. Reopening a previously selected project also records changes since its saved snapshot. The latest 20 captured revisions are stored locally. This is snapshot history: changes between two captures are combined, and it does not claim to record every intermediate keystroke or commit.
+## Agent कार्य पैकेज
 
-## AI Chat tools
+शंकाएँ चुनकर कोड और संस्करण एंकर वाला Markdown देखें, कॉपी या डाउनलोड करें। Agent स्वतंत्र मूल्यांकन करे; बदलाव की अनुमति स्पष्ट लिखी जाती है। JSON रिपोर्ट की मानव जाँच आवश्यक है। सुधार का दावा सफल टेस्ट नहीं, और निर्यात दूसरे Agent को अपने आप शुरू या संपर्क नहीं करता।
 
-`quality.choose_project`, `quality.review`, `quality.results`, `quality.propose_tests`, `quality.create_tests`, `quality.refresh` and `quality.changes` operate on the same project and results as the workspace. Model requests use the account's shared credits. File creation requires the native approval dialog even when requested from Chat.
+## जाँच चलाएँ
 
-## Scope and privacy
+केवल विश्वसनीय प्रोजेक्ट के आदेश स्पष्ट रूप से चलाएँ और आदेश, exit code व कच्चा आउटपुट देखें। स्क्रिप्ट न होना अप्रमाणित है। पढ़ना, स्थिर विश्लेषण और AI निष्पादन प्रमाण नहीं; पढ़ा हुआ चिह्न केवल पढ़ने की प्रगति है।
 
-The reader excludes dependency/build folders, hidden files, symbolic links and common credential filenames. It limits snapshots to 1,000 files, 4 MB total and 200 KB per file. Oversized/excluded files are shown in the workspace; incomplete scans display their completed-file count. Source excerpts are sent to the platform's configured AI providers. Do not select a project whose contents you cannot share with those providers. No project commands or dependencies execute during scanning.
+## अंतर्निहित AI और उपयोग
+
+Google या GitHub से लॉगिन करें। केवल अंतर्निहित मॉडल है; मॉडल चयन, निजी कुंजी या कस्टम endpoint नहीं। माँगे AI कार्य के लिए चुना संदर्भ प्रबंधित प्रदाताओं को जाता है। सामान्य dependency, build और credential पथ हटाने पर भी स्रोत में रहस्य न होने की गारंटी नहीं है।
+
+- [API कार्यक्षेत्र](introduction.md)
+- [कोड समीक्षा](code-quality.md)
+- [अंतर्निहित AI और उपयोग](ai-models.md)
+- [प्लान और कार्य संख्या](../cloud/billing.md)
+- [इंस्टॉल करें और शुरू करें](../overview/installation.md)
+- [हर बदलाव समझें](../overview/quickstart.md)
