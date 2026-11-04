@@ -20,20 +20,103 @@ import path from "node:path";
 
 const ENTRY = "overview/introduction/";
 
-function redirectHtml(lang, canonicalHref) {
+const redirectCopy = {
+  "en": [
+    "Documentation",
+    "Opening the documentation.",
+    "Continue"
+  ],
+  "zh-CN": [
+    "文档",
+    "正在打开文档。",
+    "继续"
+  ],
+  "zh-TW": [
+    "文件",
+    "正在開啟文件。",
+    "繼續"
+  ],
+  "ja-JP": [
+    "ドキュメント",
+    "ドキュメントを開いています。",
+    "続行"
+  ],
+  "ko-KR": [
+    "문서",
+    "문서를 여는 중입니다.",
+    "계속"
+  ],
+  "fr-FR": [
+    "Documentation",
+    "Ouverture de la documentation.",
+    "Continuer"
+  ],
+  "de-DE": [
+    "Dokumentation",
+    "Die Dokumentation wird geöffnet.",
+    "Weiter"
+  ],
+  "es-ES": [
+    "Documentación",
+    "Abriendo la documentación.",
+    "Continuar"
+  ],
+  "pt-BR": [
+    "Documentação",
+    "Abrindo a documentação.",
+    "Continuar"
+  ],
+  "it-IT": [
+    "Documentazione",
+    "Apertura della documentazione.",
+    "Continua"
+  ],
+  "ru-RU": [
+    "Документация",
+    "Открытие документации.",
+    "Продолжить"
+  ],
+  "ar-SA": [
+    "الوثائق",
+    "جارٍ فتح الوثائق.",
+    "متابعة"
+  ],
+  "hi-IN": [
+    "दस्तावेज़",
+    "दस्तावेज़ खोले जा रहे हैं।",
+    "जारी रखें"
+  ],
+  "id-ID": [
+    "Dokumentasi",
+    "Membuka dokumentasi.",
+    "Lanjutkan"
+  ],
+  "vi-VN": [
+    "Tài liệu",
+    "Đang mở tài liệu.",
+    "Tiếp tục"
+  ],
+  "tr-TR": [
+    "Belgeler",
+    "Belgeler açılıyor.",
+    "Devam et"
+  ]
+};
+
+export function redirectHtml(lang, canonicalHref) {
+  const [title, message, continueLabel] = redirectCopy[lang] || redirectCopy.en;
   return `<!doctype html>
-<html lang="${lang}">
+<html lang="${lang}" dir="${lang === "ar-SA" ? "rtl" : "ltr"}">
   <head>
     <meta charset="utf-8" />
-    <title>Powerduck Documentation</title>
+    <title>Powerduck · ${title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href="${canonicalHref}" />
     <meta http-equiv="refresh" content="0; url=${ENTRY}" />
   </head>
   <body>
     <p>
-      Redirecting to the documentation entry point. If you are not redirected
-      automatically, <a href="${ENTRY}">continue here</a>.
+      ${message} <a href="${ENTRY}">${continueLabel}</a>
     </p>
     <script>
       (function redirect() {
