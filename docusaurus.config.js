@@ -206,7 +206,7 @@ const config = {
             href: "https://github.com/powerducklab",
             position: "right",
             className: "header-github-link",
-            "aria-label": "GitHub repository",
+            "aria-label": "GitHub",
           },
           {
             label: "Sign in",
