@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "Blog"
+  },
+  "item.label.Code review": {
+    "message": "Revisão de código"
+  },
+  "item.label.Web App": {
+    "message": "Aplicativo web"
+  },
+  "item.label.Release notes": {
+    "message": "Notas de versão"
+  },
+  "item.label.Scenario guides": {
+    "message": "Guias por caso de uso"
   }
 }

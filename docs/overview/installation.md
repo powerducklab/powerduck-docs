@@ -16,7 +16,7 @@ Sign in with Google or GitHub. Powerduck provides the built-in model; model sele
 
 ## Plans and task allowances
 
-New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
+New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 20 conversations and 5 reviews; Starter $19/month: 300 and 30; Pro $39/month: 700 and 90; Max $99/month: 2,000 and 270. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
 
 - [API workspace](../client/introduction.md)
 - [Code review](../client/code-quality.md)

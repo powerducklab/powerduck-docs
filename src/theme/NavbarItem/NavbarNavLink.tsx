@@ -8,6 +8,7 @@
 // Swizzled from @docusaurus/theme-classic. Same-registrable-domain links render
 // as plain root-relative anchors (same tab, no target/rel, no /docs baseUrl);
 // everything else keeps the upstream behavior.
+import marketingNav from '../../data/marketing-nav.json';
 import React, {type ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -38,6 +39,9 @@ export default function NavbarNavLink({
   const rawSitePath = sameDomainPath(href);
   const sitePath = rawSitePath ? localizedSitePath(rawSitePath, currentLocale) : null;
 
+  const productKey = ({'#code-review':'codeReview','#spec-editor':'specEditor','#product-demo':'apiDebug','#spec-mcp':'mcpServer','#api-docs':'apiDocs'} as Record<string,string>)[href?.slice(href.indexOf('#')) || ''];
+  const navCopy = (marketingNav as Record<string,Record<string,string>>)[currentLocale];
+  const description = isDropdownLink && productKey && navCopy?.['nav.' + productKey + 'Desc'];
   // Link content is set through html XOR label
   const linkContentProps = html
     ? {dangerouslySetInnerHTML: {__html: html}}
@@ -45,6 +49,7 @@ export default function NavbarNavLink({
         children: (
           <>
             {label}
+            {description && <small className="marketing-nav-description">{description}</small>}
             {isExternalLink && (
               <IconExternalLink
                 {...(isDropdownLink && {width: 12, height: 12})}

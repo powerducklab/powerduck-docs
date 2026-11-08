@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "ブログ"
+  },
+  "item.label.Code review": {
+    "message": "コードレビュー"
+  },
+  "item.label.Web App": {
+    "message": "Web アプリ"
+  },
+  "item.label.Release notes": {
+    "message": "リリースノート"
+  },
+  "item.label.Scenario guides": {
+    "message": "活用ガイド"
   }
 }

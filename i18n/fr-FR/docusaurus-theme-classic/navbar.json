@@ -28,7 +28,7 @@
     "message": "Éditeur de spécifications"
   },
   "item.label.API Debug": {
-    "message": "Débogueur d’API"
+    "message": "Débogage d'API"
   },
   "item.label.MCP Server": {
     "message": "Serveur MCP"
@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "Blog"
+  },
+  "item.label.Code review": {
+    "message": "Revue de code"
+  },
+  "item.label.Web App": {
+    "message": "Application web"
+  },
+  "item.label.Release notes": {
+    "message": "Notes de version"
+  },
+  "item.label.Scenario guides": {
+    "message": "Guides par scénario"
   }
 }

@@ -61,7 +61,7 @@ Leitores públicos usam um visualizador dedicado e não precisam criar uma conta
 
 ## Cloud versus cliente de desktop
 
-Novos planos contam conversas/revisões: Free 10/2; Starter $19/mês 300/20; Pro $39/mês 700/60; Max $99/mês 2.000/180. Free reinicia no começo do mês UTC; pagos seguem o período da assinatura. Sem acúmulo. Preço final e impostos no checkout.
+Novos planos contam conversas/revisões: Free 20/5; Starter $19/mês 300/30; Pro $39/mês 700/90; Max $99/mês 2.000/270. Free reinicia no começo do mês UTC; pagos seguem o período da assinatura. Sem acúmulo. Preço final e impostos no checkout.
 
 ## Comece aqui
 

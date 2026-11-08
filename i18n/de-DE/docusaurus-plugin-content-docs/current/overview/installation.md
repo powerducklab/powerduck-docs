@@ -16,7 +16,7 @@ Mit Google oder GitHub anmelden. Nur das integrierte Modell ist verfügbar, ohne
 
 ## Tarife und Aufgaben
 
-Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
+Neue Tarife zählen Gespräche und Reviews getrennt: Free 20/5; Starter $19/Monat 300/30; Pro $39/Monat 700/90; Max $99/Monat 2.000/270. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
 
 - [API-Arbeitsbereich](../client/introduction.md)
 - [Code-Review](../client/code-quality.md)

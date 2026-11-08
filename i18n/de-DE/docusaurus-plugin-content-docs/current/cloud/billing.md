@@ -1,12 +1,12 @@
 ---
 sidebar_position: 6
 title: "Tarife und Aufgaben"
-description: "Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout."
+description: "Neue Tarife zählen Gespräche und Reviews getrennt: Free 20/5; Starter $19/Monat 300/30; Pro $39/Monat 700/90; Max $99/Monat 2.000/270. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout."
 ---
 
 # Tarife und Aufgaben
 
-Neue Tarife zählen Gespräche und Reviews getrennt: Free 10/2; Starter $19/Monat 300/20; Pro $39/Monat 700/60; Max $99/Monat 2.000/180. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
+Neue Tarife zählen Gespräche und Reviews getrennt: Free 20/5; Starter $19/Monat 300/30; Pro $39/Monat 700/90; Max $99/Monat 2.000/270. Free wird am UTC-Monatsanfang zurückgesetzt, bezahlte Kontingente im Abo-Abrechnungszeitraum. Kein Übertrag. Endpreis und Steuern stehen im Checkout.
 
 ## Integrierte KI und Nutzung
 
@@ -18,3 +18,9 @@ Ein Gesprächszug oder Review zählt als Aufgabe; interne Aufrufe kosten nicht j
 - [Tarife und Aufgaben](billing.md)
 - [Installieren und starten](../overview/installation.md)
 - [Jede Änderung verstehen](../overview/quickstart.md)
+
+## Zahlungen und Abonnementänderungen
+
+Nur Organisationsinhaber und Administratoren können Abonnements kaufen oder ändern. Upgrades werden sofort anteilig berechnet; Downgrades gelten nach Ende des bezahlten Zeitraums. Eine Kündigung der Verlängerung lässt den Zugang bis dahin bestehen und kann vor ihrem Wirksamwerden zurückgenommen werden.
+
+Warten Sie nach dem Checkout auf die Bestätigung der Bestellung auf der Rückkehrseite. Bei Verzögerungen aktualisieren Sie die bestehende Bestellung, statt erneut zu zahlen. Abgelehnte Zahlungen können im selben Checkout wiederholt werden. Eine Kündigung ist keine Erstattung; wenden Sie sich für Erstattungsanfragen an den Support.

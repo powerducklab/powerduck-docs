@@ -16,7 +16,7 @@ Inicia sesión con Google o GitHub. Solo hay modelo integrado, sin selector, cla
 
 ## Planes y tareas
 
-Nuevos planes, conversaciones/revisiones: Free 10/2; Starter $19/mes 300/20; Pro $39/mes 700/60; Max $99/mes 2.000/180. Free se reinicia al comenzar el mes UTC y los de pago según el periodo de suscripción. No se acumulan. Precio final e impuestos en el pago.
+Nuevos planes, conversaciones/revisiones: Free 20/5; Starter $19/mes 300/30; Pro $39/mes 700/90; Max $99/mes 2.000/270. Free se reinicia al comenzar el mes UTC y los de pago según el periodo de suscripción. No se acumulan. Precio final e impuestos en el pago.
 
 - [Espacio API](../client/introduction.md)
 - [Revisión de código](../client/code-quality.md)

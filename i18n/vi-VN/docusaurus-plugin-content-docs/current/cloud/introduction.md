@@ -61,7 +61,7 @@ Người đọc tài liệu công khai sử dụng trình xem riêng và không 
 
 ## So sánh Cloud với ứng dụng máy tính
 
-Gói mới tính hội thoại/rà soát: Free 10/2; Starter $19/tháng 300/20; Pro $39/tháng 700/60; Max $99/tháng 2.000/180. Free đặt lại đầu tháng UTC, gói trả phí theo kỳ thuê bao. Không cộng dồn. Giá cuối và thuế tại thanh toán.
+Gói mới tính hội thoại/rà soát: Free 20/5; Starter $19/tháng 300/30; Pro $39/tháng 700/90; Max $99/tháng 2.000/270. Free đặt lại đầu tháng UTC, gói trả phí theo kỳ thuê bao. Không cộng dồn. Giá cuối và thuế tại thanh toán.
 
 ## Bắt đầu tại đây
 

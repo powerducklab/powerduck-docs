@@ -135,16 +135,20 @@ const config = {
             position: "left",
             items: [
               {
+                label: "Code review",
+                href: "https://www.powerduck.com/#code-review",
+              },
+              {
                 label: "Spec Editor",
                 href: "https://www.powerduck.com/#spec-editor",
               },
               {
                 label: "API Debug",
-                href: "https://www.powerduck.com/#api-debug",
+                href: "https://www.powerduck.com/#product-demo",
               },
               {
                 label: "MCP Server",
-                href: "https://www.powerduck.com/#mcp-server",
+                href: "https://www.powerduck.com/#spec-mcp",
               },
               {
                 label: "API Docs",
@@ -152,45 +156,29 @@ const config = {
               },
             ],
           },
-          {
-            type: "dropdown",
-            label: "Cloud",
-            position: "left",
-            items: [
-              {
-                label: "Hub",
-                href: "https://www.powerduck.com/hub",
-              },
-              {
-                label: "Cloud Docs",
-                to: "/cloud/introduction",
-              },
-              {
-                label: "Sign in",
-                href: "https://www.powerduck.com/signin",
-              },
-            ],
-          },
+          {label: "Hub", href: "https://www.powerduck.com/hub", position: "left"},
           {
             label: "Pricing",
             href: "https://www.powerduck.com/pricing",
             position: "left",
           },
+          {label: "Documentation", to: "/overview/introduction", position: "left"},
+          {label: "Blog", href: "https://www.powerduck.com/blog/", position: "left"},
           {
             type: "dropdown",
             label: "Resources",
             position: "left",
             items: [
               {
-                label: "Documentation",
-                to: "/overview/introduction",
+                label: "Scenario guides",
+                href: "https://www.powerduck.com/use-cases.html",
               },
               {
-                label: "Blog",
-                href: "https://www.powerduck.com/blog/",
+                label: "Release notes",
+                href: "https://www.powerduck.com/blog/tag/release-notes/",
               },
               {
-                label: "Live Demo",
+                label: "Web App",
                 href: "https://www.powerduck.com/app/",
               },
               {

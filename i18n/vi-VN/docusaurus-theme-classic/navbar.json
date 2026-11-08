@@ -15,10 +15,10 @@
     "message": "Tải xuống"
   },
   "item.label.Spec Editor": {
-    "message": "Trình chỉnh sửa đặc tả"
+    "message": "Trình sửa đặc tả"
   },
   "item.label.API Debug": {
-    "message": "Gỡ lỗi API"
+    "message": "Trình gỡ lỗi API"
   },
   "item.label.MCP Server": {
     "message": "Máy chủ MCP"
@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "Đánh giá mã"
+  },
+  "item.label.Web App": {
+    "message": "Ứng dụng web"
+  },
+  "item.label.Release notes": {
+    "message": "Ghi chú phát hành"
+  },
+  "item.label.Scenario guides": {
+    "message": "Hướng dẫn tình huống sử dụng"
   }
 }

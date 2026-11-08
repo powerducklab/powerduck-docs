@@ -15,7 +15,7 @@
     "message": "Scarica"
   },
   "item.label.Spec Editor": {
-    "message": "Editor delle specifiche"
+    "message": "Editor di specifiche"
   },
   "item.label.API Debug": {
     "message": "Debugger API"
@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "Revisione del codice"
+  },
+  "item.label.Web App": {
+    "message": "App web"
+  },
+  "item.label.Release notes": {
+    "message": "Note di rilascio"
+  },
+  "item.label.Scenario guides": {
+    "message": "Guide ai casi d’uso"
   }
 }

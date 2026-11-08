@@ -28,13 +28,13 @@
     "message": "规范编辑器"
   },
   "item.label.API Debug": {
-    "message": "API 调试"
+    "message": "接口调试"
   },
   "item.label.MCP Server": {
-    "message": "MCP 服务"
+    "message": "MCP 服务器"
   },
   "item.label.API Docs": {
-    "message": "API 文档"
+    "message": "接口文档"
   },
   "item.label.Hub": {
     "message": "Hub"
@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "博客"
+  },
+  "item.label.Code review": {
+    "message": "代码审查"
+  },
+  "item.label.Web App": {
+    "message": "网页版应用"
+  },
+  "item.label.Release notes": {
+    "message": "更新日志"
+  },
+  "item.label.Scenario guides": {
+    "message": "场景指南"
   }
 }

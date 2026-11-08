@@ -1,12 +1,12 @@
 ---
 sidebar_position: 6
 title: "Plans and task allowances"
-description: "New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax."
+description: "New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 20 conversations and 5 reviews; Starter $19/month: 300 and 30; Pro $39/month: 700 and 90; Max $99/month: 2,000 and 270. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax."
 ---
 
 # Plans and task allowances
 
-New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 10 conversations and 2 reviews; Starter $19/month: 300 and 20; Pro $39/month: 700 and 60; Max $99/month: 2,000 and 180. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
+New task plans count AI conversations and code reviews separately, not upstream tokens. Free: 20 conversations and 5 reviews; Starter $19/month: 300 and 30; Pro $39/month: 700 and 90; Max $99/month: 2,000 and 270. Free resets at the start of each UTC calendar month; paid allowances follow the subscription billing period. Unused tasks do not roll over. Checkout shows the final price and tax.
 
 ## Built-in AI and usage
 
@@ -18,3 +18,9 @@ One conversation turn or one review operation is a task; its internal tool/model
 - [Plans and task allowances](billing.md)
 - [Install and start](../overview/installation.md)
 - [Understand every change](../overview/quickstart.md)
+
+## Payments and subscription changes
+
+Only organization owners and administrators can purchase or change a subscription. Upgrades charge a prorated amount immediately; downgrades take effect when the current paid period ends. Canceling renewal keeps access through the paid period, and a pending cancellation can be withdrawn before it takes effect.
+
+After checkout, wait for the order to be confirmed on the billing return page. If confirmation is delayed, refresh the existing order rather than paying again. A declined payment can be retried in the same checkout. Canceling renewal is not a refund; contact support about refund requests.

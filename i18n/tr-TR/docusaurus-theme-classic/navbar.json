@@ -15,10 +15,10 @@
     "message": "İndir"
   },
   "item.label.Spec Editor": {
-    "message": "Spesifikasyon düzenleyici"
+    "message": "Belirtim düzenleyici"
   },
   "item.label.API Debug": {
-    "message": "API hata ayıklayıcısı"
+    "message": "API hata ayıklayıcı"
   },
   "item.label.MCP Server": {
     "message": "MCP sunucusu"
@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "Kod incelemesi"
+  },
+  "item.label.Web App": {
+    "message": "Web uygulaması"
+  },
+  "item.label.Release notes": {
+    "message": "Sürüm notları"
+  },
+  "item.label.Scenario guides": {
+    "message": "Senaryo kılavuzları"
   }
 }

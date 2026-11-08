@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "部落格"
+  },
+  "item.label.Code review": {
+    "message": "程式碼審查"
+  },
+  "item.label.Web App": {
+    "message": "網頁版應用程式"
+  },
+  "item.label.Release notes": {
+    "message": "更新紀錄"
+  },
+  "item.label.Scenario guides": {
+    "message": "場景指南"
   }
 }

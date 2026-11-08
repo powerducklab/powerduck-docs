@@ -15,7 +15,7 @@
     "message": "डाउनलोड करें"
   },
   "item.label.Spec Editor": {
-    "message": "स्पेसिफ़िकेशन एडिटर"
+    "message": "स्पेसिफिकेशन एडिटर"
   },
   "item.label.API Debug": {
     "message": "API डीबगर"
@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "कोड समीक्षा"
+  },
+  "item.label.Web App": {
+    "message": "वेब ऐप"
+  },
+  "item.label.Release notes": {
+    "message": "रिलीज़ नोट्स"
+  },
+  "item.label.Scenario guides": {
+    "message": "काम के उदाहरण और गाइड"
   }
 }

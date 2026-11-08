@@ -978,3 +978,5 @@ html[dir="rtl"] pre { text-align: left; }
   .navbar__items--right { gap: 0; }
   .navbar__brand { margin-inline-end: .5rem; }
 }
+
+.marketing-nav-description{display:block;white-space:normal;font-size:13px;font-weight:400;line-height:1.5;color:var(--ifm-color-content-secondary);margin-top:5px}.navbar .dropdown__menu{min-width:300px}.navbar .dropdown__link{padding:12px 16px}

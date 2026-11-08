@@ -16,7 +16,7 @@ Accedi con Google o GitHub. Solo modello integrato, senza selettore, chiavi prop
 
 ## Piani e attività
 
-Nuovi piani, conversazioni/revisioni: Free 10/2; Starter $19/mese 300/20; Pro $39/mese 700/60; Max $99/mese 2.000/180. Free si rinnova a inizio mese UTC, i piani a pagamento nel periodo dell’abbonamento. Nessun riporto. Totale e imposte al pagamento.
+Nuovi piani, conversazioni/revisioni: Free 20/5; Starter $19/mese 300/30; Pro $39/mese 700/90; Max $99/mese 2.000/270. Free si rinnova a inizio mese UTC, i piani a pagamento nel periodo dell’abbonamento. Nessun riporto. Totale e imposte al pagamento.
 
 - [Spazio API](../client/introduction.md)
 - [Revisione del codice](../client/code-quality.md)

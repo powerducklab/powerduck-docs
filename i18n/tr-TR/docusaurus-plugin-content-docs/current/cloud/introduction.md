@@ -61,7 +61,7 @@ Herkese açık belgeleri okuyanlar özel belge görüntüleyicisini kullanır ve
 
 ## Cloud ve masaüstü istemcisi
 
-Yeni planlar konuşma/inceleme sayar: Free 10/2; Starter $19/ay 300/20; Pro $39/ay 700/60; Max $99/ay 2.000/180. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır.
+Yeni planlar konuşma/inceleme sayar: Free 20/5; Starter $19/ay 300/30; Pro $39/ay 700/90; Max $99/ay 2.000/270. Free UTC ay başında, ücretliler abonelik döneminde yenilenir. Devretmez. Son fiyat ve vergiler ödeme ekranındadır.
 
 ## Buradan başlayın
 

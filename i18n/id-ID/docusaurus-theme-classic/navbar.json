@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "Tinjauan kode"
+  },
+  "item.label.Web App": {
+    "message": "Aplikasi web"
+  },
+  "item.label.Release notes": {
+    "message": "Catatan rilis"
+  },
+  "item.label.Scenario guides": {
+    "message": "Panduan skenario"
   }
 }

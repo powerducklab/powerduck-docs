@@ -28,7 +28,7 @@
     "message": "명세 편집기"
   },
   "item.label.API Debug": {
-    "message": "API 디버깅"
+    "message": "API 디버거"
   },
   "item.label.MCP Server": {
     "message": "MCP 서버"
@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "블로그"
+  },
+  "item.label.Code review": {
+    "message": "코드 리뷰"
+  },
+  "item.label.Web App": {
+    "message": "웹 앱"
+  },
+  "item.label.Release notes": {
+    "message": "릴리스 노트"
+  },
+  "item.label.Scenario guides": {
+    "message": "활용 가이드"
   }
 }

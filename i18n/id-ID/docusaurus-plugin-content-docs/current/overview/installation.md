@@ -16,7 +16,7 @@ Masuk melalui Google atau GitHub. Hanya model bawaan, tanpa pemilih, kunci sendi
 
 ## Paket dan jumlah tugas
 
-Paket baru menghitung percakapan/tinjauan: Free 10/2; Starter $19/bulan 300/20; Pro $39/bulan 700/60; Max $99/bulan 2.000/180. Free direset awal bulan UTC, paket berbayar mengikuti periode tagihan. Tidak diakumulasi. Harga akhir dan pajak di checkout.
+Paket baru menghitung percakapan/tinjauan: Free 20/5; Starter $19/bulan 300/30; Pro $39/bulan 700/90; Max $99/bulan 2.000/270. Free direset awal bulan UTC, paket berbayar mengikuti periode tagihan. Tidak diakumulasi. Harga akhir dan pajak di checkout.
 
 - [Ruang kerja API](../client/introduction.md)
 - [Tinjauan kode](../client/code-quality.md)

@@ -53,5 +53,17 @@
   },
   "item.label.Blog": {
     "message": "المدونة"
+  },
+  "item.label.Code review": {
+    "message": "مراجعة الكود"
+  },
+  "item.label.Web App": {
+    "message": "تطبيق الويب"
+  },
+  "item.label.Release notes": {
+    "message": "ملاحظات الإصدارات"
+  },
+  "item.label.Scenario guides": {
+    "message": "أدلة سيناريوهات الاستخدام"
   }
 }

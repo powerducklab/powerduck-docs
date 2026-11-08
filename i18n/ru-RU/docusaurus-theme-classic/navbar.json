@@ -18,7 +18,7 @@
     "message": "Редактор спецификаций"
   },
   "item.label.API Debug": {
-    "message": "Отладка API"
+    "message": "Отладчик API"
   },
   "item.label.MCP Server": {
     "message": "MCP-сервер"
@@ -49,5 +49,17 @@
   },
   "logo.alt": {
     "message": "Powerduck"
+  },
+  "item.label.Code review": {
+    "message": "Проверка кода"
+  },
+  "item.label.Web App": {
+    "message": "Веб-приложение"
+  },
+  "item.label.Release notes": {
+    "message": "История версий"
+  },
+  "item.label.Scenario guides": {
+    "message": "Руководства по сценариям"
   }
 }
