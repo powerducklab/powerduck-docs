@@ -6,6 +6,8 @@ description: "Powerduck hilft, KI-generierte Änderungen mit ihrem Kontext zu pr
 
 # Code-Review
 
+Die Codeprüfung erfordert die [Desktop-App](https://www.powerduck.com/download.html). Die Browserseite bietet einen Download-Link. Lokale Projektauswahl, Git-Vergleich und Codeprüfung werden nicht im Browser ausgeführt.
+
 Nach der Ordnerwahl erscheint die Projektstruktur. Dateien lassen sich vollständig lesen: nur Quelltext, vollständiger Vergleich oder nur Änderungen. Zeilen- und Zeichenmarkierungen, Änderungsnavigation und Suche zeigen den tatsächlichen Eingriff im Kontext.
 
 ## Vergleich und Rundenverlauf

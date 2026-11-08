@@ -6,6 +6,8 @@ description: "Powerduck membantu memahami perubahan buatan AI beserta konteksnya
 
 # Tinjauan kode
 
+Peninjauan kode memerlukan [aplikasi desktop](https://www.powerduck.com/download.html). Halaman browser menyediakan tautan unduhan; pemilihan proyek lokal, perbandingan Git, dan peninjauan tidak berjalan di browser.
+
 Pemilihan folder membuka struktur proyek. Baca file lengkap dalam mode sumber saja, perbandingan lengkap, atau perubahan saja. Sorotan baris dan karakter, navigasi perubahan, serta pencarian membantu menemukan edit.
 
 ## Perbandingan dan riwayat putaran

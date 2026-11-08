@@ -6,6 +6,8 @@ description: "Powerduck ayuda a entender cambios generados por IA, leer su conte
 
 # Revisión de código
 
+La revisión de código requiere la [aplicación de escritorio](https://www.powerduck.com/download.html). La página web ofrece un enlace de descarga; la selección de proyectos locales, la comparación de Git y la revisión no se ejecutan en el navegador.
+
 Al elegir una carpeta se abre la estructura. Lee archivos completos y cambia entre solo fuente, comparación completa y solo cambios. Las líneas añadidas/eliminadas, diferencias de caracteres, navegación y búsqueda ayudan a localizar la edición.
 
 ## Comparación e historial de rondas

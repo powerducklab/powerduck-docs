@@ -6,6 +6,8 @@ description: "Powerduck, AI tarafından üretilen değişiklikleri bağlamıyla 
 
 # Kod incelemesi
 
+Kod incelemesi için [masaüstü uygulaması](https://www.powerduck.com/download.html) gerekir. Tarayıcı sayfası bir indirme bağlantısı sunar; yerel proje seçimi, Git karşılaştırması ve inceleme tarayıcıda çalışmaz.
+
 Klasör seçimi proje yapısını açar. Tam dosyayı yalnız kaynak, tam karşılaştırma veya yalnız değişiklik görünümünde okuyun. Eklenen/silinen satırlar, karakter vurguları, değişiklik gezintisi ve arama düzenlemeyi buldurur.
 
 ## Karşılaştırma ve tur geçmişi

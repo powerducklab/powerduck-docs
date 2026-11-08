@@ -6,6 +6,8 @@ description: "Powerduck aide à comprendre les modifications produites par IA, �
 
 # Revue de code
 
+La revue de code nécessite l’[application de bureau](https://www.powerduck.com/download.html). La page web propose un lien de téléchargement ; la sélection de projets locaux, la comparaison Git et la revue ne fonctionnent pas dans le navigateur.
+
 Le choix du dossier ouvre sa structure. Sélectionnez un fichier pour lire son code complet : source seule, comparaison complète ou modifications seules. Les ajouts, suppressions, différences de caractères, la navigation et la recherche rendent les changements repérables.
 
 ## Comparaison et historique des cycles

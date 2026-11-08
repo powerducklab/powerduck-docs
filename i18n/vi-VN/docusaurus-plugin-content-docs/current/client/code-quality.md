@@ -6,6 +6,8 @@ description: "Powerduck giúp hiểu thay đổi do AI tạo ra cùng ngữ cả
 
 # Rà soát mã
 
+Việc đánh giá mã cần [ứng dụng máy tính](https://www.powerduck.com/download.html). Trang trình duyệt cung cấp liên kết tải xuống; việc chọn dự án cục bộ, so sánh Git và đánh giá không chạy trong trình duyệt.
+
 Chọn thư mục để mở cấu trúc dự án. Đọc toàn bộ tệp ở chế độ chỉ mã nguồn, so sánh đầy đủ hoặc chỉ thay đổi. Đánh dấu dòng và ký tự, điều hướng thay đổi và tìm kiếm giúp xác định phần sửa.
 
 ## So sánh và lịch sử vòng

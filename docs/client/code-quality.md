@@ -6,6 +6,8 @@ description: "Powerduck helps you understand what changed, inspect the surroundi
 
 # Code review
 
+Code review requires the [desktop app](https://www.powerduck.com/download.html). The browser page provides a download link; local project selection, Git comparison and review do not run in the browser.
+
 Choose a code folder. The project structure opens first; select a file to read its full source. Switch between source only, full comparison and changes only. Added and removed lines, inline character highlights, change navigation and search help locate the actual edit without losing context.
 
 ## Comparison and round history
